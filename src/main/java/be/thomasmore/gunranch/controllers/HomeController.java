@@ -12,13 +12,13 @@ public class HomeController {
     public String home(Model model) {
         String name = "Bullseye Shooting Academy";
         String slogan = "Lock Load, and Hit the Bullseye";
-        model.addAttribute("name",name);
-        model.addAttribute("slogan",slogan);
-    return "home";
+        model.addAttribute("name", name);
+        model.addAttribute("slogan", slogan);
+        return "home";
     }
 
     @GetMapping("/about-us")
-    public String aboutUs(Model model){
+    public String aboutUs(Model model) {
         return "about-us";
     }
 }

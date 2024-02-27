@@ -36,3 +36,4 @@ VALUES (14,'M14','Semi-Automatic-Rifle',20,'7.62x51 mm',12,'Basic Gun')
 VALUES (15,'M16A1 Vietnam','Assault Rifle',30,'5.56x45 mm',12,'Basic Gun')
     INSERT INTO(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO);
 VALUES (16,'Colt M1911','Semi-Automatic-Pistol',7,'.45 ACP',10,'Basic Gun')
+

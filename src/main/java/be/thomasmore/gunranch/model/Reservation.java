@@ -3,8 +3,10 @@ package be.thomasmore.gunranch.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+import java.util.Date;
+
 @Entity
-public class user {
+public class Reservation {
     @Id
     private int id;
 
@@ -16,7 +18,9 @@ public class user {
 
     private String phoneNumber;
 
+    private int amountOfParticipants;
 
+    private Date date;
 
 
 }
