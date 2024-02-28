@@ -2,6 +2,8 @@ package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.hibernate.validator.constraints.Length;
+
 
 
 @Entity
@@ -17,6 +19,7 @@ public class Guns {
 
     private String caliber;
 
+    @Length(max = 1000)
     private String bio;
 
     private double price;
