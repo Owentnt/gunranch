@@ -12,20 +12,8 @@
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
-<nav class="navbar-dark nav-pills bg-dark btn-toolbar">
-    <ul class ="navbar-dark">
-        <a class="navbar-brand" th:href="@{/}">
-            <img src="/css/logo%20bullseye%20shooting%20academy.png" width="321.9" height="67.3" alt="">
-        </a>
-        <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/}" class ="text-white">Home</a></li>
-        <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/about-us}" class="text-white">about us</a></li>
-        <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/guns}" class="text-white">Guns</a></li>
-        <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/reservation}" class="text-white">Reservation</a></li>
-        <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/competitions}" class="text-white"></a>Competitions</li>
-        <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/contact}" class="text-white"></a>Contact</li>
+<div th:insert="~{fragments/header :: header}">Header</div>
 
-    </ul>
-</nav>
 <body>
 
 
