@@ -14,4 +14,9 @@ public class UserController {
         return "login";
     }
 
+    @GetMapping("/reservation")
+    public String reservations(Model model){
+        model.addAttribute("model",model);
+        return "reservation";
+    }
 }
