@@ -14,8 +14,18 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 <body>
-<h1 th:text="${slogan}"></h1>
-<p></p>
+<div>
+    <img src="/css/gun-background-img.jpg" class="img-fluid">
+    <h1 th:text=" 'Welcome to '+${name}" th:class="text-center"></h1>
+    <p th:class="text-center ">Unlock the thrill of precision shooting and feel the adrenaline flowing through you.
+        We provide a state-of-the-art facility for both experienced gun masters and first-time shooters.
+        Our commitment to safety, education, and an unparalleled shooting experience sets us apart. </p>
+</div>
+
+
+
+
+
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 </body>
