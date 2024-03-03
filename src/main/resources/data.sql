@@ -33,7 +33,7 @@ VALUES (5, 'Taurus 95', 'Revolver', 8, '.22 LR', 10,'The Taurus Model 95 is a re
                                                                                      so its advisable to check for the latest information.');
 
     INSERT INTO GUNS (ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE,BIO)
-VALUES (6, 'Ruger Super Redhawk', 'Revolver', 6, '44 Special/.44 Magnum Magnum', 12, );
+VALUES (6, 'Ruger Super Redhawk', 'Revolver', 6, '44 Special/.44 Magnum Magnum', 12,'Basic gun' );
 
     INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO)
 VALUES (7,'Kalashnikov Classic','Assault Rifle',35,'7.62x25 mm', 15,'The Kalashnikov Classic refers to a series of firearms designed by Mikhail Kalashnikov,

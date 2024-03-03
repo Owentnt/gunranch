@@ -17,6 +17,7 @@ public class GunsController {
     public String guns(Model model){
         Guns guns = new Guns();
         model.addAttribute("guns",guns);
+        model.addAttribute("name",guns.getName());
         return "guns";
 
     }
