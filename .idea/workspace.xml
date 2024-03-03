@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="footer op de onderkant vastgemaakt">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="2 extra records toegevoegd aan database guns">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/user.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +106,7 @@
       <workItem from="1709194267247" duration="487000" />
       <workItem from="1709306084934" duration="7906000" />
       <workItem from="1709390844677" duration="4567000" />
-      <workItem from="1709471664759" duration="2956000" />
+      <workItem from="1709471664759" duration="4634000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1708967130134</created>
@@ -216,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709474194151</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="2 extra records toegevoegd aan database guns">
+      <created>1709474915169</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709474915169</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +260,7 @@
     <MESSAGE value="footer wat bijgewerkt" />
     <MESSAGE value="text achtergrond toegevoegd" />
     <MESSAGE value="footer op de onderkant vastgemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer op de onderkant vastgemaakt" />
+    <MESSAGE value="2 extra records toegevoegd aan database guns" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 extra records toegevoegd aan database guns" />
   </component>
 </project>

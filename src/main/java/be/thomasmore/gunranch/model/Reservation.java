@@ -22,5 +22,9 @@ public class Reservation {
 
     private Date date;
 
+    private boolean member;
+
+
+
 
 }

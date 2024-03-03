@@ -99,3 +99,8 @@ VALUES (17,'M1 Garand','Semi-Automatic-Rifle',8,'.30-06 Springfield Ridge',24,'T
 INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO)
 VALUES (18,'Mauser Kar98K','Bolt-Action Rifle',5,'7,92x57mm',15,'The Mauser Karabiner 98 Kurz, commonly known as the Kar98k, is a bolt-action rifle that gained widespread recognition and use during World War II.');
 
+
+
+
+
+

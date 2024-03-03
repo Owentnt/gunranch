@@ -21,6 +21,8 @@ public class GunsController {
 
     }
 
+
+
 @GetMapping("/competitions")
     public String competitions(Model model){
         model.addAttribute("model",model);
