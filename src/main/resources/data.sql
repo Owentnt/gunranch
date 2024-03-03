@@ -92,3 +92,10 @@ VALUES (16,'Colt M1911','Semi-Automatic-Pistol',7,'.45 ACP',10,'The Colt M1911 i
                                                                Known for its .45 ACP caliber and iconic design, it served as the standard-issue sidearm for the U.S. military until 1985.
                                                                The M1911 is celebrated for its reliability, stopping power, and has become a symbol of American military firearms history.');
 
+INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO)
+VALUES (17,'M1 Garand','Semi-Automatic-Rifle',8,'.30-06 Springfield Ridge',24,'The M1 Garand is a semi-automatic rifle that gained prominence during World War II and became the standard-issue rifle for the United States military.
+                                                              Designed by Canadian-American firearms engineer John Garand, the M1 Garand is renowned for being the first semi-automatic rifle to be widely adopted by a major military power.');
+
+INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO)
+VALUES (18,'Mauser Kar98K','Bolt-Action Rifle',5,'7,92x57mm',15,'The Mauser Karabiner 98 Kurz, commonly known as the Kar98k, is a bolt-action rifle that gained widespread recognition and use during World War II.');
+
