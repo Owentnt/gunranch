@@ -18,23 +18,19 @@
 
 <h1 class="text-warning text-center">Types of Guns</h1>
 <div class="weapons mt-5 mb-5">
-    <div class="firstRow">
-            <div th:each="gun:${guns}" class="card mx-3 card border-warning">
-                <img class="card-img-top" th:src="${gun.image}" alt="Card image cap" width="60" height="60">
+    <div class="row justify-content-center mx-5">
+            <div th:each="gun:${guns}" class="card card border-warning col-md-4">
+                <img class="card-img-top" th:src="${gun.image}" th:alt="${gun.name}" width="192" height="250">
                 <div class="card-body text-warning">
                     <h5 class="card-title" th:text="${gun.name}"></h5>
-                    <p class="card-text" th:text="${gun.type}"></p>
-                    <p class="card-text" th:text="${gun.magazine}"></p>
-                    <p class="card-text" th:text="${gun.caliber}"></p>
-                    <p class="card-text" th:text="${gun.price}"></p>
+                    <p class="card-text" th:text=" 'type: '+${gun.type}"></p>
+                    <p class="card-text" th:text="'magazine: '+${gun.magazine}"></p>
+                    <p class="card-text" th:text="'caliber: '+${gun.caliber}"></p>
+                    <p class="card-text" th:text="'price: '+${gun.price}"></p>
                     <button type="button" class="btn btn-outline-warning">Meer info</button>
 
                 </div>
             </div>
-
-
-
-
     </div>
 </div>
 </body>
