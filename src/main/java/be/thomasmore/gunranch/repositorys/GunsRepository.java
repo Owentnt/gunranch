@@ -4,6 +4,7 @@ import be.thomasmore.gunranch.model.Guns;
 import org.springframework.data.repository.CrudRepository;
 
 public interface GunsRepository extends CrudRepository<Guns,Integer> {
+
     Iterable<Guns> findByType(String type);
     Iterable<Guns> findByPriceLessThan(double max);
 

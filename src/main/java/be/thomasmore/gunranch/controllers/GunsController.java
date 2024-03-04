@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.Optional;
 
 @Controller
 public class GunsController {
@@ -19,6 +22,14 @@ public class GunsController {
         model.addAttribute("guns",guns);
         return "guns";
 
+    }
+
+    @GetMapping({"/gunsdetails/{id}","/gunsdetails"})
+    public String gunsDetails(Model model, @PathVariable(required = false)Integer id){
+        if(id == null) return "gunsdetails";
+        Optional<Guns> gunsDatabase = gunsRepository.findById(id);
+        gunsDatabase.ifPresent(venue -> model.addAttribute("venue", venue));
+        return "gunsdetails";
     }
 
 
