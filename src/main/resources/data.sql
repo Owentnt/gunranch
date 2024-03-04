@@ -4,44 +4,49 @@ VALUES (1, 'Glock-19', 'Semi-Automatic-Pistol', 15, '9x19 mm', 8, '/images/glock
                                                                   Introduced in 1988, the Glock 19 has a standard magazine capacity of 15 rounds, a polymer frame,
                                                                   and is a popular choice for concealed carry due to its balance of size and firepower.');
 
-INSERT INTO GUNS(ID, NAME, TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,BIO)
-VALUES (2, 'Desert Eagle', 'Semi-Automatic-Pistol', 8, '.44 Magnum', 8,'/images/desert_eagle.png','The Desert Eagle is a powerful semi-automatic pistol
+ INSERT INTO GUNS(ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE,IMAGE,BIO)
+VALUES (2, 'Desert Eagle', 'Semi-Automatic-Pistol', 8, '.44 Magnum', 8, '/images/desert_eagle.png','The Desert Eagle is a powerful semi-automatic pistol
                                                                         known for its distinctive appearance and high-caliber ammunition.
                                                                         It was designed by Magnum Research in the United States
                                                                         and is often used in movies and video games due to its iconic look and reputation for firepower.');
 
-    INSERT INTO GUNS(ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE, BIO)
-VALUES (3, 'Walther P22 Junior', 'Semi-Automatic-Pistol', 10, '.22 LR', 9, 'The Walther P22 Junior is a compact and lightweight semi-automatic pistol
+    INSERT INTO GUNS(ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE, IMAGE, BIO)
+VALUES (3, 'Walther P22 Junior', 'Semi-Automatic-Pistol', 10, '.22 LR', 9, '/images/waltherp22junior.png ','The Walther P22 Junior is a compact and lightweight semi-automatic pistol
                                                                            designed for younger shooters or those with smaller hands.
                                                                            Its essentially a scaled-down version of the Walther P22,
                                                                            featuring a smaller frame and reduced dimensions for easier handling.
                                                                            It typically fires .22 LR ammunition and is often used for target shooting or plinking');
 
-    INSERT INTO GUNS (ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE,BIO)
-VALUES (4, 'Smith & Wesson 686', 'Revolver', 6, '.38 Special/.357 Magnum', 12, 'The Smith & Wesson Model 686 is a popular double-action revolver known for its durability and versatility.
+    INSERT INTO GUNS (ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE, IMAGE,BIO)
+VALUES (4, 'Smith & Wesson 686', 'Revolver', 6, '.38 Special/.357 Magnum Magnum', 12, '/images/smithandwessen686.png ','The Smith & Wesson Model 686 is a popular double-action revolver known for its durability and versatility.
                                                                                       It''s often chambered in .357 Magnum, providing users with the
                                                                                       option to shoot both .357 Magnum and .38 Special cartridges.
                                                                                       The 686 typically features a stainless steel construction, adjustable sights, and a 6 or 7-round cylinder.
                                                                                       It''s well-regarded for its accuracy and is commonly used for target shooting, self-defense, and as a duty sidearm for law enforcement.');
 
-    INSERT INTO GUNS(ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE, BIO)
-VALUES (5, 'Taurus 95', 'Revolver', 8, '.22 LR', 10,'The Taurus Model 95 is a revolver designed and manufactured by the Brazilian firearms company Taurus International.
+    INSERT INTO GUNS(ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE, IMAGE,BIO)
+VALUES (5, 'Taurus 95', 'Revolver', 8, '.22 LR', 10, '/images/Taurus_95.png','The Taurus Model 95 is a revolver designed and manufactured by the Brazilian firearms company Taurus International.
                                                                                      It is chambered in .38 Special and .357 Magnum. Known for its compact size and reliability,
                                                                                      the Taurus 95 is often chosen for concealed carry.
                                                                                      It typically features a 5-round cylinder and is available in various barrel lengths.
                                                                                      Keep in mind that firearm models may have undergone updates or changes,
-                                                                                     so its advisable to check for the latest information.');
+                                                                                     so it''s advisable to check for the latest information.');
 
-    INSERT INTO GUNS (ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE,BIO)
-VALUES (6, 'Ruger Super Redhawk', 'Revolver', 6, '44 Special/.44 Magnum Magnum', 12,'Basic gun' );
+    INSERT INTO GUNS (ID, NAME, TYPE, MAGAZINE, CALIBER, PRICE,IMAGE,BIO)
+VALUES (6, 'Ruger Super Redhawk', 'Revolver', 6, '44 Special/.44 Magnum Magnum', 12, '/images/Redhawk.png ','The Taurus Model 95 is a revolver designed and manufactured by the Brazilian firearms company Taurus International.
+                                                                                     It is chambered in .38 Special and .357 Magnum. Known for its compact size and reliability,
+                                                                                     the Taurus 95 is often chosen for concealed carry.
+                                                                                     It typically features a 5-round cylinder and is available in various barrel lengths.
+                                                                                     Keep in mind that firearm models may have undergone updates or changes,
+                                                                                     so it''s advisable to check for the latest information.');
 
-    INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO)
-VALUES (7,'Kalashnikov Classic','Assault Rifle',35,'7.62x25 mm', 15,'The Kalashnikov Classic refers to a series of firearms designed by Mikhail Kalashnikov,
+    INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,IMAGE,BIO)
+VALUES (7,'Kalashnikov Classic','Assault Rifle',35,'7.62x25 mm', 15, '/images/kalashnikov.png','The Kalashnikov Classic refers to a series of firearms designed by Mikhail Kalashnikov,
                                                                     notably the AK-47 assault rifle. Known for its reliability and widespread use,
                                                                     the Kalashnikov Classic design has become iconic in the realm of firearms since its introduction in the late 1940s.');
 
-    INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,BIO)
-VALUES (8,'Steyr Aug','Assault Rifle',30,'5.56x45 mm', 15,'The Steyr AUG (Armee-Universal-Gewehr, or Universal Army Rifle) is an Austrian bullpup assault rifle designed in the 1970s.
+    INSERT INTO GUNS(ID,NAME,TYPE,MAGAZINE,CALIBER, PRICE,IMAGE,BIO)
+VALUES (8,'Steyr Aug','Assault Rifle',30,'5.56x45 mm', 15, '/images/steyr_aug.png','The Steyr AUG (Armee-Universal-Gewehr, or Universal Army Rifle) is an Austrian bullpup assault rifle designed in the 1970s.
                                                           Known for its distinctive appearance and modular design, it has a reputation for reliability and accuracy.
                                                           The AUG''s bullpup design allows for a shorter overall length without sacrificing barrel length, making it more maneuverable in tight spaces.
                                                           It has been adopted by various military and law enforcement agencies worldwide.');
