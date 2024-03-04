@@ -2340,7 +2340,7 @@ textarea.form-control-lg {
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
-    background-image: url("gun-background-img.jpg");
+    background-image: url("static/images/gun-background-img.jpg");
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 16px 12px;

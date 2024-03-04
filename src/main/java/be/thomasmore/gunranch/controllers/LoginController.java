@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class InschrijvingController {
+public class LoginController {
 
     @GetMapping("/login")
     public String login(Model model){

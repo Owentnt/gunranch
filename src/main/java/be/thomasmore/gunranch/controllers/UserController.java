@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 
 
-    @GetMapping("/reservation")
+    @GetMapping("/reservations")
     public String reservations(Model model){
         model.addAttribute("model",model);
-        return "reservation";
+        return "reservations";
     }
 }

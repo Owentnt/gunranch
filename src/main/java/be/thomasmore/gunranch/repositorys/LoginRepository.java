@@ -1,4 +1,4 @@
 package be.thomasmore.gunranch.repositorys;
 
-public interface userRepository {
+public interface LoginRepository {
 }

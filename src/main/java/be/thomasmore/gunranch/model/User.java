@@ -2,8 +2,10 @@ package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Users")
 public class User {
     @Id
     private int id;
@@ -12,16 +14,19 @@ public class User {
 
     private String lastName;
 
-    private String emailAdres;
+    private String emailAddress;
 
     private String phoneNumber;
 
-    public User(int id, String firstName, String lastName, String emailAdres, String phoneNumber) {
+    private String passWord;
+
+    public User(int id, String firstName, String lastName, String emailAddress, String phoneNumber, String passWord) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailAdres = emailAdres;
+        this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
+        this.passWord = passWord;
     }
 
     public User() {
@@ -51,12 +56,12 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getEmailAdres() {
-        return emailAdres;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setEmailAdres(String emailAdres) {
-        this.emailAdres = emailAdres;
+    public void setEmailAddress(String emailAdres) {
+        this.emailAddress = emailAdres;
     }
 
     public String getPhoneNumber() {
@@ -65,5 +70,13 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 }

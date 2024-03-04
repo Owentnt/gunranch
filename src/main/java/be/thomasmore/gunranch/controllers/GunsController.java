@@ -1,7 +1,7 @@
 package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Guns;
-import be.thomasmore.gunranch.repositorys.gunsRepository;
+import be.thomasmore.gunranch.repositorys.GunsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class GunsController {
 
     @Autowired
-    gunsRepository gunsRepository;
+    GunsRepository gunsRepository;
 
     @GetMapping("/guns")
     public String guns(Model model){
-        Guns guns = new Guns();
+        Iterable<Guns> guns = gunsRepository.findAll();
         model.addAttribute("guns",guns);
-        model.addAttribute("name",guns.getName());
         return "guns";
 
     }

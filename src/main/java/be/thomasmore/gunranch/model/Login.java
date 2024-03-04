@@ -1,4 +1,4 @@
 package be.thomasmore.gunranch.model;
 
-public class Inschrijvingen {
+public class Login {
 }
