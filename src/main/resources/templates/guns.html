@@ -23,16 +23,18 @@
                 <img class="card-img-top" th:src="${gun.image}" th:alt="${gun.name}" width="192" height="250">
                 <div class="card-body text-warning">
                     <h5 class="card-title" th:text="${gun.name}"></h5>
-                    <p class="card-text" th:text=" 'type: '+${gun.type}"></p>
-                    <p class="card-text" th:text="'magazine: '+${gun.magazine}"></p>
-                    <p class="card-text" th:text="'caliber: '+${gun.caliber}"></p>
-                    <p class="card-text" th:text="'price: '+${gun.price}"></p>
-                    <button type="button" class="btn btn-outline-warning">Meer info</button>
+                    <p class="card-text" th:text=" 'Type: '+${gun.type}"></p>
+                    <p class="card-text" th:text=" 'Magazine: '+${gun.magazine}"></p>
+                    <p class="card-text" th:text=" 'Caliber: '+${gun.caliber}"></p>
+                    <p class="card-text" th:text=" 'Price: '+${gun.price}"></p>
+                    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${gun.id}|}">Meer info</a>
 
                 </div>
             </div>
     </div>
 </div>
+
+
 </body>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 

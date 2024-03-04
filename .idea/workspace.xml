@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="afbeeldingen toegevoegd in database part 2&#10;Bio Taurus 95 stond dubbel in de database">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="gunsdetails controller gemaakt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,7 @@
       <workItem from="1709471664759" duration="2306000" />
       <workItem from="1709487389160" duration="8700000" />
       <workItem from="1709546264350" duration="12961000" />
-      <workItem from="1709578592532" duration="1610000" />
+      <workItem from="1709578592532" duration="3778000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1708967130134</created>
@@ -288,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709579287701</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="gunsdetails controller gemaakt">
+      <created>1709580340487</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709580340487</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +346,8 @@
     <MESSAGE value="correcte implementatie guns template (to do layout) bug fix users entity and small refactoring images etc" />
     <MESSAGE value="afbeeldingen toegevoegd in database guns" />
     <MESSAGE value="afbeeldingen toegevoegd in database part 2&#10;Bio Taurus 95 stond dubbel in de database" />
-    <option name="LAST_COMMIT_MESSAGE" value="afbeeldingen toegevoegd in database part 2&#10;Bio Taurus 95 stond dubbel in de database" />
+    <MESSAGE value="gunsdetails controller gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="gunsdetails controller gemaakt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
