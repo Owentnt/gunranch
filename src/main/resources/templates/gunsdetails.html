@@ -14,7 +14,18 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 
-<body>
+<body class="bg-dark">
+
+<div class="gunsbio">
+    <h1 class="text-center text-warning" th:text="${guns.name}"></h1>
+
+    <div class="image">
+        <img th:src="${guns.image}" th:alt="${guns.name}" width="192" height="124.7">
+    </div>
+
+    <div class="bio carousel-caption"></div>
+    <p th:text="${guns.bio}" class="text-center text-warning"></p>
+</div>
 
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>

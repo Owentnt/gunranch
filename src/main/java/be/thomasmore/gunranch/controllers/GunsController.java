@@ -28,7 +28,7 @@ public class GunsController {
     public String gunsDetails(Model model, @PathVariable(required = false)Integer id){
         if(id == null) return "gunsdetails";
         Optional<Guns> gunsDatabase = gunsRepository.findById(id);
-        gunsDatabase.ifPresent(venue -> model.addAttribute("venue", venue));
+        gunsDatabase.ifPresent(guns -> model.addAttribute("guns", guns));
         return "gunsdetails";
     }
 
