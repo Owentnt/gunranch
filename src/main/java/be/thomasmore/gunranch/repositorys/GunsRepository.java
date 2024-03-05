@@ -3,9 +3,12 @@ package be.thomasmore.gunranch.repositorys;
 import be.thomasmore.gunranch.model.Guns;
 import org.springframework.data.repository.CrudRepository;
 
-public interface GunsRepository extends CrudRepository<Guns,Integer> {
+import java.util.Optional;
+
+public interface GunsRepository extends CrudRepository<Guns, Integer> {
 
     Iterable<Guns> findByType(String type);
+
     Iterable<Guns> findByPriceLessThan(double max);
 
     Iterable<Guns> findByPriceBetween(double min, double max);
@@ -14,21 +17,13 @@ public interface GunsRepository extends CrudRepository<Guns,Integer> {
 
     Iterable<Guns> findByCaliber(String caliber);
 
-    Iterable<Guns> findFirstByOrderByIdDesc();
+    Optional<Guns> findFirstByOrderByIdDesc();
 
-    Iterable<Guns> findFirstByOrderByIdAsc();
+    Optional<Guns> findFirstByOrderByIdAsc();
 
-    Iterable <Guns> findFirstByIdLessThanOrderByIdDesc(Integer id);
+    Optional<Guns> findFirstByIdLessThanOrderByIdDesc(Integer id);
 
-    Iterable <Guns> findFirstByIdGreaterThanOrderByIdAsc(Integer id);
-
-
-
-
-
-
-
-
+    Optional<Guns> findFirstByIdGreaterThanOrderByIdAsc(Integer id);
 
 
 }

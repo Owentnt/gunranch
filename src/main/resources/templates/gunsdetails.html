@@ -29,11 +29,11 @@
 </div>
 
 <div class="previousgun">
-    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${guns.id}|}"><- Previous</a>
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${previousGun}|}"><- Previous</a>
 </div>
 
 <div class="nextgun">
-    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${guns.id}|}">Next -></a>
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${nextGun}|}">Next -></a>
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>

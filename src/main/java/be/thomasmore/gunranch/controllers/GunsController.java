@@ -29,6 +29,17 @@ public class GunsController {
         if(id == null) return "gunsdetails";
         Optional<Guns> gunsDatabase = gunsRepository.findById(id);
         gunsDatabase.ifPresent(guns -> model.addAttribute("guns", guns));
+        if (gunsDatabase.isPresent()) {
+            Optional<Guns> previousGun = gunsRepository.findFirstByIdLessThanOrderByIdDesc(id);
+            if (previousGun.isEmpty())
+                previousGun = gunsRepository.findFirstByOrderByIdDesc();
+            Optional<Guns> nextGun = gunsRepository.findFirstByIdGreaterThanOrderByIdAsc(id);
+            if (nextGun.isEmpty())
+                nextGun = gunsRepository.findFirstByOrderByIdAsc();
+            model.addAttribute("previousGun", previousGun.get().getId());
+            model.addAttribute("nextGun",nextGun.get().getId());
+        }
+
         return "gunsdetails";
     }
 
