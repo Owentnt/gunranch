@@ -14,6 +14,15 @@ public interface GunsRepository extends CrudRepository<Guns,Integer> {
 
     Iterable<Guns> findByCaliber(String caliber);
 
+    Iterable<Guns> findFirstByOrderByIdDesc();
+
+    Iterable<Guns> findFirstByOrderByIdAsc();
+
+    Iterable <Guns> findFirstByIdLessThanOrderByIdDesc(Integer id);
+
+    Iterable <Guns> findFirstByIdGreaterThanOrderByIdAsc(Integer id);
+
+
 
 
 

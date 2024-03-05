@@ -24,9 +24,17 @@
     </div>
 
     <div class="bio carousel-caption"></div>
+    <h6 class="text-center text-warning"><strong>Bio</strong></h6>
     <p th:text="${guns.bio}" class="text-center text-warning"></p>
 </div>
 
+<div class="previousgun">
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${guns.id}|}"><- Previous</a>
+</div>
+
+<div class="nextgun">
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${guns.id}|}">Next -></a>
+</div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 </body>
