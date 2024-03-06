@@ -17,29 +17,29 @@
 <body>
 
 <h1 class="text-center text-warning">Contact Us</h1>
-
-<form class="form-select w-50 my-5 justify-content-center">
-    <div class="form-group">
+<div class="container">
+<form class="form-select my-5 w-75">
+    <div class="form-group col-md-6">
         <label for="firstName" class="my-3"><strong>First Name:</strong></label>
         <input type="text" class="form-control" id="firstName" placeholder="First name">
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-6">
         <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
         <input type="text" class="form-control" id="lastName" placeholder="Last name">
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-6">
         <label for="emailAddress" class="my-3"><strong>Email:</strong></label>
         <input type="email" class="form-control" id="emailAddress" placeholder="Email">
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-6">
         <label for="phone" class="my-3"><strong>Phone number:</strong></label>
         <input type="number" class="form-control" id="phone" placeholder="Enter your phone number">
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-6">
         <label for="commentary" class="my-3"><strong>Ask your question:</strong></label>
         <textarea class="form-control" id="commentary" placeholder="Type your question" rows="5"></textarea>
     </div>
@@ -48,6 +48,7 @@
     <button type="submit" class="btn btn-warning my-3">Submit</button>
 
 </form>
+</div>
 
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
