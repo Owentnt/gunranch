@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="contact form gemaakt">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="form styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homepage" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,7 +110,7 @@
       <workItem from="1709546264350" duration="12961000" />
       <workItem from="1709578592532" duration="3778000" />
       <workItem from="1709661873427" duration="4774000" />
-      <workItem from="1709725990715" duration="13542000" />
+      <workItem from="1709725990715" duration="14244000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1708967130134</created>
@@ -343,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709740881542</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="form styling">
+      <created>1709751049617</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1709751049617</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +371,13 @@
                       </list>
                     </value>
                   </entry>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value="nav" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
               </option>
             </State>
@@ -373,7 +387,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="links aanklikbaar gemaakt in navbar" />
     <MESSAGE value="fragment van footer gemaakt" />
     <MESSAGE value="fragment van header gemaakt" />
     <MESSAGE value="image als achtergrond gezet" />
@@ -398,7 +411,8 @@
     <MESSAGE value="form gemaakt om te reserveren" />
     <MESSAGE value="about us pagina text toegevoegd" />
     <MESSAGE value="contact form gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact form gemaakt" />
+    <MESSAGE value="form styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="form styling" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
