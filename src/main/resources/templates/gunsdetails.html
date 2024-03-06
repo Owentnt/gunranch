@@ -14,7 +14,7 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 
-<body class="bg-dark">
+<body class="bg-secondary">
 
 <div class="gunsbio">
     <h1 class="text-center text-warning" th:text="${guns.name}"></h1>
@@ -28,12 +28,12 @@
     <p th:text="${guns.bio}" class="text-center text-warning"></p>
 </div>
 
-<div class="previousgun">
-    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${previousGun}|}"><- Previous</a>
+<div class="previousgun text-start d-inline-flex ">
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${previousGun}|}">Previous</a>
 </div>
 
-<div class="nextgun">
-    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${nextGun}|}">Next -></a>
+<div class="nextgun text-end d-inline-flex">
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${nextGun}|}">Next</a>
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
