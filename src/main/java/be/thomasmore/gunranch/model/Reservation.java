@@ -5,7 +5,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
@@ -17,7 +16,7 @@ public class Reservation {
 
     private String lastName;
 
-    private String emailAdres;
+    private String emailAddress;
 
     private String phoneNumber;
 
@@ -41,7 +40,7 @@ public class Reservation {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailAdres = emailAdres;
+        this.emailAddress = emailAdres;
         this.phoneNumber = phoneNumber;
         this.amountOfParticipants = amountOfParticipants;
         this.date = date;
@@ -79,12 +78,12 @@ public class Reservation {
         this.lastName = lastName;
     }
 
-    public String getEmailAdres() {
-        return emailAdres;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setEmailAdres(String emailAdres) {
-        this.emailAdres = emailAdres;
+    public void setEmailAddress(String emailAdres) {
+        this.emailAddress = emailAdres;
     }
 
     public String getPhoneNumber() {

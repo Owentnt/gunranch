@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="time veriable aangemaakt in Reservation class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/CompetitionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/ParticipantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/ReservationRepository.java" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="time veld toegevoegd aan reservation form">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709895946799</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="time veld toegevoegd aan reservation form">
+      <created>1709896518925</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1709896518925</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="image als achtergrond gezet" />
     <MESSAGE value="login knop toegevoegd" />
     <MESSAGE value="form klaargezet" />
     <MESSAGE value="footer wat bijgewerkt" />
@@ -440,7 +444,8 @@
     <MESSAGE value="form styling" />
     <MESSAGE value="Dockerfile aangemaakt" />
     <MESSAGE value="time veriable aangemaakt in Reservation class" />
-    <option name="LAST_COMMIT_MESSAGE" value="time veriable aangemaakt in Reservation class" />
+    <MESSAGE value="time veld toegevoegd aan reservation form" />
+    <option name="LAST_COMMIT_MESSAGE" value="time veld toegevoegd aan reservation form" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
