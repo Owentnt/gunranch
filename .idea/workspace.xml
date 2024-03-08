@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="bezig met reguirements voor fields">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment=" requierement voor fields bijna klaar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,8 @@
       <workItem from="1709799068454" duration="624000" />
       <workItem from="1709820307652" duration="615000" />
       <workItem from="1709835797945" duration="3524000" />
-      <workItem from="1709922064325" duration="2044000" />
+      <workItem from="1709922064325" duration="2353000" />
+      <workItem from="1709932639386" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1708967130134</created>
@@ -433,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709914766270</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary=" requierement voor fields bijna klaar">
+      <created>1709924369499</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1709924369499</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +476,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Extra wapens bij toegevoegd" />
     <MESSAGE value="Laatste rij toegevoegd" />
     <MESSAGE value="Guns pagina is klaar" />
     <MESSAGE value="correcte implementatie guns template (to do layout) bug fix users entity and small refactoring images etc" />
@@ -495,7 +500,8 @@
     <MESSAGE value="fiels required gemaakt" />
     <MESSAGE value="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)" />
     <MESSAGE value="bezig met reguirements voor fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="bezig met reguirements voor fields" />
+    <MESSAGE value=" requierement voor fields bijna klaar" />
+    <option name="LAST_COMMIT_MESSAGE" value=" requierement voor fields bijna klaar" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
