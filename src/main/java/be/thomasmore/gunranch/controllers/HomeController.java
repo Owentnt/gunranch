@@ -22,16 +22,6 @@ public class HomeController {
         model.addAttribute("model",model);
         return "about-us";
     }
-    @GetMapping("/contact")
-    public String contactUs(Model model){
-        String phoneNumber = "0494 31 00 04";
-        String emailAdres = "owentm031111@gmail.com";
-        String adres = "Duivebergen 2B 3140 Keerbergen";
-        model.addAttribute("model",model);
-        model.addAttribute("phoneNumber",phoneNumber);
-        model.addAttribute("emailAdres",emailAdres);
-        model.addAttribute("adres",adres);
-        return "contact";
-    }
+
 
 }
