@@ -4,7 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -13,26 +14,46 @@ public class Reservation {
     @Id
     private int id;
 
+    @NotBlank(message = "First name is required")
     private String firstName;
 
+    @NotBlank(message = "Last name is required")
     private String lastName;
 
+    @NotBlank(message = "Email address is required")
+    @Email(message = "Please enter a valid email")
     private String emailAddress;
 
     @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
+    @NotBlank(message = "Phone number is required")
     private String phoneNumber;
 
+    @NotBlank(message = "Amount of participants is required")
+    @Min( value = 1, message = "Please enter a positive number")
+    @Max(value = 8, message = "Max 8 participants")
     private int amountOfParticipants;
 
+
+    @DateTimeFormat(pattern = "DD/MM/YYYY")
+    @NotBlank(message = "Date is required")
+    @Future(message = "Please select a date in the future")
     @Temporal(TemporalType.DATE)
     private Date date;
 
+    @FutureOrPresent(message = "Please select a time in the present or future")
+    @NotBlank(message = "Time is required")
+    @DateTimeFormat(pattern = "HH:MM")
     @Temporal(TemporalType.TIME)
     private Date time;
+
+
     private boolean member;
 
+
+    @NotBlank(message = "Address is required")
     private String Address;
 
+    @NotBlank(message = "City is required")
     private String city;
 
     public Reservation(int id, String firstName, String lastName,
