@@ -47,8 +47,12 @@ public class Reservation {
         this.date = date;
         this.time = time;
         this.member = member;
-        Address = address;
+        this.Address = address;
         this.city = city;
+    }
+
+    public Reservation() {
+
     }
 
     public int getId() {
