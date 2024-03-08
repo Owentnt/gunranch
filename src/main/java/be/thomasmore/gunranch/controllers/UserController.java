@@ -19,18 +19,20 @@ public class UserController {
 
     @GetMapping("/reservations")
     public String reservations(Model model){
-        Iterable<Reservation> reservations = reservationRepository.findAll();
         model.addAttribute("model",model);
-        model.addAttribute("reservations",reservations);
+        model.addAttribute("reservations", new Reservation());
         return "reservations";
     }
 
     @PostMapping("/reservations")
-    public String submitReservation(@Valid Reservation reservation, BindingResult bindingResult){
+    public String submitReservation(@Valid Reservation reservations, BindingResult bindingResult, Model model){
         if (bindingResult.hasErrors()){
             return "reservations";
         }
-        return "reservationdetails";
+        model.addAttribute("reservations",reservations);
+
+
+        return "redirect:/reservationdetails";
     }
 
     @GetMapping("/reservationdetails")
