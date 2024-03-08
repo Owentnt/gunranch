@@ -20,13 +20,12 @@ public class User {
 
     private String passWord;
 
-    public User(int id, String firstName, String lastName, String emailAddress, String phoneNumber, String passWord) {
+    public User(int id, String firstName, String lastName, String emailAddress, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
-        this.passWord = passWord;
     }
 
     public User() {
