@@ -22,19 +22,23 @@
     <div class="row">
     <div class="form-group col-md-6">
         <label for="firstName" class="my-3"><strong>First Name:</strong></label>
-        <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+        <input type="text" class="form-control" id="firstName" placeholder="First name" th:field="*{firstName}" required>
+        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
     </div>
 
     <div class="form-group col-md-6">
         <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
-        <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+        <input type="text" class="form-control" id="lastName" placeholder="Last name" th:field="*{lastName}" required>
+        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
     </div>
     </div>
 
     <div class="row">
     <div class="form-group col-md-6">
         <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>
-        <input type="email" class="form-control" id="emailAddress" placeholder="Email" required>
+        <input type="email" class="form-control" id="emailAddress" placeholder="Email" required th:field="*{emailAddress}">
+        <span th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></span>
+
     </div>
 
     <div class="form-group col-md-6">
@@ -47,31 +51,38 @@
     <div class="row">
     <div class="form-group col-md-6">
         <label for="address" class="my-3"><strong>Address:</strong></label>
-        <input type="text" class="form-control" id="address" placeholder="Enter your Address" required>
+        <input type="text" class="form-control" id="address" placeholder="Enter your Address" required th:field="*{address}">
+        <span th:if="${#fields.hasErrors('Address')}" th:errors="*{address}"></span>
     </div>
 
     <div class="form-group col-md-6">
         <label for="city" class="my-3"><strong>City:</strong></label>
-        <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+        <input type="text" class="form-control" id="city" placeholder="Enter your city" required th:field="*{city}">
+        <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></span>
+
     </div>
     </div>
     <div class="row">
     <div class="form-group col-md-4">
         <label for="participants" class="my-3"><strong>Amount of participants:</strong></label>
-        <input type="number" class="form-control" id="participants" placeholder="Amount of participants" required>
+        <input type="number" class="form-control" id="participants" placeholder="Amount of participants" required th:field="*{amountOfParticipants}">
+        <span th:if="${#fields.hasErrors('AmountOfParticipants')}" th:errors="*{amountOfParticipants}"></span>
     </div>
     <div class="form-group col-md-4">
         <label class="control-label my-3" for="date" ><strong>Date:</strong></label>
-        <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY" required>
+        <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY" required th:field="*{date}">
+        <span th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></span>
     </div>
         <div class="form-group col-md-4">
             <label class="control-label my-3" for="time"><strong>Time:</strong></label>
-            <input type="text" class="form-control" id="time" placeholder="00:00" required>
+            <input type="text" class="form-control" id="time" placeholder="00:00" required th:field="*{time}">
+            <span th:if="${#fields.hasErrors('time')}" th:errors="*{time}"></span>
         </div>
     </div>
     <div class="form-group">
         <label for="member" class="my-3 form-check-label"><strong>Member:</strong></label>
-        <input type="checkbox" class="form-control form-check-input" id="member" placeholder="Amount of participants">
+        <input type="checkbox" class="form-control form-check-input" id="member" th:field="*{member}">
+        <span th:if="${#fields.hasErrors('member')}" th:errors="*{member}"></span>
     </div>
 
     <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none">Submit</a></button>
