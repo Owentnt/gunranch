@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="fiels required gemaakt">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -420,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709911882917</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)">
+      <created>1709912719842</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1709912719842</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="eerste card gemaakt" />
     <MESSAGE value="Bio Taurus 95 verplaatst want stond bij foute record" />
     <MESSAGE value="Extra wapens bij toegevoegd" />
     <MESSAGE value="Laatste rij toegevoegd" />
@@ -482,7 +486,8 @@
     <MESSAGE value="extra waarden toegevoegd bij competitions" />
     <MESSAGE value="extra waarden bij competition model" />
     <MESSAGE value="fiels required gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="fiels required gemaakt" />
+    <MESSAGE value="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)" />
+    <option name="LAST_COMMIT_MESSAGE" value="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

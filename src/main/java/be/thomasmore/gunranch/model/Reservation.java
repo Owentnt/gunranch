@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.validation.constraints.Pattern;
 
 import java.util.Date;
 
@@ -18,6 +19,7 @@ public class Reservation {
 
     private String emailAddress;
 
+    @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
     private String phoneNumber;
 
     private int amountOfParticipants;

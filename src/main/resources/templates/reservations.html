@@ -18,7 +18,7 @@
 
 <h1 class="text-center text-warning">Make a reservation</h1>
 <div class="container">
-<form class="my-5">
+<form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
     <div class="row">
     <div class="form-group col-md-6">
         <label for="firstName" class="my-3"><strong>First Name:</strong></label>
@@ -39,7 +39,8 @@
 
     <div class="form-group col-md-6">
         <label for="phone" class="my-3"><strong>Phone number:</strong></label>
-        <input type="number" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" th:field="*{phone}" required>
+        <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
     </div>
     </div>
 
