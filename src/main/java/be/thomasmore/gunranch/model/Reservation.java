@@ -2,6 +2,8 @@ package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,8 +23,11 @@ public class Reservation {
 
     private int amountOfParticipants;
 
+    @Temporal(TemporalType.DATE)
     private Date date;
 
+    @Temporal(TemporalType.TIME)
+    private Date time;
     private boolean member;
 
     private String Address;
@@ -31,7 +36,7 @@ public class Reservation {
 
     public Reservation(int id, String firstName, String lastName,
                        String emailAdres, String phoneNumber,
-                       int amountOfParticipants, Date date, boolean member,
+                       int amountOfParticipants, Date date, Date time, boolean member,
                        String address, String city) {
         this.id = id;
         this.firstName = firstName;
@@ -40,6 +45,7 @@ public class Reservation {
         this.phoneNumber = phoneNumber;
         this.amountOfParticipants = amountOfParticipants;
         this.date = date;
+        this.time = time;
         this.member = member;
         Address = address;
         this.city = city;
@@ -123,5 +129,13 @@ public class Reservation {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 }
