@@ -11,9 +11,9 @@ import java.util.Set;
 @Entity
 public class Competitions {
     @Id
-    private Integer id;
+    private int id;
 
-    private String name;
+    private String title;
 
     @Temporal(TemporalType.TIME)
     private Date startingHour;
@@ -22,93 +22,133 @@ public class Competitions {
     private Date endingHour;
 
     @Temporal(TemporalType.DATE)
-    private Date Date;
+    private Date date;
 
-    private int participationPrice;
+    private double participationPrice;
 
-    private String info;
+    @ManyToOne
+    private Guns guns;
 
-    //Nr of participants
+    private String objective;
 
-    //guns allowed
+    private int rating;
 
-    //rating
+    @ManyToOne
+    private Participants nrOfParticipants;
+
     private String image;
 
+    private String rules;
 
-    public Competitions(String name, java.util.Date startingHour, java.util.Date endingHour, java.util.Date date, int participationPrice, String info, Participants numberOfParticipants, String image) {
-        this.name = name;
+    private String timeLimit;
+
+    private String rounds;
+
+    private String safety;
+
+    public Competitions(int id, String title, Date startingHour, Date endingHour,
+                        Date date, double participationPrice, Guns guns,
+                        String objective, int rating, Participants nrOfParticipants,
+                        String image, String rules, String timeLimit,
+                        String rounds, String safety) {
+        this.id = id;
+        this.title = title;
         this.startingHour = startingHour;
         this.endingHour = endingHour;
-        Date = date;
+        this.date = date;
         this.participationPrice = participationPrice;
-        this.info = info;
-        this.numberOfParticipants = numberOfParticipants;
+        this.guns = guns;
+        this.objective = objective;
+        this.rating = rating;
+        this.nrOfParticipants = nrOfParticipants;
         this.image = image;
+        this.rules = rules;
+        this.timeLimit = timeLimit;
+        this.rounds = rounds;
+        this.safety = safety;
     }
 
-    public Integer getId() {
+    public Competitions() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public java.util.Date getStartingHour() {
+    public Date getStartingHour() {
         return startingHour;
     }
 
-    public void setStartingHour(java.util.Date startingHour) {
+    public void setStartingHour(Date startingHour) {
         this.startingHour = startingHour;
     }
 
-    public java.util.Date getEndingHour() {
+    public Date getEndingHour() {
         return endingHour;
     }
 
-    public void setEndingHour(java.util.Date endingHour) {
+    public void setEndingHour(Date endingHour) {
         this.endingHour = endingHour;
     }
 
-    public java.util.Date getDate() {
-        return Date;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDate(java.util.Date date) {
-        Date = date;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public int getParticipationPrice() {
+    public double getParticipationPrice() {
         return participationPrice;
     }
 
-    public void setParticipationPrice(int participationPrice) {
+    public void setParticipationPrice(double participationPrice) {
         this.participationPrice = participationPrice;
     }
 
-    public String getInfo() {
-        return info;
+    public Guns getGuns() {
+        return guns;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setGuns(Guns guns) {
+        this.guns = guns;
     }
 
-    public Participants getNumberOfParticipants() {
-        return numberOfParticipants;
+    public String getObjective() {
+        return objective;
     }
 
-    public void setNumberOfParticipants(Participants numberOfParticipants) {
-        this.numberOfParticipants = numberOfParticipants;
+    public void setObjective(String objective) {
+        this.objective = objective;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public Participants getNrOfParticipants() {
+        return nrOfParticipants;
+    }
+
+    public void setNrOfParticipants(Participants nrOfParticipants) {
+        this.nrOfParticipants = nrOfParticipants;
     }
 
     public String getImage() {
@@ -117,5 +157,37 @@ public class Competitions {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getRules() {
+        return rules;
+    }
+
+    public void setRules(String rules) {
+        this.rules = rules;
+    }
+
+    public String getTimeLimit() {
+        return timeLimit;
+    }
+
+    public void setTimeLimit(String timeLimit) {
+        this.timeLimit = timeLimit;
+    }
+
+    public String getRounds() {
+        return rounds;
+    }
+
+    public void setRounds(String rounds) {
+        this.rounds = rounds;
+    }
+
+    public String getSafety() {
+        return safety;
+    }
+
+    public void setSafety(String safety) {
+        this.safety = safety;
     }
 }
