@@ -82,8 +82,8 @@ public class Reservation {
         return emailAddress;
     }
 
-    public void setEmailAddress(String emailAdres) {
-        this.emailAddress = emailAdres;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public String getPhoneNumber() {
@@ -110,6 +110,14 @@ public class Reservation {
         this.date = date;
     }
 
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
     public boolean isMember() {
         return member;
     }
@@ -132,13 +140,5 @@ public class Reservation {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
     }
 }
