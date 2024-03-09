@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="Requirements toegevoegd bij alle velden">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="participationform en competitionsdetails toegevoegd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/ParticipantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/ParticipantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -116,7 +118,9 @@
       <workItem from="1709820307652" duration="615000" />
       <workItem from="1709835797945" duration="3524000" />
       <workItem from="1709922064325" duration="2353000" />
-      <workItem from="1709932639386" duration="4602000" />
+      <workItem from="1709932639386" duration="5196000" />
+      <workItem from="1709983233548" duration="1531000" />
+      <workItem from="1709984868817" duration="2670000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1708967130134</created>
@@ -454,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709934787739</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="participationform en competitionsdetails toegevoegd">
+      <created>1709937453604</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1709937453604</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="afbeeldingen toegevoegd in database guns" />
     <MESSAGE value="afbeeldingen toegevoegd in database part 2&#10;Bio Taurus 95 stond dubbel in de database" />
     <MESSAGE value="gunsdetails controller gemaakt" />
     <MESSAGE value="details pagina aangevuld part 1" />
@@ -516,7 +526,8 @@
     <MESSAGE value="phoneNumber pattern test" />
     <MESSAGE value="phone number required gemaakt met @Notblank" />
     <MESSAGE value="Requirements toegevoegd bij alle velden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Requirements toegevoegd bij alle velden" />
+    <MESSAGE value="participationform en competitionsdetails toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="participationform en competitionsdetails toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

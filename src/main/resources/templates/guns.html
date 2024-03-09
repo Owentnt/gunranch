@@ -17,6 +17,34 @@
 <body>
 
 <h1 class="text-warning text-center">Types of Guns</h1>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Type of Gun
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Handgun</a>
+        <a class="dropdown-item" href="#">Shotgun</a>
+        <a class="dropdown-item" href="#">SMG</a>
+        <a class="dropdown-item" href="#">Rifles</a>
+        <a class="dropdown-item" href="#">Assault Rifles</a>
+        <a class="dropdown-item" href="#">Machine guns</a>
+        <a class="dropdown-item" href="#">Sniper Rifles</a>
+    </div>
+    <div class="minMagazineFilter">
+        <label for="minMagazineFilter" class="form-label">Min Magazine</label>
+        <input type="number" name="minMagazineFilter" id="minMagazineFilter" placeholder="minMagazineFilter" th:value="${minCapacity}" step="1" min="5" max="35" th:class="w-50">
+    </div>
+    <div class="maxMagazineFilter">
+        <label for="maxMagazineFilter" class="form-label">Max Magazine</label>
+        <input type="number" name="maxMagazineFilter" id="maxMagazineFilter" placeholder="maxMagazineFilter" th:value="${minCapacity}" step="1" min="5" max="35" th:class="w-50">
+    </div>
+    <div class="caliberFilter">
+    <label for="caliberFilter" class="form-label">Caliber</label>
+        <input type="search" name="caliberFilter" id="caliberFilter" placeholder="Search">
+    </div>
+</div>
+
 <div class="weapons mt-5 mb-5">
     <div class="row justify-content-center mx-5">
             <div th:each="gun:${guns}" class="card card border-warning col-md-4">
