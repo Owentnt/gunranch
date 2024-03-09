@@ -32,17 +32,25 @@
         <a class="dropdown-item" href="#">Sniper Rifles</a>
     </div>
     <div class="minMagazineFilter">
-        <label for="minMagazineFilter" class="form-label">Min Magazine</label>
-        <input type="number" name="minMagazineFilter" id="minMagazineFilter" placeholder="minMagazineFilter" th:value="${minCapacity}" step="1" min="5" max="35" th:class="w-50">
+        <label for="minPrice" class="form-label">Min Magazine</label>
+        <input type="number" name="minMagazineFilter" id="minPrice" placeholder="minMagazine" th:value="${minCapacity}" step="1" min="5" max="35" th:class="w-75">
     </div>
     <div class="maxMagazineFilter">
         <label for="maxMagazineFilter" class="form-label">Max Magazine</label>
-        <input type="number" name="maxMagazineFilter" id="maxMagazineFilter" placeholder="maxMagazineFilter" th:value="${minCapacity}" step="1" min="5" max="35" th:class="w-50">
+        <input type="number" name="maxMagazineFilter" id="maxMagazineFilter" placeholder="maxMagazine" th:value="${minCapacity}" step="1" min="5" max="35" th:class="w-75">
     </div>
     <div class="caliberFilter">
-    <label for="caliberFilter" class="form-label">Caliber</label>
-        <input type="search" name="caliberFilter" id="caliberFilter" placeholder="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-warning"type="submit">Search</button></div>
+    <div class="minMagazineFilter">
+        <label for="minPrice" class="form-label">Min Price</label>
+        <input type="number" name="minPrice" id="minMagazineFilter" placeholder="minPrice" th:value="${minCapacity}" step="1" min="1" max="25" th:class="w-75">
     </div>
+    <div class="maxMagazineFilter">
+        <label for="maxPrice" class="form-label">Max Price</label>
+        <input type="number" name="maxPrice" id="maxPrice" placeholder="max Price" th:value="${minCapacity}" step="1" min="1" max="25" th:class="w-75">
+    </div>
+
 </div>
 
 <div class="weapons mt-5 mb-5">
