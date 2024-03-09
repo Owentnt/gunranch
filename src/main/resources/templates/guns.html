@@ -42,13 +42,17 @@
     <div class="caliberFilter">
         <input class="form-control mr-sm-2" type="search" placeholder="Search">
         <button class="btn btn-outline-warning"type="submit">Search</button></div>
-    <div class="minMagazineFilter">
+    <div class="minPriceFilter">
         <label for="minPrice" class="form-label">Min Price</label>
         <input type="number" name="minPrice" id="minMagazineFilter" placeholder="minPrice" th:value="${minCapacity}" step="1" min="1" max="25" th:class="w-75">
     </div>
-    <div class="maxMagazineFilter">
+    <div class="maxPriceFilter">
         <label for="maxPrice" class="form-label">Max Price</label>
         <input type="number" name="maxPrice" id="maxPrice" placeholder="max Price" th:value="${minCapacity}" step="1" min="1" max="25" th:class="w-75">
+    </div>
+    <div class="FirearmsFilter">
+        <label for="Semi-Auto" class="form-label">Firearms Type</label>
+        <input type="radio" class="form-control" name="Semi-Auto" id="Semi-Auto" value="true" th:class="w-25" >
     </div>
 
 </div>
