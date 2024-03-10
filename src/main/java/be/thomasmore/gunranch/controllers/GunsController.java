@@ -26,8 +26,8 @@ public class GunsController {
                        @RequestParam (required = false) Integer minMagazine,
                        @RequestParam (required = false) Integer maxMagazine,
                        @RequestParam (required = false) String caliber,
-                       @RequestParam (required = false) int minPrice,
-                       @RequestParam (required = false) int maxPrice,
+                       @RequestParam (required = false) Integer minPrice,
+                       @RequestParam (required = false) Integer maxPrice,
                        @RequestParam (required = false) String firearmsType){
         logger.info(String.format("guns -- type=%s", type));
         logger.info(String.format("guns -- minmagazine=%d", minMagazine));
@@ -49,6 +49,8 @@ public class GunsController {
         return "guns";
 
     }
+
+
 
     @GetMapping({"/gunsdetails/{id}","/gunsdetails"})
     public String gunsDetails(Model model, @PathVariable(required = false)Integer id){

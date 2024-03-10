@@ -27,12 +27,14 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
 
     Optional<Guns> findFirstByIdGreaterThanOrderByIdAsc(Integer id);
 
+
+
     @Query("SELECT g from Guns g WHERE " +
             "(:type IS NULL OR :type <= g.type) AND " +
-            "(:minMagazine IS NULL OR g.magazine <= :minMagazine) AND " +
+            "(:minMagazine IS NULL OR :minMagazine <= g.magazine) AND " +
             "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine) AND " +
             "(:caliber IS NULL OR g.caliber = :caliber) AND " +
-            "(:minPrice IS NULL OR g.price <= :minPrice) AND " +
+            "(:minPrice IS NULL OR :minPrice <= g.price) AND " +
             "(:maxPrice IS NULL OR g.price <= :maxPrice) AND " +
             "(:firearmsType IS NULL OR :firearmsType <= g.firearmType)")
 
