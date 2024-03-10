@@ -14,15 +14,16 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 <body>
-<div class="inleiding">
-    <img src="/images/gun-background-img.jpg" class="img-fluid" alt="">
-    <div class="bg-warning ">
+<div class="inleiding img-fluid" style="background-image: url('/images/gun-background-img.jpg')">
+    <div>
         <div class="title">
             <h1 th:text=" 'Welcome to '+${name}" class="text-center text-warning"></h1>
         </div>
-        <p class="text-center carousel-caption text-dark bg-warning">Welcome to Bullseye Shooting Academy, where precision meets passion,
+        <p class="text-center container mt-5 text-dark">Welcome to Bullseye Shooting Academy, where precision meets
+            passion,
             and enthusiasts gather to experience the thrill of marksmanship in a safe and welcoming environment.
-            Established with a commitment to promoting responsible firearm ownership, education, and a sense of camaraderie, our gun range is more than just a shooting facility—it's a community.
+            Established with a commitment to promoting responsible firearm ownership, education, and a sense of
+            camaraderie, our gun range is more than just a shooting facility—it's a community.
 
         </p>
 

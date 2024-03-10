@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="corrigeren van guns controller">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="filter knop toegevoegd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +123,8 @@
       <workItem from="1710012749673" duration="2560000" />
       <workItem from="1710071348482" duration="1082000" />
       <workItem from="1710074638472" duration="3974000" />
-      <workItem from="1710079502255" duration="4232000" />
-    </task>
-    <task id="LOCAL-00010" summary="image als achtergrond gezet">
-      <created>1709308333354</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1709308333354</updated>
+      <workItem from="1710079502255" duration="5051000" />
+      <workItem from="1710087136960" duration="1331000" />
     </task>
     <task id="LOCAL-00011" summary="login knop toegevoegd">
       <created>1709308369681</created>
@@ -469,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710081099648</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="filter knop toegevoegd">
+      <created>1710083955034</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1710083955034</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,13 +490,6 @@
                       </list>
                     </value>
                   </entry>
-                  <entry key="text">
-                    <value>
-                      <list>
-                        <option value="nav" />
-                      </list>
-                    </value>
-                  </entry>
                 </map>
               </option>
             </State>
@@ -506,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="form styling" />
     <MESSAGE value="Dockerfile aangemaakt" />
     <MESSAGE value="time veriable aangemaakt in Reservation class" />
     <MESSAGE value="time veld toegevoegd aan reservation form" />
@@ -531,7 +523,8 @@
     <MESSAGE value="query gemaakt voor guns repository" />
     <MESSAGE value="radio buttons afgemaakt" />
     <MESSAGE value="corrigeren van guns controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrigeren van guns controller" />
+    <MESSAGE value="filter knop toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter knop toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
