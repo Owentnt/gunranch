@@ -24,8 +24,9 @@ public class Guns {
 
     private double price;
 
+    private String firearmType;
     private String image;
-    public Guns(int id, String name, String type, int magazine, String caliber, String bio, double price, String image) {
+    public Guns(int id, String name, String type, int magazine, String caliber, String bio, double price, String firearmType, String image) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -33,6 +34,7 @@ public class Guns {
         this.caliber = caliber;
         this.bio = bio;
         this.price = price;
+        this.firearmType = firearmType;
         this.image = image;
     }
 
@@ -103,5 +105,13 @@ public class Guns {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getFirearmType() {
+        return firearmType;
+    }
+
+    public void setFirearmType(String firearmType) {
+        this.firearmType = firearmType;
     }
 }

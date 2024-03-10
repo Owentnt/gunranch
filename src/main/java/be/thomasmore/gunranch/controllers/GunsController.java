@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Optional;
 
@@ -17,7 +18,7 @@ public class GunsController {
     GunsRepository gunsRepository;
 
     @GetMapping("/guns")
-    public String guns(Model model){
+    public String guns(Model model, @RequestParam (required = false) int ){
         Iterable<Guns> guns = gunsRepository.findAll();
         model.addAttribute("guns",guns);
         return "guns";

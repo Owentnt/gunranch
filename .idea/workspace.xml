@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="min en max prijs toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="radiobuttons full auto and semi auto (onder constructie)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,14 +120,8 @@
       <workItem from="1709983233548" duration="1531000" />
       <workItem from="1709984868817" duration="3348000" />
       <workItem from="1709988273683" duration="19000" />
-      <workItem from="1710012749673" duration="2527000" />
-    </task>
-    <task id="LOCAL-00003" summary="paginas wat verder uitgewerkt en data klaargemaakt voor guns">
-      <created>1709056837264</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1709056837264</updated>
+      <workItem from="1710012749673" duration="2560000" />
+      <workItem from="1710071348482" duration="724000" />
     </task>
     <task id="LOCAL-00004" summary="bezig met andere databases">
       <created>1709068326304</created>
@@ -464,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710014275916</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="radiobuttons full auto and semi auto (onder constructie)">
+      <created>1710015304986</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1710015304986</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="details pagina aangevuld part 1" />
     <MESSAGE value="Iterables toegevoegd voor next en previous buttons" />
     <MESSAGE value="previous en next buttons actief" />
     <MESSAGE value="form gemaakt om in te loggen" />
@@ -526,7 +527,8 @@
     <MESSAGE value="participationform en competitionsdetails toegevoegd" />
     <MESSAGE value="filter buttons toevoegen en styling" />
     <MESSAGE value="min en max prijs toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="min en max prijs toegevoegd" />
+    <MESSAGE value="radiobuttons full auto and semi auto (onder constructie)" />
+    <option name="LAST_COMMIT_MESSAGE" value="radiobuttons full auto and semi auto (onder constructie)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
