@@ -2,6 +2,7 @@ package be.thomasmore.gunranch.repositorys;
 
 import be.thomasmore.gunranch.model.Guns;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
@@ -25,5 +26,12 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
 
     Optional<Guns> findFirstByIdGreaterThanOrderByIdAsc(Integer id);
 
+    Iterable<Guns> findByFilter(@Param("type") String type,
+                                 @Param("minMagazine") Integer minMagazine,
+                                 @Param("maxMagazine") Integer maxMagazine,
+                                 @Param("caliber") String caliber,
+                                 @Param("minPrice") Integer minPrice,
+                                 @Param("maxPrice") Integer maxPrice,
+                                @Param("firearmsType") String firearmsType);
 
 }

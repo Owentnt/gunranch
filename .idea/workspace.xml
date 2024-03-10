@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="variable firearmsType toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="request parameters toegevoegd aan /guns">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +122,7 @@
       <workItem from="1709988273683" duration="19000" />
       <workItem from="1710012749673" duration="2560000" />
       <workItem from="1710071348482" duration="1082000" />
-    </task>
-    <task id="LOCAL-00005" summary="problemen met controllers en database opgelost">
-      <created>1709114999180</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1709114999180</updated>
+      <workItem from="1710074638472" duration="2519000" />
     </task>
     <task id="LOCAL-00006" summary="navbar gemaakt">
       <created>1709131118017</created>
@@ -464,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710072112444</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="request parameters toegevoegd aan /guns">
+      <created>1710074760957</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1710074760958</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="previous en next buttons actief" />
     <MESSAGE value="form gemaakt om in te loggen" />
     <MESSAGE value="form gemaakt om te reserveren" />
     <MESSAGE value="about us pagina text toegevoegd" />
@@ -526,7 +528,8 @@
     <MESSAGE value="min en max prijs toegevoegd" />
     <MESSAGE value="radiobuttons full auto and semi auto (onder constructie)" />
     <MESSAGE value="variable firearmsType toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="variable firearmsType toegevoegd" />
+    <MESSAGE value="request parameters toegevoegd aan /guns" />
+    <option name="LAST_COMMIT_MESSAGE" value="request parameters toegevoegd aan /guns" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

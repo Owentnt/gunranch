@@ -2,6 +2,8 @@ package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.repositorys.GunsRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +16,8 @@ import java.util.Optional;
 @Controller
 public class GunsController {
 
+    private Logger logger = LoggerFactory.getLogger(GunsController.class);
+
     @Autowired
     GunsRepository gunsRepository;
 
@@ -25,8 +29,23 @@ public class GunsController {
                        @RequestParam (required = false) int minPrice,
                        @RequestParam (required = false) int maxPrice,
                        @RequestParam (required = false) String firearmsType){
-        Iterable<Guns> guns = gunsRepository.findAll();
-        model.addAttribute("guns",guns);
+        logger.info(String.format("guns -- type=%d", type));
+        logger.info(String.format("guns -- minmagazine=%d", minMagazine));
+        logger.info(String.format("guns -- maxmagazine=%d", maxMagazine));
+        logger.info(String.format("guns -- caliber=%d", caliber));
+        logger.info(String.format("guns -- minprice=%d", minPrice));
+        logger.info(String.format("guns -- maxprice=%d", maxPrice));
+        logger.info(String.format("guns -- firearmstype=%d", firearmsType));
+        Iterable<Guns> allGuns = gunsRepository.findAll();
+        allGuns = gunsRepository.findByFilter(type,minMagazine,maxMagazine,caliber,minPrice,maxPrice,firearmsType);
+        model.addAttribute("allGuns",allGuns);
+        model.addAttribute("type",type);
+        model.addAttribute("minMagazine",minMagazine);
+        model.addAttribute("maxMagazine",maxMagazine);
+        model.addAttribute("caliber",caliber);
+        model.addAttribute("minPrice",minPrice);
+        model.addAttribute("maxPrice",maxPrice);
+        model.addAttribute("firearmsType",firearmsType);
         return "guns";
 
     }
