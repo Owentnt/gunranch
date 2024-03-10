@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="query gemaakt voor guns repository">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="radio buttons afgemaakt">
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +121,7 @@
       <workItem from="1710012749673" duration="2560000" />
       <workItem from="1710071348482" duration="1082000" />
       <workItem from="1710074638472" duration="3974000" />
-      <workItem from="1710079502255" duration="1184000" />
-    </task>
-    <task id="LOCAL-00008" summary="fragment van footer gemaakt">
-      <created>1709137089519</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1709137089519</updated>
+      <workItem from="1710079502255" duration="1488000" />
     </task>
     <task id="LOCAL-00009" summary="fragment van header gemaakt">
       <created>1709137630501</created>
@@ -469,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710078526841</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="radio buttons afgemaakt">
+      <created>1710080801273</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1710080801274</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="about us pagina text toegevoegd" />
     <MESSAGE value="contact form gemaakt" />
     <MESSAGE value="form styling" />
     <MESSAGE value="Dockerfile aangemaakt" />
@@ -531,7 +527,8 @@
     <MESSAGE value="request parameters toegevoegd aan /guns" />
     <MESSAGE value="guns controller afgewerkt voor filtering" />
     <MESSAGE value="query gemaakt voor guns repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="query gemaakt voor guns repository" />
+    <MESSAGE value="radio buttons afgemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="radio buttons afgemaakt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
