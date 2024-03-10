@@ -18,7 +18,13 @@ public class GunsController {
     GunsRepository gunsRepository;
 
     @GetMapping("/guns")
-    public String guns(Model model, @RequestParam (required = false) int ){
+    public String guns(Model model, @RequestParam (required = false) String type,
+                       @RequestParam (required = false) Integer minMagazine,
+                       @RequestParam (required = false) Integer maxMagazine,
+                       @RequestParam (required = false) String caliber,
+                       @RequestParam (required = false) int minPrice,
+                       @RequestParam (required = false) int maxPrice,
+                       @RequestParam (required = false) String firearmsType){
         Iterable<Guns> guns = gunsRepository.findAll();
         model.addAttribute("guns",guns);
         return "guns";
