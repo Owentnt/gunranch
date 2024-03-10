@@ -52,6 +52,7 @@ public class GunsController {
         model.addAttribute("minPrice",minPrice);
         model.addAttribute("maxPrice",maxPrice);
         model.addAttribute("firearmsType",firearmsType);
+        model.addAttribute("filtersEnabled",true);
         return "guns";
 
     }
