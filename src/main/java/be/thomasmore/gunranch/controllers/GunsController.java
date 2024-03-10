@@ -29,13 +29,13 @@ public class GunsController {
                        @RequestParam (required = false) int minPrice,
                        @RequestParam (required = false) int maxPrice,
                        @RequestParam (required = false) String firearmsType){
-        logger.info(String.format("guns -- type=%d", type));
+        logger.info(String.format("guns -- type=%s", type));
         logger.info(String.format("guns -- minmagazine=%d", minMagazine));
         logger.info(String.format("guns -- maxmagazine=%d", maxMagazine));
-        logger.info(String.format("guns -- caliber=%d", caliber));
+        logger.info(String.format("guns -- caliber=%s", caliber));
         logger.info(String.format("guns -- minprice=%d", minPrice));
         logger.info(String.format("guns -- maxprice=%d", maxPrice));
-        logger.info(String.format("guns -- firearmstype=%d", firearmsType));
+        logger.info(String.format("guns -- firearmstype=%s", firearmsType));
         Iterable<Guns> allGuns = gunsRepository.findAll();
         allGuns = gunsRepository.findByFilter(type,minMagazine,maxMagazine,caliber,minPrice,maxPrice,firearmsType);
         model.addAttribute("allGuns",allGuns);

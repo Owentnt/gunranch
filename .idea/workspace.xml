@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="request parameters toegevoegd aan /guns">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="guns controller afgewerkt voor filtering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="forms" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,14 +122,7 @@
       <workItem from="1709988273683" duration="19000" />
       <workItem from="1710012749673" duration="2560000" />
       <workItem from="1710071348482" duration="1082000" />
-      <workItem from="1710074638472" duration="2519000" />
-    </task>
-    <task id="LOCAL-00006" summary="navbar gemaakt">
-      <created>1709131118017</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1709131118017</updated>
+      <workItem from="1710074638472" duration="3697000" />
     </task>
     <task id="LOCAL-00007" summary="links aanklikbaar gemaakt in navbar">
       <created>1709134107410</created>
@@ -467,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710074760958</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="guns controller afgewerkt voor filtering">
+      <created>1710077340305</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1710077340305</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +484,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="filters" />
                       </list>
                     </value>
                   </entry>
@@ -504,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="form gemaakt om in te loggen" />
     <MESSAGE value="form gemaakt om te reserveren" />
     <MESSAGE value="about us pagina text toegevoegd" />
     <MESSAGE value="contact form gemaakt" />
@@ -529,7 +528,8 @@
     <MESSAGE value="radiobuttons full auto and semi auto (onder constructie)" />
     <MESSAGE value="variable firearmsType toegevoegd" />
     <MESSAGE value="request parameters toegevoegd aan /guns" />
-    <option name="LAST_COMMIT_MESSAGE" value="request parameters toegevoegd aan /guns" />
+    <MESSAGE value="guns controller afgewerkt voor filtering" />
+    <option name="LAST_COMMIT_MESSAGE" value="guns controller afgewerkt voor filtering" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
