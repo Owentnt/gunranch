@@ -76,9 +76,11 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
 
     @Query("SELECT g from Guns g WHERE " +
             "(:minMagazine IS NULL OR :minMagazine <= g.magazine) AND " +
-            "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine)")
+            "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine) AND " +
+            "(:minPrice IS NULL OR :minPrice <= g.price)")
     Iterable<Guns> findByFilter2(
                                 @Param("minMagazine") Integer minMagazine,
-                                @Param("maxMagazine") Integer maxMagazine);
+                                @Param("maxMagazine") Integer maxMagazine,
+                                @Param("minPrice") Integer minPrice);
 
 }

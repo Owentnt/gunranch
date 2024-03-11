@@ -29,29 +29,26 @@
             <div>
                 <input type="submit" value="search" class="btn btn-outline-info">
             </div>
-            <!--        <select id="gunType" name="gunType" th:field="*{gunType}" class="btn-outline-warning btn">-->
-            <!--            <option th:value="'All'" th:text="All"></option>-->
-            <!--            <option th:value="'Handgun'" th:text="Handgun"></option>-->
-            <!--            <option th:value="'Shotgun'" th:text="Shotgun"></option>-->
-            <!--        </select>-->
-            <!--        <div class="dropdown-menu">-->
-            <!--            <a class="dropdown-item" href="#">Handgun</a>-->
-            <!--            <a class="dropdown-item" href="#">Shotgun</a>-->
-            <!--            <a class="dropdown-item" href="#">SMG</a>-->
-            <!--            <a class="dropdown-item" href="#">Rifles</a>-->
-            <!--            <a class="dropdown-item" href="#">Assault Rifles</a>-->
-            <!--            <a class="dropdown-item" href="#">Machine guns</a>-->
-            <!--            <a class="dropdown-item" href="#">Sniper Rifles</a>-->
-            <!--        </div>-->
-            <h3>Min Magazine</h3>
-            <div class="minMagazineFilter">
+
+            <h3>Magazine</h3>
+            <div class="MagazineFilter">
                 <div class="form-select w-50">
                     <label for="minMagazine" class="form-label">Min Capacity</label>
-                    <input type="number" name="minMagazine" class="form-control" id="minMagazine"  placeholder="minMagazine"
-                           th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-75">
+                    <input type="number" name="minMagazine" class="form-control" id="minMagazine"
+                           placeholder="minMagazine"
+                           th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
                     <label for="maxMagazine" class="form-label">Max Capacity</label>
-                    <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"  placeholder="maxMagazine"
-                           th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-75">
+                    <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"
+                           placeholder="maxMagazine"
+                           th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">
+                </div>
+            </div>
+            <div class="priceFilter">
+                <div class="form-select w-75">
+                    <label for="minPrice" class="form-label">Min Price</label>
+                    <input type="number" name="minPrice" class="form-control" id="minPrice"
+                           placeholder="minPrice"
+                           th:value="${minPrice}" step="5" min="5" max="30" th:class="w-100">
                 </div>
             </div>
         </div>

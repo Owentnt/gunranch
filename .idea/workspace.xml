@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="troubleshooting">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="maxmagazine field corrigeren. ze werken nu allebei">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
@@ -127,21 +127,7 @@
       <workItem from="1710079502255" duration="5051000" />
       <workItem from="1710087136960" duration="1331000" />
       <workItem from="1710095990160" duration="5502000" />
-      <workItem from="1710151276558" duration="9004000" />
-    </task>
-    <task id="LOCAL-00014" summary="text achtergrond toegevoegd">
-      <created>1709393599096</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1709393599096</updated>
-    </task>
-    <task id="LOCAL-00015" summary="text achtergrond toegevoegd">
-      <created>1709410647009</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1709410647009</updated>
+      <workItem from="1710151276558" duration="10909000" />
     </task>
     <task id="LOCAL-00016" summary="cards gemaakt">
       <created>1709480541978</created>
@@ -472,7 +458,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710159602474</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="minmagazine field corrigeren">
+      <created>1710160564118</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1710160564119</updated>
+    </task>
+    <task id="LOCAL-00064" summary="maxmagazine field corrigeren. ze werken nu allebei">
+      <created>1710160802539</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1710160802539</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,8 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="time veld toegevoegd aan reservation form" />
-    <MESSAGE value="Reservations database aan het maken" />
     <MESSAGE value="data troubleshooting" />
     <MESSAGE value="extra waarden toegevoegd bij competitions" />
     <MESSAGE value="extra waarden bij competition model" />
@@ -527,7 +525,9 @@
     <MESSAGE value="filter knop toegevoegd" />
     <MESSAGE value="styling" />
     <MESSAGE value="troubleshooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting" />
+    <MESSAGE value="minmagazine field corrigeren" />
+    <MESSAGE value="maxmagazine field corrigeren. ze werken nu allebei" />
+    <option name="LAST_COMMIT_MESSAGE" value="maxmagazine field corrigeren. ze werken nu allebei" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
