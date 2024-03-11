@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="caliber button toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="caliber button filter actief">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,14 +126,7 @@
       <workItem from="1710079502255" duration="5051000" />
       <workItem from="1710087136960" duration="1331000" />
       <workItem from="1710095990160" duration="5502000" />
-      <workItem from="1710151276558" duration="21676000" />
-    </task>
-    <task id="LOCAL-00021" summary="Laatste rij toegevoegd">
-      <created>1709498613562</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1709498613562</updated>
+      <workItem from="1710151276558" duration="22338000" />
     </task>
     <task id="LOCAL-00022" summary="Guns pagina is klaar">
       <created>1709499230114</created>
@@ -470,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710188146853</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="caliber button filter actief">
+      <created>1710189284921</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1710189284921</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)" />
     <MESSAGE value="bezig met reguirements voor fields" />
     <MESSAGE value=" requierement voor fields bijna klaar" />
     <MESSAGE value="phoneNumber pattern test" />
@@ -525,7 +525,8 @@
     <MESSAGE value="dropdown menu voor guntypes toegevoegd" />
     <MESSAGE value="troubleshooting" />
     <MESSAGE value="caliber button toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="caliber button toegevoegd" />
+    <MESSAGE value="caliber button filter actief" />
+    <option name="LAST_COMMIT_MESSAGE" value="caliber button filter actief" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
