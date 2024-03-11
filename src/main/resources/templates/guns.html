@@ -48,7 +48,10 @@
                 <div class="form-select w-50">
                     <label for="minMagazine" class="form-label">Min Capacity</label>
                     <input type="number" name="minMagazine" class="form-control" id="minMagazine"  placeholder="minMagazine"
-                           th:value="${minMagazine}" step="1" th:class="w-75">
+                           th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-75">
+                    <label for="maxMagazine" class="form-label">Max Capacity</label>
+                    <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"  placeholder="maxMagazine"
+                           th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-75">
                 </div>
             </div>
         </div>
