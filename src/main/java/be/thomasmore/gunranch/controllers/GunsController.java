@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Collection;
 import java.util.Optional;
 
 @Controller
@@ -25,6 +26,21 @@ public class GunsController {
     public String guns(Model model){
         final Iterable<Guns> allGuns = gunsRepository.findAll();
         model.addAttribute("guns",allGuns);
+        return "guns";
+    }
+    @GetMapping("/guns/filter2")
+    public String guns(Model model,@RequestParam (required = false) String gunType,
+                       @RequestParam (required = false,defaultValue = "5") Integer minMagazine){
+        if(gunType == null){
+            gunType = "All";
+        }
+
+        Iterable<Guns> allGuns = gunsRepository.findAll();
+        allGuns = gunsRepository.findByFilter2(minMagazine);
+        model.addAttribute("guns",allGuns);
+        model.addAttribute("gunType","Handgun");
+        model.addAttribute("minMagazine",minMagazine);
+        model.addAttribute("filtersEnabled",true);
         return "guns";
     }
     @GetMapping("/guns/filter")
@@ -43,16 +59,16 @@ public class GunsController {
         logger.info(String.format("guns -- maxprice=%d", maxPrice));
         logger.info(String.format("guns -- firearmstype=%s", firearmsType));
         Iterable<Guns> allGuns = gunsRepository.findAll();
-        allGuns = gunsRepository.findByFilter(type,minMagazine,maxMagazine,caliber,minPrice,maxPrice,firearmsType);
+        logger.info(String.format("guns -- count=%s", ((Collection<?>) allGuns).size()));
         model.addAttribute("allGuns",allGuns);
-        model.addAttribute("type",type);
-        model.addAttribute("minMagazine",minMagazine);
-        model.addAttribute("maxMagazine",maxMagazine);
-        model.addAttribute("caliber",caliber);
-        model.addAttribute("minPrice",minPrice);
-        model.addAttribute("maxPrice",maxPrice);
-        model.addAttribute("firearmsType",firearmsType);
-        model.addAttribute("filtersEnabled",true);
+//        model.addAttribute("type",type);
+//        model.addAttribute("minMagazine",minMagazine);
+//        model.addAttribute("maxMagazine",maxMagazine);
+//        model.addAttribute("caliber",caliber);
+//        model.addAttribute("minPrice",minPrice);
+//        model.addAttribute("maxPrice",maxPrice);
+//        model.addAttribute("firearmsType",firearmsType);
+//        model.addAttribute("filtersEnabled",false);
         return "guns";
 
     }
