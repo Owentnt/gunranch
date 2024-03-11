@@ -33,77 +33,68 @@
             </select>
         </div>
         <div class="btn-group">
-        <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">
-            <option value="" selected disabled>Select Caliber</option>
-            <option value="9x19 mm">9x19 mm</option>
-            <option value=".44 Magnum">.44 Magnum</option>
-            <option value=".22 LR">.22 LR</option>
-            <option value=".38 Special/.357 Magnum Magnum">.38 Special/.357 Magnum Magnum</option>
-            <option value="7.62x25 mm">7.62x25 mm</option>
-            <option value="5.56x45 mm">5.56x45 mm</option>
-            <option value="7.62x54 mm">7.62x54 mm</option>
-            <option value="12 GA">12 GA</option>
-            <option value="7.62x51 mm">7.62x51 mm</option>
-            <option value=".45 ACP">.45 ACP</option>
-            <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>
-            <option value="7,92x57mm">7,92x57mm</option>
+            <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">
+                <option value="" selected disabled>Select Caliber</option>
+                <option value="9x19 mm">9x19 mm</option>
+                <option value=".44 Magnum">.44 Magnum</option>
+                <option value=".22 LR">.22 LR</option>
+                <option value=".38 Special/.357 Magnum Magnum">.38 Special/.357 Magnum Magnum</option>
+                <option value="7.62x25 mm">7.62x25 mm</option>
+                <option value="5.56x45 mm">5.56x45 mm</option>
+                <option value="7.62x54 mm">7.62x54 mm</option>
+                <option value="12 GA">12 GA</option>
+                <option value="7.62x51 mm">7.62x51 mm</option>
+                <option value=".45 ACP">.45 ACP</option>
+                <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>
+                <option value="7,92x57mm">7,92x57mm</option>
 
-        </select>
+            </select>
         </div>
-        <h3 >Magazine</h3>
+        <h3>Magazine</h3>
         <div class="MagazineFilter">
-                <div class="form-select w-50">
-                    <label for="minMagazine" class="form-label">Min Magazine</label>
-                    <input type="number" name="minMagazine" class="form-control" id="minMagazine"
-                           placeholder="minMagazine"
-                           th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
-                    <label for="maxMagazine" class="form-label">Max Magazine</label>
-                    <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"
-                           placeholder="maxMagazine"
-                           th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">
-                </div>
+            <div class="form-select w-50">
+                <label for="minMagazine" class="form-label">Min Magazine</label>
+                <input type="number" name="minMagazine" class="form-control" id="minMagazine"
+                       placeholder="minMagazine"
+                       th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
+                <label for="maxMagazine" class="form-label">Max Magazine</label>
+                <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"
+                       placeholder="maxMagazine"
+                       th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">
             </div>
-            <div class="priceFilter">
-                <div class="form-select w-75">
-                    <label for="minPrice" class="form-label">Min Price</label>
-                    <input type="number" name="minPrice" class="form-control" id="minPrice"
-                           placeholder="minPrice"
-                           th:value="${minPrice}" step="5" min="5" max="30" th:class="w-100">
-                    <label for="maxPrice" class="form-label">Max Price</label>
-                    <input type="number" name="maxPrice" class="form-control" id="maxPrice"
-                           placeholder="maxPrice"
-                           th:value="${maxPrice}" step="5" min="5" max="30" th:class="w-100">
-                </div>
+        </div>
+        <div class="priceFilter">
+            <div class="form-select w-75">
+                <label for="minPrice" class="form-label">Min Price</label>
+                <input type="number" name="minPrice" class="form-control" id="minPrice"
+                       placeholder="minPrice"
+                       th:value="${minPrice}" step="5" min="5" max="30" th:class="w-100">
+                <label for="maxPrice" class="form-label">Max Price</label>
+                <input type="number" name="maxPrice" class="form-control" id="maxPrice"
+                       placeholder="maxPrice"
+                       th:value="${maxPrice}" step="5" min="5" max="30" th:class="w-100">
             </div>
-
-
-
-
+        </div>
+        <div>
+        </div>
+        <h5> Firearms Type</h5>
+        <div class="FirearmsFilterSemi">
+            <label for="Semi-Auto" class="form-label">Semi-Auto</label>
+            <input type="radio" class="form-control" name="FirearmsFilter" id="Semi-Auto" th:class="w-25">
+        </div>
+        <div class="FirearmsFilterFull">
+            <label for="Full-Auto" class="form-label">Full-Auto</label>
+            <input type="radio" class="form-control" name="FirearmsFilter" id="Full-Auto" th:class="w-25">
+        </div>
+        <div class="FirearmsFilterBoth">
+            <label for="Both" class="form-label">Both</label>
+            <input type="radio" class="form-control" name="FirearmsFilter" id="Both" th:class="w-25">
+        </div>
         <div>
             <input type="submit" value="search" class="btn btn-outline-info">
         </div>
 
     </form>
-
-
-
-
-    <!--        <div class="caliberFilter">-->
-
-    <!--        </div>-->
-    <!--        <h5> Firearms Type</h5>-->
-    <!--        <div class="FirearmsFilterSemi">-->
-    <!--            <label for="Semi-Auto" class="form-label">Semi-Auto</label>-->
-    <!--            <input type="radio" class="form-control" name="FirearmsFilter" id="Semi-Auto" th:class="w-25">-->
-    <!--        </div>-->
-    <!--        <div class="FirearmsFilterFull">-->
-    <!--            <label for="Full-Auto" class="form-label">Full-Auto</label>-->
-    <!--            <input type="radio" class="form-control" name="FirearmsFilter" id="Full-Auto" th:class="w-25">-->
-    <!--        </div>-->
-    <!--        <div class="FirearmsFilterBoth">-->
-    <!--            <label for="Both" class="form-label">Both</label>-->
-    <!--            <input type="radio" class="form-control" name="FirearmsFilter" id="Both" th:class="w-25">-->
-    <!--        </div>-->
 
 </div>
 </div>
