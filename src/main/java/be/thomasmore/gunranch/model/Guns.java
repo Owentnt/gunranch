@@ -13,7 +13,7 @@ public class Guns {
 
     private String name;
 
-    private String type;
+    private String gunType;
 
     private int magazine;
 
@@ -29,7 +29,7 @@ public class Guns {
     public Guns(int id, String name, String type, int magazine, String caliber, String bio, double price, String firearmType, String image) {
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.gunType = type;
         this.magazine = magazine;
         this.caliber = caliber;
         this.bio = bio;
@@ -59,12 +59,12 @@ public class Guns {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getGunType() {
+        return gunType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setGunType(String type) {
+        this.gunType = type;
     }
 
     public int getMagazine() {

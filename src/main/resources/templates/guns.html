@@ -20,11 +20,9 @@
 
 <div th:if="${filtersEnabled}">
     <a class="btn btn-outline-warning" type="button" th:href="@{/guns}">Close Filter</a>
-    <h3 >Magazine</h3>
     <form action="#" th:action="@{/guns/filter2}" method="get">
         <div class="btn-group">
-            <select id="gunType" name="gunType" class="btn-warning btn">
-                <option value="Gun Type">Gun Type</option>
+            <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">
                 <option value="Handguns">Handguns</option>
                 <option value="Shotguns">Shotguns</option>
                 <option value="Rifles">Rifles</option>
@@ -34,13 +32,14 @@
             </select>
         </div>
 
-            <div class="MagazineFilter">
+        <h3 >Magazine</h3>
+        <div class="MagazineFilter">
                 <div class="form-select w-50">
-                    <label for="minMagazine" class="form-label">Min </label>
+                    <label for="minMagazine" class="form-label">Min Magazine</label>
                     <input type="number" name="minMagazine" class="form-control" id="minMagazine"
                            placeholder="minMagazine"
                            th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
-                    <label for="maxMagazine" class="form-label">Max Capacity</label>
+                    <label for="maxMagazine" class="form-label">Max Magazine</label>
                     <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"
                            placeholder="maxMagazine"
                            th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">
@@ -101,7 +100,7 @@
             <img class="card-img-top" th:src="${gun.image}" th:alt="${gun.name}" width="192" height="250">
             <div class="card-body text-warning">
                 <h5 class="card-title" th:text="${gun.name}"></h5>
-                <p class="card-text" th:text=" 'Type: '+${gun.type}"></p>
+                <p class="card-text" th:text=" 'Type: '+${gun.gunType}"></p>
                 <p class="card-text" th:text=" 'Magazine: '+${gun.magazine}"></p>
                 <p class="card-text" th:text=" 'Caliber: '+${gun.caliber}"></p>
                 <p class="card-text" th:text=" 'Price: '+${gun.price}+' EUR'"></p>

@@ -37,7 +37,7 @@ public class GunsController {
                        @RequestParam (required = false) String caliber){
 
         Iterable<Guns> allGuns = gunsRepository.findAll();
-        allGuns = gunsRepository.findByFilter2(minMagazine,maxMagazine,minPrice,maxPrice,caliber);
+        allGuns = gunsRepository.findByFilter2(minMagazine,maxMagazine,minPrice,maxPrice,caliber,gunType);
         model.addAttribute("guns",allGuns);
         model.addAttribute("gunType","Handgun");
         model.addAttribute("minMagazine",minMagazine);
@@ -45,6 +45,7 @@ public class GunsController {
         model.addAttribute("minPrice",minPrice);
         model.addAttribute("maxPrice",maxPrice);
         model.addAttribute("caliber",caliber);
+        model.addAttribute("gunType",gunType);
         model.addAttribute("filtersEnabled",true);
         return "guns";
     }
