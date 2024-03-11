@@ -30,16 +30,18 @@ public class GunsController {
     }
     @GetMapping("/guns/filter2")
     public String guns(Model model,@RequestParam (required = false) String gunType,
-                       @RequestParam (required = false,defaultValue = "5") Integer minMagazine){
+                       @RequestParam (required = false) Integer minMagazine,
+                       @RequestParam (required = false) Integer maxMagazine){
         if(gunType == null){
             gunType = "All";
         }
 
         Iterable<Guns> allGuns = gunsRepository.findAll();
-        allGuns = gunsRepository.findByFilter2(minMagazine);
+        allGuns = gunsRepository.findByFilter2(minMagazine,maxMagazine);
         model.addAttribute("guns",allGuns);
         model.addAttribute("gunType","Handgun");
         model.addAttribute("minMagazine",minMagazine);
+        model.addAttribute("maxMagazine",maxMagazine);
         model.addAttribute("filtersEnabled",true);
         return "guns";
     }
