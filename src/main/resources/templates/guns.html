@@ -80,18 +80,21 @@
         <h5> Firearms Type</h5>
         <div class="FirearmsFilterSemi">
             <label for="Semi-Auto" class="form-label">Semi-Auto</label>
-            <input type="radio" class="form-control" name="FirearmsFilter" id="Semi-Auto" th:class="w-25">
+            <input type="radio" class="form-control" name="firearmsFilter" id="Semi-Auto"
+                   value="Semi-Auto" th:class="w-25" th:checked="${firearmsType=='Semi-Auto'}">
         </div>
         <div class="FirearmsFilterFull">
             <label for="Full-Auto" class="form-label">Full-Auto</label>
-            <input type="radio" class="form-control" name="FirearmsFilter" id="Full-Auto" th:class="w-25">
+            <input type="radio" class="form-control" name="firearmsFilter" id="Full-Auto"
+                   value="Full-Auto" th:class="w-25" th:checked="${firearmsType=='Full-Auto'}">
         </div>
         <div class="FirearmsFilterBoth">
             <label for="Both" class="form-label">Both</label>
-            <input type="radio" class="form-control" name="FirearmsFilter" id="Both" th:class="w-25">
+            <input type="radio" class="form-control" name="firearmsFilter" id="Both"
+                   value="" th:class="w-25" th:checked="${firearmsType==null}">
         </div>
         <div>
-            <input type="submit" value="search" class="btn btn-outline-info">
+            <input type="submit" value="search" class="btn btn-outline-warning">
         </div>
 
     </form>

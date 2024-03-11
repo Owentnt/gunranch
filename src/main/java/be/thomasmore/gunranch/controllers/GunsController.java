@@ -34,10 +34,11 @@ public class GunsController {
                        @RequestParam (required = false) Integer maxMagazine,
                        @RequestParam (required = false) Integer minPrice,
                        @RequestParam (required = false) Integer maxPrice,
-                       @RequestParam (required = false) String caliber){
+                       @RequestParam (required = false) String caliber,
+                       @RequestParam (required = false) String firearmsType){
 
         Iterable<Guns> allGuns = gunsRepository.findAll();
-        allGuns = gunsRepository.findByFilter2(minMagazine,maxMagazine,minPrice,maxPrice,caliber,gunType);
+        allGuns = gunsRepository.findByFilter2(minMagazine,maxMagazine,minPrice,maxPrice,caliber,gunType,firearmsType);
         model.addAttribute("guns",allGuns);
         model.addAttribute("gunType","Handgun");
         model.addAttribute("minMagazine",minMagazine);
@@ -46,6 +47,7 @@ public class GunsController {
         model.addAttribute("maxPrice",maxPrice);
         model.addAttribute("caliber",caliber);
         model.addAttribute("gunType",gunType);
+        model.addAttribute("firearmsType",firearmsType);
         model.addAttribute("filtersEnabled",true);
         return "guns";
     }
