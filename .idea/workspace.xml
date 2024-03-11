@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="dropdown menu voor guntypes toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="troubleshooting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,14 +125,7 @@
       <workItem from="1710079502255" duration="5051000" />
       <workItem from="1710087136960" duration="1331000" />
       <workItem from="1710095990160" duration="5502000" />
-      <workItem from="1710151276558" duration="17303000" />
-    </task>
-    <task id="LOCAL-00019" summary="Extra wapens bij toegevoegd">
-      <created>1709497519400</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1709497519400</updated>
+      <workItem from="1710151276558" duration="20335000" />
     </task>
     <task id="LOCAL-00020" summary="Extra wapens bij toegevoegd">
       <created>1709497801038</created>
@@ -474,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710182659544</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="troubleshooting">
+      <created>1710183465565</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1710183465565</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,13 +519,13 @@
     <MESSAGE value="corrigeren van guns controller" />
     <MESSAGE value="filter knop toegevoegd" />
     <MESSAGE value="styling" />
-    <MESSAGE value="troubleshooting" />
     <MESSAGE value="minmagazine field corrigeren" />
     <MESSAGE value="maxmagazine field corrigeren. ze werken nu allebei" />
     <MESSAGE value="min price field toegevoegd" />
     <MESSAGE value="max price field toegevoegd" />
     <MESSAGE value="dropdown menu voor guntypes toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="dropdown menu voor guntypes toegevoegd" />
+    <MESSAGE value="troubleshooting" />
+    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
