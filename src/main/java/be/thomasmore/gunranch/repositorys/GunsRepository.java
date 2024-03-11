@@ -78,12 +78,14 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
             "(:minMagazine IS NULL OR :minMagazine <= g.magazine) AND " +
             "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine) AND " +
             "(:minPrice IS NULL OR :minPrice <= g.price) AND " +
-            "(:maxPrice IS NULL OR g.price <= :maxPrice)")
+            "(:maxPrice IS NULL OR g.price <= :maxPrice) AND " +
+             "(:caliber IS NULL OR g.caliber = :caliber)")
 
     Iterable<Guns> findByFilter2(
                                 @Param("minMagazine") Integer minMagazine,
                                 @Param("maxMagazine") Integer maxMagazine,
                                 @Param("minPrice") Integer minPrice,
-                                @Param("maxPrice") Integer maxPrice);
+                                @Param("maxPrice") Integer maxPrice,
+                                @Param("caliber")String caliber);
 
 }

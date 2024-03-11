@@ -20,20 +20,23 @@
 
 <div th:if="${filtersEnabled}">
     <a class="btn btn-outline-warning" type="button" th:href="@{/guns}">Close Filter</a>
+    <h3 >Magazine</h3>
     <form action="#" th:action="@{/guns/filter2}" method="get">
         <div class="btn-group">
-            <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                Type of Gun
-            </button>
-            <div>
-                <input type="submit" value="search" class="btn btn-outline-info">
-            </div>
+            <select id="gunType" name="gunType" class="btn-warning btn">
+                <option value="Gun Type">Gun Type</option>
+                <option value="Handguns">Handguns</option>
+                <option value="Shotguns">Shotguns</option>
+                <option value="Rifles">Rifles</option>
+                <option value="Assault Rifles">Assault Rifles</option>
+                <option value="Sniper Rifles">Sniper Rifles</option>
+                <option value="Submachine Guns">Submachine Guns</option>
+            </select>
+        </div>
 
-            <h3>Magazine</h3>
             <div class="MagazineFilter">
                 <div class="form-select w-50">
-                    <label for="minMagazine" class="form-label">Min Capacity</label>
+                    <label for="minMagazine" class="form-label">Min </label>
                     <input type="number" name="minMagazine" class="form-control" id="minMagazine"
                            placeholder="minMagazine"
                            th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
@@ -55,13 +58,21 @@
                            th:value="${maxPrice}" step="5" min="5" max="30" th:class="w-100">
                 </div>
             </div>
+
+
+
+
+        <div>
+            <input type="submit" value="search" class="btn btn-outline-info">
         </div>
+
     </form>
 
 
+
+
     <!--        <div class="caliberFilter">-->
-    <!--            <input class="form-control mr-sm-2" type="search" placeholder="Search">-->
-    <!--            <button class="btn btn-outline-warning" type="submit">Search</button>-->
+
     <!--        </div>-->
     <!--        <h5> Firearms Type</h5>-->
     <!--        <div class="FirearmsFilterSemi">-->

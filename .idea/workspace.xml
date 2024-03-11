@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="min price field toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="max price field toegevoegd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
@@ -127,14 +127,7 @@
       <workItem from="1710079502255" duration="5051000" />
       <workItem from="1710087136960" duration="1331000" />
       <workItem from="1710095990160" duration="5502000" />
-      <workItem from="1710151276558" duration="12191000" />
-    </task>
-    <task id="LOCAL-00017" summary="eerste card gemaakt">
-      <created>1709488341861</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1709488341861</updated>
+      <workItem from="1710151276558" duration="16545000" />
     </task>
     <task id="LOCAL-00018" summary="Bio Taurus 95 verplaatst want stond bij foute record">
       <created>1709494569195</created>
@@ -472,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710162669461</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="max price field toegevoegd">
+      <created>1710178379899</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1710178379899</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="extra waarden toegevoegd bij competitions" />
     <MESSAGE value="extra waarden bij competition model" />
     <MESSAGE value="fiels required gemaakt" />
     <MESSAGE value="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)" />
@@ -527,7 +526,8 @@
     <MESSAGE value="minmagazine field corrigeren" />
     <MESSAGE value="maxmagazine field corrigeren. ze werken nu allebei" />
     <MESSAGE value="min price field toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="min price field toegevoegd" />
+    <MESSAGE value="max price field toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="max price field toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
