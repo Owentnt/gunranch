@@ -28,7 +28,7 @@ public class GunsController {
         model.addAttribute("guns",allGuns);
         return "guns";
     }
-    @GetMapping("/guns/filter2")
+    @GetMapping("/guns/filter")
     public String guns(Model model,@RequestParam (required = false) String gunType,
                        @RequestParam (required = false) Integer minMagazine,
                        @RequestParam (required = false) Integer maxMagazine,
@@ -38,7 +38,7 @@ public class GunsController {
                        @RequestParam (required = false) String firearmsType){
 
         Iterable<Guns> allGuns = gunsRepository.findAll();
-        allGuns = gunsRepository.findByFilter2(minMagazine,maxMagazine,minPrice,maxPrice,caliber,gunType,firearmsType);
+        allGuns = gunsRepository.findByFilter(minMagazine,maxMagazine,minPrice,maxPrice,caliber,gunType,firearmsType);
         model.addAttribute("guns",allGuns);
         model.addAttribute("gunType","Handgun");
         model.addAttribute("minMagazine",minMagazine);
@@ -51,35 +51,7 @@ public class GunsController {
         model.addAttribute("filtersEnabled",true);
         return "guns";
     }
-    @GetMapping("/guns/filter")
-    public String guns(Model model, @RequestParam (required = false) String type,
-                       @RequestParam (required = false) Integer minMagazine,
-                       @RequestParam (required = false) Integer maxMagazine,
-                       @RequestParam (required = false) String caliber,
-                       @RequestParam (required = false) Integer minPrice,
-                       @RequestParam (required = false) Integer maxPrice,
-                       @RequestParam (required = false) String firearmsType){
-        logger.info(String.format("guns -- type=%s", type));
-        logger.info(String.format("guns -- minmagazine=%d", minMagazine));
-        logger.info(String.format("guns -- maxmagazine=%d", maxMagazine));
-        logger.info(String.format("guns -- caliber=%s", caliber));
-        logger.info(String.format("guns -- minprice=%d", minPrice));
-        logger.info(String.format("guns -- maxprice=%d", maxPrice));
-        logger.info(String.format("guns -- firearmstype=%s", firearmsType));
-        Iterable<Guns> allGuns = gunsRepository.findAll();
-        logger.info(String.format("guns -- count=%s", ((Collection<?>) allGuns).size()));
-        model.addAttribute("allGuns",allGuns);
-//        model.addAttribute("type",type);
-//        model.addAttribute("minMagazine",minMagazine);
-//        model.addAttribute("maxMagazine",maxMagazine);
-//        model.addAttribute("caliber",caliber);
-//        model.addAttribute("minPrice",minPrice);
-//        model.addAttribute("maxPrice",maxPrice);
-//        model.addAttribute("firearmsType",firearmsType);
-//        model.addAttribute("filtersEnabled",false);
-        return "guns";
 
-    }
 
 
 

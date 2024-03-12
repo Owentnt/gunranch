@@ -57,22 +57,7 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
     List<Guns> findAll(@Param("maxPrice") Integer maxPrice, @Param("minPrice") Integer minPrice);
 
 
-//    @Query("SELECT g from Guns g WHERE " +
-//            "(:type IS NULL OR :type <= g.Type) AND " +
-//            "(:minMagazine IS NULL OR :minMagazine <= g.magazine) AND " +
-//            "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine) AND " +
-//            "(:caliber IS NULL OR g.caliber = :caliber) AND " +
-//            "(:minPrice IS NULL OR :minPrice <= g.price) AND " +
-//            "(:maxPrice IS NULL OR g.price <= :maxPrice) AND " +
-//            "(:firearmsType IS NULL OR :firearmsType <= g.firearmType)")
-//
-//    Iterable<Guns> findByFilter(@Param("type") String type,
-//                                 @Param("minMagazine") Integer minMagazine,
-//                                 @Param("maxMagazine") Integer maxMagazine,
-//                                 @Param("caliber") String caliber,
-//                                 @Param("minPrice") Integer minPrice,
-//                                 @Param("maxPrice") Integer maxPrice,
-//                                @Param("firearmsType") String firearmsType);
+
 
     @Query("SELECT g from Guns g WHERE " +
             "(:minMagazine IS NULL OR :minMagazine <= g.magazine) AND " +
@@ -81,9 +66,9 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
             "(:maxPrice IS NULL OR g.price <= :maxPrice) AND " +
              "(:caliber IS NULL OR g.caliber = :caliber) AND " +
               "(:gunType IS NULL OR g.gunType = :gunType) AND " +
-             "(:firearmsType IS NULL OR g.firearmType = :firearmsType)")
+             "(:firearmsType IS NULL OR g.firearmsType = :firearmsType)")
 
-    Iterable<Guns> findByFilter2(
+    Iterable<Guns> findByFilter(
                                 @Param("minMagazine") Integer minMagazine,
                                 @Param("maxMagazine") Integer maxMagazine,
                                 @Param("minPrice") Integer minPrice,

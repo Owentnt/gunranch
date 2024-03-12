@@ -14,8 +14,9 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 <body>
-<div class="inleiding img-fluid"  style=" background-image: url('/images/gun-background-img.jpg')">
-    <div>
+<div class="inleiding d-flex justify-content-center h-100"  style=" background-image: url('/images/gun-background-img.jpg')">
+<!--    <img src="/images/gun-background-img.jpg" class="inleiding d-flex justify-content-center position-absolute w-100 h-100">-->
+<div>
         <div class="title">
             <h1 th:text=" 'Welcome to '+${name}" class="text-center text-warning"></h1>
         </div>

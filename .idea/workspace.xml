@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="type of gun button filter actief">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="troubleshooting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,28 +130,10 @@
       <workItem from="1710079502255" duration="5051000" />
       <workItem from="1710087136960" duration="1331000" />
       <workItem from="1710095990160" duration="5502000" />
-      <workItem from="1710151276558" duration="23448000" />
-    </task>
-    <task id="LOCAL-00023" summary="correcte implementatie guns template (to do layout) bug fix users entity and small refactoring images etc">
-      <created>1709552670676</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1709552670676</updated>
-    </task>
-    <task id="LOCAL-00024" summary="afbeeldingen toegevoegd in database guns">
-      <created>1709562752703</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1709562752703</updated>
-    </task>
-    <task id="LOCAL-00025" summary="afbeeldingen toegevoegd in database part 2&#10;Bio Taurus 95 stond dubbel in de database">
-      <created>1709579287700</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1709579287701</updated>
+      <workItem from="1710151276558" duration="25858000" />
+      <workItem from="1710231084204" duration="2369000" />
+      <workItem from="1710236558260" duration="929000" />
+      <workItem from="1710242774096" duration="1452000" />
     </task>
     <task id="LOCAL-00026" summary="gunsdetails controller gemaakt">
       <created>1709580340487</created>
@@ -472,7 +457,28 @@
       <option name="project" value="LOCAL" />
       <updated>1710190151073</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="radio buttons klaargezet">
+      <created>1710191146342</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1710191146342</updated>
+    </task>
+    <task id="LOCAL-00073" summary="logo terug actief gezet">
+      <created>1710243485149</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1710243485149</updated>
+    </task>
+    <task id="LOCAL-00074" summary="troubleshooting">
+      <created>1710244051189</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1710244051189</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,8 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" requierement voor fields bijna klaar" />
-    <MESSAGE value="phoneNumber pattern test" />
     <MESSAGE value="phone number required gemaakt met @Notblank" />
     <MESSAGE value="Requirements toegevoegd bij alle velden" />
     <MESSAGE value="participationform en competitionsdetails toegevoegd" />
@@ -523,11 +527,13 @@
     <MESSAGE value="min price field toegevoegd" />
     <MESSAGE value="max price field toegevoegd" />
     <MESSAGE value="dropdown menu voor guntypes toegevoegd" />
-    <MESSAGE value="troubleshooting" />
     <MESSAGE value="caliber button toegevoegd" />
     <MESSAGE value="caliber button filter actief" />
     <MESSAGE value="type of gun button filter actief" />
-    <option name="LAST_COMMIT_MESSAGE" value="type of gun button filter actief" />
+    <MESSAGE value="radio buttons klaargezet" />
+    <MESSAGE value="logo terug actief gezet" />
+    <MESSAGE value="troubleshooting" />
+    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

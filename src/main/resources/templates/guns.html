@@ -20,7 +20,7 @@
 
 <div th:if="${filtersEnabled}">
     <a class="btn btn-outline-warning" type="button" th:href="@{/guns}">Close Filter</a>
-    <form action="#" th:action="@{/guns/filter2}" method="get">
+    <form action="#" th:action="@{/guns/filter}" method="get">
         <div class="btn-group">
             <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">
                 <option value="" selected disabled>Select Gun Type</option>
@@ -91,10 +91,15 @@
         <div class="FirearmsFilterBoth">
             <label for="Both" class="form-label">Both</label>
             <input type="radio" class="form-control" name="firearmsFilter" id="Both"
-                   value="" th:class="w-25" th:checked="${firearmsType==null}">
+                   value="" th:class="w-25" th:checked="${firearmsType==null} and ${firearmsType=='Both Semi-Auto and Full-Auto'}">
+        </div>
+        <div class="FirearmsFilterNeither">
+            <label for="Neither" class="form-label">Neither</label>
+            <input type="radio" class="form-control" name="firearmsFilter" id="Neither"
+                   value="Neither" th:class="w-25" th:checked="${firearmsType=='Neither Semi-Auto nor Full-Auto'}">
         </div>
         <div>
-            <input type="submit" value="search" class="btn btn-outline-warning">
+            <input type="submit" value="search" class="btn btn-outline-info">
         </div>
 
     </form>
@@ -103,7 +108,7 @@
 </div>
 
 <div th:unless="${filtersEnabled}">
-    <button><a class="btn btn-outline-warning " th:href="@{/guns/filter2}">Open Filter</a></button>
+    <button><a class="btn btn-outline-warning " th:href="@{/guns/filter}">Open Filter</a></button>
 </div>
 
 <div class="weapons mt-5 mb-5">
@@ -116,6 +121,7 @@
                 <p class="card-text" th:text=" 'Magazine: '+${gun.magazine}"></p>
                 <p class="card-text" th:text=" 'Caliber: '+${gun.caliber}"></p>
                 <p class="card-text" th:text=" 'Price: '+${gun.price}+' EUR'"></p>
+                <p class="card-text" th:text=" 'Type of Firearm: '+${gun.firearmsType}"></p>
                 <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${gun.id}|}">Meer info</a>
 
             </div>
