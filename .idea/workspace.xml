@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="home page verder gestyled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,14 +131,7 @@
       <workItem from="1710236558260" duration="929000" />
       <workItem from="1710242774096" duration="1452000" />
       <workItem from="1710244666908" duration="912000" />
-      <workItem from="1710255137152" duration="3185000" />
-    </task>
-    <task id="LOCAL-00028" summary="Iterables toegevoegd voor next en previous buttons">
-      <created>1709662831084</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1709662831084</updated>
+      <workItem from="1710255137152" duration="4157000" />
     </task>
     <task id="LOCAL-00029" summary="previous en next buttons actief">
       <created>1709663754686</created>
@@ -476,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710245399968</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="home page verder gestyled">
+      <created>1710258495055</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1710258495056</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="participationform en competitionsdetails toegevoegd" />
     <MESSAGE value="filter buttons toevoegen en styling" />
     <MESSAGE value="min en max prijs toegevoegd" />
     <MESSAGE value="radiobuttons full auto and semi auto (onder constructie)" />
@@ -531,7 +530,8 @@
     <MESSAGE value="troubleshooting" />
     <MESSAGE value="wat refactoring en wat aanpassingen aan de database" />
     <MESSAGE value="error pagina gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="error pagina gemaakt" />
+    <MESSAGE value="home page verder gestyled" />
+    <option name="LAST_COMMIT_MESSAGE" value="home page verder gestyled" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
