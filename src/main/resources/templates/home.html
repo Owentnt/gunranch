@@ -14,22 +14,20 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 <body>
-<div class="inleiding d-flex justify-content-center h-100"  style=" background-image: url('/images/gun-background-img.jpg')">
-<!--    <img src="/images/gun-background-img.jpg" class="inleiding d-flex justify-content-center position-absolute w-100 h-100">-->
-<div>
-        <div class="title">
-            <h1 th:text=" 'Welcome to '+${name}" class="text-center text-warning"></h1>
-        </div>
-        <div class="text-white " style="background-color: rgba(255, 221, 51, 0.75);">
-        <p class="text-center container mt-5 ">Welcome to Bullseye Shooting Academy, where precision meets
-            passion,
-            and enthusiasts gather to experience the thrill of marksmanship in a safe and welcoming environment.
-            Established with a commitment to promoting responsible firearm ownership, education, and a sense of
-            camaraderie, our gun range is more than just a shooting facility—it's a community.
-
+<!--<div class="inleiding d-flex justify-content-center h-100"  style=" background-image: url('/images/gun-background-img.jpg')">-->
+<div class="position-relative">
+    <img src="/images/gun-background-img.jpg" class="inleiding bg h-100 w-100 d-flex">
+    <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
+        <h1 th:text="'Welcome to '+${name}" class="text-warning mb-5"></h1>
+        <div style="background-color: rgba(255, 221, 51, 0.75);">
+        <p>Welcome to Bullseye Shooting Academy, where precision meets
+        passion,
+        and enthusiasts gather to experience the thrill of marksmanship in a safe and welcoming environment.
+        Established with a commitment to promoting responsible firearm ownership, education, and a sense of
+        camaraderie, our gun range is more than just a shooting facility—it's a community.
         </p>
-        </div>
     </div>
+</div>
 </div>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 </body>
