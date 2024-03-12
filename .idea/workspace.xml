@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="troubleshooting">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="wat refactoring en wat aanpassingen aan de database">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/GunsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/GunsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +75,7 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\images" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
@@ -134,13 +130,7 @@
       <workItem from="1710231084204" duration="2369000" />
       <workItem from="1710236558260" duration="929000" />
       <workItem from="1710242774096" duration="1452000" />
-    </task>
-    <task id="LOCAL-00026" summary="gunsdetails controller gemaakt">
-      <created>1709580340487</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1709580340487</updated>
+      <workItem from="1710244666908" duration="607000" />
     </task>
     <task id="LOCAL-00027" summary="details pagina aangevuld part 1">
       <created>1709636004670</created>
@@ -478,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710244051189</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="wat refactoring en wat aanpassingen aan de database">
+      <created>1710244801870</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1710244801871</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="phone number required gemaakt met @Notblank" />
     <MESSAGE value="Requirements toegevoegd bij alle velden" />
     <MESSAGE value="participationform en competitionsdetails toegevoegd" />
     <MESSAGE value="filter buttons toevoegen en styling" />
@@ -533,7 +529,8 @@
     <MESSAGE value="radio buttons klaargezet" />
     <MESSAGE value="logo terug actief gezet" />
     <MESSAGE value="troubleshooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting" />
+    <MESSAGE value="wat refactoring en wat aanpassingen aan de database" />
+    <option name="LAST_COMMIT_MESSAGE" value="wat refactoring en wat aanpassingen aan de database" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
