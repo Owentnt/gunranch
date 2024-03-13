@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="bezig met footer stylen">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/gunrack.jpg" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="about us page achtergrond foto toegevoegd en nog wat gestyled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/gunrack.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/gunrack.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +133,8 @@
       <workItem from="1710236558260" duration="929000" />
       <workItem from="1710242774096" duration="1452000" />
       <workItem from="1710244666908" duration="912000" />
-      <workItem from="1710255137152" duration="5531000" />
-    </task>
-    <task id="LOCAL-00030" summary="form gemaakt om in te loggen">
-      <created>1709729883277</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1709729883277</updated>
+      <workItem from="1710255137152" duration="7884000" />
+      <workItem from="1710333311811" duration="1431000" />
     </task>
     <task id="LOCAL-00031" summary="form gemaakt om te reserveren">
       <created>1709738431477</created>
@@ -478,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710259317963</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="about us page achtergrond foto toegevoegd en nog wat gestyled">
+      <created>1710261088708</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1710261088708</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="min en max prijs toegevoegd" />
     <MESSAGE value="radiobuttons full auto and semi auto (onder constructie)" />
     <MESSAGE value="variable firearmsType toegevoegd" />
     <MESSAGE value="request parameters toegevoegd aan /guns" />
@@ -533,7 +533,8 @@
     <MESSAGE value="error pagina gemaakt" />
     <MESSAGE value="home page verder gestyled" />
     <MESSAGE value="bezig met footer stylen" />
-    <option name="LAST_COMMIT_MESSAGE" value="bezig met footer stylen" />
+    <MESSAGE value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
+    <option name="LAST_COMMIT_MESSAGE" value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

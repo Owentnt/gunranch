@@ -18,7 +18,7 @@ VALUES (3, 'Walther P22 Junior', 'Handgun', 10, '.22 LR', 9, '/images/waltherp22
                                                                            It typically fires .22 LR ammunition and is often used for target shooting or plinking');
 
     INSERT INTO GUNS (ID, NAME, GUN_TYPE, MAGAZINE, CALIBER, PRICE, IMAGE,FIREARMS_TYPE,BIO)
-VALUES (4, 'Smith & Wesson 686', 'Handgun', 6, '.38 Special/.357 Magnum Magnum', 12, '/images/smithandwessen686.png ','Neither Semi-Auto nor Full-Auto','The Smith & Wesson Model 686 is a popular double-action revolver known for its durability and versatility.
+VALUES (4, 'Smith & Wesson 686', 'Handgun', 6, '.38 Special Magnum', 12, '/images/smithandwessen686.png ','Neither Semi-Auto nor Full-Auto','The Smith & Wesson Model 686 is a popular double-action revolver known for its durability and versatility.
                                                                                       It''s often chambered in .357 Magnum, providing users with the
                                                                                       option to shoot both .357 Magnum and .38 Special cartridges.
                                                                                       The 686 typically features a stainless steel construction, adjustable sights, and a 6 or 7-round cylinder.
