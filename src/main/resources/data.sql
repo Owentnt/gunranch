@@ -148,3 +148,14 @@ INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME,EMAIL_ADDRESS,PHONE_NUMBER)
 VALUES (8,'Mahalia','Vleminckx','haailaxcosplays@gmail.com','0477 65 22 47');
 
 
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,DATE,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,ALLOWED_FIREARMS_ID,OBJECTIVE,IMAGE,
+                         RULES,ROUNDS,TIME_LIMIT,SAFETY)
+VALUES (1,'Bullseye Shooting Academy',14:00,17:00,18/05/2024,11/05/2024,25,1,
+        'Bullseye shooting, also known as precision shooting or conventional pistol,
+        is a shooting sport where participants aim to achieve the highest level of accuracy in hitting a target.
+        The primary goal is to place shots as close as possible to the center of a target,
+        which typically has a series of concentric circles.','',
+        'The standard bullseye target consists of concentric circles,
+        with the center being the bullseye. The outer rings have decreasing point values,
+        with the highest points awarded for shots closest to the center.',10,1:00,'Lol')

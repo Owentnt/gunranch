@@ -28,8 +28,8 @@ public class Competitions {
 
     private double participationPrice;
 
-    @ManyToOne
-    private Guns allowedFirearms;
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "competitions")
+    private Collection<Guns> allowedFirearms;
 
     private String objective;
 
@@ -41,16 +41,16 @@ public class Competitions {
 
     private String rules;
 
-    private String timeLimit;
+    private int timeLimit;
 
-    private String rounds;
+    private int rounds;
 
     private String safety;
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
                         Date date,Date registrationDeadline, double participationPrice, Guns guns,
-                        String objective, String image, String rules, String timeLimit,
-                        String rounds, String safety) {
+                        String objective, String image, String rules, int timeLimit,
+                        int rounds, String safety) {
         this.id = id;
         this.title = title;
         this.startingHour = startingHour;
@@ -58,7 +58,6 @@ public class Competitions {
         this.date = date;
         this.registrationDeadline = registrationDeadline;
         this.participationPrice = participationPrice;
-        this.allowedFirearms = guns;
         this.objective = objective;
         this.image = image;
         this.rules = rules;
@@ -68,6 +67,14 @@ public class Competitions {
     }
 
     public Competitions() {
+    }
+
+    public Collection<Guns> getAllowedFirearms() {
+        return allowedFirearms;
+    }
+
+    public void setAllowedFirearms(Collection<Guns> allowedFirearms) {
+        this.allowedFirearms = allowedFirearms;
     }
 
     public Collection<Participants> getParticipants() {
@@ -126,13 +133,6 @@ public class Competitions {
         this.participationPrice = participationPrice;
     }
 
-    public Guns getAllowedFirearms() {
-        return allowedFirearms;
-    }
-
-    public void setAllowedFirearms(Guns guns) {
-        this.allowedFirearms = guns;
-    }
 
     public String getObjective() {
         return objective;
@@ -158,19 +158,19 @@ public class Competitions {
         this.rules = rules;
     }
 
-    public String getTimeLimit() {
+    public int getTimeLimit() {
         return timeLimit;
     }
 
-    public void setTimeLimit(String timeLimit) {
+    public void setTimeLimit(int timeLimit) {
         this.timeLimit = timeLimit;
     }
 
-    public String getRounds() {
+    public int getRounds() {
         return rounds;
     }
 
-    public void setRounds(String rounds) {
+    public void setRounds(int rounds) {
         this.rounds = rounds;
     }
 

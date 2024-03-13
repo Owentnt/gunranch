@@ -1,9 +1,9 @@
 package be.thomasmore.gunranch.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.hibernate.validator.constraints.Length;
 
+import java.util.Collection;
 
 
 @Entity
@@ -28,6 +28,9 @@ public class Guns {
 
     private String firearmsType;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Competitions> competitions;
+
     public Guns(int id, String name, String type, int magazine, String caliber, String bio, double price, String firearmsType, String image) {
         this.id = id;
         this.name = name;
@@ -43,6 +46,14 @@ public class Guns {
 
 
     public Guns() {
+    }
+
+    public Collection<Competitions> getCompetitions() {
+        return competitions;
+    }
+
+    public void setCompetitions(Collection<Competitions> competitions) {
+        this.competitions = competitions;
     }
 
     public int getId() {
@@ -116,4 +127,7 @@ public class Guns {
     public void setFirearmsType(String firearmType) {
         this.firearmsType = firearmType;
     }
+
+
+
 }
