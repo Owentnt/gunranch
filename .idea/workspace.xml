@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="about us page achtergrond foto toegevoegd en nog wat gestyled">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="guns filter pagina wat gestyled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/gunrack.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/gunrack.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,14 +132,7 @@
       <workItem from="1710242774096" duration="1452000" />
       <workItem from="1710244666908" duration="912000" />
       <workItem from="1710255137152" duration="7884000" />
-      <workItem from="1710333311811" duration="1431000" />
-    </task>
-    <task id="LOCAL-00031" summary="form gemaakt om te reserveren">
-      <created>1709738431477</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1709738431477</updated>
+      <workItem from="1710333311811" duration="3408000" />
     </task>
     <task id="LOCAL-00032" summary="about us pagina text toegevoegd">
       <created>1709740102603</created>
@@ -479,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710261088708</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="guns filter pagina wat gestyled">
+      <created>1710334959144</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1710334959144</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="radiobuttons full auto and semi auto (onder constructie)" />
     <MESSAGE value="variable firearmsType toegevoegd" />
     <MESSAGE value="request parameters toegevoegd aan /guns" />
     <MESSAGE value="guns controller afgewerkt voor filtering" />
@@ -534,7 +531,8 @@
     <MESSAGE value="home page verder gestyled" />
     <MESSAGE value="bezig met footer stylen" />
     <MESSAGE value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
-    <option name="LAST_COMMIT_MESSAGE" value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
+    <MESSAGE value="guns filter pagina wat gestyled" />
+    <option name="LAST_COMMIT_MESSAGE" value="guns filter pagina wat gestyled" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

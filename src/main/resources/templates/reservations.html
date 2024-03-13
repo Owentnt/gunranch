@@ -15,8 +15,10 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
-
-<h1 class="text-center text-warning">Make a reservation</h1>
+<div class="position-relative">
+    <img src="/images/reservationsbg.jpg" class="bg h-100 w-100 d-flex">
+    <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
+    <h1 class="text-center text-warning">Make a reservation</h1>
 <div class="container">
 <form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
     <div class="row">
@@ -64,7 +66,7 @@
     </div>
     <div class="row">
     <div class="form-group col-md-4">
-        <label for="participants" class="my-3"><strong>Amount of participants:</strong></label>
+        <label for="participants" class="my-3"><strong>Participants:</strong></label>
         <input type="number" class="form-control" id="participants" placeholder="Amount of participants" required min="1" max="8" th:field="*{amountOfParticipants}">
         <span th:if="${#fields.hasErrors('AmountOfParticipants')}" th:errors="*{amountOfParticipants}"></span>
     </div>
@@ -88,6 +90,8 @@
     <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none">Submit</a></button>
 
 </form>
+</div>
+</div>
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
