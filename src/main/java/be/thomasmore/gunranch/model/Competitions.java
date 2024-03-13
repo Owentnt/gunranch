@@ -41,6 +41,8 @@ public class Competitions {
 
     private String image;
 
+    private String bio;
+
     @Length(max = 5000)
     private String rules;
 
@@ -49,8 +51,8 @@ public class Competitions {
     private String safety;
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
-                        Date date,Date registrationDeadline, double participationPrice, Guns guns,
-                        String objective, String image, String rules, String safety) {
+                        Date date,Date registrationDeadline, double participationPrice,
+                        String objective, String image, String rules, String safety,String bio) {
         this.id = id;
         this.title = title;
         this.startingHour = startingHour;
@@ -62,6 +64,7 @@ public class Competitions {
         this.image = image;
         this.rules = rules;
         this.safety = safety;
+        this.bio = bio;
     }
 
     public Competitions() {
@@ -142,6 +145,14 @@ public class Competitions {
 
     public String getImage() {
         return image;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 
     public void setImage(String image) {
