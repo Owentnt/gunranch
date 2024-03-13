@@ -3,9 +3,8 @@ package be.thomasmore.gunranch.model;
 import jakarta.persistence.*;
 
 
+import java.util.Collection;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 
 @Entity
@@ -24,17 +23,19 @@ public class Competitions {
     @Temporal(TemporalType.DATE)
     private Date date;
 
+    @Temporal(TemporalType.DATE)
+    private Date registrationDeadline;
+
     private double participationPrice;
 
     @ManyToOne
-    private Guns guns;
+    private Guns allowedFirearms;
 
     private String objective;
 
-    private int rating;
 
-    @ManyToOne
-    private Participants nrOfParticipants;
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Participants> participants;
 
     private String image;
 
@@ -47,20 +48,18 @@ public class Competitions {
     private String safety;
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
-                        Date date, double participationPrice, Guns guns,
-                        String objective, int rating, Participants nrOfParticipants,
-                        String image, String rules, String timeLimit,
+                        Date date,Date registrationDeadline, double participationPrice, Guns guns,
+                        String objective, String image, String rules, String timeLimit,
                         String rounds, String safety) {
         this.id = id;
         this.title = title;
         this.startingHour = startingHour;
         this.endingHour = endingHour;
         this.date = date;
+        this.registrationDeadline = registrationDeadline;
         this.participationPrice = participationPrice;
-        this.guns = guns;
+        this.allowedFirearms = guns;
         this.objective = objective;
-        this.rating = rating;
-        this.nrOfParticipants = nrOfParticipants;
         this.image = image;
         this.rules = rules;
         this.timeLimit = timeLimit;
@@ -69,6 +68,14 @@ public class Competitions {
     }
 
     public Competitions() {
+    }
+
+    public Collection<Participants> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(Collection<Participants> nrOfParticipants) {
+        this.participants = nrOfParticipants;
     }
 
     public int getId() {
@@ -119,12 +126,12 @@ public class Competitions {
         this.participationPrice = participationPrice;
     }
 
-    public Guns getGuns() {
-        return guns;
+    public Guns getAllowedFirearms() {
+        return allowedFirearms;
     }
 
-    public void setGuns(Guns guns) {
-        this.guns = guns;
+    public void setAllowedFirearms(Guns guns) {
+        this.allowedFirearms = guns;
     }
 
     public String getObjective() {
@@ -133,22 +140,6 @@ public class Competitions {
 
     public void setObjective(String objective) {
         this.objective = objective;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
-    public Participants getNrOfParticipants() {
-        return nrOfParticipants;
-    }
-
-    public void setNrOfParticipants(Participants nrOfParticipants) {
-        this.nrOfParticipants = nrOfParticipants;
     }
 
     public String getImage() {
@@ -189,5 +180,13 @@ public class Competitions {
 
     public void setSafety(String safety) {
         this.safety = safety;
+    }
+
+    public Date getRegistrationDeadline() {
+        return registrationDeadline;
+    }
+
+    public void setRegistrationDeadline(Date registrationDeadline) {
+        this.registrationDeadline = registrationDeadline;
     }
 }

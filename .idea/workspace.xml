@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="reservatie pagina wat gestyled en een achtergrond afbeelding toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="werken aan radio buttons">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/targets.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/gunrange_target.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +137,7 @@
       <workItem from="1710242774096" duration="1452000" />
       <workItem from="1710244666908" duration="912000" />
       <workItem from="1710255137152" duration="7884000" />
-      <workItem from="1710333311811" duration="5633000" />
-    </task>
-    <task id="LOCAL-00033" summary="contact form gemaakt">
-      <created>1709740881542</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1709740881542</updated>
+      <workItem from="1710333311811" duration="9985000" />
     </task>
     <task id="LOCAL-00034" summary="form styling">
       <created>1709751049617</created>
@@ -478,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710336948225</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="werken aan radio buttons">
+      <created>1710341303288</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1710341303288</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="request parameters toegevoegd aan /guns" />
     <MESSAGE value="guns controller afgewerkt voor filtering" />
     <MESSAGE value="query gemaakt voor guns repository" />
     <MESSAGE value="radio buttons afgemaakt" />
@@ -533,7 +536,8 @@
     <MESSAGE value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
     <MESSAGE value="guns filter pagina wat gestyled" />
     <MESSAGE value="reservatie pagina wat gestyled en een achtergrond afbeelding toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="reservatie pagina wat gestyled en een achtergrond afbeelding toegevoegd" />
+    <MESSAGE value="werken aan radio buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="werken aan radio buttons" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

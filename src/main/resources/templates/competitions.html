@@ -10,14 +10,22 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/gunranch.css}" href="/css/gunranch.css"/>
     <meta charset="UTF-8">
-    <title>Wedstrijden</title>
+    <title>Competitions</title>
 </head>
 
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
 
+<div class="position-relative">
+    <img src="/images/targets.jpg" class="bg h-100 w-100 d-flex">
+    <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
 <h1 class="text-center text-warning">Participate in our competitions</h1>
+    </div>
+
+
+
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
+</div>
 </body>
 </html>
