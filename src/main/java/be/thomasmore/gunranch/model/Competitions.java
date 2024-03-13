@@ -1,6 +1,7 @@
 package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
+import org.hibernate.validator.constraints.Length;
 
 
 import java.util.Collection;
@@ -31,6 +32,7 @@ public class Competitions {
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "competitions")
     private Collection<Guns> allowedFirearms;
 
+    @Length(max = 5000)
     private String objective;
 
 
@@ -39,18 +41,16 @@ public class Competitions {
 
     private String image;
 
+    @Length(max = 5000)
     private String rules;
 
-    private int timeLimit;
 
-    private int rounds;
-
+    @Length(max = 5000)
     private String safety;
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
                         Date date,Date registrationDeadline, double participationPrice, Guns guns,
-                        String objective, String image, String rules, int timeLimit,
-                        int rounds, String safety) {
+                        String objective, String image, String rules, String safety) {
         this.id = id;
         this.title = title;
         this.startingHour = startingHour;
@@ -61,8 +61,6 @@ public class Competitions {
         this.objective = objective;
         this.image = image;
         this.rules = rules;
-        this.timeLimit = timeLimit;
-        this.rounds = rounds;
         this.safety = safety;
     }
 
@@ -158,21 +156,6 @@ public class Competitions {
         this.rules = rules;
     }
 
-    public int getTimeLimit() {
-        return timeLimit;
-    }
-
-    public void setTimeLimit(int timeLimit) {
-        this.timeLimit = timeLimit;
-    }
-
-    public int getRounds() {
-        return rounds;
-    }
-
-    public void setRounds(int rounds) {
-        this.rounds = rounds;
-    }
 
     public String getSafety() {
         return safety;

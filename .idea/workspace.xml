@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="participants en competitions many to many relaties">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="fouten in de database opgelost">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,14 +133,7 @@
       <workItem from="1710242774096" duration="1452000" />
       <workItem from="1710244666908" duration="912000" />
       <workItem from="1710255137152" duration="7884000" />
-      <workItem from="1710333311811" duration="11955000" />
-    </task>
-    <task id="LOCAL-00035" summary="form styling">
-      <created>1709751652398</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1709751652398</updated>
+      <workItem from="1710333311811" duration="13569000" />
     </task>
     <task id="LOCAL-00036" summary="Dockerfile aangemaakt">
       <created>1709836064505</created>
@@ -479,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710345884988</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="fouten in de database opgelost">
+      <created>1710347818551</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1710347818551</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="query gemaakt voor guns repository" />
     <MESSAGE value="radio buttons afgemaakt" />
     <MESSAGE value="corrigeren van guns controller" />
     <MESSAGE value="filter knop toegevoegd" />
@@ -534,7 +532,8 @@
     <MESSAGE value="reservatie pagina wat gestyled en een achtergrond afbeelding toegevoegd" />
     <MESSAGE value="werken aan radio buttons" />
     <MESSAGE value="participants en competitions many to many relaties" />
-    <option name="LAST_COMMIT_MESSAGE" value="participants en competitions many to many relaties" />
+    <MESSAGE value="fouten in de database opgelost" />
+    <option name="LAST_COMMIT_MESSAGE" value="fouten in de database opgelost" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
