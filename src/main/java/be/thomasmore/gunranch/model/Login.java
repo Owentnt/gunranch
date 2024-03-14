@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Users")
-public class User {
+public class Login {
     @Id
     private int id;
 
@@ -20,7 +20,7 @@ public class User {
 
     private String passWord;
 
-    public User(int id, String firstName, String lastName, String emailAddress, String phoneNumber) {
+    public Login(int id, String firstName, String lastName, String emailAddress, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -28,7 +28,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public User() {
+    public Login() {
     }
 
     public int getId() {

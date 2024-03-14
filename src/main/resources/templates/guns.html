@@ -18,107 +18,101 @@
 
 <h1 class="text-warning text-center">Types of Guns</h1>
 
-<div th:if="${filtersEnabled}">
-    <a class="btn btn-outline-warning" th:href="@{/guns}">Close Filter</a>
-    <form action="#" th:action="@{/guns/filter}" method="get">
-        <div class="card-body card card border-warning col-md-2 bg-dark row">
-        <div class="btn-group">
-            <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">
-                <option value="" selected disabled>Select Gun Type</option>
-                <option value="Handgun">Handguns</option>
-                <option value="Shotgun">Shotguns</option>
-                <option value="Rifle">Rifles</option>
-                <option value="Assault Rifle">Assault Rifles</option>
-                <option value="Sniper Rifle">Sniper Rifles</option>
-                <option value="Submachine Gun">Submachine Guns</option>
-            </select>
-        </div>
-        <div class="btn-group">
-            <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">
-                <option value="" selected disabled>Select Caliber</option>
-                <option value="9x19 mm">9x19 mm</option>
-                <option value=".44 Magnum">.44 Magnum</option>
-                <option value=".22 LR">.22 LR</option>
-                <option value=".38 Special Magnum">.38 Special Magnum</option>
-                <option value="7.62x25 mm">7.62x25 mm</option>
-                <option value="5.56x45 mm">5.56x45 mm</option>
-                <option value="7.62x54 mm">7.62x54 mm</option>
-                <option value="12 GA">12 GA</option>
-                <option value="7.62x51 mm">7.62x51 mm</option>
-                <option value=".45 ACP">.45 ACP</option>
-                <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>
-                <option value="7,92x57mm">7,92x57mm</option>
-
-            </select>
-        </div>
-        </div>
-        <h3>Magazine</h3>
-        <div class="card-body card card border-warning col-md-2 row d-inline-block">
-        <div class="MagazineFilter">
-            <div class="form-select w-100">
-                <label for="minMagazine" class="form-label">Min Magazine</label>
-                <input type="number" name="minMagazine" class="form-control" id="minMagazine"
-                       placeholder="minMagazine"
-                       th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
-                <label for="maxMagazine" class="form-label">Max Magazine</label>
-                <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"
-                       placeholder="maxMagazine"
-                       th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">
-            </div>
-        </div>
-        </div>
-        <h3>Price</h3>
-        <div class="card-body card card border-warning col-md-2">
-        <div class="priceFilter">
-            <div class="form-select w-100">
-                <label for="minPrice" class="form-label">Min Price</label>
-                <input type="number" name="minPrice" class="form-control" id="minPrice"
-                       placeholder="minPrice"
-                       th:value="${minPrice}" step="5" min="5" max="30" th:class="w-100">
-                <label for="maxPrice" class="form-label">Max Price</label>
-                <input type="number" name="maxPrice" class="form-control" id="maxPrice"
-                       placeholder="maxPrice"
-                       th:value="${maxPrice}" step="5" min="5" max="30" th:class="w-100">
-            </div>
-        </div>
-        </div>
-        <div>
-        </div>
-        <h5> Firearms Type</h5>
-        <div class="card-body card card border-warning col-md-2">
-        <div class="FirearmsFilterSemi">
-            <label for="Semi-Auto" class="form-label">Semi-Auto</label>
-            <input type="radio" class="form-control" name="firearmsFilter" id="Semi-Auto"
-                   value="Semi-Auto" th:class="w-25" th:checked="${firearmsType eq 'Semi-Auto'}">
-        </div>
-        <div class="FirearmsFilterFull">
-            <label for="Full-Auto" class="form-label">Full-Auto</label>
-            <input type="radio" class="form-control" name="firearmsFilter" id="Full-Auto"
-                   value="Full-Auto" th:class="w-25" th:checked="${firearmsType eq 'Full-Auto'}">
-        </div>
-        <div class="FirearmsFilterBoth">
-            <label for="Both" class="form-label">Both</label>
-            <input type="radio" class="form-control" name="firearmsFilter" id="Both"
-                   value="" th:class="w-25" th:checked="${firearmsType eq null} and ${firearmsType eq'Both Semi-Auto and Full-Auto'}">
-        </div>
-        <div class="FirearmsFilterNeither">
-            <label for="Neither" class="form-label">Neither</label>
-            <input type="radio" class="form-control" name="firearmsFilter" id="Neither"
-                   value="Neither" th:class="w-25" th:checked="${firearmsType eq 'Neither Semi-Auto nor Full-Auto'}">
-        </div>
-        </div>
-        <div>
-            <input type="submit" value="search" class="btn btn-outline-info">
-        </div>
-
-    </form>
-
-</div>
-</div>
-
-<div th:unless="${filtersEnabled}" class="align-items-center">
+<div th:unless="${filtersEnabled}" class="text-center mt-5">
     <a class="btn btn-outline-warning" th:href="@{/guns/filter}">Open Filter</a>
 </div>
+
+<div th:if="${filtersEnabled}" class="text-center mt-5">
+    <a class="btn btn-outline-warning" th:href="@{/guns}">Close Filter</a>
+    <form th:action="@{/guns/filter}" method="get">
+        <div class="card-body card card border-warning col-md-12 row mt-5">
+            <h5 class="card-header">Filters</h5>
+            <div class="btn-group w-25 col-md-2">
+                <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">
+                    <option value="" selected disabled>Select Gun Type</option>
+                    <option value="Handgun">Handguns</option>
+                    <option value="Shotgun">Shotguns</option>
+                    <option value="Rifle">Rifles</option>
+                    <option value="Assault Rifle">Assault Rifles</option>
+                    <option value="Sniper Rifle">Sniper Rifles</option>
+                    <option value="Submachine Gun">Submachine Guns</option>
+                </select>
+            </div>
+            <div class="btn-group w-25 col-md-2">
+                <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">
+                    <option value="" selected disabled>Select Caliber</option>
+                    <option value="9x19 mm">9x19 mm</option>
+                    <option value=".44 Magnum">.44 Magnum</option>
+                    <option value=".22 LR">.22 LR</option>
+                    <option value=".38 Special Magnum">.38 Special Magnum</option>
+                    <option value="7.62x25 mm">7.62x25 mm</option>
+                    <option value="5.56x45 mm">5.56x45 mm</option>
+                    <option value="7.62x54 mm">7.62x54 mm</option>
+                    <option value="12 GA">12 GA</option>
+                    <option value="7.62x51 mm">7.62x51 mm</option>
+                    <option value=".45 ACP">.45 ACP</option>
+                    <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>
+                    <option value="7,92x57mm">7,92x57mm</option>
+                </select>
+            </div>
+            <div class="MagazineFilter">
+                <div class="form-select w-25">
+                    <label for="minMagazine" class="form-label">Min Magazine</label>
+                    <input type="number" name="minMagazine" class="form-control" id="minMagazine"
+                           placeholder="minMagazine"
+                           th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">
+                    <label for="maxMagazine" class="form-label">Max Magazine</label>
+                    <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"
+                           placeholder="maxMagazine"
+                           th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">
+                </div>
+            </div>
+
+            <div class="priceFilter">
+                <div class="form-select w-25">
+                    <label for="minPrice" class="form-label">Min Price</label>
+                    <input type="number" name="minPrice" class="form-control" id="minPrice"
+                           placeholder="minPrice"
+                           th:value="${minPrice}" step="5" min="5" max="30" th:class="w-100">
+                    <label for="maxPrice" class="form-label">Max Price</label>
+                    <input type="number" name="maxPrice" class="form-control" id="maxPrice"
+                           placeholder="maxPrice"
+                           th:value="${maxPrice}" step="5" min="5" max="30" th:class="w-100">
+                </div>
+            </div>
+            <div class="FirearmsFilterSemi">
+                <label for="Semi-Auto" class="form-label">Semi-Auto</label>
+                <input type="radio" class="form-control" name="firearmsFilter" id="Semi-Auto"
+                       value="Semi-Auto" th:class="w-25" th:checked="${firearmsType eq 'Semi-Auto'}">
+            </div>
+            <div class="FirearmsFilterFull">
+                <label for="Full-Auto" class="form-label">Full-Auto</label>
+                <input type="radio" class="form-control" name="firearmsFilter" id="Full-Auto"
+                       value="Full-Auto" th:class="w-25" th:checked="${firearmsType eq 'Full-Auto'}">
+            </div>
+            <div class="FirearmsFilterBoth">
+                <label for="Both" class="form-label">Both</label>
+                <input type="radio" class="form-control" name="firearmsFilter" id="Both"
+                       value="" th:class="w-25"
+                       th:checked="${firearmsType eq null} and ${firearmsType eq'Both Semi-Auto and Full-Auto'}">
+            </div>
+            <div class="FirearmsFilterNeither">
+                <label for="Neither" class="form-label">Neither</label>
+                <input type="radio" class="form-control" name="firearmsFilter" id="Neither"
+                       value="Neither" th:class="w-25"
+                       th:checked="${firearmsType eq 'Neither Semi-Auto nor Full-Auto'}">
+            </div>
+            <div>
+                <input type="submit" value="search" class="btn btn-outline-info">
+            </div>
+        </div>
+
+
+
+
+    </form>
+</div>
+
 
 <div class="weapons mt-5 mb-5">
     <div class="row justify-content-center mx-5">

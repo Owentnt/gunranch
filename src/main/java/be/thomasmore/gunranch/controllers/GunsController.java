@@ -24,6 +24,8 @@ public class GunsController {
 
     @Autowired
     CompetitionRepository competitionRepository;
+
+    @Autowired
     GunsRepository gunsRepository;
 
     @GetMapping("/guns")

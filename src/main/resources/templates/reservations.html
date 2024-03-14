@@ -18,80 +18,92 @@
 <div class="position-relative">
     <img src="/images/reservationsbg.jpg" class="bg h-100 w-100 d-flex">
     <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
-    <h1 class="text-center text-warning">Make a reservation</h1>
-<div class="container">
-<form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
-    <div class="row">
-    <div class="form-group col-md-6">
-        <label for="firstName" class="my-3"><strong>First Name:</strong></label>
-        <input type="text" class="form-control" id="firstName" placeholder="First name" th:field="*{firstName}" required>
-        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
-    </div>
+        <h1 class="text-center text-warning">Make a reservation</h1>
+        <div class="container text-start">
+            <form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName" class="my-3"><strong>First Name:</strong></label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First name"
+                               th:field="*{firstName}" required>
+                        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+                    </div>
 
-    <div class="form-group col-md-6">
-        <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
-        <input type="text" class="form-control" id="lastName" placeholder="Last name" th:field="*{lastName}" required>
-        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
-    </div>
-    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                               th:field="*{lastName}" required>
+                        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+                    </div>
+                </div>
 
-    <div class="row">
-    <div class="form-group col-md-6">
-        <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>
-        <input type="email" class="form-control" id="emailAddress" placeholder="Email" required th:field="*{emailAddress}">
-        <span th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></span>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>
+                        <input type="email" class="form-control" id="emailAddress" placeholder="Email" required
+                               th:field="*{emailAddress}">
+                        <span th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></span>
 
-    </div>
+                    </div>
 
-    <div class="form-group col-md-6">
-        <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>
-        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" th:field="*{phoneNumber}" placeholder="Enter your phone number" required>
-        <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>
-    </div>
-    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>
+                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                               th:field="*{phoneNumber}" placeholder="Enter your phone number" required>
+                        <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>
+                    </div>
+                </div>
 
-    <div class="row">
-    <div class="form-group col-md-6">
-        <label for="address" class="my-3"><strong>Address:</strong></label>
-        <input type="text" class="form-control" id="address" placeholder="Enter your Address" required th:field="*{address}">
-        <span th:if="${#fields.hasErrors('Address')}" th:errors="*{address}"></span>
-    </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="address" class="my-3"><strong>Address:</strong></label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your Address" required
+                               th:field="*{address}">
+                        <span th:if="${#fields.hasErrors('Address')}" th:errors="*{address}"></span>
+                    </div>
 
-    <div class="form-group col-md-6">
-        <label for="city" class="my-3"><strong>City:</strong></label>
-        <input type="text" class="form-control" id="city" placeholder="Enter your city" required th:field="*{city}">
-        <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></span>
+                    <div class="form-group col-md-6">
+                        <label for="city" class="my-3"><strong>City:</strong></label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter your city" required
+                               th:field="*{city}">
+                        <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></span>
 
-    </div>
-    </div>
-    <div class="row">
-    <div class="form-group col-md-4">
-        <label for="participants" class="my-3"><strong>Participants:</strong></label>
-        <input type="number" class="form-control" id="participants" placeholder="Amount of participants" required min="1" max="8" th:field="*{amountOfParticipants}">
-        <span th:if="${#fields.hasErrors('AmountOfParticipants')}" th:errors="*{amountOfParticipants}"></span>
-    </div>
-    <div class="form-group col-md-4">
-        <label class="control-label my-3" for="date" ><strong>Date:</strong></label>
-        <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY" required th:field="*{date}">
-        <span th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></span>
-    </div>
-        <div class="form-group col-md-4">
-            <label class="control-label my-3" for="time"><strong>Time:</strong></label>
-            <input type="text" class="form-control" id="time" placeholder="00:00" required th:field="*{time}">
-            <span th:if="${#fields.hasErrors('time')}" th:errors="*{time}"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="participants" class="my-3"><strong>Participants:</strong></label>
+                        <input type="number" class="form-control" id="participants" placeholder="Amount of participants"
+                               required min="1" max="8" th:field="*{amountOfParticipants}">
+                        <span th:if="${#fields.hasErrors('AmountOfParticipants')}"
+                              th:errors="*{amountOfParticipants}"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="control-label my-3" for="date"><strong>Date:</strong></label>
+                        <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY" required
+                               th:field="*{date}">
+                        <span th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="control-label my-3" for="time"><strong>Time:</strong></label>
+                        <input type="text" class="form-control" id="time" placeholder="00:00" required
+                               th:field="*{time}">
+                        <span th:if="${#fields.hasErrors('time')}" th:errors="*{time}"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="member" class="my-3 form-check-label"><strong>Member:</strong></label>
+                    <input type="checkbox" class="form-control form-check-input" id="member" th:field="*{member}">
+                    <span th:if="${#fields.hasErrors('member')}" th:errors="*{member}"></span>
+                </div>
+
+                <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}"
+                                                                      class="text-white text-decoration-none">Submit</a>
+                </button>
+
+            </form>
         </div>
     </div>
-    <div class="form-group">
-        <label for="member" class="my-3 form-check-label"><strong>Member:</strong></label>
-        <input type="checkbox" class="form-control form-check-input" id="member" th:field="*{member}">
-        <span th:if="${#fields.hasErrors('member')}" th:errors="*{member}"></span>
-    </div>
-
-    <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none">Submit</a></button>
-
-</form>
-</div>
-</div>
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
