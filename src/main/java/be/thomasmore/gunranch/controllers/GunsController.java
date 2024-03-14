@@ -20,10 +20,6 @@ import java.util.Optional;
 @Controller
 public class GunsController {
 
-    private Logger logger = LoggerFactory.getLogger(GunsController.class);
-
-    @Autowired
-    CompetitionRepository competitionRepository;
 
     @Autowired
     GunsRepository gunsRepository;
@@ -79,37 +75,7 @@ public class GunsController {
         return "gunsdetails";
     }
 
-
-    @GetMapping("/competitions")
-    public String competitions(Model model) {
-        model.addAttribute("model", model);
-        return "competitions";
     }
 
-    @GetMapping("/competitions/filter")
-    public String competitionsFilter(Model model, @RequestParam(required = false) String title,
-                                     @RequestParam (required = false) Date startingHour,
-                                     @RequestParam (required = false) Date endingHour,
-                                     @RequestParam (required = false) Date date,
-                                     @RequestParam (required = false) Date registrationDeadline,
-                                     @RequestParam (required = false) double participationPrice,
-                                     @RequestParam (required = false) String bio,
-                                     @RequestParam (required = false) String image,
-                                     @RequestParam (required = false) String rules) {
 
-        Iterable<Competitions> allComps = competitionRepository.findAll();
-        model.addAttribute("competitions", allComps);
-        model.addAttribute("title", title);
-        model.addAttribute("startingHour", startingHour);
-        model.addAttribute("endingHour", endingHour);
-        model.addAttribute("date", date);
-        model.addAttribute("registrationDeadline", registrationDeadline);
-        model.addAttribute("participationPrice", participationPrice);
-        model.addAttribute("bio", bio);
-        model.addAttribute("image", image);
-        model.addAttribute("rules",rules);
-        model.addAttribute("filtersEnabled", true);
-        return "competitions";
-    }
-}
 

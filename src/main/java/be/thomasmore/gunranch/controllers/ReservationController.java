@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @Validated
-public class UserController {
+public class ReservationController {
 
     @Autowired
     ReservationRepository reservationRepository;

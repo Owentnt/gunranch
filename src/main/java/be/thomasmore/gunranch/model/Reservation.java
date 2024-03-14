@@ -56,14 +56,15 @@ public class Reservation {
     @NotBlank(message = "City is required")
     private String city;
 
+
     public Reservation(int id, String firstName, String lastName,
-                       String emailAdres, String phoneNumber,
+                       String emailAddress, String phoneNumber,
                        int amountOfParticipants, Date date, Date time, boolean member,
                        String address, String city) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailAddress = emailAdres;
+        this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.amountOfParticipants = amountOfParticipants;
         this.date = date;

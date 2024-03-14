@@ -148,10 +148,15 @@ INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME,EMAIL_ADDRESS,PHONE_NUMBER)
 VALUES (8,'Mahalia','Vleminckx','haailaxcosplays@gmail.com','0477 65 22 47');
 
 
-INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,BIO,date,REGISTRATION_DEADLINE,
-                         PARTICIPATION_PRICE,OBJECTIVE,IMAGE,
-                         RULES,SAFETY)
-VALUES (1,'Bullseye Shooting Academy','14:00','17:00',null,'2024-05-18','2024-05-11',25,
-        null,null,
-        null,null);
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
+        '/images/bullseye.png',null,'Participants aim to hit the center of a target,
+                                     with scoring based on proximity to the bullseye.
+                                    Variations include different target sizes and distances.');
+
+INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES(5,1);
+INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES(2,1);
+INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES(3,1);
+
 
