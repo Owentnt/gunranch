@@ -37,13 +37,14 @@
     <div class="card-body">
         <img th:src="${competition.image}" alt="bullseye" width="327.3" height="250.9">
         <h5 class="card-title" th:text="${competition.title}"></h5>
-        <p class="card-text" th:text=" ' Starting Hour: '+${competition.startingHour}"></p>
+        <p class="card-text" th:text=" ' &#x23F0; Starting Hour: '+${competition.startingHour}"></p>
         <p class="card-text" th:text=" ' Ending Hour: '+${competition.endingHour}"></p>
-        <p class="card-text" th:text=" ' Date '*{date}"></p>
+        <p class="card-text" th:text=" ' Date '+${competition.date}"></p>
         <p class="card-text" th:text=" ' Participation Price: '+${competition.participationPrice}+' EUR'"></p>
-        <p class="card-text" th:text=" ' Allowed Firearms: '+${competition.getAllowedFirearms}"></p>
+        <p class="card-text" th:text=" ' Allowed Firearms: '+${competition.allowedFirearms}"></p>
         <p class="card-text" th:text=" ' Bio: '+${competition.bio}"></p>
-        <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/*{competition.id}|}">Meer info</a>
+        <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/${competition.id}|}">More Info</a>
+        <a class="btn btn-outline-warning" th:href="@{/participationform}">Enter Competition</a>
     </div>
 </div>
 

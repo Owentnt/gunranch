@@ -1,7 +1,9 @@
 package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Competitions;
+import be.thomasmore.gunranch.model.Participants;
 import be.thomasmore.gunranch.repositorys.CompetitionRepository;
+import be.thomasmore.gunranch.repositorys.ParticipantRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,9 @@ public class CompetitionsController {
     @Autowired
     CompetitionRepository competitionRepository;
 
+    @Autowired
+    ParticipantRepository participantRepository;
+
     @GetMapping("/competitions")
     public String competitions(Model model) {
         final Iterable<Competitions> allComps = competitionRepository.findAll();
@@ -35,8 +40,7 @@ public class CompetitionsController {
                                      @RequestParam (required = false) Date registrationDeadline,
                                      @RequestParam (required = false) double participationPrice,
                                      @RequestParam (required = false) String bio,
-                                     @RequestParam (required = false) String image,
-                                     @RequestParam (required = false) String rules) {
+                                     @RequestParam (required = false) String image) {
 
         Iterable<Competitions> allComps = competitionRepository.findAll();
         model.addAttribute("competitions", allComps);
@@ -48,7 +52,6 @@ public class CompetitionsController {
         model.addAttribute("participationPrice", participationPrice);
         model.addAttribute("bio", bio);
         model.addAttribute("image", image);
-        model.addAttribute("rules",rules);
         model.addAttribute("filtersEnabled", true);
         return "competitions";
     }
@@ -60,4 +63,9 @@ public class CompetitionsController {
         return "competitiondetails";
     }
 
+    @GetMapping("/participationform")
+    public String participationForm(Model model) {
+        model.addAttribute("participations", new Participants());
+        return "participationform";
+    }
 }

@@ -154,6 +154,62 @@ VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',
         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
                                      with scoring based on proximity to the bullseye.
                                     Variations include different target sizes and distances.');
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (2,'Steel Challenge','20:00','22:00','2024-05-25','2024-05-20',30,
+        null,null,'The Steel Challenge is a dynamic and fast-paced shooting competition
+                                    that has captivated enthusiasts worldwide. Born out of a desire to
+                                    create a thrilling and accessible shooting sport, the Steel Challenge has grown from
+                                    its humble beginnings into one of the most popular shooting disciplines today.');
+
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (3,'3 Gun','10:00','18:00','2024-06-06','2024-06-01',13,
+        null,null,'3 Gun involves using three different firearms
+                  (usually rifle, shotgun, and handgun) to engage various targets
+                  in a course of fire. It tests participants'' proficiency with multiple weapons.');
+
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (4,'Trap And Skeet','12:00','17:00','2024-06-10','2024-06-03',15,
+        null,null,'Shotgun games like Trap and Skeet involve shooting clay pigeons
+                   launched into the air. In Trap, targets are launched away from the shooter,
+                  while in Skeet, targets move in various directions.');
+
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (5,'Run And Gun','18:00','22:00','2024-06-27','2024-06-23',18,
+        null,null,'Combining elements of shooting and physical fitness,
+                  Run and Gun events involve participants navigating through
+                  a course and engaging targets with various firearms.');
+
+-- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+--                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+-- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
+--         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
+--                                      with scoring based on proximity to the bullseye.
+--                                     Variations include different target sizes and distances.');
+--
+-- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+--                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+-- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
+--         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
+--                                      with scoring based on proximity to the bullseye.
+--                                     Variations include different target sizes and distances.');
+--
+-- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+--                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+-- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
+--         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
+--                                      with scoring based on proximity to the bullseye.
+--                                     Variations include different target sizes and distances.');
+--
+-- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+--                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+-- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
+--         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
+--                                      with scoring based on proximity to the bullseye.
+--                                     Variations include different target sizes and distances.');
 
 INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES(5,1);
 INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES(2,1);

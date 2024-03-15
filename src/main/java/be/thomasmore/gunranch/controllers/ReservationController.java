@@ -20,7 +20,6 @@ public class ReservationController {
 
     @GetMapping("/reservations")
     public String reservationsForm(Model model){
-        model.addAttribute("model",model);
         model.addAttribute("reservations", new Reservation());
         return "reservations";
     }
