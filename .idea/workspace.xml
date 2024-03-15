@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="competition pagina aan het maken. Wat extra testdata toegevoegd">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +19,15 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="competitions" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,14 +139,7 @@
       <workItem from="1710426064220" duration="7614000" />
       <workItem from="1710447585875" duration="6693000" />
       <workItem from="1710501549693" duration="5132000" />
-      <workItem from="1710511782407" duration="787000" />
-    </task>
-    <task id="LOCAL-00039" summary="Reservations database aan het maken">
-      <created>1709897951215</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1709897951215</updated>
+      <workItem from="1710511782407" duration="2131000" />
     </task>
     <task id="LOCAL-00040" summary="data troubleshooting">
       <created>1709898918149</created>
@@ -484,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710454567856</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="competition pagina aan het maken. Wat extra testdata toegevoegd">
+      <created>1710512631653</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1710512631653</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +501,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="updatedatabase" />
                       </list>
                     </value>
                   </entry>
@@ -514,7 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="styling" />
     <MESSAGE value="minmagazine field corrigeren" />
     <MESSAGE value="maxmagazine field corrigeren. ze werken nu allebei" />
     <MESSAGE value="min price field toegevoegd" />
@@ -539,7 +538,8 @@
     <MESSAGE value="troubleshooting met de database Competitions" />
     <MESSAGE value="Page styling" />
     <MESSAGE value="wat styling wat data bijgewerkt en card klaar en troubleshooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="wat styling wat data bijgewerkt en card klaar en troubleshooting" />
+    <MESSAGE value="competition pagina aan het maken. Wat extra testdata toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="competition pagina aan het maken. Wat extra testdata toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
