@@ -33,10 +33,9 @@
 
 
 <div class="card col-md-6 " th:each="competition:${competitions}">
-    <h5 class="card-header">Lol</h5>
+    <h5 class="card-header" th:text="${competition.title}"></h5>
     <div class="card-body">
         <img th:src="${competition.image}" alt="bullseye" width="327.3" height="250.9">
-        <h5 class="card-title" th:text="${competition.title}"></h5>
         <p class="card-text" th:text=" ' &#x23F0; Starting Hour: '+${competition.startingHour}"></p>
         <p class="card-text" th:text=" ' Ending Hour: '+${competition.endingHour}"></p>
         <p class="card-text" th:text=" ' Date '+${competition.date}"></p>

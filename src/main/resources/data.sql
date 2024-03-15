@@ -150,7 +150,7 @@ VALUES (8,'Mahalia','Vleminckx','haailaxcosplays@gmail.com','0477 65 22 47');
 
 INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
-VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
+VALUES (1,'Bullseye Shooting','14:00','17:00','2024-05-18','2024-05-11',25,
         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
                                      with scoring based on proximity to the bullseye.
                                     Variations include different target sizes and distances.');
@@ -183,20 +183,20 @@ VALUES (5,'Run And Gun','18:00','22:00','2024-06-27','2024-06-23',18,
                   Run and Gun events involve participants navigating through
                   a course and engaging targets with various firearms.');
 
--- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
---                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
--- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
---         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
---                                      with scoring based on proximity to the bullseye.
---                                     Variations include different target sizes and distances.');
---
--- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
---                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
--- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
---         '/images/bullseye.png',null,'Participants aim to hit the center of a target,
---                                      with scoring based on proximity to the bullseye.
---                                     Variations include different target sizes and distances.');
---
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (6,'Presicion Rifle Series','10:00','14:00','2024-07-10','2024-07-05',35,
+        null,null,'PRS competitions focus on long-range precision rifle shooting.
+                  Shooters engage targets at varying distances and often encounter challenging
+                  environmental conditions.');
+
+INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
+                         PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
+VALUES (7,'Precision Pistol','13:00','17:00','2024-08-08','2024-08-02',40,
+        null,null,'Participants aim to hit the center of a target,
+                                     with scoring based on proximity to the bullseye.
+                                    Variations include different target sizes and distances.');
+
 -- INSERT INTO COMPETITIONS(ID,TITLE,STARTING_HOUR,ENDING_HOUR,date,REGISTRATION_DEADLINE,
 --                          PARTICIPATION_PRICE,IMAGE,OBJECTIVE,BIO)
 -- VALUES (1,'Bullseye Shooting Academy','14:00','17:00','2024-05-18','2024-05-11',25,
