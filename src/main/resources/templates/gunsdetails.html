@@ -16,7 +16,7 @@
 
 <body class="bg-secondary">
 
-<div class="gunsbio">
+<div>
     <h1 class="text-center text-warning" th:text="${guns.name}"></h1>
 
     <div class="image">
@@ -24,17 +24,32 @@
     </div>
 
     <div class="bio carousel-caption"></div>
+    <h6 class="text-center text-warning"><strong>Gun Type</strong></h6>
+    <p th:text="${guns.gunType}" class="text-center text-warning"></p>
+    <h6 class="text-center text-warning"><strong>Magazine</strong></h6>
+    <p th:text="${guns.magazine}" class="text-center text-warning"></p>
+    <h6 class="text-center text-warning"><strong>Caliber</strong></h6>
+    <p th:text="${guns.caliber}" class="text-center text-warning"></p>
+    <h6 class="text-center text-warning"><strong>Price</strong></h6>
+    <p th:text="${guns.price}" class="text-center text-warning"></p>
+    <h6 class="text-center text-warning"><strong>Firearm Type</strong></h6>
+    <p th:text="${guns.firearmsType}" class="text-center text-warning"></p>
     <h6 class="text-center text-warning"><strong>Bio</strong></h6>
     <p th:text="${guns.bio}" class="text-center text-warning"></p>
 </div>
 
-<div class="previousgun text-start d-inline-flex ">
-    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${previousGun}|}">Previous</a>
+<div class="gun text-start d-inline-flex ">
+    <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${previousGun}|}">Prev</a>
 </div>
 
-<div class="nextgun text-end d-inline-flex">
+<div class="text-end d-inline-flex">
     <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${nextGun}|}">Next</a>
 </div>
+
+<div class="text-end d-inline-flex">
+    <a class="btn btn-outline-warning" th:href="@{|/admin/editguns/${guns.id}|}">Edit Gun</a>
+</div>
+
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 </body>
