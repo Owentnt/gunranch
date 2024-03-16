@@ -8,16 +8,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LoginController {
 
     @GetMapping("/login")
-    public String login(Model model){
-        String firstName = "Owen";
-        String lastName = "Talboom";
-        String emailAdres = "owentm031111@gmail.com";
-        String phoneNumber = "0494 31 00 04";
+    public String login(Model model,String userName, String passWord){
+        model.addAttribute("userName",userName);
+        model.addAttribute("passWord",passWord);
+        return "login";
+    }
+    @GetMapping("/registration")
+    public String registration(Model model, String firstName,
+                               String lastName,
+                               String emailAddress,
+                               String phoneNumber,
+                               String passWord){
         model.addAttribute("firstName",firstName);
         model.addAttribute("lastName",lastName);
-        model.addAttribute("emailAdres",emailAdres);
+        model.addAttribute("emailAddress",emailAddress);
         model.addAttribute("phoneNumber",phoneNumber);
-        model.addAttribute("model",model);
-        return "login";
+        model.addAttribute("passWord",passWord);
+        return "registration";
     }
 }

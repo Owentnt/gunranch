@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="pagina aangemaakt voor nieuwe gun te implementeren">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="Registratie pagina gemaakt en link in login voor moest user geen account hebben">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,13 +141,6 @@
       <workItem from="1710501549693" duration="5132000" />
       <workItem from="1710511782407" duration="6757000" />
       <workItem from="1710585023247" duration="2329000" />
-    </task>
-    <task id="LOCAL-00045" summary="bezig met reguirements voor fields">
-      <created>1709914766270</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1709914766270</updated>
     </task>
     <task id="LOCAL-00046" summary=" requierement voor fields bijna klaar">
       <created>1709924369499</created>
@@ -485,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710586419882</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Registratie pagina gemaakt en link in login voor moest user geen account hebben">
+      <created>1710605859067</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1710605859068</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="caliber button toegevoegd" />
     <MESSAGE value="caliber button filter actief" />
     <MESSAGE value="type of gun button filter actief" />
     <MESSAGE value="radio buttons klaargezet" />
@@ -540,7 +539,8 @@
     <MESSAGE value="findGun controller toegevoegd" />
     <MESSAGE value="update pagina toegevoegd met de nodige controllers" />
     <MESSAGE value="update formulier werkt" />
-    <option name="LAST_COMMIT_MESSAGE" value="update formulier werkt" />
+    <MESSAGE value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
