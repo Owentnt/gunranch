@@ -17,11 +17,20 @@
 <body>
 <div th:if="${guns}">
   <form th:action="@{|/admin/editguns/${guns.id}|}" method="post" th:object="${guns}">
-    <label for="gunName" class="form-label">Gun Type</label>
-    <input id="gunName" class="form-control" type="text" th:field="${guns.name}">
+    <label for="gunName" class="form-label">Gun Name</label>
+    <input id="gunName" class="form-control" type="text" th:field="*{name}">
+    <select id="gunType" name="gunType" class="btn-warning btn" th:field="*{gunType}">
+      <option value="" selected disabled>Select Gun Type</option>
+      <option value="Handgun">Handguns</option>
+      <option value="Shotgun">Shotguns</option>
+      <option value="Rifle">Rifles</option>
+      <option value="Assault Rifle">Assault Rifles</option>
+      <option value="Sniper Rifle">Sniper Rifles</option>
+      <option value="Submachine Gun">Submachine Guns</option>
+    </select>
     <label for="Magazine" class="form-label">Magazine</label>
-    <input id="Magazine" class="form-control" type="number" th:field="${guns.magazine}">
-    <select id="caliber" name="caliber" class="btn-warning btn" th:field="${guns.caliber}">
+    <input id="Magazine" class="form-control" type="number" th:field="*{magazine}">
+    <select id="caliber" name="caliber" class="btn-warning btn" th:field="*{caliber}">
       <option value="" selected disabled>Select Caliber</option>
       <option value="9x19 mm">9x19 mm</option>
       <option value=".44 Magnum">.44 Magnum</option>
@@ -37,8 +46,8 @@
       <option value="7,92x57mm">7,92x57mm</option>
     </select>
     <label for="Price" class="form-label">Price</label>
-    <input id="Price" class="form-control" type="number" th:field="${guns.price}">
-    <select id="firearmsType" name="firearmsType" class="btn-warning btn" th:field="${guns.firearmsType}">
+    <input id="Price" class="form-control" type="number" th:field="*{price}">
+    <select id="firearmsType" name="firearmsType" class="btn-warning btn" th:field="*{firearmsType}">
       <option value="" selected disabled>Select Caliber</option>
       <option value="Semi-Auto">Semi-Auto</option>
       <option value="Full-Auto">Full-Auto</option>
@@ -46,7 +55,7 @@
       <option value="Neither">Neither</option>
     </select>
     <label for="bio" class="form-label">Bio</label>
-    <textarea id="bio" type="text" class="form-control" th:field="${guns.bio}"></textarea>
+    <textarea id="bio" type="text" class="form-control" th:field="*{bio}"></textarea>
     <a class="btn btn-warning" th:href="@{|/gunsdetails/${guns.id}|}">Cancel</a>
     <input class="btn-warning btn" type="submit">
 
