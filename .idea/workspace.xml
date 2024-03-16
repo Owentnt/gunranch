@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="findGun controller toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="update formulier werkt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,21 +140,7 @@
       <workItem from="1710447585875" duration="6693000" />
       <workItem from="1710501549693" duration="5132000" />
       <workItem from="1710511782407" duration="6757000" />
-      <workItem from="1710585023247" duration="1042000" />
-    </task>
-    <task id="LOCAL-00043" summary="fiels required gemaakt">
-      <created>1709911882917</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1709911882917</updated>
-    </task>
-    <task id="LOCAL-00044" summary="reservationdetails pagina actief gezet&#10;contact pagina verwijderd (overbodige pagina)">
-      <created>1709912719842</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1709912719842</updated>
+      <workItem from="1710585023247" duration="2329000" />
     </task>
     <task id="LOCAL-00045" summary="bezig met reguirements voor fields">
       <created>1709914766270</created>
@@ -485,7 +471,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710519347091</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="update pagina toegevoegd met de nodige controllers">
+      <created>1710586401059</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1710586401059</updated>
+    </task>
+    <task id="LOCAL-00093" summary="update formulier werkt">
+      <created>1710586419882</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1710586419882</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,8 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="max price field toegevoegd" />
-    <MESSAGE value="dropdown menu voor guntypes toegevoegd" />
     <MESSAGE value="caliber button toegevoegd" />
     <MESSAGE value="caliber button filter actief" />
     <MESSAGE value="type of gun button filter actief" />
@@ -540,7 +538,9 @@
     <MESSAGE value="admin controller en edit pagina gemaakt" />
     <MESSAGE value="formulier gemaakt op editguns maar nog niet volledig klaar" />
     <MESSAGE value="findGun controller toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="findGun controller toegevoegd" />
+    <MESSAGE value="update pagina toegevoegd met de nodige controllers" />
+    <MESSAGE value="update formulier werkt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update formulier werkt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -8,6 +8,7 @@ import java.util.Collection;
 
 @Entity
 public class Guns {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 
