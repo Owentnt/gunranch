@@ -16,10 +16,10 @@
 
 <body>
 
-<h1 class="text-center text-warning">Login</h1>
+<h1 class="text-center text-warning">Log in</h1>
 
 <div>
-<form class="form-select container my-5 justify-content-center">
+<form class="form-select container my-5 justify-content-center w-50">
     <div class="form-group">
         <label for="firstName" class="my-3"><strong>Username:</strong></label>
         <input type="text" class="form-control" id="firstName" placeholder="First name">
@@ -31,6 +31,7 @@
 
 
 <button type="submit" class="btn btn-warning my-3">Sign in</button>
+    <a class="text-warning text-decoration-none" th:href="@{/registration}">Register if you are new</a>
 
 </form>
 </div>
