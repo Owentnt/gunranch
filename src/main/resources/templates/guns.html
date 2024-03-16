@@ -103,7 +103,10 @@
                        th:checked="${firearmsType eq 'Neither Semi-Auto nor Full-Auto'}">
             </div>
             <div>
-                <input type="submit" value="search" class="btn btn-outline-info">
+                <input type="submit" value="search" class="btn btn-outline-warning">
+            </div>
+            <div>
+                <a class="btn btn-outline-warning" th:href="@{/admin/newgun}">New Gun</a>
             </div>
         </div>
 

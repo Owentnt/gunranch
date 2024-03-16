@@ -20,16 +20,17 @@ public class GunAdminController {
 
     private final Logger logger = LoggerFactory.getLogger(GunAdminController.class);
 
-    @GetMapping({"/editguns/{id}","/editguns"})
+    @GetMapping({"/editguns/{id}", "/editguns"})
     public String editGuns(Model model, @PathVariable Integer id, Guns guns) {
-        model.addAttribute("id",id);
-        model.addAttribute("guns",guns);
-        logger.info(String.format("gunEdit" + id ));
+        model.addAttribute("id", id);
+        model.addAttribute("guns", guns);
+        logger.info(String.format("gunEdit" + id));
         return "admin/editguns";
     }
+
     @ModelAttribute("guns")
-    public Guns findGun(@PathVariable (required = false) Integer id){
-        logger.info("findGun "+id);
+    public Guns findGun(@PathVariable(required = false) Integer id) {
+        logger.info("findGun " + id);
         Optional<Guns> gunFinder = gunsRepository.findById(id);
 
         if (gunFinder.isPresent())
@@ -38,16 +39,23 @@ public class GunAdminController {
     }
 
     @PostMapping("/editguns/{id}")
-    public String editGunsPost(@PathVariable Integer id, Guns guns){
-        logger.info("gunEditPost" +id +"-- new name=" + guns.getName()
-                +"-- new gunType=" + guns.getGunType()
-                +"-- new Magazine=" + guns.getMagazine()
-                +"-- new Caliber=" + guns.getCaliber()
-                +"-- new price=" + guns.getPrice()
-                +"-- new firearmsType=" + guns.getFirearmsType()
-                +"-- new bio=" + guns.getBio()
-                +"-- new image=" + guns.getImage());
+    public String editGunsPost(@PathVariable Integer id, Guns guns) {
+        logger.info("gunEditPost" + id + "-- new name=" + guns.getName()
+                + "-- new gunType=" + guns.getGunType()
+                + "-- new Magazine=" + guns.getMagazine()
+                + "-- new Caliber=" + guns.getCaliber()
+                + "-- new price=" + guns.getPrice()
+                + "-- new firearmsType=" + guns.getFirearmsType()
+                + "-- new bio=" + guns.getBio()
+                + "-- new image=" + guns.getImage());
         gunsRepository.save(guns);
-        return "redirect:/gunsdetails/"+id;
+        return "redirect:/gunsdetails/" + id;
+    }
+
+    @GetMapping("/newgun")
+    public String newGun(Model model, Guns guns) {
+        model.addAttribute("guns", guns);
+        logger.info("gunNew");
+        return "admin/newgun";
     }
 }

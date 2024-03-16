@@ -10,13 +10,14 @@
   <link rel="stylesheet" type="text/css" media="all"
         th:href="@{/css/gunranch.css}" href="/css/gunranch.css"/>
   <meta charset="UTF-8">
-    <title>Edit Guns</title>
+    <title>New Gun</title>
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
+
 <div th:if="${guns}">
-  <form th:action="@{|/admin/editguns/${guns.id}|}" method="post" th:object="${guns}">
+  <form th:action="@{/admin/newgun}" method="post" th:object="${guns}">
     <label for="gunName" class="form-label">Gun Name</label>
     <input id="gunName" class="form-control" type="text" th:field="*{name}">
     <select id="gunType" name="gunType" class="btn-warning btn" th:field="*{gunType}">
@@ -58,11 +59,8 @@
     <textarea id="bio" type="text" class="form-control" th:field="*{bio}"></textarea>
     <a class="btn btn-warning" th:href="@{|/gunsdetails/${guns.id}|}">Cancel</a>
     <input class="btn-warning btn" type="submit" value="Save">
-
-  </form>
-
-
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
+  </form>
 </div>
 </body>
 </html>
