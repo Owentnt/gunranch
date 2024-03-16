@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="formulier gemaakt op editguns maar nog niet volledig klaar" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="findGun controller toegevoegd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,14 +139,8 @@
       <workItem from="1710426064220" duration="7614000" />
       <workItem from="1710447585875" duration="6693000" />
       <workItem from="1710501549693" duration="5132000" />
-      <workItem from="1710511782407" duration="5942000" />
-    </task>
-    <task id="LOCAL-00042" summary="extra waarden bij competition model">
-      <created>1709906531470</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1709906531470</updated>
+      <workItem from="1710511782407" duration="6757000" />
+      <workItem from="1710585023247" duration="1042000" />
     </task>
     <task id="LOCAL-00043" summary="fiels required gemaakt">
       <created>1709911882917</created>
@@ -480,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710517080398</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="findGun controller toegevoegd">
+      <created>1710519347091</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1710519347091</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="min price field toegevoegd" />
     <MESSAGE value="max price field toegevoegd" />
     <MESSAGE value="dropdown menu voor guntypes toegevoegd" />
     <MESSAGE value="caliber button toegevoegd" />
@@ -535,7 +539,8 @@
     <MESSAGE value="competition pagina aan het maken. Wat extra testdata toegevoegd" />
     <MESSAGE value="admin controller en edit pagina gemaakt" />
     <MESSAGE value="formulier gemaakt op editguns maar nog niet volledig klaar" />
-    <option name="LAST_COMMIT_MESSAGE" value="formulier gemaakt op editguns maar nog niet volledig klaar" />
+    <MESSAGE value="findGun controller toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="findGun controller toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
