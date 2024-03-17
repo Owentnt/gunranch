@@ -82,25 +82,25 @@
             </div>
             <div class="FirearmsFilterSemi">
                 <label for="Semi-Auto" class="form-label">Semi-Auto</label>
-                <input type="radio" class="form-control" name="firearmsFilter" id="Semi-Auto"
-                       value="Semi-Auto" th:class="w-25" th:checked="${firearmsType eq 'Semi-Auto'}">
+                <input type="radio" class="form-control" name="firearmsFilter" id="Semi-Auto" value="Semi-Auto"
+                       th:class="w-25" th:checked="${firearmsType == 'Semi-Auto'}">
             </div>
             <div class="FirearmsFilterFull">
                 <label for="Full-Auto" class="form-label">Full-Auto</label>
                 <input type="radio" class="form-control" name="firearmsFilter" id="Full-Auto"
-                       value="Full-Auto" th:class="w-25" th:checked="${firearmsType eq 'Full-Auto'}">
+                       value="Full-Auto" th:class="w-25" th:checked="${firearmsType == 'Full-Auto'}">
             </div>
             <div class="FirearmsFilterBoth">
                 <label for="Both" class="form-label">Both</label>
                 <input type="radio" class="form-control" name="firearmsFilter" id="Both"
                        value="" th:class="w-25"
-                       th:checked="${firearmsType eq null} and ${firearmsType eq'Both Semi-Auto and Full-Auto'}">
+                       th:checked="${firearmsType == 'Both Semi-Auto and Full-Auto'}">
             </div>
             <div class="FirearmsFilterNeither">
                 <label for="Neither" class="form-label">Neither</label>
                 <input type="radio" class="form-control" name="firearmsFilter" id="Neither"
                        value="Neither" th:class="w-25"
-                       th:checked="${firearmsType eq 'Neither Semi-Auto nor Full-Auto'}">
+                       th:checked="${firearmsType == 'Neither Semi-Auto nor Full-Auto'}">
             </div>
             <div>
                 <input type="submit" value="search" class="btn btn-outline-warning">
@@ -119,7 +119,7 @@
 
 <div class="weapons mt-5 mb-5">
     <div class="row justify-content-center mx-5">
-        <div th:each="gun:${guns}" class="card card border-warning col-md-4">
+        <div th:each="gun:${guns}" class="card card border-warning col-md-4 bg-dark">
             <img class="card-img-top" th:src="${gun.image}" th:alt="${gun.name}" width="192" height="250">
             <div class="card-body text-warning">
                 <h5 class="card-title" th:text="${gun.name}"></h5>
