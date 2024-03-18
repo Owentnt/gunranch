@@ -9,6 +9,7 @@
             crossorigin="anonymous" ></script>
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/gunranch.css}" href="/css/gunranch.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <meta charset="UTF-8">
     <title>Guns</title>
 </head>
@@ -16,7 +17,7 @@
 
 <body>
 
-<h1 class="text-warning text-center">Types of Guns</h1>
+<h1 class="text-warning text-center"><i class="bi bi-person-circle"></i> Types of Guns</h1>
 
 <div th:unless="${filtersEnabled}" class="text-center mt-5">
     <a class="btn btn-outline-warning" th:href="@{/guns/filter}">Open Filter</a>
