@@ -16,25 +16,26 @@ public class Reservation {
     @JoinColumn(name="users_id", nullable=false)
     private Users users;
 
-    @NotBlank(message = "Amount of participants is required")
+    @NotNull(message = "Amount of participants is required")
     @Min( value = 1, message = "Please enter a positive number")
     @Max(value = 8, message = "Max 8 participants")
     private int amountOfParticipants;
 
     @DateTimeFormat(pattern = "DD/MM/YYYY")
-    @NotBlank(message = "Date is required")
+    @Pattern(regexp = "\\d{2}/\\d{2}/\\d{4}")
+    @NotNull(message = "Date is required")
     @Future(message = "Please select a date in the future")
     @Temporal(TemporalType.DATE)
     private Date date;
 
     @FutureOrPresent(message = "Please select a time in the present or future")
-    @NotBlank(message = "Time is required")
+    @Pattern(regexp = "\\d{2}:\\d{2}")
+    @NotNull(message = "Time is required")
     @DateTimeFormat(pattern = "HH:MM")
     @Temporal(TemporalType.TIME)
     private Date time;
 
-
-    @ManyToMany(mappedBy = "reservations")
+    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "reservations")
     @Size(max = 5)
     private Collection<Guns> gunPackage;
 

@@ -1,5 +1,6 @@
 package be.thomasmore.gunranch.controllers;
 
+import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.model.Reservation;
 import be.thomasmore.gunranch.repositorys.ReservationRepository;
 import jakarta.validation.Valid;
@@ -19,8 +20,8 @@ public class ReservationController {
     ReservationRepository reservationRepository;
 
     @GetMapping("/reservations")
-    public String reservationsForm(Model model){
-        model.addAttribute("reservations", new Reservation());
+    public String reservationsForm(Reservation reservations,Model model){
+        model.addAttribute("reservations",reservations);
         return "reservations";
     }
 
@@ -30,6 +31,7 @@ public class ReservationController {
             return "reservations";
         }
         model.addAttribute("reservations",reservations);
+        reservationRepository.save(reservations);
         return "redirect:/reservationdetails";
     }
 

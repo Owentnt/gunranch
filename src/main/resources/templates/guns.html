@@ -117,6 +117,12 @@
                            th:checked="${firearmsType == 'Pump-Action'}">
                 </div>
             </div>
+            <div class="form-group col-md-6">
+                <label for="gunPackage">Guns</label>
+                <select name="gunPackage" id="gunPackage" class="btn-warning btn">
+                    <option th:each="gunpackage : ${guns}" th:value="${gunpackage.id}" th:text="${gunpackage.name}"></option>
+                </select>
+            </div>
             <div>
                 <input type="submit" value="search" class="btn btn-outline-warning">
             </div>

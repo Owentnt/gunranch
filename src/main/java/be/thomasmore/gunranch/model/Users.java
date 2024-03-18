@@ -4,10 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.util.Set;
 
@@ -20,31 +17,31 @@ public class Users {
     @OneToMany(mappedBy="users")
     private Set<Reservation> reservations;
 
-    @NotBlank(message = "First name is required")
+    @NotNull(message = "First name is required")
     private String firstName;
 
 
-    @NotBlank(message = "Last name is required")
+    @NotNull(message = "Last name is required")
     private String lastName;
 
-    @NotBlank(message = "Email address is required")
+    @NotNull(message = "Email address is required")
     @Email(message = "Please enter a valid email")
     private String emailAddress;
 
     @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
-    @NotBlank(message = "Phone number is required")
+    @NotNull(message = "Phone number is required")
     private String phoneNumber;
 
-    @NotBlank(message = "Address is required")
+    @NotNull(message = "Address is required")
     private String address;
 
-    @NotBlank(message = "Postal code is required")
+    @NotNull(message = "Postal code is required")
     @Pattern(regexp = "\\d{4}", message = "Postal code not valid")
     private String postalCode;
-    @NotBlank(message = "City is required")
+    @NotNull(message = "City is required")
     private String city;
 
-    @NotBlank(message = "Password is required")
+    @NotNull(message = "Password is required")
     @Size(min = 10, max = 20)
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[&@#§è!+=?^])(?=\\S+$)",
             message = "passWord does not meet requirements, " +
