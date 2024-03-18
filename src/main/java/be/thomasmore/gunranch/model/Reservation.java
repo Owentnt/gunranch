@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -33,6 +34,11 @@ public class Reservation {
     private Date time;
 
 
+    @ManyToMany(mappedBy = "reservations")
+    @Size(max = 5)
+    private Collection<Guns> gunPackage;
+
+
 
 
     public Reservation(int id,int amountOfParticipants, Date date, Date time) {
@@ -53,6 +59,14 @@ public class Reservation {
 
     public void setUsers(Users users) {
         this.users = users;
+    }
+
+    public Collection<Guns> getGunPackage() {
+        return gunPackage;
+    }
+
+    public void setGunPackage(Collection<Guns> gunPackage) {
+        this.gunPackage = gunPackage;
     }
 
     public int getId() {

@@ -31,6 +31,9 @@ public class Guns {
 
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
+    @ManyToMany
+    private Collection<Reservation> reservations;
+
 
     public Guns(int id, String name, String type, int magazine, String caliber, String bio, double price, String firearmsType, String image) {
         this.id = id;
@@ -47,6 +50,14 @@ public class Guns {
 
 
     public Guns() {
+    }
+
+    public Collection<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Collection<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
     public Collection<Competitions> getCompetitions() {

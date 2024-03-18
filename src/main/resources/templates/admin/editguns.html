@@ -48,11 +48,13 @@
     <label for="Price" class="form-label">Price</label>
     <input id="Price" class="form-control" type="number" th:field="*{price}">
     <select id="firearmsType" name="firearmsType" class="btn-warning btn" th:field="*{firearmsType}">
-      <option value="" selected disabled>Select Caliber</option>
+      <option value="" selected disabled>Select Firearms Type</option>
       <option value="Semi-Auto">Semi-Auto</option>
       <option value="Full-Auto">Full-Auto</option>
-      <option value="Both">Both</option>
-      <option value="Neither">Neither</option>
+      <option value="Revolver">Revolver</option>
+      <option value="Carbine">Carbine</option>
+      <option value="Pump-Action">Pump-Action</option>
+      <option value="Bolt-Action">Bolt-Action</option>
     </select>
     <label for="bio" class="form-label">Bio</label>
     <textarea id="bio" type="text" class="form-control" th:field="*{bio}"></textarea>

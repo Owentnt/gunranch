@@ -7,6 +7,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 import java.util.Set;
 
@@ -26,8 +27,8 @@ public class Users {
     @NotBlank(message = "Last name is required")
     private String lastName;
 
-//    @NotBlank(message = "Email address is required")
-//    @Email(message = "Please enter a valid email")
+    @NotBlank(message = "Email address is required")
+    @Email(message = "Please enter a valid email")
     private String emailAddress;
 
     @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
@@ -37,9 +38,18 @@ public class Users {
     @NotBlank(message = "Address is required")
     private String address;
 
+    @NotBlank(message = "Postal code is required")
+    @Pattern(regexp = "\\d{4}", message = "Postal code not valid")
     private String postalCode;
     @NotBlank(message = "City is required")
     private String city;
+
+    @NotBlank(message = "Password is required")
+    @Size(min = 10, max = 20)
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[&@#§è!+=?^])(?=\\S+$)",
+            message = "passWord does not meet requirements, " +
+                    "It has to contain at least one digit, one lowercase letter, " +
+                    "one uppercase letter, no whitespace and a special character")
     private String passWord;
 
     public Users(int id, String firstName, String lastName, String emailAddress,
