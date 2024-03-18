@@ -17,14 +17,14 @@
 
 <body>
 
-<h1 class="text-warning text-center"><i class="bi bi-person-circle"></i> Types of Guns</h1>
+<h1 class="text-warning text-center"> Types of Guns</h1>
 
 <div th:unless="${filtersEnabled}" class="text-center mt-5">
-    <a class="btn btn-outline-warning" th:href="@{/guns/filter}">Open Filter</a>
+    <a class="btn btn-outline-warning bi bi-arrow-down" th:href="@{/guns/filter}">Open Filter</a>
 </div>
 
 <div th:if="${filtersEnabled}" class="text-center mt-5">
-    <a class="btn btn-outline-warning" th:href="@{/guns}">Close Filter</a>
+    <a class="btn btn-outline-warning bi bi-arrow-up" th:href="@{/guns}">Close Filter</a>
     <form th:action="@{/guns/filter}" method="get">
         <div class="card-body card card border-warning col-md-8 row mt-5 bg-dark container">
             <h5 class="card-header text-warning">Filters</h5>
@@ -125,10 +125,12 @@
                 </select>
             </div>
             <div>
-                <input type="submit" value="search" class="btn btn-outline-warning">
+                <button type="submit" class="btn btn-outline-warning">
+                    <i class="bi-search bi"></i>Search
+                </button>
             </div>
             <div>
-                <a class="btn btn-outline-warning" th:href="@{/admin/newgun}">New Gun</a>
+                <a class="btn btn-outline-warning bi bi-plus" th:href="@{/admin/newgun}">New Gun</a>
             </div>
 
         </div>
@@ -147,7 +149,7 @@
                 <p class="card-text" th:text=" 'Caliber: '+${gun.caliber}"></p>
                 <p class="card-text" th:text=" 'Price: '+${gun.price}+' EUR'"></p>
                 <p class="card-text" th:text=" 'Type of Firearm: '+${gun.firearmsType}"></p>
-                <a class="btn btn-outline-warning" th:href="@{|/gunsdetails/${gun.id}|}">Meer info</a>
+                <a class="btn btn-outline-warning bi bi-info-circle" th:href="@{|/gunsdetails/${gun.id}|}">Meer info</a>
 
             </div>
         </div>

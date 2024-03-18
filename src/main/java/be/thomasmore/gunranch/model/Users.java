@@ -49,6 +49,10 @@ public class Users {
                     "one uppercase letter, no whitespace and a special character")
     private String passWord;
 
+    @Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
+    private String ssId;
+
+
     public Users(int id, String firstName, String lastName, String emailAddress,
                  String phoneNumber, String address, String postalCode, String city,
                  String passWord, String ssId) {
@@ -104,7 +108,6 @@ public class Users {
         this.ssId = ssId;
     }
 
-    private String ssId;
 
     public Users() {
     }

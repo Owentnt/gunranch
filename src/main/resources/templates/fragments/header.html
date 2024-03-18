@@ -20,7 +20,7 @@
 
 <div th:fragment="header">
   <nav class="navbar-dark nav-pills bg-dark btn-toolbar">
-    <ul class ="navbar-dark">
+    <ul class ="navbar-dark d-flex align-items-center">
       <a class="navbar-brand" th:href="@{/}">
         <img src="/images/logo_bullseye_shooting_academy.png" width="321.9" height="67.3" alt="">
       </a>
@@ -30,7 +30,13 @@
       <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/reservations}" class="text-white text-decoration-none">Reservations</a></li>
       <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/competitions}" class="text-white text-decoration-none">Competitions</a></li>
       <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/login}" class="text-white text-decoration-none">Login</a></li>
-
+      <li class="nav-item ms-5">
+        <h1>
+          <a class="ui-icon-link text-warning" th:href="@{/userprofiledetails}">
+            <i class="bi-person-circle bi"></i>
+          </a>
+        </h1>
+      </li>
     </ul>
   </nav>
 </div>
