@@ -14,12 +14,11 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 <body>
-<!--<div class="inleiding d-flex justify-content-center h-100"  style=" background-image: url('/images/gun-background-img.jpg')">-->
 <div class="position-relative">
     <img src="/images/gun-background-img.jpg" class="inleiding bg h-100 w-100 d-flex">
     <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
         <h1 th:text="'Welcome to '+${name}" class="text-warning mb-5"></h1>
-        <div style="background-color: rgba(255, 221, 51, 0.75);">
+        <div style="background-color: rgba(255, 221, 51, 0.75);" class="mt-5 p-3">
         <p>Welcome to Bullseye Shooting Academy, where precision meets
         passion,
         and enthusiasts gather to experience the thrill of marksmanship in a safe and welcoming environment.

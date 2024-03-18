@@ -18,12 +18,21 @@ public class LoginController {
                                String lastName,
                                String emailAddress,
                                String phoneNumber,
-                               String passWord){
+                               String passWord,
+                               String address,
+                               String city,
+                               String ssId,
+                               String postalCode){
         model.addAttribute("firstName",firstName);
         model.addAttribute("lastName",lastName);
         model.addAttribute("emailAddress",emailAddress);
         model.addAttribute("phoneNumber",phoneNumber);
         model.addAttribute("passWord",passWord);
+        model.addAttribute("address",address);
+        model.addAttribute("city",city);
+        model.addAttribute("postalCode",postalCode);
+        model.addAttribute("ssId",ssId);
+
         return "registration";
     }
 }
