@@ -18,14 +18,14 @@ VALUES ('Walther P22 Junior', 'Handgun', 10, '.22 LR', 9, '/images/waltherp22jun
                                                                            It typically fires .22 LR ammunition and is often used for target shooting or plinking');
 
     INSERT INTO GUNS ( NAME, GUN_TYPE, MAGAZINE, CALIBER, PRICE, IMAGE,FIREARMS_TYPE,BIO)
-VALUES ( 'Smith & Wesson 686', 'Handgun', 6, '.38 Special Magnum', 12, '/images/smithandwessen686.png ','Neither Semi-Auto nor Full-Auto','The Smith & Wesson Model 686 is a popular double-action revolver known for its durability and versatility.
+VALUES ( 'Smith & Wesson 686', 'Handgun', 6, '.38 Special Magnum', 12, '/images/smithandwessen686.png ','Revolver','The Smith & Wesson Model 686 is a popular double-action revolver known for its durability and versatility.
                                                                                       It''s often chambered in .357 Magnum, providing users with the
                                                                                       option to shoot both .357 Magnum and .38 Special cartridges.
                                                                                       The 686 typically features a stainless steel construction, adjustable sights, and a 6 or 7-round cylinder.
                                                                                       It''s well-regarded for its accuracy and is commonly used for target shooting, self-defense, and as a duty sidearm for law enforcement.');
 
     INSERT INTO GUNS( NAME, GUN_TYPE, MAGAZINE, CALIBER, PRICE, IMAGE,FIREARMS_TYPE,BIO)
-VALUES ( 'Taurus 95', 'Handgun', 8, '.22 LR', 10, '/images/Taurus_95.png','Neither Semi-Auto nor Full-Auto','The Taurus Model 95 is a revolver designed and manufactured by the Brazilian firearms company Taurus International.
+VALUES ( 'Taurus 95', 'Handgun', 8, '.22 LR', 10, '/images/Taurus_95.png','Revolver','The Taurus Model 95 is a revolver designed and manufactured by the Brazilian firearms company Taurus International.
                                                                                      It is chambered in .38 Special and .357 Magnum. Known for its compact size and reliability,
                                                                                      the Taurus 95 is often chosen for concealed carry.
                                                                                      It typically features a 5-round cylinder and is available in various barrel lengths.
@@ -33,23 +33,23 @@ VALUES ( 'Taurus 95', 'Handgun', 8, '.22 LR', 10, '/images/Taurus_95.png','Neith
                                                                                      so it''s advisable to check for the latest information.');
 
     INSERT INTO GUNS ( NAME, GUN_TYPE, MAGAZINE, CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Ruger Super Redhawk', 'Handgun', 6, '44 Special/.44 Magnum Magnum', 12, '/images/Redhawk.png ','Neither Semi-Auto nor Full-Auto','The Ruger Super Redhawk is a line of double-action revolvers manufactured by Sturm, Ruger & Co.
+VALUES ('Ruger Super Redhawk', 'Handgun', 6, '44 Special/.44 Magnum Magnum', 12, '/images/Redhawk.png ','Revolver','The Ruger Super Redhawk is a line of double-action revolvers manufactured by Sturm, Ruger & Co.
                                                                                                             The Super Redhawk was first introduced in 1987 as a powerful and rugged firearm designed for both hunting and personal defense.
                                                                                                             It is known for its strength, durability, and versatility, making it a popular choice among handgun enthusiasts.');
 
     INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Kalashnikov Classic','Assault Rifle',35,'7.62x25 mm', 15, '/images/kalashnikov.png','Both Semi-Auto and Full-Auto','The Kalashnikov Classic refers to a series of firearms designed by Mikhail Kalashnikov,
+VALUES ('Kalashnikov Classic','Assault Rifle',35,'7.62x25 mm', 15, '/images/kalashnikov.png','Carbine','The Kalashnikov Classic refers to a series of firearms designed by Mikhail Kalashnikov,
                                                                     notably the AK-47 assault rifle. Known for its reliability and widespread use,
                                                                     the Kalashnikov Classic design has become iconic in the realm of firearms since its introduction in the late 1940s.');
 
     INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Steyr Aug','Assault Rifle',30,'5.56x45 mm', 15, '/images/steyr_aug.png','Both Semi-Auto and Full-Auto','The Steyr AUG (Armee-Universal-Gewehr, or Universal Army Rifle) is an Austrian bullpup assault rifle designed in the 1970s.
+VALUES ('Steyr Aug','Assault Rifle',30,'5.56x45 mm', 15, '/images/steyr_aug.png','Carbine','The Steyr AUG (Armee-Universal-Gewehr, or Universal Army Rifle) is an Austrian bullpup assault rifle designed in the 1970s.
                                                           Known for its distinctive appearance and modular design, it has a reputation for reliability and accuracy.
                                                           The AUG''s bullpup design allows for a shorter overall length without sacrificing barrel length, making it more maneuverable in tight spaces.
                                                           It has been adopted by various military and law enforcement agencies worldwide.');
 
     INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Mosin Nagant','Sniper Rifle',5,'7.62x54 mm', 15,'/images/mosin_nagant.png','Neither Semi-Auto nor Full-Auto','The Mosin-Nagant is a bolt-action rifle that originated in Russia
+VALUES ('Mosin Nagant','Sniper Rifle',5,'7.62x54 mm', 15,'/images/mosin_nagant.png','Bolt-Action','The Mosin-Nagant is a bolt-action rifle that originated in Russia
                                                                 and became one of the most widely used military rifles in the 20th century.
                                                                 It was designed by Russian and Belgian inventors, Sergei Mosin and Léon Nagant.
                                                                 Introduced in the late 19th century, it played a significant role in both World War I and World War II.
@@ -66,7 +66,7 @@ VALUES ('UZI','Submachine Gun',25,'9x19 mm',18,'/images/UZI.png','Full-Auto','Th
                                                  The Uzi has been used by military and law enforcement worldwide, becoming an iconic firearm.');
 
     INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Mossberg 590A1','Shotgun',8,'12 GA',15,'/images/mossberg590A1.png','Neither Semi-Auto nor Full-Auto','The Mossberg 590A1 is a pump-action shotgun known for its durability and reliability.
+VALUES ('Mossberg 590A1','Shotgun',8,'12 GA',15,'/images/mossberg590A1.png','Pump Action','The Mossberg 590A1 is a pump-action shotgun known for its durability and reliability.
                                                                It''s often used by military and law enforcement due to its robust construction and ability to handle heavy loads.
                                                                Features include a 20-inch barrel, 9-round capacity, and a reinforced aluminum receiver.
                                                                The 590A1 is designed to meet rigorous military standards and is popular for home defense and tactical use.');
@@ -77,7 +77,7 @@ VALUES ('Saiga 12','Shotgun',5,'12 GA',15,'/images/Saiga12.png','Semi-Auto','The
                                                             The Saiga-12 is popular for its versatility and adaptability, often used in shooting sports and by military and law enforcement agencies.');
 
     INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('M14','Assault Rifle',20,'7.62x51 mm',12,'/images/M14.png','Both Semi-Auto or Full-Auto','The M14 is a selective fire, magazine-fed battle rifle adopted by the United States military in the late 1950s.
+VALUES ('M14','Assault Rifle',20,'7.62x51 mm',12,'/images/M14.png','Carbine','The M14 is a selective fire, magazine-fed battle rifle adopted by the United States military in the late 1950s.
                                                            It served as the standard-issue rifle for the U.S. military until it was replaced by the M16 in the 1960s.
                                                            The M14 is known for its 7.62x51mm NATO caliber and distinctive design, featuring a wooden stock.
                                                            It has seen continued use in various roles and is appreciated for its accuracy and stopping power.');
@@ -99,7 +99,7 @@ VALUES ('M1 Garand','Sniper Rifle',8,'.30-06 Springfield Ridge',24, '/images/M1G
                                                               Designed by Canadian-American firearms engineer John Garand, the M1 Garand is renowned for being the first semi-automatic rifle to be widely adopted by a major military power.');
 
 INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Mauser Kar98K','Sniper Rifle',5,'7,92x57mm',15,'/images/mauser.png','Neither Semi-Auto nor Full-Auto','The Mauser Karabiner 98 Kurz, commonly known as the Kar98k, is a bolt-action rifle that gained widespread recognition and use during World War II.');
+VALUES ('Mauser Kar98K','Sniper Rifle',5,'7,92x57mm',15,'/images/mauser.png','Carbine','The Mauser Karabiner 98 Kurz, commonly known as the Kar98k, is a bolt-action rifle that gained widespread recognition and use during World War II.');
 
 
 
