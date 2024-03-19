@@ -41,4 +41,9 @@ public class ReservationController {
         model.addAttribute("reservations",reservations);
         return "reservationdetails";
     }
+    @GetMapping("/userprofiledetails")
+    public String profile(Model model,Reservation reservation){
+        model.addAttribute("reservation",reservation);
+        return "userprofiledetails";
+    }
 }

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="image input veld toegevoegd in editguns en newgun pagina">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="Icons bootstrap documentation toegevoegd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userprofiledetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userprofiledetails.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="forms" />
+        <entry key="$PROJECT_DIR$" value="reservation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -145,9 +148,20 @@
       <workItem from="1710681199076" duration="2514000" />
       <workItem from="1710756126547" duration="6245000" />
       <workItem from="1710773107588" duration="1794000" />
-      <workItem from="1710796947461" duration="317000" />
-      <workItem from="1710834498828" duration="769000" />
-      <workItem from="1710853059481" duration="8654000" />
+    </task>
+    <task id="LOCAL-00048" summary="Requirements toegevoegd bij alle velden">
+      <created>1709934787739</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1709934787739</updated>
+    </task>
+    <task id="LOCAL-00049" summary="participationform en competitionsdetails toegevoegd">
+      <created>1709937453604</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1709937453604</updated>
     </task>
     <task id="LOCAL-00050" summary="filter buttons toevoegen en styling">
       <created>1709987730896</created>
@@ -478,21 +492,7 @@
       <option name="project" value="LOCAL" />
       <updated>1710784228736</updated>
     </task>
-    <task id="LOCAL-00097" summary="insert pagina is ready">
-      <created>1710856070569</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1710856070570</updated>
-    </task>
-    <task id="LOCAL-00098" summary="image input veld toegevoegd in editguns en newgun pagina">
-      <created>1710857051187</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1710857051187</updated>
-    </task>
-    <option name="localTasksCounter" value="99" />
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,6 +522,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="radio buttons klaargezet" />
+    <MESSAGE value="logo terug actief gezet" />
     <MESSAGE value="troubleshooting" />
     <MESSAGE value="wat refactoring en wat aanpassingen aan de database" />
     <MESSAGE value="error pagina gemaakt" />
@@ -545,9 +547,7 @@
     <MESSAGE value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
     <MESSAGE value="wat troubleshooting" />
     <MESSAGE value="Icons bootstrap documentation toegevoegd" />
-    <MESSAGE value="insert pagina is ready" />
-    <MESSAGE value="image input veld toegevoegd in editguns en newgun pagina" />
-    <option name="LAST_COMMIT_MESSAGE" value="image input veld toegevoegd in editguns en newgun pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="Icons bootstrap documentation toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

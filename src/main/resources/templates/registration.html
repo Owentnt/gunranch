@@ -20,7 +20,7 @@
 <h1 class="text-center text-warning mt-2"> Registrate Your Account</h1>
 
 <div>
-    <form class="form-select container my-5 justify-content-center w-50">
+    <form th:action="@{/userprofiledetails}" method="post" id="registration" class="form-select container my-5 justify-content-center w-50">
         <div class="form-group">
             <label for="firstName" class="my-3"><strong>First Name:</strong></label>
             <input type="text" class="form-control" id="firstName" placeholder="First name">
@@ -83,7 +83,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-warning my-3">Sign in</button>
+        <button type="submit" class="btn btn-warning my-3"><a th:href="@{/userprofiledetails}" class="text-white text-decoration-none bi bi-send">Sign in</a></button>
     </form>
 </div>
 
