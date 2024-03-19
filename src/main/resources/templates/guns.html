@@ -26,9 +26,9 @@
 <div th:if="${filtersEnabled}" class="text-center mt-5">
     <a class="btn btn-outline-warning bi bi-arrow-up" th:href="@{/guns}">Close Filter</a>
     <form th:action="@{/guns/filter}" method="get">
-        <div class="card-body card card border-warning col-md-8 row mt-5 bg-dark container">
+        <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container">
             <h5 class="card-header text-warning">Filters</h5>
-            <div class="btn-group w-25 col-md-2">
+            <div class="btn-group w-25 col-md-2 row col">
                 <label for="gunType"></label>
                 <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">
                     <option value="" selected disabled>Select Gun Type</option>
@@ -39,7 +39,9 @@
                     <option value="Sniper Rifle">Sniper Rifles</option>
                     <option value="Submachine Gun">Submachine Guns</option>
                 </select>
-                <label for="caliber"></label>
+            </div>
+            <div class="btn-group w-25 col-md-2 row col">
+            <label for="caliber"></label>
                 <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">
                     <option value="" selected disabled>Select Caliber</option>
                     <option value="9x19 mm">9x19 mm</option>
@@ -57,7 +59,7 @@
                 </select>
             </div>
             <div class="row col">
-                <div class="form-select w-25 col-md-6">
+                <div class="form-select w-50 col-md-3 mt-5 ms-3">
                     <label for="minMagazine" class="form-label">Min Magazine</label>
                     <input type="number" name="minMagazine" class="form-control" id="minMagazine"
                            placeholder="minMagazine"
@@ -69,7 +71,7 @@
 
                 </div>
                 <div class="row col">
-                    <div class="form-select w-25 col-md-6">
+                    <div class="form-select w-75 col-md-3 mt-5 ms-3 ">
                         <label for="minPrice" class="form-label">Min Price</label>
                         <input type="number" name="minPrice" class="form-control" id="minPrice"
                                placeholder="minPrice"
@@ -82,48 +84,47 @@
                 </div>
             </div>
 
-            <div class="text-warning">
+            <div class="text-warning form-select w-50 col-md-12 my-5 ms-3 align-items-center">
                 <div class="FirearmsFilterSemi">
-                    <label for="Semi-Auto" class="form-label">Semi-Auto</label>
-                    <input type="radio" class="form-control" name="firearmsType" id="Semi-Auto" value="Semi-Auto"
+                    <label for="Semi-Auto" class="form-label d-inline-block">Semi-Auto</label>
+                    <input type="checkbox" class="form-control " name="firearmsType" id="Semi-Auto" value="Semi-Auto"
                            th:class="w-25" th:checked="${firearmsType == 'Semi-Auto'}">
                 </div>
                 <div class="FirearmsFilterFull">
                     <label for="Full-Auto" class="form-label">Full-Auto</label>
-                    <input type="radio" class="form-control" name="firearmsType" id="Full-Auto"
+                    <input type="checkbox" class="form-control d-inline-block " name="firearmsType" id="Full-Auto"
                            value="Full-Auto" th:class="w-25" th:checked="${firearmsType == 'Full-Auto'}">
                 </div>
                 <div class="FirearmsFilterNeither">
                     <label for="Revolver" class="form-label">Revolver</label>
-                    <input type="radio" class="form-control" name="firearmsType" id="Revolver"
+                    <input type="checkbox" class="form-control" name="firearmsType" id="Revolver"
                            value="Revolver" th:class="w-25"
                            th:checked="${firearmsType == 'Revolver'}">
                 </div>
                 <div class="FirearmsFilterNeither">
                     <label for="Carbine" class="form-label">Carbine</label>
-                    <input type="radio" class="form-control" name="firearmsType" id="Carbine"
+                    <input type="checkbox" class="form-control" name="firearmsType" id="Carbine"
                            value="Carbine" th:class="w-25"
                            th:checked="${firearmsType == 'Carbine'}">
                 </div>
                 <div class="FirearmsFilterNeither">
                     <label for="Bolt-Action" class="form-label">Bolt-Action</label>
-                    <input type="radio" class="form-control" name="firearmsType" id="Bolt-Action"
+                    <input type="checkbox" class="form-control" name="firearmsType" id="Bolt-Action"
                            value="Bolt-Action" th:class="w-25"
                            th:checked="${firearmsType == 'Bolt-Action'}">
                 </div>
                 <div class="FirearmsFilterNeither">
                     <label for="Pump-Action" class="form-label">Pump-Action</label>
-                    <input type="radio" class="form-control" name="firearmsType" id="Pump-Action"
+                    <input type="checkbox" class="form-control" name="firearmsType" id="Pump-Action"
                            value="Pump-Action" th:class="w-25"
                            th:checked="${firearmsType == 'Pump-Action'}">
                 </div>
             </div>
-            <div>
+            <div class="col-md-6 mx-auto">
                 <button type="submit" class="btn btn-outline-warning">
                     <i class="bi-search bi"></i>Search
                 </button>
-            </div>
-            <div>
+
                 <a class="btn btn-outline-warning bi bi-plus" th:href="@{/admin/newgun}">New Gun</a>
             </div>
 
