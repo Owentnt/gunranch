@@ -2,6 +2,7 @@ package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.model.Reservation;
+import be.thomasmore.gunranch.repositorys.GunsRepository;
 import be.thomasmore.gunranch.repositorys.ReservationRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +20,20 @@ public class ReservationController {
     @Autowired
     ReservationRepository reservationRepository;
 
+    @Autowired
+    GunsRepository gunsRepository;
+
     @GetMapping("/reservations")
     public String reservationsForm(Reservation reservations,Model model){
+        Iterable <Guns> gunsPackage = gunsRepository.findAll();
         model.addAttribute("reservations",reservations);
+        model.addAttribute("gunsPackage",gunsPackage);
         return "reservations";
     }
 
     @PostMapping("/reservations")
     public String submitReservationForm(@Valid Reservation reservations, BindingResult bindingResult, Model model){
+
         if (bindingResult.hasErrors()){
             return "reservations";
         }

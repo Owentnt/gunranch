@@ -35,10 +35,10 @@ public class Reservation {
     @Temporal(TemporalType.TIME)
     private Date time;
 
-    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "reservations")
-    @Size(max = 5)
-    private Collection<Guns> gunPackage;
 
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "reservations")
+    @Size(max = 5)
+    private Collection<Guns> gunsPackage;
 
 
 
@@ -62,12 +62,12 @@ public class Reservation {
         this.users = users;
     }
 
-    public Collection<Guns> getGunPackage() {
-        return gunPackage;
+    public Collection<Guns> getGunsPackage() {
+        return gunsPackage;
     }
 
-    public void setGunPackage(Collection<Guns> gunPackage) {
-        this.gunPackage = gunPackage;
+    public void setGunsPackage(Collection<Guns> gunsPackage) {
+        this.gunsPackage = gunsPackage;
     }
 
     public int getId() {

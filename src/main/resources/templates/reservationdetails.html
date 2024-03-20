@@ -16,8 +16,17 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
+<h1>Thank you for you reservation</h1>
 
-
+<div>
+    <button type="button" class="btn btn-outline-warning"><a th:href="@{/reservations}" class="text-dark text-decoration-none">New reservation></a></button>
+</div>
+<div>
+    <button type="button" class="btn btn-outline-warning">Cancel Reservation</button>
+</div>
+<div>
+    <button type="button" class="btn btn-outline-warning"><a th:href="@{/}" class="text-dark text-decoration-none">Return to home page</a></button>
+</div>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 </body>
 </html>

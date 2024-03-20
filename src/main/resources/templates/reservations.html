@@ -25,47 +25,62 @@
         <h1 class="text-center text-warning">Make a reservation</h1>
         <div class="container text-start">
             <form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
-<!--                <div class="row">-->
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="firstName" class="my-3"><strong>First Name:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="firstName" placeholder="First name"-->
-<!--                               th:value="*{getUsers().firstName}" required readonly="readonly">-->
-<!--                    </div>-->
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName" class="my-3"><strong>First Name:</strong></label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First name"
+                               th:field="*{users.firstName}" required >
+                    </div>
 
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="lastName" class="my-3"><strong>Last Name:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="lastName" placeholder="Last name"-->
-<!--                               th:value="*{getUsers().lastName}" required readonly="readonly">-->
-<!--                    </div>-->
-<!--                </div>-->
+                    <div class="form-group col-md-6">
+                        <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                               th:field="*{users.lastName}" required >
+                    </div>
+                </div>
 
-<!--                <div class="row">-->
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>-->
-<!--                        <input type="email" class="form-control" id="emailAddress" placeholder="Email" readonly="readonly"-->
-<!--                               th:value="*{getUsers().emailAddress}">-->
-<!--                    </div>-->
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="userName" class="my-3"><strong>Username: </strong></label>
+                        <input type="text" class="form-control" id="userName" placeholder="Username"
+                               th:field="*{users.userName}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="ssId" class="my-3"><strong>ss Id:</strong></label>
+                        <input type="text" class="form-control" id="ssId" name="ssId"
+                               th:field="*{users.ssId}" placeholder="ss Id">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>
+                        <input type="email" class="form-control" id="emailAddress" placeholder="Email"
+                               th:field="*{users.emailAddress}">
+                    </div>
 
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"-->
-<!--                               th:value="*{getUsers().phoneNumber}" placeholder="Enter your phone number" readonly="readonly">-->
-<!--                    </div>-->
-<!--                </div>-->
+                    <div class="form-group col-md-6">
+                        <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>
+                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                               th:field="*{users.phoneNumber}" placeholder="Enter your phone number">
+                    </div>
+                </div>
 
-<!--                <div class="row">-->
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="address" class="my-3"><strong>Address:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="address" placeholder="Enter your Address" readonly="readonly"-->
-<!--                               th:value="*{getUsers().address}">-->
-<!--                    </div>-->
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="address" class="my-3"><strong>Address:</strong></label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your Address"
+                               th:field="*{users.address}">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="postalCode" class="my-3"><strong>Postal Code:</strong></label>
+                        <input type="text" class="form-control" id="postalCode" placeholder="Postalcode"
+                               th:field="*{users.postalCode}">
+                    </div>
 
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="city" class="my-3"><strong>City:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="city" placeholder="Enter your city" readonly="readonly"-->
-<!--                               th:value="*{getUsers().city}">-->
-<!--                    </div>-->
-<!--                </div>-->
+                    <div class="form-group col-md-4">
+                        <label for="city" class="my-3"><strong>City:</strong></label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter your city"
+                               th:field="*{users.city}">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="form-group col-md-4 bi">
                             <i class="bi bi-people"></i>
@@ -88,16 +103,20 @@
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('time')}" th:errors="*{time}"></div>
                     </div>
                 </div>
-<!--                <div class="form-group col-md-6">-->
-<!--                    <label for="gunPackage">Guns</label>-->
-<!--                    <select name="gunPackage" id="gunPackage" class="btn-warning btn form-control">-->
-<!--                        <option th:each="gunpackage : ${reservations}" th:value="${reservations.gunPackage}"></option>-->
-<!--                    </select>-->
-<!--                </div>-->
-
+                <div row>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="gunPackage" >Guns</label>
+                    <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}" multiple>
+                        <option th:each="gun : ${gunsPackage}" th:selected="*{gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label"for="gunPackageSelect">Selected Guns:</label>
+                    <input id="gunPackageSelect" name="gunPackageSelect" class="form-control" th:value="${gunsPackage != null ? gunsPackage : ''}" readonly>
+                </div>
+                </div>
                 <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
                 </button>
-
             </form>
         </div>
     </div>

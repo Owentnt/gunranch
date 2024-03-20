@@ -123,9 +123,6 @@ VALUES ('Mauser Kar98K','Sniper Rifle',5,'7,92x57mm',15,'/images/mauser.png','Ca
 -- INSERT INTO RESERVATION(ID,FIRST_NAME,LAST_NAME,EMAIL_ADDRESS,PHONE_NUMBER,AMOUNT_OF_PARTICIPANTS,DATE,TIME,MEMBER,ADDRESS,CITY)
 -- VALUES (6,'Rafael','Rodriguez','rafaelrodriguez@gmail.be','0468 31 25 55','6',04/04/2023,13:00,false);
 
-INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME,EMAIL_ADDRESS,PHONE_NUMBER,PASS_WORD,POSTAL_CODE,CITY,ADDRESS,SS_ID)
-VALUES (1,'Owen','Talboom','owentm031111@gmail.com','0494 31 00 04','nazdiuhi','3140','Keerbergen',
-        'Duivebergen 2B','uizadp');
 
 -- INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME,EMAIL_ADDRESS,PHONE_NUMBER)
 -- VALUES (2,'Sara','Pasteels','sara.pasteels@hotmail.be','0477 83 14 10');

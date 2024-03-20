@@ -24,6 +24,9 @@ public class Users {
     @NotNull(message = "Last name is required")
     private String lastName;
 
+    @NotNull(message = "username is required")
+    private String userName;
+
     @NotNull(message = "Email address is required")
     @Email(message = "Please enter a valid email")
     private String emailAddress;
@@ -53,12 +56,13 @@ public class Users {
     private String ssId;
 
 
-    public Users(int id, String firstName, String lastName, String emailAddress,
+    public Users(int id, String firstName, String lastName,String userName, String emailAddress,
                  String phoneNumber, String address, String postalCode, String city,
                  String passWord, String ssId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.userName = userName;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.address = address;
@@ -108,6 +112,13 @@ public class Users {
         this.ssId = ssId;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public Users() {
     }
