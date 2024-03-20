@@ -1,12 +1,23 @@
 package be.thomasmore.gunranch.controllers;
 
+import be.thomasmore.gunranch.model.Reservation;
+import be.thomasmore.gunranch.model.Users;
+import be.thomasmore.gunranch.repositorys.UserRepository;
 import jakarta.servlet.Registration;
+import jakarta.validation.Valid;
+import org.apache.catalina.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class LoginController {
+
+    @Autowired
+    UserRepository userRepository;
 
     @GetMapping("/login")
     public String login(Model model,String userName, String passWord){
@@ -16,7 +27,8 @@ public class LoginController {
     }
     @GetMapping("/registration")
     public String registration(Model model, String firstName,
-                               String lastName,
+                               String lastName, String userName,
+                               String gender,
                                String emailAddress,
                                String phoneNumber,
                                String passWord,
@@ -24,9 +36,11 @@ public class LoginController {
                                String city,
                                String ssId,
                                String postalCode){
-        
+        model.addAttribute("users", new Users());
         model.addAttribute("firstName",firstName);
         model.addAttribute("lastName",lastName);
+        model.addAttribute("userName",userName);
+        model.addAttribute("gender",gender);
         model.addAttribute("emailAddress",emailAddress);
         model.addAttribute("phoneNumber",phoneNumber);
         model.addAttribute("passWord",passWord);
@@ -37,4 +51,15 @@ public class LoginController {
 
         return "registration";
     }
+    @PostMapping("/registration")
+    public String submitReservationForm(@Valid Users users, BindingResult bindingResult, Model model){
+
+        if (bindingResult.hasErrors()){
+            return "registration";
+        }
+        model.addAttribute("users",users);
+        userRepository.save(users);
+        return "redirect:/profile";
+    }
+
 }

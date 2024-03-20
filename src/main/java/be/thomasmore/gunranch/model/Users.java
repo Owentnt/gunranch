@@ -24,6 +24,9 @@ public class Users {
     @NotNull(message = "Last name is required")
     private String lastName;
 
+
+    private String gender;
+
     @NotNull(message = "username is required")
     private String userName;
 
@@ -56,13 +59,14 @@ public class Users {
     private String ssId;
 
 
-    public Users(int id, String firstName, String lastName,String userName, String emailAddress,
+    public Users(int id, String firstName, String lastName,String userName,String gender, String emailAddress,
                  String phoneNumber, String address, String postalCode, String city,
                  String passWord, String ssId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
+        this.gender = gender;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.address = address;
@@ -121,6 +125,14 @@ public class Users {
     }
 
     public Users() {
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public int getId() {

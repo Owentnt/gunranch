@@ -51,6 +51,6 @@ public class ReservationController {
     @GetMapping("/userprofiledetails")
     public String profile(Model model,Reservation reservation){
         model.addAttribute("reservation",reservation);
-        return "userprofiledetails";
+        return "profile";
     }
 }

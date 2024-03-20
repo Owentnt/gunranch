@@ -20,69 +20,73 @@
 <h1 class="text-center text-warning mt-2"> Registrate Your Account</h1>
 
 <div>
-    <form th:action="@{/userprofiledetails}" method="post" id="registration" class="form-select container my-5 justify-content-center w-50">
+    <form th:action="@{/registration}" method="post" id="registration" class="form-select container my-5 justify-content-center w-50">
         <div class="form-group">
-            <label for="firstName" class="my-3"><strong>First Name:</strong></label>
-            <input type="text" class="form-control" id="firstName" placeholder="First name">
-        </div>
-        <div class="form-group">
-            <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
-            <input type="text" class="form-control" id="lastName" placeholder="Last name">
-        </div>
-        <div class="row">
-            <div class="form-group">
-                <label for="emailAddress" class="my-3"><strong>Email:</strong></label>
-                <input type="text" class="form-control" id="emailAddress" placeholder="Email">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="firstName" class="my-3"><strong>First Name:</strong></label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First name"
+                           th:field="*{firstName}" required >
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                           th:field="*{lastName}" required >
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="gender" class="my-3"><strong>Gender:</strong></label>
+                    <select id="gender" name="gender" th:value="*{gender}">
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="phoneNumber" class="my-3"><strong>Phone:</strong></label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="Phone">
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="userName" class="my-3"><strong>Username: </strong></label>
+                    <input type="text" class="form-control" id="userName" placeholder="Username"
+                           th:field="*{userName}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ssId" class="my-3"><strong>ss Id:</strong></label>
+                    <input type="text" class="form-control" id="ssId" name="ssId"
+                           th:field="*{ssId}" placeholder="ss Id">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="Email"
+                           th:field="*{emailAddress}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                           th:field="*{phoneNumber}" placeholder="Enter your phone number">
+                </div>
             </div>
-<!--            <div class="form-group col-md-6">-->
-<!--                <label for="emailAddress" class="my-3"><strong>Email address:</strong></label>-->
-<!--                <input type="email" class="form-control" id="emailAddress" placeholder="Email" required-->
-<!--                       th:field="${emailAddress}">-->
-<!--                <span th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></span>-->
 
-<!--            </div>-->
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="address" class="my-3"><strong>Address:</strong></label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter your Address"
+                           th:field="*{address}">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="postalCode" class="my-3"><strong>Postal Code:</strong></label>
+                    <input type="text" class="form-control" id="postalCode" placeholder="Postalcode"
+                           th:field="*{postalCode}">
+                </div>
 
-<!--            <div class="form-group col-md-6">-->
-<!--                <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>-->
-<!--                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"-->
-<!--                       th:field="*{phoneNumber}" placeholder="Enter your phone number" required>-->
-<!--                <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>-->
-<!--            </div>-->
-        </div>
-        <div class="row">
-            <div class="form-group">
-                <label for="address" class="my-3"><strong>Address:</strong></label>
-                <input type="text" class="form-control" id="address" placeholder="Address">
+                <div class="form-group col-md-4">
+                    <label for="city" class="my-3"><strong>City:</strong></label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter your city"
+                           th:field="*{city}">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="city" class="my-3"><strong>City:</strong></label>
-                <input type="text" class="form-control" id="city" placeholder="City">
-            </div>
-<!--            <div class="form-group col-md-6">-->
-<!--                <label for="address" class="my-3"><strong>Address:</strong></label>-->
-<!--                <input type="text" class="form-control" id="address" placeholder="Enter your Address" required-->
-<!--                       th:field="*{address}">-->
-<!--                <span th:if="${#fields.hasErrors('Address')}" th:errors="*{address}"></span>-->
-<!--            </div>-->
-
-<!--            <div class="form-group col-md-6">-->
-<!--                <label for="city" class="my-3"><strong>City:</strong></label>-->
-<!--                <input type="text" class="form-control" id="city" placeholder="Enter your city" required-->
-<!--                       th:field="*{city}">-->
-<!--                <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></span>-->
-
-<!--            </div>-->
         </div>
-        <div class="form-group">
-            <label for="password" class="my-3"><strong>Password:</strong></label>
-            <input type="password" class="form-control" id="password" placeholder="Enter your password">
-        </div>
-
-
         <button type="submit" class="btn btn-warning my-3"><a th:href="@{/userprofiledetails}" class="text-white text-decoration-none bi bi-send">Sign in</a></button>
     </form>
 </div>

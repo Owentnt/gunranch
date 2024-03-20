@@ -32,10 +32,18 @@
                                th:field="*{users.firstName}" required >
                     </div>
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
                         <input type="text" class="form-control" id="lastName" placeholder="Last name"
                                th:field="*{users.lastName}" required >
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="sex" class="my-3"><strong>Sex:</strong></label>
+                        <select id="sex" name="sex" class="form-control" th:value="*{users.gender}">
+                            <option value="" selected disabled>Sex</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
                     </div>
                 </div>
 
