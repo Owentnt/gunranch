@@ -31,6 +31,7 @@ public class GunAdminController {
     @ModelAttribute("guns")
     public Guns findGun(@PathVariable(required = false) Integer id) {
         logger.info("findGun " + id);
+        if (id == null) return new Guns();
         Optional<Guns> gunFinder = gunsRepository.findById(id);
 
         if (gunFinder.isPresent())
@@ -57,5 +58,10 @@ public class GunAdminController {
         model.addAttribute("guns", guns);
         logger.info("gunNew");
         return "admin/newgun";
+    }
+    @PostMapping("/newgun")
+    public String newGunPost(Guns guns) {
+        gunsRepository.save(guns);
+        return "redirect:/guns";
     }
 }

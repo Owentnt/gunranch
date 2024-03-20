@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="postmapping controller voor new gun toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="gunfilter voor pump-action gefixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,13 +148,6 @@
       <workItem from="1710681199076" duration="2514000" />
       <workItem from="1710756126547" duration="6245000" />
       <workItem from="1710773107588" duration="1794000" />
-    </task>
-    <task id="LOCAL-00049" summary="participationform en competitionsdetails toegevoegd">
-      <created>1709937453604</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1709937453604</updated>
     </task>
     <task id="LOCAL-00050" summary="filter buttons toevoegen en styling">
       <created>1709987730896</created>
@@ -493,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710936666356</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="gunfilter voor pump-action gefixed">
+      <created>1710938534640</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1710938534640</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logo terug actief gezet" />
     <MESSAGE value="troubleshooting" />
     <MESSAGE value="wat refactoring en wat aanpassingen aan de database" />
     <MESSAGE value="error pagina gemaakt" />
@@ -548,7 +546,8 @@
     <MESSAGE value="wat troubleshooting" />
     <MESSAGE value="Icons bootstrap documentation toegevoegd" />
     <MESSAGE value="postmapping controller voor new gun toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="postmapping controller voor new gun toegevoegd" />
+    <MESSAGE value="gunfilter voor pump-action gefixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="gunfilter voor pump-action gefixed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
