@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="Icons bootstrap documentation toegevoegd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userprofiledetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userprofiledetails.html" afterDir="false" />
     </list>
@@ -30,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="reservation" />
+        <entry key="$PROJECT_DIR$" value="Login" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
