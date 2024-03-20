@@ -19,6 +19,8 @@ public class Participants {
 
     private String phoneNumber;
 
+
+
     @ManyToMany(mappedBy = "participants")
     private Collection<Competitions> competitions;
 

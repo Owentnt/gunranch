@@ -66,7 +66,7 @@ VALUES ('UZI','Submachine Gun',25,'9x19 mm',18,'/images/UZI.png','Full-Auto','Th
                                                  The Uzi has been used by military and law enforcement worldwide, becoming an iconic firearm.');
 
     INSERT INTO GUNS(NAME,GUN_TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ('Mossberg 590A1','Shotgun',8,'12 GA',15,'/images/mossberg590A1.png','Pump Action','The Mossberg 590A1 is a pump-action shotgun known for its durability and reliability.
+VALUES ('Mossberg 590A1','Shotgun',8,'12 GA',15,'/images/mossberg590A1.png','Pump-Action','The Mossberg 590A1 is a pump-action shotgun known for its durability and reliability.
                                                                It''s often used by military and law enforcement due to its robust construction and ability to handle heavy loads.
                                                                Features include a 20-inch barrel, 9-round capacity, and a reinforced aluminum receiver.
                                                                The 590A1 is designed to meet rigorous military standards and is popular for home defense and tactical use.');
