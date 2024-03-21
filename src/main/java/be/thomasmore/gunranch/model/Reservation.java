@@ -13,7 +13,6 @@ public class Reservation {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name="users_id", nullable=false)
     private Users users;
 
     @NotNull(message = "Amount of participants is required")

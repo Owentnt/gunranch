@@ -19,7 +19,8 @@ public class Participants {
 
     private String phoneNumber;
 
-
+    @ManyToOne
+    private Users users;
 
     @ManyToMany(mappedBy = "participants")
     private Collection<Competitions> competitions;
@@ -91,5 +92,14 @@ public class Participants {
 
     public void setCompetitions(Collection<Competitions> competitions) {
         this.competitions = competitions;
+    }
+
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
     }
 }

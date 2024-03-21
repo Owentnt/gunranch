@@ -19,7 +19,7 @@
 <div th:if="${guns}">
   <form th:action="@{|/admin/editguns/${guns.id}|}" method="post" th:object="${guns}">
     <label for="image" class="form-label">Image</label>
-    <input id="image" type="file" name="image" class="form-control" accept="image/*" th:field="*{image}">
+    <input id="image" type="file" name="image" class="form-control-file" accept="image/*" th:field="*{image}">
     <label for="gunName" class="form-label">Gun Name</label>
     <input id="gunName" class="form-control" type="text" th:field="*{name}">
     <select id="gunType" name="gunType" class="btn-warning btn" th:field="*{gunType}">

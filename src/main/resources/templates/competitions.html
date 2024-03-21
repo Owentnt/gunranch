@@ -36,12 +36,13 @@
 <div class="card col-md-6 " th:each="competition:${competitions}">
     <h5 class="card-header" th:text="${competition.title}"></h5>
     <div class="card-body">
-        <img th:src="${competition.image}" alt="bullseye" width="327.3" height="250.9">
+        <img th:src="${competition.image}" alt="bullseye" width="327.3" height="250.9" src="image">
         <p class="card-text" th:text=" ' &#x23F0; Starting Hour: '+${competition.startingHour}"></p>
         <p class="card-text" th:text=" ' Ending Hour: '+${competition.endingHour}"></p>
         <p class="card-text" th:text=" ' Date '+${competition.date}"></p>
         <p class="card-text" th:text=" ' Participation Price: '+${competition.participationPrice}+' EUR'"></p>
         <p class="card-text" th:text=" ' Allowed Firearms: '+${competition.allowedFirearms}"></p>
+        <p class="card-text" th:text=" ' Number of competitors: '+${competition.participants}"></p>
         <p class="card-text" th:text=" ' Bio: '+${competition.bio}"></p>
         <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/${competition.id}|}">More Info</a>
         <a class="btn btn-outline-warning" th:href="@{/participationform}">Enter Competition</a>

@@ -59,7 +59,7 @@
     </select>
     <label for="bio" class="form-label">Bio</label>
     <textarea id="bio" type="text" class="form-control" th:field="*{bio}"></textarea>
-    <a class="btn btn-warning" th:href="@{|/gunsdetails/${guns.id}|}">Cancel</a>
+    <a class="btn btn-warning" th:href="@{/guns}">Cancel</a>
     <input class="btn-warning btn" type="submit" value="Save">
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
   </form>

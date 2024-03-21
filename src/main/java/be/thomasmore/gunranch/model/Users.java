@@ -1,9 +1,6 @@
 package be.thomasmore.gunranch.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
 import java.util.Set;
@@ -16,6 +13,9 @@ public class Users {
 
     @OneToMany(mappedBy="users")
     private Set<Reservation> reservations;
+
+    @OneToMany(mappedBy = "users")
+    private Set<Participants> participants;
 
     @NotNull(message = "First name is required")
     private String firstName;
@@ -82,6 +82,14 @@ public class Users {
 
     public void setReservations(Set<Reservation> reservations) {
         this.reservations = reservations;
+    }
+
+    public Set<Participants> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(Set<Participants> participants) {
+        this.participants = participants;
     }
 
     public String getAddress() {
