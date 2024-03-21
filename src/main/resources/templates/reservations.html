@@ -26,107 +26,46 @@
         <div class="container text-start">
             <form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
                 <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="firstName" class="my-3"><strong>First Name:</strong></label>
-                        <input type="text" class="form-control" id="firstName" placeholder="First name"
-                               th:field="*{users.firstName}" required >
-                        <div th:if="${#fields.hasErrors('*')}">First Name is required</div>
-                    </div>
 
-<!--                    <div class="form-group col-md-4">-->
-<!--                        <label for="lastName" class="my-3"><strong>Last Name:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="lastName" placeholder="Last name"-->
-<!--                               th:field="*{users.lastName}" required >-->
-<!--                    </div>-->
-<!--                    <div class="form-group col-md-2">-->
-<!--                        <label for="sex" class="my-3"><strong>Sex:</strong></label>-->
-<!--                        <select id="sex" name="sex" class="form-control" th:value="*{users.gender}">-->
-<!--                            <option value="" selected disabled>Sex</option>-->
-<!--                            <option value="M">M</option>-->
-<!--                            <option value="F">F</option>-->
-<!--                        </select>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="row">-->
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="userName" class="my-3"><strong>Username: </strong></label>-->
-<!--                        <input type="text" class="form-control" id="userName" placeholder="Username"-->
-<!--                               th:field="*{users.userName}">-->
-<!--                    </div>-->
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="ssId" class="my-3"><strong>ss Id:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="ssId" name="ssId"-->
-<!--                               th:field="*{users.ssId}" placeholder="ss Id">-->
-<!--                    </div>-->
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>-->
-<!--                        <input type="email" class="form-control" id="emailAddress" placeholder="Email"-->
-<!--                               th:field="*{users.emailAddress}">-->
-<!--                    </div>-->
-
-<!--                    <div class="form-group col-md-6">-->
-<!--                        <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"-->
-<!--                               th:field="*{users.phoneNumber}" placeholder="Enter your phone number">-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="row">-->
-<!--                    <div class="form-group col-md-4">-->
-<!--                        <label for="address" class="my-3"><strong>Address:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="address" placeholder="Enter your Address"-->
-<!--                               th:field="*{users.address}">-->
-<!--                    </div>-->
-<!--                    <div class="form-group col-md-4">-->
-<!--                        <label for="postalCode" class="my-3"><strong>Postal Code:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="postalCode" placeholder="Postalcode"-->
-<!--                               th:field="*{users.postalCode}">-->
-<!--                    </div>-->
-
-<!--                    <div class="form-group col-md-4">-->
-<!--                        <label for="city" class="my-3"><strong>City:</strong></label>-->
-<!--                        <input type="text" class="form-control" id="city" placeholder="Enter your city"-->
-<!--                               th:field="*{users.city}">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row">-->
-<!--                    <div class="form-group col-md-4 bi">-->
-<!--                            <i class="bi bi-people"></i>-->
-<!--                        <label for="participants" class="my-3"><strong>Participants:</strong></label>-->
-<!--                        <input type="number" class="form-control" id="participants" placeholder="Amount of participants"-->
-<!--                               required min="1" max="8" th:field="*{amountOfParticipants}" th:errorclass="bg-warning">-->
-<!--                        <div class="alert alert-danger" th:if="${#fields.hasErrors('AmountOfParticipants')}"-->
-<!--                             th:errors="*{amountOfParticipants}"></div>-->
+                <div class="row">
+                    <div class="form-group col-md-4 bi">
+                            <i class="bi bi-people"></i>
+                        <label for="participants" class="my-3"><strong>Participants:</strong></label>
+                        <input type="number" class="form-control" id="participants" placeholder="Amount of participants"
+                               required min="1" max="8" th:field="*{amountOfParticipants}" th:errorclass="bg-warning">
+                        <div class="alert alert-danger" th:if="${#fields.hasErrors('AmountOfParticipants')}"
+                             th:errors="*{amountOfParticipants}"></div>
 <!--                    </div>-->
 <!--                    <div class="form-group col-md-4">-->
 <!--                        <label class="control-label my-3" for="date"><strong>Date:</strong></label>-->
 <!--                        <input type="date" class="form-control" id="date" placeholder="MM/DD/YYYY" required-->
 <!--                               th:field="*{date}">-->
-<!--                        <div class="alert-danger alert" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></div>-->
+<!--                        <div class="alert-danger alert" th:if="${#fields.hasErrors('*')}" th:errors="*{date}"></div>-->
 <!--                    </div>-->
 <!--                    <div class="form-group col-md-4">-->
 <!--                        <label class="control-label my-3" for="time"><strong>Time:</strong></label>-->
 <!--                        <input type="time" class="form-control" id="time" placeholder="00:00" required-->
 <!--                               th:field="*{time}">-->
-<!--                        <div class="alert alert-danger" th:if="${#fields.hasErrors('time')}" th:errors="*{time}"></div>-->
+<!--                        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}" th:errors="*{time}"></div>-->
 <!--                    </div>-->
-<!--                </div>-->
-<!--                <div row>-->
-<!--                <div class="form-group col-md-6">-->
-<!--                    <label class="control-label" for="gunPackage" >Guns</label>-->
-<!--                    <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}" multiple>-->
-<!--                        <option th:each="gun : ${gunsPackage}" th:selected="*{gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>-->
-<!--                    </select>-->
-<!--                </div>-->
-<!--                <div class="form-group col-md-6">-->
-<!--                    <label class="control-label"for="gunPackageSelect">Selected Guns:</label>-->
-<!--                    <input id="gunPackageSelect" name="gunPackageSelect" class="form-control" th:value="${gunsPackage != null ? gunsPackage : ''}" readonly>-->
-<!--                </div>-->
-<!--                </div>-->
+                </div>
+                <div row>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="gunPackage" >Guns</label>
+                    <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}" multiple>
+                        <option th:each="gun : ${gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="gunPackageSelect">Selected Guns:</label>
+                    <input id="gunPackageSelect" name="gunPackageSelect" class="form-control" th:value="${selectedGun}" readonly>
+                </div>
+                </div>
                 <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
                 </button>
                 </div>
+                </div>
+
             </form>
         </div>
     </div>

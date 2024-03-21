@@ -24,10 +24,11 @@ public class ReservationController {
     GunsRepository gunsRepository;
 
     @GetMapping("/reservations")
-    public String reservationsForm(Reservation reservations,Model model){
+    public String reservationsForm(Reservation reservations,Model model, String selectedGun){
         Iterable <Guns> gunsPackage = gunsRepository.findAll();
         model.addAttribute("reservations",reservations);
         model.addAttribute("gunsPackage",gunsPackage);
+        model.addAttribute("selectedGun",selectedGun);
         return "reservations";
     }
 

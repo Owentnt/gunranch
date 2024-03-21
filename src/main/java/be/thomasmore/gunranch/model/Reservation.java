@@ -9,6 +9,7 @@ import java.util.Date;
 
 @Entity
 public class Reservation {
+
     @Id
     private int id;
 
