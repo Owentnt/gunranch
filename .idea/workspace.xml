@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="detailpagina klaargemaakt voor competitions">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="probleem met registration page opgelost">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservationdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservationdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +23,15 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="competitions" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,13 +152,6 @@
       <workItem from="1710681199076" duration="2514000" />
       <workItem from="1710756126547" duration="6245000" />
       <workItem from="1710773107588" duration="1794000" />
-    </task>
-    <task id="LOCAL-00053" summary="variable firearmsType toegevoegd">
-      <created>1710072112444</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1710072112444</updated>
     </task>
     <task id="LOCAL-00054" summary="request parameters toegevoegd aan /guns">
       <created>1710074760957</created>
@@ -492,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711014656228</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="probleem met registration page opgelost">
+      <created>1711017984638</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1711017984639</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +513,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="security" />
                       </list>
                     </value>
                   </entry>
@@ -522,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="home page verder gestyled" />
     <MESSAGE value="bezig met footer stylen" />
     <MESSAGE value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
     <MESSAGE value="guns filter pagina wat gestyled" />
@@ -547,7 +550,8 @@
     <MESSAGE value="probleem met insert pagina opgelost" />
     <MESSAGE value="reservation form: gun select field toegevoegd" />
     <MESSAGE value="detailpagina klaargemaakt voor competitions" />
-    <option name="LAST_COMMIT_MESSAGE" value="detailpagina klaargemaakt voor competitions" />
+    <MESSAGE value="probleem met registration page opgelost" />
+    <option name="LAST_COMMIT_MESSAGE" value="probleem met registration page opgelost" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
