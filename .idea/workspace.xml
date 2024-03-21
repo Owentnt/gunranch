@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="standaard login pagina geconfigureerd en H2 console toegevoegd">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="login en logout knop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/CompetitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/CompetitionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schedule.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schedule.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +74,9 @@
     ],
     &quot;DatabaseDriversLRU&quot;: [
       &quot;h2&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;52149911-bfbc-4dee-9505-c4b7b3d0541e&quot;
     ]
   }
 }</component>
@@ -81,14 +86,19 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources" />
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\images" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.GunRanchApplication">
+    <configuration name="schedule.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/schedule.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <configuration name="GunRanchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gunranch" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="be.thomasmore.gunranch.GunRanchApplication" />
@@ -96,6 +106,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.schedule.sql" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -150,14 +165,8 @@
       <workItem from="1710681199076" duration="2514000" />
       <workItem from="1710756126547" duration="6245000" />
       <workItem from="1710773107588" duration="1794000" />
-      <workItem from="1711027248209" duration="4222000" />
-    </task>
-    <task id="LOCAL-00055" summary="guns controller afgewerkt voor filtering">
-      <created>1710077340305</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1710077340305</updated>
+      <workItem from="1711027248209" duration="11090000" />
+      <workItem from="1711044401471" duration="1024000" />
     </task>
     <task id="LOCAL-00056" summary="query gemaakt voor guns repository">
       <created>1710078526841</created>
@@ -495,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711022484270</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="login en logout knop">
+      <created>1711031767134</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1711031767135</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="about us page achtergrond foto toegevoegd en nog wat gestyled" />
     <MESSAGE value="guns filter pagina wat gestyled" />
     <MESSAGE value="reservatie pagina wat gestyled en een achtergrond afbeelding toegevoegd" />
     <MESSAGE value="werken aan radio buttons" />
@@ -550,7 +565,8 @@
     <MESSAGE value="detailpagina klaargemaakt voor competitions" />
     <MESSAGE value="probleem met registration page opgelost" />
     <MESSAGE value="standaard login pagina geconfigureerd en H2 console toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="standaard login pagina geconfigureerd en H2 console toegevoegd" />
+    <MESSAGE value="login en logout knop" />
+    <option name="LAST_COMMIT_MESSAGE" value="login en logout knop" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

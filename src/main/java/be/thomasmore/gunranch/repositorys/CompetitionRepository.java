@@ -2,8 +2,12 @@ package be.thomasmore.gunranch.repositorys;
 
 import be.thomasmore.gunranch.model.Competitions;
 import be.thomasmore.gunranch.model.Guns;
+import be.thomasmore.gunranch.model.Participants;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 public interface CompetitionRepository extends CrudRepository<Competitions,Integer> {
@@ -15,4 +19,9 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     Optional<Competitions> findFirstByIdGreaterThanOrderByIdAsc(Integer id);
 
     Optional<Competitions> findFirstByOrderByIdAsc();
+
+
+
+
 }
+

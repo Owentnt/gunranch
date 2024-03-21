@@ -22,7 +22,7 @@ public class Participants {
     @ManyToOne
     private Users users;
 
-    @ManyToMany(mappedBy = "participants")
+    @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
 
     public Participants(int id, String firstName, String lastName, String gender, String emailAddress, String phoneNumber) {

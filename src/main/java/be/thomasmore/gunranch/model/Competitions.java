@@ -36,7 +36,7 @@ public class Competitions {
     private String objective;
 
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "competitions")
     private Collection<Participants> participants;
 
     private String image;
