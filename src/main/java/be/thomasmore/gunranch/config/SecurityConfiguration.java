@@ -44,14 +44,14 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
             return http.build();
         }
 
-        @Bean
-        public JdbcUserDetailsManager jdbcUserDetailsManager(){
-            return new JdbcUserDetailsManager(dataSource);
-        }
-
-        @Bean
-    public PasswordEncoder passwordEncoder(){
-            return new BCryptPasswordEncoder();
-        }
+//        @Bean
+//        public JdbcUserDetailsManager jdbcUserDetailsManager(){
+//            return new JdbcUserDetailsManager(dataSource);
+//        }
+//
+//        @Bean
+//    public PasswordEncoder passwordEncoder(){
+//            return new BCryptPasswordEncoder();
+//        }
     }
 

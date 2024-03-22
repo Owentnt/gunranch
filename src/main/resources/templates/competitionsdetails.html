@@ -31,12 +31,23 @@
   <p th:text="${competitions.registrationDeadline}" class="text-center text-warning"></p>
   <h6 class="text-center text-warning"><strong>Price</strong></h6>
   <p th:text="${competitions.participationPrice}" class="text-center text-warning"></p>
+
+  <div class="text-warning text-center">
+  <p>Number of Players:</p>
+  <div th:each="players:${competitions.participants}">
+    <p class="card-text text-warning text-center" th:text="${players.id}"></p>
+  </div>
+  </div>
+
+  <div class="text-center text-warning">
+  <p>Allowed Firearms:</p>
+  <div th:each="gunsAllowed:${competitions.allowedFirearms}">
+    <p class="card-text" th:text="${gunsAllowed.name}"></p>
+  </div>
+  </div>
+
   <h6 class="text-center text-warning"><strong>Objective:</strong></h6>
   <p th:text="${competitions.objective}" class="text-center text-warning"></p>
-  <h6 class="text-center text-warning"><strong>Nr of participants</strong></h6>
-  <p th:text="${competitions.participants}" class="text-center text-warning"></p>
-  <h6 class="text-center text-warning"><strong>Allowed Firearms</strong></h6>
-  <p th:text="${competitions.allowedFirearms}" class="text-center text-warning"></p>
 
 </div>
 <div class="gun text-start d-inline-flex ">

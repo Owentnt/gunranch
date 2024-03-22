@@ -55,10 +55,11 @@
         <p class="card-text" th:text=" ' Bio: '+${competition.bio}"></p>
         <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/${competition.id}|}">More Info</a>
         <a class="btn btn-outline-warning" th:href="@{/participationform}">Enter Competition</a>
+        <a class="btn-outline-warning btn">Check Scores</a>
     </div>
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
-</div>
+
 </body>
 </html>

@@ -35,19 +35,19 @@
                                required min="1" max="8" th:field="*{amountOfParticipants}" th:errorclass="bg-warning">
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('AmountOfParticipants')}"
                              th:errors="*{amountOfParticipants}"></div>
-<!--                    </div>-->
-<!--                    <div class="form-group col-md-4">-->
-<!--                        <label class="control-label my-3" for="date"><strong>Date:</strong></label>-->
-<!--                        <input type="date" class="form-control" id="date" placeholder="MM/DD/YYYY" required-->
-<!--                               th:field="*{date}">-->
-<!--                        <div class="alert-danger alert" th:if="${#fields.hasErrors('*')}" th:errors="*{date}"></div>-->
-<!--                    </div>-->
-<!--                    <div class="form-group col-md-4">-->
-<!--                        <label class="control-label my-3" for="time"><strong>Time:</strong></label>-->
-<!--                        <input type="time" class="form-control" id="time" placeholder="00:00" required-->
-<!--                               th:field="*{time}">-->
-<!--                        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}" th:errors="*{time}"></div>-->
-<!--                    </div>-->
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="control-label my-3" for="date"><strong>Date:</strong></label>
+                        <input type="date" class="form-control" id="date" placeholder="MM/DD/YYYY" required
+                               th:field="*{date}">
+                        <div class="alert-danger alert" th:if="${#fields.hasErrors('*')}" th:errors="*{date}"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="control-label my-3" for="time"><strong>Time:</strong></label>
+                        <input type="time" class="form-control" id="time" placeholder="00:00" min="09:00" max="21:00" step="1800" required
+                               th:field="*{time}">
+                        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}" th:errors="*{time}"></div>
+                    </div>
                 </div>
                 <div row>
                 <div class="form-group col-md-6">
@@ -61,7 +61,8 @@
                     <input id="gunPackageSelect" name="gunPackageSelect" class="form-control" th:value="${selectedGun}" readonly>
                 </div>
                 </div>
-                <button type="submit" class="btn btn-warning my-3"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
+                    <div>
+                <button type="submit" class="btn btn-warning my-3 w-25"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
                 </button>
                 </div>
                 </div>

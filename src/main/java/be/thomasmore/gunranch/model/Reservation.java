@@ -21,17 +21,13 @@ public class Reservation {
     @Max(value = 8, message = "Max 8 participants")
     private int amountOfParticipants;
 
-    @DateTimeFormat(pattern = "DD/MM/YYYY")
-    @Pattern(regexp = "\\d{2}/\\d{2}/\\d{4}")
     @NotNull(message = "Date is required")
     @Future(message = "Please select a date in the future")
     @Temporal(TemporalType.DATE)
     private Date date;
 
     @FutureOrPresent(message = "Please select a time in the present or future")
-    @Pattern(regexp = "\\d{2}:\\d{2}")
     @NotNull(message = "Time is required")
-    @DateTimeFormat(pattern = "HH:MM")
     @Temporal(TemporalType.TIME)
     private Date time;
 
