@@ -41,7 +41,7 @@
         <p class="card-text bi-info" th:text=" ' Bio: '+${competition.bio}"></p>
         <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/${competition.id}|}">More Info</a>
         <a class="btn btn-outline-warning" th:href="@{/participationform}">Enter Competition</a>
-        <a class="btn-outline-warning btn">Check Scores</a>
+        <a class="btn-outline-warning btn" th:href="@{/scoreboard}">Check Scores</a>
         <a class="btn-outline-warning btn" th:href="@{/admin/newcompetition}">New Competition</a>
     </div>
 </div>

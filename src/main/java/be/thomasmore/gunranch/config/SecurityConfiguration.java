@@ -34,7 +34,7 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
                     new MvcRequestMatcher.Builder(introspector);
 
             http.authorizeHttpRequests(auth -> auth
-                    .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).authenticated()
+                    .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).hasAnyAuthority("ADMIN")
                     .anyRequest().permitAll());
 
             http.formLogin(Customizer.withDefaults());
@@ -44,14 +44,14 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
             return http.build();
         }
 
-//        @Bean
-//        public JdbcUserDetailsManager jdbcUserDetailsManager(){
-//            return new JdbcUserDetailsManager(dataSource);
-//        }
-//
-//        @Bean
-//    public PasswordEncoder passwordEncoder(){
-//            return new BCryptPasswordEncoder();
-//        }
+        @Bean
+        public JdbcUserDetailsManager jdbcUserDetailsManager(){
+            return new JdbcUserDetailsManager(dataSource);
+        }
+
+        @Bean
+    public PasswordEncoder passwordEncoder(){
+            return new BCryptPasswordEncoder();
+        }
     }
 

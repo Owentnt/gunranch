@@ -2,7 +2,6 @@ package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Collection;
 import java.util.Date;
@@ -14,7 +13,7 @@ public class Reservation {
     private int id;
 
     @ManyToOne
-    private Users users;
+    private Members users;
 
     @NotNull(message = "Amount of participants is required")
     @Min( value = 1, message = "Please enter a positive number")
@@ -50,11 +49,11 @@ public class Reservation {
 
     }
 
-    public Users getUsers() {
+    public Members getUsers() {
         return users;
     }
 
-    public void setUsers(Users users) {
+    public void setUsers(Members users) {
         this.users = users;
     }
 

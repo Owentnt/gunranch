@@ -20,7 +20,7 @@ public class Participants {
     private String phoneNumber;
 
     @ManyToOne
-    private Users users;
+    private Members users;
 
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
@@ -95,11 +95,11 @@ public class Participants {
     }
 
 
-    public Users getUsers() {
+    public Members getUsers() {
         return users;
     }
 
-    public void setUsers(Users users) {
+    public void setUsers(Members users) {
         this.users = users;
     }
 }

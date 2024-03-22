@@ -1,6 +1,6 @@
 
 
-CREATE TABLE members
+CREATE TABLE users
 (
     username varchar(50) not null primary key,
     password varchar(100) not null,
@@ -11,7 +11,7 @@ CREATE TABLE authorities
 (
     username VARCHAR(50) NOT NULL,
     authority VARCHAR(50) NOT NULL,
-    FOREIGN KEY (username) REFERENCES members (username)
+    FOREIGN KEY (username) REFERENCES users (username)
 );
 
 

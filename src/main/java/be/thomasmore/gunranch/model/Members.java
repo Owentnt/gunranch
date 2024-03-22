@@ -6,8 +6,8 @@ import jakarta.validation.constraints.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "Users")
-public class Users {
+@Table(name = "Members")
+public class Members {
     @Id
     private int id;
 
@@ -59,9 +59,9 @@ public class Users {
     private String ssId;
 
 
-    public Users(int id, String firstName, String lastName,String userName,String gender, String emailAddress,
-                 String phoneNumber, String address, String postalCode, String city,
-                 String passWord, String ssId) {
+    public Members(int id, String firstName, String lastName, String userName, String gender, String emailAddress,
+                   String phoneNumber, String address, String postalCode, String city,
+                   String passWord, String ssId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -132,7 +132,7 @@ public class Users {
         this.userName = userName;
     }
 
-    public Users() {
+    public Members() {
     }
 
     public String getGender() {
