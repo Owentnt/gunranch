@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="implementatie van scores pagina en prototype van reservationdetails gemaakt">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="edit pagina van competitions gemaakt">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/newcompetition.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/CompAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/CompAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Competitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editcompetitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editcompetitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/newgun.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/newgun.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,14 +165,7 @@
       <workItem from="1710773107588" duration="1794000" />
       <workItem from="1711027248209" duration="11090000" />
       <workItem from="1711044401471" duration="10850000" />
-      <workItem from="1711100893989" duration="5751000" />
-    </task>
-    <task id="LOCAL-00059" summary="filter knop toegevoegd">
-      <created>1710083955034</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1710083955034</updated>
+      <workItem from="1711100893989" duration="8706000" />
     </task>
     <task id="LOCAL-00060" summary="styling">
       <created>1710100024154</created>
@@ -512,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711103947021</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="edit pagina van competitions gemaakt">
+      <created>1711106875054</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1711106875054</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +540,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="participants en competitions many to many relaties" />
     <MESSAGE value="fouten in de database opgelost" />
     <MESSAGE value="troubleshooting met de database Competitions" />
     <MESSAGE value="Page styling" />
@@ -567,7 +564,8 @@
     <MESSAGE value="testdata in de users en authorities tabel gezet" />
     <MESSAGE value="users en authorities in database gezet" />
     <MESSAGE value="implementatie van scores pagina en prototype van reservationdetails gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementatie van scores pagina en prototype van reservationdetails gemaakt" />
+    <MESSAGE value="edit pagina van competitions gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit pagina van competitions gemaakt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

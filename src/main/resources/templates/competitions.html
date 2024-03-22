@@ -14,23 +14,9 @@
     <title>Competitions</title>
 </head>
 
-<div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
-
-<!--<div class="position-relative">-->
-<!--    <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">-->
-<!--<h1 class="text-center text-warning">Participate in our competitions</h1>-->
-<!--        <div class="weapons mt-5 mb-5">-->
-<!--            <div class="row justify-content-center mx-5">-->
-<!--                <div th:each="competition:${competitions}" class="card card border-warning col-md-4">-->
-<!--                    <div class="card-body text-warning">-->
-
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+<div th:insert="~{fragments/header :: header}">Header</div>
 
 
 <div class="card col-md-6 " th:each="competition:${competitions}">
@@ -56,6 +42,7 @@
         <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/${competition.id}|}">More Info</a>
         <a class="btn btn-outline-warning" th:href="@{/participationform}">Enter Competition</a>
         <a class="btn-outline-warning btn">Check Scores</a>
+        <a class="btn-outline-warning btn" th:href="@{/admin/newcompetition}">New Competition</a>
     </div>
 </div>
 

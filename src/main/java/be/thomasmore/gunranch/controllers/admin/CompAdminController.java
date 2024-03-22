@@ -57,5 +57,15 @@ public class CompAdminController {
         competitionRepository.save(competitions);
         return "redirect:/competitionsdetails/" + id;
     }
-
+    @GetMapping("/newcompetition")
+    public String newComp(Model model, Competitions competitions) {
+        model.addAttribute("competition", competitions);
+        logger.info("compNew");
+        return "admin/newcompetition";
+    }
+    @PostMapping("/newcompetition")
+    public String newCompPost(Competitions competitions) {
+        competitionRepository.save(competitions);
+        return "redirect:/competitions";
+    }
 }
