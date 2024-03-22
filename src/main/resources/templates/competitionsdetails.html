@@ -58,6 +58,10 @@
   <a class="btn btn-outline-warning bi bi-caret-right-fill" th:href="@{|/competitionsdetails/${nextComp}|}">Next</a>
 </div>
 
+<div class="text-end d-inline-flex">
+  <a class="btn btn-outline-warning bi bi-hammer" th:href="@{|/admin/editcompetitions/${competitions.id}|}">Edit Comp</a>
+</div>
+
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 

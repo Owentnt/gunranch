@@ -41,18 +41,21 @@ public class CompAdminController {
         return null;
     }
 
-//    @PostMapping("/editguns/{id}")
-//    public String editCompPost(@PathVariable Integer id, Competitions competitions) {
-//        logger.info("compEditPost" + id + "-- new title=" + competitions.getTitle()
-//                + "-- new gunType=" + competitions.
-//                + "-- new Magazine=" + guns.getMagazine()
-//                + "-- new Caliber=" + guns.getCaliber()
-//                + "-- new price=" + guns.getPrice()
-//                + "-- new firearmsType=" + guns.getFirearmsType()
-//                + "-- new bio=" + guns.getBio()
-//                + "-- new image=" + guns.getImage());
-//        gunsRepository.save(guns);
-//        return "redirect:/gunsdetails/" + id;
-//    }
+    @PostMapping("/editcompetitions/{id}")
+    public String editCompPost(@PathVariable Integer id, Competitions competitions) {
+        logger.info("compEditPost" + id + "-- new title=" + competitions.getTitle()
+                + "-- new Image=" + competitions.getImage()
+                + "-- new Time=" + competitions.getDate().getTime()
+                + "-- new Date=" + competitions.getDate()
+                + "-- new registrationDate=" + competitions.getRegistrationDeadline()
+                + "-- new Price=" + competitions.getParticipationPrice()
+                + "-- new numberOfParticipants=" + competitions.getParticipants()
+                + "-- new allowedFirearms=" + competitions.getAllowedFirearms()
+                + "-- new bio" + competitions.getBio()
+                + "-- new objective" + competitions.getObjective());
+
+        competitionRepository.save(competitions);
+        return "redirect:/competitionsdetails/" + id;
+    }
 
 }

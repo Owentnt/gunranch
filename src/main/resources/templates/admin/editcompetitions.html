@@ -16,7 +16,37 @@
 
 <body>
 
-<div th:insert="~{fragments/footer :: footer}">Footer</div>
+<div th:if="${competitions}">
+  <form th:action="@{|/admin/editcompetitions/${competitions.id}|}" method="post" th:object="${competitions}">
+    <label for="image" class="form-label">Image</label>
+    <input id="image" type="file" name="image" class="form-control-file" accept="image/*" th:field="*{image}">
+    <label for="title" class="form-label">Title</label>
+    <input id="title" class="form-control" type="text" th:field="*{title}">
+    <label for="date" class="form-label">Date</label>
+    <input id="date" class="form-control" type="date" th:field="*{date}">
+    <label for="registrationDate" class="form-label">Registration Date</label>
+    <input id="registrationDate" class="form-control" type="date" th:field="*{registrationDeadline}">
+    <label for="timeStart" class="form-label">Starting Hour</label>
+    <input id="timeStart" class="form-control" type="time" th:field="*{startingHour}">
+    <label for="timeEnd" class="form-label">Ending Hour</label>
+    <input id="timeEnd" class="form-control" type="time" th:field="*{endingHour}">
+    <label for="price" class="form-label">Participation Price</label>
+    <input id="price" class="form-control" type="text" th:field="*{participationPrice}">
+    <label for="players" class="form-label">Number of Players</label>
+    <input id="players" class="form-control" type="number" min="1" max="20" th:field="*{participants}">
+    <label for="allowedGuns" class="form-label">Allowed Firearms</label>
+    <input id="allowedGuns" class="form-control" type="text" th:field="*{allowedFirearms}">
+    <label for="bio" class="form-label">Bio</label>
+    <textarea id="bio" class="form-control" type="text" th:field="*{bio}"></textarea>
+    <label for="objective" class="form-label">Objective</label>
+    <textarea id="objective" class="form-control" type="text" th:field="*{objective}"></textarea>
+    <a class="btn btn-warning" th:href="@{|/competitionsdetails/${competitions.id}|}">Cancel</a>
+    <input class="btn-warning btn" type="submit" value="Save">
 
+
+    <div th:insert="~{fragments/footer :: footer}">Footer</div>
+
+  </form>
+</div>
 </body>
 </html>

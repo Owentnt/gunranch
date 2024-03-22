@@ -1,7 +1,9 @@
 package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 import java.util.Collection;
@@ -16,6 +18,7 @@ public class Competitions {
     private String title;
 
     @Temporal(TemporalType.TIME)
+    @DateTimeFormat(fallbackPatterns = "HH:MM")
     private Date startingHour;
 
     @Temporal(TemporalType.TIME)
@@ -119,7 +122,7 @@ public class Competitions {
         this.date = date;
     }
 
-    public double getParticipationPrice() {
+    public Integer getParticipationPrice() {
         return participationPrice;
     }
 
