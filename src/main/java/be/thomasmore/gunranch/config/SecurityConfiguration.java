@@ -37,7 +37,8 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
                     .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).hasAnyAuthority("ADMIN")
                     .anyRequest().permitAll());
 
-            http.formLogin(Customizer.withDefaults());
+            http.formLogin(form -> form .loginPage("/user/login")
+                    .permitAll());
 
             http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
             http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));

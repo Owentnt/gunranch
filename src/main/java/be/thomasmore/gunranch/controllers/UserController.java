@@ -10,17 +10,18 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
+
 @Controller
-public class LoginController {
+public class UserController {
 
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping("/login")
-    public String login(Model model,String userName, String passWord){
-        model.addAttribute("userName",userName);
-        model.addAttribute("passWord",passWord);
-        return "login";
+    @GetMapping("/user/login")
+    public String login(Model model, Principal principal){
+        if(principal != null) return "redirect:/guns";
+        return "user/login";
     }
     @GetMapping("/registration")
     public String registration(Model model, String firstName,
