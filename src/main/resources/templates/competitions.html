@@ -42,7 +42,7 @@
         <a class="btn btn-outline-warning" th:href="@{|/competitionsdetails/${competition.id}|}">More Info</a>
         <a class="btn btn-outline-warning" th:href="@{/participationform}">Enter Competition</a>
         <a class="btn-outline-warning btn" th:href="@{/scoreboard}">Check Scores</a>
-        <a class="btn-outline-warning btn" th:href="@{/admin/newcompetition}">New Competition</a>
+        <div sec:authorize="hasAnyAuthority('ADMIN')"><a class="btn-outline-warning btn" th:href="@{/admin/newcompetition}">New Competition</a></div>
     </div>
 </div>
 
