@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="security system geintegreerd in de securityconfig zodat alleen admins kunnen gaan naar de admin paginas">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="error met doctype ivm Spring Security Dialect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editcompetitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editcompetitions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/participationform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/participationform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +108,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Database Script.schedule.sql" />
+        <item itemvalue="Database Script.schedule.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +169,7 @@
       <workItem from="1711044401471" duration="10850000" />
       <workItem from="1711100893989" duration="11751000" />
       <workItem from="1711191557991" duration="3435000" />
+      <workItem from="1711196328111" duration="2556000" />
     </task>
     <task id="LOCAL-00062" summary="troubleshooting">
       <created>1710159602474</created>
