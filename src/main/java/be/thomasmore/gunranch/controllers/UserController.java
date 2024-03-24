@@ -9,19 +9,27 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping("/user/login")
+    @GetMapping("/login")
     public String login(Model model, Principal principal){
         if(principal != null) return "redirect:/guns";
         return "user/login";
+    }
+
+    @GetMapping("/logout")
+    public String logout(Model model, Principal principal){
+        if (principal == null) return "redirect:/guns";
+        return "user/logout";
     }
     @GetMapping("/registration")
     public String registration(Model model, String firstName,
@@ -47,17 +55,17 @@ public class UserController {
         model.addAttribute("postalCode",postalCode);
         model.addAttribute("ssId",ssId);
 
-        return "registration";
+        return "user/registration";
     }
     @PostMapping("/registration")
     public String submitReservationForm(@Valid Members users, BindingResult bindingResult, Model model){
 
         if (bindingResult.hasErrors()){
-            return "registration";
+            return "user/registration";
         }
         model.addAttribute("users",users);
         userRepository.save(users);
-        return "redirect:/profile";
+        return "redirect:user/profile";
     }
 
 }

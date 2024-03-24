@@ -2,6 +2,7 @@ package be.thomasmore.gunranch.config;
 
 import jakarta.persistence.Access;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,9 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
     @Configuration
     public class SecurityConfiguration {
 
+    @Value("${security.h2-console-needed}")
+    private boolean h2ConsoleNeeded;
+
     @Autowired
     private DataSource dataSource;
         @Bean
@@ -40,8 +44,13 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
             http.formLogin(form -> form .loginPage("/user/login")
                     .permitAll());
 
-            http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
-            http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+            if (h2ConsoleNeeded){
+                http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
+                http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+
+            }
+
+            http.logout(form -> form.logoutUrl("/user/logout"));
             return http.build();
         }
 
