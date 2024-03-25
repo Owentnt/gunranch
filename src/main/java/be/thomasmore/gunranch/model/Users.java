@@ -6,8 +6,8 @@ import jakarta.validation.constraints.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "Members")
-public class Members {
+@Table(name = "Users")
+public class Users {
     @Id
     private int id;
 
@@ -17,18 +17,25 @@ public class Members {
     @OneToMany(mappedBy = "users")
     private Set<Participants> participants;
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    private boolean enabled;
     @NotNull(message = "First name is required")
     private String firstName;
-
 
     @NotNull(message = "Last name is required")
     private String lastName;
 
-
     private String gender;
 
-    @NotNull(message = "username is required")
-    private String userName;
+    @Column(unique=true)
+    private String username;
 
     @NotNull(message = "Email address is required")
     @Email(message = "Please enter a valid email")
@@ -48,32 +55,34 @@ public class Members {
     private String city;
 
     @NotNull(message = "Password is required")
-    @Size(min = 10, max = 20)
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[&@#§è!+=?^])(?=\\S+$)",
-            message = "passWord does not meet requirements, " +
-                    "It has to contain at least one digit, one lowercase letter, " +
-                    "one uppercase letter, no whitespace and a special character")
-    private String passWord;
+//@Size(min = 10, max = 20)
+    @Column(length = 100)
+/*@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[&@#§è!+=?^])(?=\\S+$)",
+        message = "passWord does not meet requirements, " +
+                "It has to contain at least one digit, one lowercase letter, " +
+                "one uppercase letter, no whitespace and a special character")*/
+    private String password;
 
     @Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
     private String ssId;
 
 
-    public Members(int id, String firstName, String lastName, String userName, String gender, String emailAddress,
-                   String phoneNumber, String address, String postalCode, String city,
-                   String passWord, String ssId) {
+    public Users(int id, String firstName, String lastName, String username, String gender, String emailAddress,
+                 String phoneNumber, String address, String postalCode, String city,
+                 String password, String ssId, boolean enabled) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.userName = userName;
+        this.username = username;
         this.gender = gender;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.postalCode = postalCode;
         this.city = city;
-        this.passWord = passWord;
+        this.password = password;
         this.ssId = ssId;
+        this.enabled = enabled;
     }
 
     public Set<Reservation> getReservations() {
@@ -124,15 +133,15 @@ public class Members {
         this.ssId = ssId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public Members() {
+    public Users() {
     }
 
     public String getGender() {
@@ -183,11 +192,12 @@ public class Members {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
+
 }

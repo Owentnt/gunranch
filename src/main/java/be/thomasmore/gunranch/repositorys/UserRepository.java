@@ -1,8 +1,8 @@
 package be.thomasmore.gunranch.repositorys;
 
-import be.thomasmore.gunranch.model.Members;
+import be.thomasmore.gunranch.model.Users;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<Members,Integer> {
+public interface UserRepository extends CrudRepository<Users,Integer> {
 
 }

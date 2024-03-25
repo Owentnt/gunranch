@@ -1,6 +1,6 @@
 package be.thomasmore.gunranch.controllers;
 
-import be.thomasmore.gunranch.model.Members;
+import be.thomasmore.gunranch.model.Users;
 import be.thomasmore.gunranch.repositorys.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class LoginController {
                                String city,
                                String ssId,
                                String postalCode){
-        model.addAttribute("users", new Members());
+        model.addAttribute("users", new Users());
         model.addAttribute("firstName",firstName);
         model.addAttribute("lastName",lastName);
         model.addAttribute("userName",userName);
@@ -49,7 +49,7 @@ public class LoginController {
         return "registration";
     }
     @PostMapping("/registration")
-    public String submitReservationForm(@Valid Members users, BindingResult bindingResult, Model model){
+    public String submitReservationForm(@Valid Users users, BindingResult bindingResult, Model model){
 
         if (bindingResult.hasErrors()){
             return "registration";

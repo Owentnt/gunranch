@@ -13,7 +13,7 @@ public class Reservation {
     private int id;
 
     @ManyToOne
-    private Members users;
+    private Users users;
 
     @NotNull(message = "Amount of participants is required")
     @Min( value = 1, message = "Please enter a positive number")
@@ -49,11 +49,11 @@ public class Reservation {
 
     }
 
-    public Members getUsers() {
+    public Users getUsers() {
         return users;
     }
 
-    public void setUsers(Members users) {
+    public void setUsers(Users users) {
         this.users = users;
     }
 
