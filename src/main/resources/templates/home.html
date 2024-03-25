@@ -20,8 +20,8 @@
 <div class="position-relative">
     <img src="/images/gun-background-img.jpg" class="inleiding bg h-100 w-100 d-flex">
     <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
-        <div th:if="authenticated">
-        <h1 th:text="'Welcome to '+${name} +${principal}" class="text-warning mb-5"></h1>
+        <div th:if="${loginName != null}">
+        <h1 th:text="'Welcome to Bullseye Shooting Academy ' +${loginName}" class="text-warning mb-5"></h1>
         </div>
         <div style="background-color: rgba(255, 221, 51, 0.75);" class="mt-5 p-3">
         <p>Welcome to Bullseye Shooting Academy, where precision meets
