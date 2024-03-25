@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="refactoring members to users table">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="nog meer beveiliging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitionsdetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,13 +171,6 @@
       <workItem from="1711027248209" duration="11090000" />
       <workItem from="1711044401471" duration="10850000" />
       <workItem from="1711100893989" duration="11132000" />
-    </task>
-    <task id="LOCAL-00063" summary="minmagazine field corrigeren">
-      <created>1710160564118</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1710160564119</updated>
     </task>
     <task id="LOCAL-00064" summary="maxmagazine field corrigeren. ze werken nu allebei">
       <created>1710160802539</created>
@@ -513,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711380032220</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="nog meer beveiliging">
+      <created>1711383684914</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1711383684914</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wat styling wat data bijgewerkt en card klaar en troubleshooting" />
     <MESSAGE value="competition pagina aan het maken. Wat extra testdata toegevoegd" />
     <MESSAGE value="admin controller en edit pagina gemaakt" />
     <MESSAGE value="formulier gemaakt op editguns maar nog niet volledig klaar" />
@@ -568,7 +569,8 @@
     <MESSAGE value="insert pagina van competitions gemaakt" />
     <MESSAGE value="refactoring securitydb" />
     <MESSAGE value="refactoring members to users table" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring members to users table" />
+    <MESSAGE value="nog meer beveiliging" />
+    <option name="LAST_COMMIT_MESSAGE" value="nog meer beveiliging" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

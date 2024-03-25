@@ -214,13 +214,13 @@ INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES(select
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled)
-VALUES (1,'Owen','Talboom','M','admin','owentm031111@gmail.com','0494310004',
+VALUES (1,'Owen','Talboom','M','owentnt','owentm031111@gmail.com','0494310004',
         '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS',
         'Duivebergen 2B','3140','Keerbergen','03.11.11.157', true);
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled)
-VALUES (2,'Marie','Achternaam','F','marie','marie@gmail.com','0494310004',
+VALUES (2,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0494310004',
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
         'Straatloos 0','2800','Mechelen','03.11.11.157', true);
 
@@ -229,6 +229,6 @@ VALUES (2,'Marie','Achternaam','F','marie','marie@gmail.com','0494310004',
 
 --INSERT INTO USERS (USERNAME, PASSWORD, ENABLED) VALUES ('admin', '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS', true);
 INSERT INTO AUTHORITIES (USERNAME, AUTHORITY)
-VALUES ('admin', 'ADMIN');
+VALUES ('owentnt', 'ADMIN');
 --INSERT INTO USERS (USERNAME, PASSWORD, ENABLED) VALUES ('marie', '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm', true);
-INSERT INTO AUTHORITIES (USERNAME, AUTHORITY) VALUES ('marie', 'USER');
+INSERT INTO AUTHORITIES (USERNAME, AUTHORITY) VALUES ('saraps', 'USER');
