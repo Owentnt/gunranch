@@ -19,6 +19,13 @@ public class Participants {
 
     private String phoneNumber;
 
+    //skill level
+    //playername or teamname
+    //chosen firearms
+    //age
+    //medical conditions
+    //competition
+
     @ManyToOne
     private Users users;
 

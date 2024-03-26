@@ -1,13 +1,10 @@
 package be.thomasmore.gunranch.repositorys;
 
 import be.thomasmore.gunranch.model.Competitions;
-import be.thomasmore.gunranch.model.Guns;
-import be.thomasmore.gunranch.model.Participants;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -46,14 +43,30 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("select comp from Competitions comp Where :startHour IS NULL OR :startHour <= comp.startingHour")
     List<Competitions> findCompetitionsByStartingHourGreaterThan(@Param("startHour") Date startingHour);
 
-    @Query("select comp from Competitions comp Where :endHour IS NULL OR comp.participationPrice <= :endHour")
+    @Query("select comp from Competitions comp Where :endHour IS NULL OR comp.startingHour <= :endHour")
     List<Competitions> findByCompetitionsByStartingHourLessThan(@Param("endHour") Date endingHour);
 
     @Query("select comp from Competitions comp where :startHour IS NULL AND :endHour IS NULL")
-    List<Competitions> findAll(@Param("endHour") Date endingHour, @Param("startHour") Date startingHour);
+    List<Competitions> findAll(@Param("endHour") Date endingHour,
+                               @Param("startHour") Date startingHour);
 
-    @Query("SELECT comp, COUNT(Participants ) FROM Competitions comp JOIN comp.participants p GROUP BY comp")
+    @Query("SELECT comp FROM Competitions comp WHERE" +
+            "(:startDate IS NULL OR :startDate <= comp.date) AND " + " (:endDate IS NULL OR comp.date <= :endDate)")
+    List<Competitions> findCompetitionsByDateBetween(@Param("startDate") Date startDate,
+                                                             @Param("endDate") Date endDate);
+
+    @Query("select comp from Competitions comp Where :startDate IS NULL OR :startDate <= comp.date")
+    List<Competitions> findCompetitionsByDateAfter(@Param("startDate") Date startDate);
+
+    @Query("select comp from Competitions comp Where :endDate IS NULL OR comp.date <= :endDate")
+    List<Competitions> findByCompetitionsByDateBefore(@Param("endDate") Date endDate);
+
+    @Query("select comp from Competitions comp where :startDate IS NULL AND :endDate IS NULL")
+    List<Competitions> findAllByDate(@Param("endDate") Date endDate, @Param("startDate") Date startDate);
+
+    @Query("SELECT comp, COUNT(Participants) FROM Competitions comp JOIN comp.participants p GROUP BY comp")
     List<Competitions> countParticipantsPerCompetition();
+
 
 
 //    @Query("SELECT comp from Competitions comp WHERE " +

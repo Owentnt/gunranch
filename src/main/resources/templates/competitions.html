@@ -151,8 +151,9 @@
 
 
         <p>Number of Players:</p>
-        <div th:each="players:${competition.participants}">
-        <p class="card-text bi-person" th:text="${players.id}"></p>
+        <div th:text="|${playerCount}|">
+        <p class="card-text bi-person" ></p>
+        </div>
         </div>
 
         <p class="card-text bi-info" th:text=" ' Bio: '+${competition.bio}"></p>

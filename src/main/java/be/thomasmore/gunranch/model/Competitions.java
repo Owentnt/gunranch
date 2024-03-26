@@ -1,13 +1,13 @@
 package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -143,4 +143,9 @@ public class Competitions {
         this.bio = bio;
     }
 
+    public Integer getPlayerCount(int playerCount){
+        return playerCount;
+    }
+    public void setPlayerCount(int playerCount) {
+    }
 }

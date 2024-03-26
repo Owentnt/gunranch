@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -26,7 +27,9 @@ public class CompetitionsController {
     @GetMapping("/competitions")
     public String competitions(Model model) {
         final Iterable<Competitions> allComps = competitionRepository.findAll();
+        List<Competitions> playerCount = competitionRepository.countParticipantsPerCompetition();
         model.addAttribute("competitions", allComps);
+        model.addAttribute("playerCount",playerCount);
         return "competitions";
     }
 
