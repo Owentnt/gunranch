@@ -126,7 +126,7 @@
                     <i class="bi-search bi"></i>Search
                 </button>
 
-                <div sec:authorize="hasRole('ADMIN')">
+                <div sec:authorize="hasAnyAuthority('ADMIN')">
                     <a class="btn btn-outline-warning bi bi-plus" th:href="@{/admin/newgun}">New Gun</a>
                 </div>
 

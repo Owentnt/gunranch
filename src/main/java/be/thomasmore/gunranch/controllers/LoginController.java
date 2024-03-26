@@ -22,7 +22,7 @@ public class LoginController {
     @GetMapping("/login")
         public String login(Model model, Principal principal) {
             if (principal != null) return "redirect:/";
-            return "/login";
+            return "user/login";
     }
     @GetMapping("/logout")
     public String logout(Model model, Principal principal) {
@@ -54,13 +54,13 @@ public class LoginController {
         model.addAttribute("postalCode",postalCode);
         model.addAttribute("ssId",ssId);
 
-        return "/registration";
+        return "user/registration";
     }
     @PostMapping("/registration")
     public String submitReservationForm(@Valid Users users, BindingResult bindingResult, Model model){
 
         if (bindingResult.hasErrors()){
-            return "/registration";
+            return "user/registration";
         }
         model.addAttribute("users",users);
         userRepository.save(users);

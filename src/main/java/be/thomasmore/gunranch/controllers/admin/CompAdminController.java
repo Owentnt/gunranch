@@ -44,10 +44,8 @@ public class CompAdminController {
     @PostMapping("/editcompetitions/{id}")
     public String editCompPost(@PathVariable Integer id, Competitions competitions) {
         logger.info("compEditPost" + id + "-- new title=" + competitions.getTitle()
-                + "-- new Image=" + competitions.getImage()
                 + "-- new Time=" + competitions.getDate().getTime()
                 + "-- new Date=" + competitions.getDate()
-                + "-- new registrationDate=" + competitions.getRegistrationDeadline()
                 + "-- new Price=" + competitions.getParticipationPrice()
                 + "-- new numberOfParticipants=" + competitions.getParticipants()
                 + "-- new allowedFirearms=" + competitions.getAllowedFirearms()

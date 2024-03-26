@@ -49,7 +49,7 @@
 </div>
 
 <div class="text-end d-inline-flex">
-    <div sec:authorize="hasAuthority('ADMIN')">
+    <div sec:authorize="hasAnyAuthority('ADMIN')">
         <a class="btn btn-outline-warning bi bi-hammer" th:href="@{|/admin/editguns/${guns.id}|}">Edit Gun</a>
     </div>
 </div>

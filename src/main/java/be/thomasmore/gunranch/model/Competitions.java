@@ -27,8 +27,6 @@ public class Competitions {
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    @Temporal(TemporalType.DATE)
-    private Date registrationDeadline;
 
     private Integer participationPrice;
 
@@ -42,24 +40,21 @@ public class Competitions {
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "competitions")
     private Collection<Participants> participants;
 
-    private String image;
 
     @Length(max = 1000)
     private String bio;
 
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
-                        Date date,Date registrationDeadline, Integer participationPrice,
-                        String objective, String image,String bio) {
+                        Date date, Integer participationPrice,
+                        String objective, String bio) {
         this.id = id;
         this.title = title;
         this.startingHour = startingHour;
         this.endingHour = endingHour;
         this.date = date;
-        this.registrationDeadline = registrationDeadline;
         this.participationPrice = participationPrice;
         this.objective = objective;
-        this.image = image;
         this.bio = bio;
     }
 
@@ -139,9 +134,6 @@ public class Competitions {
         this.objective = objective;
     }
 
-    public String getImage() {
-        return image;
-    }
 
     public String getBio() {
         return bio;
@@ -151,16 +143,4 @@ public class Competitions {
         this.bio = bio;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-
-    public Date getRegistrationDeadline() {
-        return registrationDeadline;
-    }
-
-    public void setRegistrationDeadline(Date registrationDeadline) {
-        this.registrationDeadline = registrationDeadline;
-    }
 }

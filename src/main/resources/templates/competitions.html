@@ -20,17 +20,21 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 
-<div class="card col-md-6 bg-dark text-warning my-5" th:each="competition:${competitions}">
+<div class="card bg-dark text-warning my-5" th:each="competition:${competitions}">
+    <div class="col-md-6">
     <h5 class="card-header" th:text="${competition.title}"></h5>
     <div class="card-body">
-        <p class="card-text bi-clock-fill" th:text=" ' Time: '+${competition.startingHour} + ' untile ' +${competition.endingHour}"></p>
+        <p class="card-text bi-clock-fill" th:text=" ' Time: '+${competition.startingHour} + ' until ' +${competition.endingHour}"></p>
         <p class="card-text bi-calendar" th:text=" ' Date '+${competition.date}"></p>
         <p class="card-text bi-currency-euro" th:text=" ' Participation Price: '+${competition.participationPrice}+' EUR'"></p>
-
+    </div>
+        <div class="btn btn-outline-warning text-start">
         <p>Allowed Firearms:</p>
         <div th:each="gunsAllowed:${competition.allowedFirearms}">
-        <p class="card-text bi-backpack-fill" th:text="${gunsAllowed.name}"></p>
+        <p class="card-text" th:text="${gunsAllowed.name}"></p>
         </div>
+        </div>
+
 
         <p>Number of Players:</p>
         <div th:each="players:${competition.participants}">
