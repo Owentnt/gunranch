@@ -19,15 +19,129 @@
 <body>
 <div th:insert="~{fragments/header :: header}">Header</div>
 
+<!--<div th:unless="${filtersEnabled}" class="text-center mt-5">-->
+<!--    <a class="btn btn-outline-warning bi bi-arrow-down" th:href="@{/competitions/filter}">Open Filter</a>-->
+<!--</div>-->
 
-<div class="card bg-dark text-warning my-5" th:each="competition:${competitions}">
-    <div class="col-md-6">
+<!--<div th:if="${filtersEnabled}" class="text-center mt-5">-->
+<!--    <a class="btn btn-outline-warning bi bi-arrow-up" th:href="@{/guns}">Close Filter</a>-->
+<!--    <form th:action="@{/guns/filter}" method="get">-->
+<!--        <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container">-->
+<!--            <h5 class="card-header text-warning">Filters</h5>-->
+<!--            <div class="btn-group w-25 col-md-2 row col">-->
+<!--                <label for="gunType"></label>-->
+<!--                <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">-->
+<!--                    <option value="" selected disabled>Select Gun Type</option>-->
+<!--                    <option value="Handgun">Handguns</option>-->
+<!--                    <option value="Shotgun">Shotguns</option>-->
+<!--                    <option value="Rifle">Rifles</option>-->
+<!--                    <option value="Assault Rifle">Assault Rifles</option>-->
+<!--                    <option value="Sniper Rifle">Sniper Rifles</option>-->
+<!--                    <option value="Submachine Gun">Submachine Guns</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="btn-group w-25 col-md-2 row col">-->
+<!--                <label for="caliber"></label>-->
+<!--                <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">-->
+<!--                    <option value="" selected disabled>Select Caliber</option>-->
+<!--                    <option value="9x19 mm">9x19 mm</option>-->
+<!--                    <option value=".44 Magnum">.44 Magnum</option>-->
+<!--                    <option value=".22 LR">.22 LR</option>-->
+<!--                    <option value=".38 Special Magnum">.38 Special Magnum</option>-->
+<!--                    <option value="7.62x25 mm">7.62x25 mm</option>-->
+<!--                    <option value="5.56x45 mm">5.56x45 mm</option>-->
+<!--                    <option value="7.62x54 mm">7.62x54 mm</option>-->
+<!--                    <option value="12 GA">12 GA</option>-->
+<!--                    <option value="7.62x51 mm">7.62x51 mm</option>-->
+<!--                    <option value=".45 ACP">.45 ACP</option>-->
+<!--                    <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>-->
+<!--                    <option value="7,92x57mm">7,92x57mm</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="row col">-->
+<!--                <div class="form-select w-50 col-md-3 mt-5 ms-3">-->
+<!--                    <label for="minMagazine" class="form-label">Min Magazine</label>-->
+<!--                    <input type="number" name="minMagazine" class="form-control" id="minMagazine"-->
+<!--                           placeholder="minMagazine"-->
+<!--                           th:value="${minMagazine}" step="1" min="5" max="40" th:class="w-100">-->
+<!--                    <label for="maxMagazine" class="form-label">Max Magazine</label>-->
+<!--                    <input type="number" name="maxMagazine" class="form-control" id="maxMagazine"-->
+<!--                           placeholder="maxMagazine"-->
+<!--                           th:value="${maxMagazine}" step="1" min="5" max="40" th:class="w-100">-->
+
+<!--                </div>-->
+<!--                <div class="row col">-->
+<!--                    <div class="form-select w-75 col-md-3 mt-5 ms-3 ">-->
+<!--                        <label for="minPrice" class="form-label">Min Price</label>-->
+<!--                        <input type="number" name="minPrice" class="form-control" id="minPrice"-->
+<!--                               placeholder="minPrice"-->
+<!--                               th:value="${minPrice}" step="5" min="5" max="30" th:class="w-100">-->
+<!--                        <label for="maxPrice" class="form-label">Max Price</label>-->
+<!--                        <input type="number" name="maxPrice" class="form-control" id="maxPrice"-->
+<!--                               placeholder="maxPrice"-->
+<!--                               th:value="${maxPrice}" step="5" min="5" max="30" th:class="w-100">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="text-warning form-select w-50 col-md-12 my-5 ms-3 align-items-center">-->
+<!--                <div class="FirearmsFilterSemi">-->
+<!--                    <label for="Semi-Auto" class="form-label d-inline-block">Semi-Auto</label>-->
+<!--                    <input type="radio" class="form-control " name="firearmsType" id="Semi-Auto" value="Semi-Auto"-->
+<!--                           th:class="w-25" th:checked="${firearmsType == 'Semi-Auto'}">-->
+<!--                </div>-->
+<!--                <div class="FirearmsFilterFull">-->
+<!--                    <label for="Full-Auto" class="form-label">Full-Auto</label>-->
+<!--                    <input type="radio" class="form-control d-inline-block " name="firearmsType" id="Full-Auto"-->
+<!--                           value="Full-Auto" th:class="w-25" th:checked="${firearmsType == 'Full-Auto'}">-->
+<!--                </div>-->
+<!--                <div class="FirearmsFilterRevolver">-->
+<!--                    <label for="Revolver" class="form-label">Revolver</label>-->
+<!--                    <input type="radio" class="form-control" name="firearmsType" id="Revolver"-->
+<!--                           value="Revolver" th:class="w-25"-->
+<!--                           th:checked="${firearmsType == 'Revolver'}">-->
+<!--                </div>-->
+<!--                <div class="FirearmsFilterCarbine">-->
+<!--                    <label for="Carbine" class="form-label">Carbine</label>-->
+<!--                    <input type="radio" class="form-control" name="firearmsType" id="Carbine"-->
+<!--                           value="Carbine" th:class="w-25"-->
+<!--                           th:checked="${firearmsType == 'Carbine'}">-->
+<!--                </div>-->
+<!--                <div class="FirearmsFilterBoltAction">-->
+<!--                    <label for="Bolt-Action" class="form-label">Bolt-Action</label>-->
+<!--                    <input type="radio" class="form-control" name="firearmsType" id="Bolt-Action"-->
+<!--                           value="Bolt-Action" th:class="w-25"-->
+<!--                           th:checked="${firearmsType == 'Bolt-Action'}">-->
+<!--                </div>-->
+<!--                <div class="FirearmsFilterPumpAction">-->
+<!--                    <label for="Pump-Action" class="form-label">Pump-Action</label>-->
+<!--                    <input type="radio" class="form-control" name="firearmsType" id="Pump-Action"-->
+<!--                           value="Pump-Action" th:class="w-25"-->
+<!--                           th:checked="${firearmsType == 'Pump-Action'}">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6 mx-auto">-->
+<!--                <button type="submit" class="btn btn-outline-warning">-->
+<!--                    <i class="bi-search bi"></i>Search-->
+<!--                </button>-->
+
+<!--                <div sec:authorize="hasAnyAuthority('ADMIN')">-->
+<!--                    <a class="btn btn-outline-warning bi bi-plus" th:href="@{/admin/newgun}">New Gun</a>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </form>-->
+
+
+<div class="card bg-dark text-warning my-5 col-md-6" th:each="competition:${competitions}">
     <h5 class="card-header" th:text="${competition.title}"></h5>
     <div class="card-body">
         <p class="card-text bi-clock-fill" th:text=" ' Time: '+${competition.startingHour} + ' until ' +${competition.endingHour}"></p>
         <p class="card-text bi-calendar" th:text=" ' Date '+${competition.date}"></p>
         <p class="card-text bi-currency-euro" th:text=" ' Participation Price: '+${competition.participationPrice}+' EUR'"></p>
-    </div>
+
         <div class="btn btn-outline-warning text-start">
         <p>Allowed Firearms:</p>
         <div th:each="gunsAllowed:${competition.allowedFirearms}">
@@ -54,5 +168,6 @@
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
+</div>
 </body>
 </html>

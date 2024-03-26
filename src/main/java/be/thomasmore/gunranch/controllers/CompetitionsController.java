@@ -35,10 +35,8 @@ public class CompetitionsController {
                                      @RequestParam(required = false) Date startingHour,
                                      @RequestParam(required = false) Date endingHour,
                                      @RequestParam(required = false) Date date,
-                                     @RequestParam(required = false) Date registrationDeadline,
                                      @RequestParam(required = false) double participationPrice,
-                                     @RequestParam(required = false) String bio,
-                                     @RequestParam(required = false) String image) {
+                                     @RequestParam(required = false) String bio) {
 
         Iterable<Competitions> allComps = competitionRepository.findAll();
         model.addAttribute("competitions", allComps);
@@ -46,10 +44,8 @@ public class CompetitionsController {
         model.addAttribute("startingHour", startingHour);
         model.addAttribute("endingHour", endingHour);
         model.addAttribute("date", date);
-        model.addAttribute("registrationDeadline", registrationDeadline);
         model.addAttribute("participationPrice", participationPrice);
         model.addAttribute("bio", bio);
-        model.addAttribute("image", image);
         model.addAttribute("filtersEnabled", true);
         return "competitions";
     }

@@ -27,7 +27,7 @@ public class LoginController {
     @GetMapping("/logout")
     public String logout(Model model, Principal principal) {
         if (principal == null) return "redirect:/";
-        return "/logout";
+        return "user/logout";
     }
 
     @GetMapping("/registration")
