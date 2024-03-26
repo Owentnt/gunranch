@@ -66,6 +66,11 @@ public class LoginController {
         userRepository.save(users);
         return "redirect:user/profile";
     }
+    @GetMapping("profile")
+        public String profile(Model model, Users users){
+        model.addAttribute("profile",users);
+        return "profile";
+    }
 
 //    @PostMapping("/registration")
 //    public String registrationPost(Principal principal, HttpServletRequest request,

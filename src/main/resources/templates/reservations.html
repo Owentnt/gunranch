@@ -38,13 +38,13 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label class="control-label my-3" for="date"><strong>Date:</strong></label>
-                        <input type="date" class="form-control" id="date" placeholder="MM/DD/YYYY" required
-                               th:field="*{date}">
+                        <input type="date" class="form-control" id="date" required
+                               th:field="*{date}" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}">
                         <div class="alert-danger alert" th:if="${#fields.hasErrors('*')}" th:errors="*{date}"></div>
                     </div>
                     <div class="form-group col-md-4">
                         <label class="control-label my-3" for="time"><strong>Time:</strong></label>
-                        <input type="time" class="form-control" id="time" placeholder="00:00" min="09:00" max="21:00" step="1800" required
+                        <input type="time" class="form-control" id="time" required
                                th:field="*{time}">
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}" th:errors="*{time}"></div>
                     </div>

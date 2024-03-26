@@ -15,7 +15,11 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 
-<body>
+<body class="bg-info">
+
+<h1 class="text-dark" th:text="${profile.firstName}">name</h1>
+
+<a class="btn btn-outline-warning">Edit Profile</a>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
