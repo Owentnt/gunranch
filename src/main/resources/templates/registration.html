@@ -26,17 +26,17 @@
                 <div class="form-group col-md-6">
                     <label for="firstName" class="my-3"><strong>First Name:</strong></label>
                     <input type="text" class="form-control" id="firstName" placeholder="First name"
-                           th:field="*{users.firstName}" required >
+                           th:field="*{user.firstName}" required >
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="lastName" class="my-3"><strong>Last Name:</strong></label>
                     <input type="text" class="form-control" id="lastName" placeholder="Last name"
-                           th:field="*{users.lastName}" required >
+                           th:field="*{user.lastName}" required >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="gender" class="my-3"><strong>Gender:</strong></label>
-                    <select id="gender" name="gender" th:value="*{users.gender}">
+                    <select id="gender" name="gender" th:value="*{user.gender}">
                         <option value="" selected disabled>Select Gender</option>
                         <option value="M">M</option>
                         <option value="F">F</option>
@@ -48,28 +48,28 @@
                 <div class="form-group col-md-6">
                     <label for="username" class="my-3"><strong>Username: </strong></label>
                     <input type="text" class="form-control" id="username" placeholder="Username"
-                           th:field="*{users.username}">
+                           th:field="*{user.username}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="password" class="my-3"><strong>Password: </strong></label>
                     <input type="password" class="form-control" id="password" placeholder="Password"
-                           th:field="*{users.password}">
+                           th:field="*{user.password}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="ssId" class="my-3"><strong>ss Id:</strong></label>
                     <input type="text" class="form-control" id="ssId" name="ssId"
-                           th:field="*{users.ssId}" placeholder="ss Id">
+                           th:field="*{user.ssId}" placeholder="ss Id">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="emailAddress" class="my-3"><strong>Emailadres:</strong></label>
                     <input type="email" class="form-control" id="emailAddress" placeholder="Email"
-                           th:field="*{users.emailAddress}">
+                           th:field="*{user.emailAddress}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="phoneNumber" class="my-3"><strong>Phone number:</strong></label>
                     <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
-                           th:field="*{users.phoneNumber}" placeholder="Enter your phone number">
+                           th:field="*{user.phoneNumber}" placeholder="Enter your phone number">
                 </div>
             </div>
 
@@ -77,18 +77,18 @@
                 <div class="form-group col-md-4">
                     <label for="address" class="my-3"><strong>Address:</strong></label>
                     <input type="text" class="form-control" id="address" placeholder="Enter your Address"
-                           th:field="*{users.address}">
+                           th:field="*{user.address}">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="postalCode" class="my-3"><strong>Postal Code:</strong></label>
                     <input type="text" class="form-control" id="postalCode" placeholder="Postalcode"
-                           th:field="*{users.postalCode}">
+                           th:field="*{user.postalCode}">
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="city" class="my-3"><strong>City:</strong></label>
                     <input type="text" class="form-control" id="city" placeholder="Enter your city"
-                           th:field="*{users.city}">
+                           th:field="*{user.city}">
                 </div>
             </div>
         </div>

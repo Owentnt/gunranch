@@ -17,13 +17,15 @@ public class Competitions {
 
     private String title;
 
+    @DateTimeFormat(pattern = "HH:mm")
     @Temporal(TemporalType.TIME)
-    @DateTimeFormat(fallbackPatterns = "HH:MM")
     private Date startingHour;
 
+    @DateTimeFormat(pattern = "HH:mm")
     @Temporal(TemporalType.TIME)
     private Date endingHour;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
     private Date date;
 

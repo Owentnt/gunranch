@@ -20,17 +20,13 @@
 <div>
   <h1 class="text-center text-warning" th:text="${competitions.title}"></h1>
 
-  <div class="image">
-    <img th:src="${competitions.image}" th:alt="${competitions.title}" width="192" height="124.7">
-  </div>
+
 
   <div class="bio carousel-caption"></div>
   <h6 class="text-center text-warning"><strong>Time:</strong></h6>
   <p th:text="${competitions.startingHour} + ${competitions.endingHour}" class="text-center text-warning"></p>
   <h6 class="text-center text-warning"><strong>Date:</strong></h6>
   <p th:text="${competitions.date}" class="text-center text-warning"></p>
-  <h6 class="text-center text-warning"><strong>Registration Date:</strong></h6>
-  <p th:text="${competitions.registrationDeadline}" class="text-center text-warning"></p>
   <h6 class="text-center text-warning"><strong>Price</strong></h6>
   <p th:text="${competitions.participationPrice}" class="text-center text-warning"></p>
 
