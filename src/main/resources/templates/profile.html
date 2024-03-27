@@ -17,7 +17,8 @@
 
 <body class="bg-info">
 
-<h1 class="text-dark" th:text="${profile.firstName}">name</h1>
+<h1 class="text-dark">name</h1>
+<h1 class="text-dark" th:text="*{profile.username}"></h1>
 
 <a class="btn btn-outline-warning">Edit Profile</a>
 

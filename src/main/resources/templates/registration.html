@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="password" class="my-3"><strong>Password: </strong></label>
-                    <input type="text" class="form-control" id="password" placeholder="Password"
+                    <input type="password" class="form-control" id="password" placeholder="Password"
                            th:field="*{users.password}">
                 </div>
                 <div class="form-group col-md-6">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-warning my-3"><a th:href="@{/userprofiledetails}" class="text-white text-decoration-none bi bi-send">Sign in</a></button>
+        <button type="submit" class="btn btn-warning my-3"><a th:href="@{/profile}" class="text-white text-decoration-none bi bi-send">Sign in</a></button>
     </form>
 </div>
 

@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
 
@@ -20,10 +21,11 @@ public class LoginController {
 
 
     @GetMapping("/login")
-        public String login(Model model, Principal principal) {
-            if (principal != null) return "redirect:/";
-            return "user/login";
+    public String login(Model model, Principal principal) {
+        if (principal != null) return "redirect:/";
+        return "user/login";
     }
+
     @GetMapping("/logout")
     public String logout(Model model, Principal principal) {
         if (principal == null) return "redirect:/";
@@ -31,44 +33,48 @@ public class LoginController {
     }
 
     @GetMapping("/registration")
-    public String registration(Model model, String firstName,
-                               String lastName, String username,
-                               String gender,
-                               String emailAddress,
-                               String phoneNumber,
-                               String password,
-                               String address,
-                               String city,
-                               String ssId,
-                               String postalCode){
-        model.addAttribute("users", new Users());
-        model.addAttribute("firstName",firstName);
-        model.addAttribute("lastName",lastName);
-        model.addAttribute("username",username);
-        model.addAttribute("gender",gender);
-        model.addAttribute("emailAddress",emailAddress);
-        model.addAttribute("phoneNumber",phoneNumber);
-        model.addAttribute("password",password);
-        model.addAttribute("address",address);
-        model.addAttribute("city",city);
-        model.addAttribute("postalCode",postalCode);
-        model.addAttribute("ssId",ssId);
-
-        return "user/registration";
+    public String registration(Users users, Model model) {
+        model.addAttribute("user", users);
+        return "/registration";
     }
+
     @PostMapping("/registration")
-    public String submitReservationForm(@Valid Users users, BindingResult bindingResult, Model model){
+    public String submitReservationForm(
+                                        Model model,
+                                        @RequestParam("firstName") String firstName,
+                                        @RequestParam("lastName") String lastName,
+                                        @RequestParam("username") String username,
+                                        @RequestParam("gender") String gender,
+                                        @RequestParam("emailAddress") String emailAddress,
+                                        @RequestParam("phoneNumber") String phoneNumber,
+                                        @RequestParam("password") String password,
+                                        @RequestParam("address") String address,
+                                        @RequestParam("city") String city,
+                                        @RequestParam("ssId") String ssId,
+                                        @RequestParam("postalCode") String postalCode) {
 
-        if (bindingResult.hasErrors()){
-            return "user/registration";
-        }
-        model.addAttribute("users",users);
-        userRepository.save(users);
-        return "redirect:user/profile";
+//        if (bindingResult.hasErrors()) {
+//            return "/registration";
+//        }
+      //  model.addAttribute("users", users);
+        model.addAttribute("firstName", firstName);
+        model.addAttribute("lastName", lastName);
+        model.addAttribute("username", username);
+        model.addAttribute("gender", gender);
+        model.addAttribute("emailAddress", emailAddress);
+        model.addAttribute("phoneNumber", phoneNumber);
+        model.addAttribute("password", password);
+        model.addAttribute("address", address);
+        model.addAttribute("city", city);
+        model.addAttribute("postalCode", postalCode);
+        model.addAttribute("ssId", ssId);
+       // userRepository.save(users);
+        return "redirect:/profile";
     }
+
     @GetMapping("profile")
-        public String profile(Model model, Users users){
-        model.addAttribute("profile",users);
+    public String profile(Model model, Users users) {
+        model.addAttribute("profile", users);
         return "profile";
     }
 

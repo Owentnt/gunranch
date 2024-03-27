@@ -50,9 +50,9 @@
                     </div>
                 </div>
                 <div row>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 w-25">
                     <label class="control-label" for="gunPackage" >Guns</label>
-                    <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}" multiple>
+                    <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}">
                         <option th:each="gun : ${gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
                     </select>
                 </div>
@@ -73,5 +73,18 @@
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
+
+<!--<script th:inline="javascript">-->
+<!--    function updateTextField() {-->
+<!--        const selectedGuns = [];-->
+<!--        const selectElement = document.getElementById("guns");-->
+<!--        for (let i = 0; i < selectElement.options.length; i++) {-->
+<!--            if (selectElement.options[i].selected) {-->
+<!--                selectedGuns.push(selectElement.options[i].text);-->
+<!--            }-->
+<!--        }-->
+<!--        document.getElementById("selectedGuns").value = selectedGuns.join(", ");-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>

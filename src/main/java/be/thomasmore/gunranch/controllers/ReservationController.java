@@ -29,9 +29,13 @@ public class ReservationController {
     @GetMapping("/reservations")
     public String reservationsForm(Reservation reservations,Model model, String selectedGun){
         Iterable <Guns> gunsPackage = gunsRepository.findAll();
+        Iterable <Reservation> reservations1 = reservationRepository.findAll();
         model.addAttribute("reservations",reservations);
         model.addAttribute("gunsPackage",gunsPackage);
         model.addAttribute("selectedGun",selectedGun);
+        String selectedGunsText = String.join(", ", selectedGun);
+        model.addAttribute("selectedGuns",selectedGunsText);
+
         return "reservations";
     }
 
