@@ -91,6 +91,12 @@
                            th:field="*{user.city}">
                 </div>
             </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="bio" class="my-3"><strong>About me:</strong></label>
+                    <textarea id="bio" name="bio" rows="5" cols="50" th:field="*{user.aboutMe}" placeholder="Tell something about yourself"></textarea>
+                </div>
+            </div>
         </div>
         <button type="submit" class="btn btn-warning my-3"><a th:href="@{/profile}" class="text-white text-decoration-none bi bi-send">Sign in</a></button>
     </form>

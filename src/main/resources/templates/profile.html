@@ -32,7 +32,9 @@
   <h6 th:text="'SsId  : ' +${user.ssId}"></h6>
   <h6 th:text="'Reservations : ' +${user.reservations}"></h6>
   <h6 th:text="'Competitions : ' +${user.participants}"></h6>
+  <div th:if="${user.aboutMe != null}">
   <h6 th:text="'Bio : ' +${user.aboutMe}"></h6>
+  </div>
 
 
 
