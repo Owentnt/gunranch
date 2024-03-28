@@ -2,19 +2,18 @@ package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Users;
 import be.thomasmore.gunranch.repositorys.UserRepository;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
+import java.util.Optional;
 
 @Controller
-public class LoginController {
+public class UserController {
 
     @Autowired
     UserRepository userRepository;
@@ -73,8 +72,18 @@ public class LoginController {
     }
 
     @GetMapping("profile")
-    public String profile(Model model, Users profile) {
-        model.addAttribute("profile", profile);
+    public String profile(Model model, Principal principal) {
+        if (principal != null){
+            final String loginName = principal.getName();
+            System.out.println(principal.getName());
+            Optional<Users> user = userRepository.findByUsername(loginName);
+            model.addAttribute("user", user.get());
+
+        }else{
+            return "/registration";
+        }
+
+   //     model.addAttribute("user", user);
         return "profile";
     }
 
