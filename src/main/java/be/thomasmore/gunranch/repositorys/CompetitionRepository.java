@@ -4,6 +4,7 @@ import be.thomasmore.gunranch.model.Competitions;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.core.parameters.P;
 
 import java.util.Date;
 import java.util.List;
@@ -67,7 +68,12 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("SELECT comp, COUNT(Participants) FROM Competitions comp JOIN comp.participants p GROUP BY comp")
     List<Competitions> countParticipantsPerCompetition();
 
-
+//    @Query("select c from Competitions c WHERE " +
+//            ":keyword IS NULL OR " +
+//            "(UPPER(c.bio) LIKE UPPER(CONCAT('%', :keyword, '%'))) OR " +
+//            "(UPPER(c.participationPrice) LIKE UPPER(CONCAT('%', :keyword, '%'))) OR " +
+//            "(UPPER(c.title) LIKE UPPER(CONCAT('%', :keyword, '%')))")
+//           List<Competitions> findByKeyword(@Param("keyword")String keyword);
 
 //    @Query("SELECT comp from Competitions comp WHERE " +
 //            "(:minMagaz IS NULL OR :minMagazine <= g.magazine) AND " +

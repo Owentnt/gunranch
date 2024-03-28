@@ -73,8 +73,8 @@ public class LoginController {
     }
 
     @GetMapping("profile")
-    public String profile(Model model, Users users) {
-        model.addAttribute("profile", users);
+    public String profile(Model model, Users profile) {
+        model.addAttribute("profile", profile);
         return "profile";
     }
 

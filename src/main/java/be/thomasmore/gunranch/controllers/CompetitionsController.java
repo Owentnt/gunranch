@@ -4,6 +4,8 @@ import be.thomasmore.gunranch.model.Competitions;
 import be.thomasmore.gunranch.model.Participants;
 import be.thomasmore.gunranch.repositorys.CompetitionRepository;
 import be.thomasmore.gunranch.repositorys.ParticipantRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +17,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+
+
 @Controller
 public class CompetitionsController {
 
+    private final Logger logger = LoggerFactory.getLogger(Competitions.class);
     @Autowired
     CompetitionRepository competitionRepository;
 
@@ -39,8 +44,10 @@ public class CompetitionsController {
                                      @RequestParam(required = false) Date endingHour,
                                      @RequestParam(required = false) Date date,
                                      @RequestParam(required = false) double participationPrice,
-                                     @RequestParam(required = false) String bio) {
+                                     @RequestParam(required = false) String bio,
+                                     @RequestParam(required = false) String keyword) {
 
+        logger.info(String.format("competitionsFilter -- keyword=%s", keyword));
         Iterable<Competitions> allComps = competitionRepository.findAll();
         model.addAttribute("competitions", allComps);
         model.addAttribute("title", title);
@@ -49,6 +56,7 @@ public class CompetitionsController {
         model.addAttribute("date", date);
         model.addAttribute("participationPrice", participationPrice);
         model.addAttribute("bio", bio);
+        model.addAttribute("keyword",keyword);
         model.addAttribute("filtersEnabled", true);
         return "competitions";
     }

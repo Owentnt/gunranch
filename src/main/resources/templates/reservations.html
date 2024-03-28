@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/gunranch.css}" href="/css/gunranch.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="use-bootstrap-select.min.css" />
     <meta charset="UTF-8">
     <title>Reservation</title>
 
@@ -19,12 +20,16 @@
 
 
 <body>
+
+
+
+
 <div class="position-relative">
     <img src="/images/reservationsbg.jpg" class="bg h-100 w-100 d-flex">
     <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
         <h1 class="text-center text-warning">Make a reservation</h1>
         <div class="container text-start">
-            <form class="my-5" th:action="@{/reservations}" th:object="${reservations}" method="post">
+            <form class="my-5" th:action="@{/reservations}" th:object="${reservation}" method="post">
                 <div class="row">
 
                 <div class="row">
@@ -51,7 +56,7 @@
                 </div>
                 <div row>
                 <div class="form-group col-md-6 w-25">
-                    <label class="control-label" for="gunPackage" >Guns</label>
+                    <label class="control-label " for="gunPackage" >Guns</label>
                     <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}">
                         <option th:each="gun : ${gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
                     </select>
@@ -61,8 +66,16 @@
                     <input id="gunPackageSelect" name="gunPackageSelect" class="form-control" th:value="${selectedGun}" readonly>
                 </div>
                 </div>
+                    <div class="form-group col-md-8">
+                        <label class="control-label" for="example">Selected Guns:</label>
+                        <select class="form-select" id="example" data-ub-select-clear="true">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
                     <div>
-                <button type="submit" class="btn btn-warning my-3 w-25"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
+                <button type="submit" class=" btn btn-outline-warning"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
                 </button>
                 </div>
                 </div>
@@ -72,19 +85,11 @@
     </div>
 </div>
 
+<script src="use-bootstrap-select.min.js"></script>
+
+
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
-<!--<script th:inline="javascript">-->
-<!--    function updateTextField() {-->
-<!--        const selectedGuns = [];-->
-<!--        const selectElement = document.getElementById("guns");-->
-<!--        for (let i = 0; i < selectElement.options.length; i++) {-->
-<!--            if (selectElement.options[i].selected) {-->
-<!--                selectedGuns.push(selectElement.options[i].text);-->
-<!--            }-->
-<!--        }-->
-<!--        document.getElementById("selectedGuns").value = selectedGuns.join(", ");-->
-<!--    }-->
-<!--</script>-->
+
 </body>
 </html>

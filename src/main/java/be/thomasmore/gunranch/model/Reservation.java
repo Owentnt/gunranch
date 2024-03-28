@@ -13,7 +13,7 @@ public class Reservation {
     @Id
     private int id;
 
-    @ManyToOne
+    @ManyToOne()
     private Users users;
 
     @NotNull(message = "Amount of participants is required")

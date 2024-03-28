@@ -21,6 +21,8 @@
 <h1 class="text-dark"> <span sec:authorize="isAuthenticated()"></span>
   <span sec:authentication="name"></span> profile</h1>
 
+<p th:text="${profile.username}"></p>
+
 <a class="btn btn-outline-warning">Edit Profile</a>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>

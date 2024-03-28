@@ -42,7 +42,7 @@ public class CompAdminController {
     }
 
     @PostMapping("/editcompetitions/{id}")
-    public String editCompPost(@PathVariable Integer id, Competitions competitions) {
+    public String editCompPost(@PathVariable (required = false)Integer id, Competitions competitions) {
         logger.info("compEditPost" + id + "-- new title=" + competitions.getTitle()
                 + "-- new Time=" + competitions.getDate().getTime()
                 + "-- new Date=" + competitions.getDate()

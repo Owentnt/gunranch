@@ -27,10 +27,9 @@ public class ReservationController {
     GunsRepository gunsRepository;
 
     @GetMapping("/reservations")
-    public String reservationsForm(Reservation reservations,Model model, String selectedGun){
+    public String reservationsForm(Model model, String selectedGun){
         Iterable <Guns> gunsPackage = gunsRepository.findAll();
-        Iterable <Reservation> reservations1 = reservationRepository.findAll();
-        model.addAttribute("reservations",reservations);
+        model.addAttribute("reservation", new Reservation());
         model.addAttribute("gunsPackage",gunsPackage);
         model.addAttribute("selectedGun",selectedGun);
         String selectedGunsText = String.join(", ", selectedGun);
@@ -40,13 +39,13 @@ public class ReservationController {
     }
 
     @PostMapping("/reservations")
-    public String submitReservationForm(@Valid Reservation reservations, BindingResult bindingResult, Model model){
+    public String submitReservationForm(@Valid Reservation reservation, BindingResult bindingResult, Model model){
 
         if (bindingResult.hasErrors()){
             return "reservations";
         }
-        model.addAttribute("reservations",reservations);
-        reservationRepository.save(reservations);
+        model.addAttribute("reservation",reservation);
+        reservationRepository.save(reservation);
         return "redirect:/reservationdetails";
     }
 

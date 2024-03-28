@@ -17,11 +17,11 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
-<h1>Thank you for you reservation<span th:text="' '" sec:authentication="name"></span>
-</h1>
+<h1>Thank you for you reservation<span th:text="' '+${#authentication.name}"></span>
 
-<h6>Je reservatie zal doorgaan op datum om uur.
-Je komt met ? personen en je hebt de volgende wapens gekozen.</h6>
+<div th:each="booking : ${reservations}">
+
+<p th:text="'Je reservatie zal doorgaan op' +${booking.getDate()}+' stipt om '+${booking.time} + 'Je komt met '+${booking.amountOfParticipants}+' personen.'"></p>
 
 <p>Gekozen wapens:</p>
 
@@ -30,6 +30,7 @@ Je komt met ? personen en je hebt de volgende wapens gekozen.</h6>
 <p>De prijs die je per wapen betaald is goed voor 1 magazijn.
 Als je meerdere magazijnen wilt gebruiken moet je opnieuw de prijs betalen voor dat wapen</p>
 
+</div>
 <div>
     <button type="button" class="btn btn-outline-warning"><a th:href="@{/reservations}" class="text-dark text-decoration-none">New reservation></a></button>
 </div>
@@ -39,6 +40,7 @@ Als je meerdere magazijnen wilt gebruiken moet je opnieuw de prijs betalen voor 
 <div>
     <button type="button" class="btn btn-outline-warning"><a th:href="@{/}" class="text-dark text-decoration-none">Return to home page</a></button>
 </div>
+
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 </body>
 </html>
