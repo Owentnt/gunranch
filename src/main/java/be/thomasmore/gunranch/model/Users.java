@@ -70,9 +70,11 @@ public class Users {
     @Length(max = 500)
     private String aboutMe;
 
+    private String image;
+
     public Users(int id, String firstName, String lastName, String username, String gender, String emailAddress,
                  String phoneNumber, String address, String postalCode, String city,
-                 String password, String ssId, boolean enabled, String aboutMe) {
+                 String password, String ssId, boolean enabled, String aboutMe, String image) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -87,6 +89,16 @@ public class Users {
         this.ssId = ssId;
         this.enabled = enabled;
         this.aboutMe = aboutMe;
+        this.image = image;
+    }
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Set<Reservation> getReservations() {

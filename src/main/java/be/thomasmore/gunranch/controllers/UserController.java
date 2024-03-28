@@ -1,13 +1,14 @@
 package be.thomasmore.gunranch.controllers;
 
+import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.model.Users;
 import be.thomasmore.gunranch.repositorys.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.Optional;
@@ -18,6 +19,7 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping("/login")
     public String login(Model model, Principal principal) {
@@ -34,12 +36,14 @@ public class UserController {
     @GetMapping("/registration")
     public String registration(Users users, Model model) {
         model.addAttribute("user", users);
+        logger.info("registrate");
         return "/registration";
     }
 
+
     @PostMapping("/registration")
     public String submitReservationForm(
-                                        Model model,
+                                        Model model, Users users,
                                         @RequestParam("firstName") String firstName,
                                         @RequestParam("lastName") String lastName,
                                         @RequestParam("username") String username,
@@ -50,12 +54,11 @@ public class UserController {
                                         @RequestParam("address") String address,
                                         @RequestParam("city") String city,
                                         @RequestParam("ssId") String ssId,
-                                        @RequestParam("postalCode") String postalCode) {
+                                        @RequestParam("postalCode") String postalCode,
+                                        @RequestParam("image") String image) {
 
-//        if (bindingResult.hasErrors()) {
-//            return "/registration";
-//        }
-      //  model.addAttribute("users", users);
+
+        model.addAttribute("users", users);
         model.addAttribute("firstName", firstName);
         model.addAttribute("lastName", lastName);
         model.addAttribute("username", username);
@@ -67,7 +70,8 @@ public class UserController {
         model.addAttribute("city", city);
         model.addAttribute("postalCode", postalCode);
         model.addAttribute("ssId", ssId);
-       // userRepository.save(users);
+        model.addAttribute("image",image);
+        userRepository.save(users);
         return "redirect:/profile";
     }
 
