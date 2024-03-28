@@ -17,9 +17,33 @@
 
 <body class="bg-info">
 
-<div th:if="${user != null}">
-  <h1 th:text="'First name: ' +${user.firstName}" ></h1>
-  <h1 th:text="'last name: ' +${user.lastName}" ></h1>
+<h1 th:text="${user.username}+ ' profile '" class="text-warning"></h1>
+<div class="card-body card card border-warning col-md-8 row mt-5 bg-dark container text-warning">
+<div th:if="${user != null}" class="">
+  <h6 th:text="'Name: ' +${user.firstName} + ' ' +${user.lastName}" ></h6>
+  <h6 th:text="'Gender: ' +${user.gender}"></h6>
+  <h6 th:text="'Contact Info : '"></h6>
+  <p th:text="'Email: ' +${user.emailAddress}"></p>
+  <p th:text="'Phone: ' +${user.phoneNumber}"></p>
+  <h6 th:text="'Address : '"></h6>
+  <p th:text="'Street: ' +${user.address}"></p>
+  <p th:text="'Postal Code: ' +${user.postalCode}"></p>
+  <p th:text="'City: ' +${user.city}"></p>
+  <h6 th:text="'SsId  : ' +${user.ssId}"></h6>
+  <h6 th:text="'Reservations : ' +${user.reservations}"></h6>
+  <h6 th:text="'Competitions : ' +${user.participants}"></h6>
+  <h6 th:text="'Bio : ' +${user.aboutMe}"></h6>
+
+
+
+
+
+
+
+
+
+
+</div>
 </div>
 
 

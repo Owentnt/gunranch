@@ -2,6 +2,7 @@ package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import org.hibernate.validator.constraints.Length;
 
 import java.util.Set;
 
@@ -66,10 +67,12 @@ public class Users {
     @Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
     private String ssId;
 
+    @Length(max = 500)
+    private String aboutMe;
 
     public Users(int id, String firstName, String lastName, String username, String gender, String emailAddress,
                  String phoneNumber, String address, String postalCode, String city,
-                 String password, String ssId, boolean enabled) {
+                 String password, String ssId, boolean enabled, String aboutMe) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -83,6 +86,7 @@ public class Users {
         this.password = password;
         this.ssId = ssId;
         this.enabled = enabled;
+        this.aboutMe = aboutMe;
     }
 
     public Set<Reservation> getReservations() {
@@ -200,4 +204,11 @@ public class Users {
         this.password = password;
     }
 
+    public String getAboutMe() {
+        return aboutMe;
+    }
+
+    public void setAboutMe(String aboutMe) {
+        this.aboutMe = aboutMe;
+    }
 }

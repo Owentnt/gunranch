@@ -237,16 +237,16 @@ INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES (16,7)
 --USERS DATA
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
-                  ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled)
+                  ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,ABOUT_ME)
 VALUES (1,'Owen','Talboom','M','owentnt','owentm031111@gmail.com','0494310004',
         '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS',
-        'Duivebergen 2B','3140','Keerbergen','03.11.11.157', true);
+        'Duivebergen 2B','3140','Keerbergen','03.11.11.157', true,'Ik ben klant');
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
-                  ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled)
+                  ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,ABOUT_ME)
 VALUES (2,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0477 83 14 10',
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
-        'Den Bremt 1','3020','Herent','06.14.03.157', true);
+        'Den Bremt 1','3020','Herent','06.14.03.157', true,null);
 
 
 
