@@ -1,6 +1,5 @@
 package be.thomasmore.gunranch.controllers;
 
-import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.model.Users;
 import be.thomasmore.gunranch.repositorys.UserRepository;
 import org.slf4j.Logger;
@@ -39,10 +38,20 @@ public class UserController {
         logger.info("registrate");
         return "/registration";
     }
+    @ModelAttribute("users")
+    public Users findUser(String username) {
+        logger.info("findUser " + username);
+        if (username == null) return new Users();
+        Optional<Users> findUser = userRepository.findByUsername(username);
+
+        if (findUser.isPresent())
+            return findUser.get();
+        return null;
+    }
 
 
     @PostMapping("/registration")
-    public String submitReservationForm(
+    public String submitRegistrationForm(
                                         Model model, Users users,
                                         @RequestParam("firstName") String firstName,
                                         @RequestParam("lastName") String lastName,
@@ -55,9 +64,22 @@ public class UserController {
                                         @RequestParam("city") String city,
                                         @RequestParam("ssId") String ssId,
                                         @RequestParam("postalCode") String postalCode,
-                                        @RequestParam("image") String image) {
+                                        @RequestParam("image") String image,
+                                        @RequestParam("aboutMe") String aboutMe) {
 
 
+        logger.info("registration" + username + "-- new username=" + users.getUsername()
+                + "-- new firstName=" + users.getFirstName()
+                + "-- new lastName=" + users.getLastName()
+                + "-- new gender=" + users.getGender()
+                + "-- new emailAddress=" + users.getEmailAddress()
+                + "-- new phoneNumber=" + users.getPhoneNumber()
+                + "-- new address=" + users.getAddress()
+                + "-- new postalCode=" + users.getPostalCode()
+                + "-- new city=" + users.getCity()
+                + "-- new ssId=" + users.getSsId()
+                + "-- new image=" + users.getImage()
+                + "-- new aboutMe=" + users.getAboutMe());
         model.addAttribute("users", users);
         model.addAttribute("firstName", firstName);
         model.addAttribute("lastName", lastName);
@@ -71,6 +93,7 @@ public class UserController {
         model.addAttribute("postalCode", postalCode);
         model.addAttribute("ssId", ssId);
         model.addAttribute("image",image);
+        model.addAttribute("aboutMe",aboutMe);
         userRepository.save(users);
         return "redirect:/profile";
     }

@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="profile page in orde">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/anonymous-female-icon-12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/male icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/owen.jpg" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="profiel foto functie toegevoegd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,14 +176,8 @@
       <workItem from="1711584359889" duration="830000" />
       <workItem from="1711620809654" duration="7423000" />
       <workItem from="1711628742835" duration="4982000" />
-      <workItem from="1711651185306" duration="7805000" />
-    </task>
-    <task id="LOCAL-00074" summary="troubleshooting">
-      <created>1710244051189</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1710244051189</updated>
+      <workItem from="1711651185306" duration="8160000" />
+      <workItem from="1711709787292" duration="2537000" />
     </task>
     <task id="LOCAL-00075" summary="wat refactoring en wat aanpassingen aan de database">
       <created>1710244801870</created>
@@ -531,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711632965143</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="profiel foto functie toegevoegd">
+      <created>1711659130103</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1711659130103</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="postmapping controller voor new gun toegevoegd" />
     <MESSAGE value="gunfilter voor pump-action gefixed" />
     <MESSAGE value="probleem met insert pagina opgelost" />
     <MESSAGE value="reservation form: gun select field toegevoegd" />
@@ -586,7 +576,8 @@
     <MESSAGE value="troubleshooting" />
     <MESSAGE value="test profile pagina" />
     <MESSAGE value="profile page in orde" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile page in orde" />
+    <MESSAGE value="profiel foto functie toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="profiel foto functie toegevoegd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

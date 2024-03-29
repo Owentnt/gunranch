@@ -47,11 +47,10 @@
   <h6 th:text="'Competitions : ' +${user.participants}"></h6>
   <div th:if="${user.aboutMe != null}">
   <h6 th:text="'Bio : ' +${user.aboutMe}"></h6>
-    <div>
-    <a class="btn btn-outline-warning" th:href="@{/registration}">Edit Profile</a>
-    </div>
   </div>
-
+  <div>
+    <a class="btn btn-outline-warning" th:href="@{/registration}">Edit Profile</a>
+  </div>
 
 
 
