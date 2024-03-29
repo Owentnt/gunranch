@@ -54,42 +54,116 @@
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}" th:errors="*{time}"></div>
                     </div>
                 </div>
-                <div row>
-                <div class="form-group col-md-6 w-25">
-                    <label class="control-label " for="gunPackage" >Guns</label>
-                    <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}">
-                        <option th:each="gun : ${gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
-                    </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label class="control-label" for="gunPackageSelect">Selected Guns:</label>
-                    <input id="gunPackageSelect" name="gunPackageSelect" class="form-control" th:value="${selectedGun}" readonly>
-                </div>
-                </div>
-                    <div class="form-group col-md-8">
-                        <label class="control-label" for="example">Selected Guns:</label>
-                        <select class="form-select" id="example" data-ub-select-clear="true">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                <div class="row">
+                    <div class="form-group col-md-6 w-25">
+                        <label class="control-label" for="gunPackage">Guns</label>
+                        <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}">
+                            <option th:each="gun : ${gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
                         </select>
                     </div>
+                    <div class="form-group col-md-6 btn-outline-warning">
+                    <label class="control-label" for="gunPackageSelect">Selected Guns:</label>
+                    <div id="selectedGunsTags" class="breadcrumb gap-2 btn-warning ">
+                        <!-- Selected guns will be displayed here as tags -->
+                    </div>
+                        <textarea id="gunPackageSelect" name="gunPackageSelect" type="text" th:value="${selectedGun}" readonly="readonly"></textarea>
+                </div>
+
+                </div>
                     <div>
                 <button type="submit" class=" btn btn-outline-warning"><a th:href="@{/reservationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a>
                 </button>
                 </div>
                 </div>
-
             </form>
+
         </div>
     </div>
 </div>
 
-<script src="use-bootstrap-select.min.js"></script>
+<style>
+    .selected-guns-tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .selected-gun-tag {
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const gunTextarea = document.getElementById("gunPackageSelect");
+        const selectedGunsDiv = document.getElementById("selectedGunsTags");
+        const gunSelect = document.getElementById("gunPackage");
+        const selectedGuns = new Set(); // Keeps track of selected guns
+
+        // Function to add a gun button
+        function addGunButton(gunName) {
+            const button = document.createElement("button");
+            button.className = "btn btn-warning btn-sm m-1";
+            button.textContent = gunName;
+            button.onclick = function() {
+                selectedGuns.delete(gunName); // Remove from the set
+                selectedGunsDiv.removeChild(button);
+                updateTextarea();
+                updateOptions(); // Enable the option in the dropdown
+            };
+            selectedGunsDiv.appendChild(button);
+        }
+
+        // Function to update the text area
+        function updateTextarea() {
+            const gunList = Array.from(selectedGuns);
+            gunTextarea.value = gunList.join(", ");
+        }
+
+        // Function to disable the selected option in the dropdown
+        function updateOptions() {
+            const options = gunSelect.options;
+            for (let i = 0; i < options.length; i++) {
+                if (selectedGuns.has(options[i].textContent)) {
+                    options[i].disabled = true;
+                } else {
+                    options[i].disabled = false;
+                }
+            }
+        }
+
+        // Event listener for select change
+        gunSelect.addEventListener("change", function(event) {
+            const selectedGun = event.target.options[event.target.selectedIndex].text;
+            if (!selectedGuns.has(selectedGun)) {
+                selectedGuns.add(selectedGun);
+                addGunButton(selectedGun);
+                updateTextarea();
+                updateOptions();
+            } else {
+                alert("This gun has already been selected.");
+            }
+            // Reset the dropdown to the default option
+            event.target.selectedIndex = 0;
+        });
+
+        // Initial setup (if any guns are pre-selected)
+        const initialGuns = gunTextarea.value.split(",");
+        initialGuns.forEach(function(gun) {
+            if (gun.trim() !== "") {
+                selectedGuns.add(gun.trim());
+                addGunButton(gun.trim());
+            }
+        });
+
+        // Update the options initially
+        updateOptions();
+    });
+</script>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
-
 
 </body>
 </html>

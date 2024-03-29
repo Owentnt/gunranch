@@ -249,6 +249,19 @@ VALUES (2,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0477 83 14 1
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
         'Den Bremt 1','3020','Herent','06.14.03.157', true,null,null);
 
+INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
+                  ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
+VALUES (3,'Milan','Keymolen','M','milankeymolen1','milan.keymolen@gmail.com','0478389427',
+        '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS',
+        'Duivebergen 9','3140','Keerbergen','05.17.04.157', true,null,'Ik ben user');
+
+
+INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
+                  ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
+VALUES (4,'Beike','Rogiers','F','beeroger','beike.r@hotmail.com','0478 23 65 00',
+        '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
+        'Baalsebaan 203B','3120','Baal','78.08.11.157', true,null,null);
+
 
 
 
@@ -257,5 +270,8 @@ INSERT INTO AUTHORITIES (USERNAME, AUTHORITY)
 VALUES ('owentnt', 'ADMIN');
 --INSERT INTO USERS (USERNAME, PASSWORD, ENABLED) VALUES ('marie', '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm', true);
 INSERT INTO AUTHORITIES (USERNAME, AUTHORITY) VALUES ('saraps', 'USER');
+INSERT INTO AUTHORITIES (USERNAME, AUTHORITY) VALUES ('milankeymolen1', 'USER');
+INSERT INTO AUTHORITIES (USERNAME, AUTHORITY) VALUES ('beeroger', 'ADMIN');
+
 
 
