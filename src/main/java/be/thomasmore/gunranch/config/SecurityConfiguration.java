@@ -41,8 +41,11 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
                     .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).hasAnyAuthority("ADMIN")
                     .anyRequest().permitAll());
 
-            http.formLogin(Customizer.withDefaults());
+            http.formLogin(form -> form .loginPage("/user/login")
+                    .permitAll());
 
+
+            http.logout(form -> form.logoutUrl("/user/logout"));
 
             if (h2ConsoleNeeded){
                 http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
