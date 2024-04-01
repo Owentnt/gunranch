@@ -31,7 +31,7 @@
       <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/reservations}" class="text-white text-decoration-none">Reservations</a></li>
       <li class="btn btn-outline-warning mx-2 my-2"><a th:href="@{/competitions}" class="text-white text-decoration-none">Competitions</a></li>
       <li class="btn btn-outline-warning mx-2 my-2">
-        <a sec:authorize="!isAuthenticated()" href="/login" class="text-white text-decoration-none">Login</a>
+        <a sec:authorize="!isAuthenticated()" th:href="@{/login}" class="text-white text-decoration-none">Login</a>
       </li>
 
       <li class="btn btn-outline-warning mx-2 my-2">

@@ -44,24 +44,30 @@ public class CompetitionsController {
     }
 
     @GetMapping("/competitions/filter")
-    public String competitionsFilter(Model model, @RequestParam(required = false) String title,
-                                     @RequestParam(required = false) Date startingHour,
-                                     @RequestParam(required = false) Date endingHour,
-                                     @RequestParam(required = false) Date date,
-                                     @RequestParam(required = false) double participationPrice,
-                                     @RequestParam(required = false) String bio,
+    public String competitionsFilter(Model model, @RequestParam(required = false) Double minPrice,
+                                     @RequestParam(required = false) Double maxPrice,
+                                     @RequestParam(required = false) Date startDate,
+                                     @RequestParam(required = false) Date endDate,
+                                     @RequestParam(required = false) Date startHour,
+                                     @RequestParam(required = false) Date endHour,
+                                     @RequestParam(required = false) List <String> allowedGuns,
+                                     @RequestParam(required = false) int nrOfPlayers,
                                      @RequestParam(required = false) String keyword) {
 
+        Iterable<Competitions> allGames = competitionRepository.findAll();
+
+        allGames = competitionRepository.findByFilter(minPrice, maxPrice, startDate, endDate, startHour, endHour, allowedGuns, nrOfPlayers, keyword);
         logger.info(String.format("competitionsFilter -- keyword=%s", keyword));
-        Iterable<Competitions> allComps = competitionRepository.findAll();
-        model.addAttribute("competitions", allComps);
-        model.addAttribute("title", title);
-        model.addAttribute("startingHour", startingHour);
-        model.addAttribute("endingHour", endingHour);
-        model.addAttribute("date", date);
-        model.addAttribute("participationPrice", participationPrice);
-        model.addAttribute("bio", bio);
+        model.addAttribute("competitions", allGames);
+        model.addAttribute("startingHour", startHour);
+        model.addAttribute("endingHour", endHour);
+        model.addAttribute("startDate", startDate);
+        model.addAttribute("endDate", endDate);
+        model.addAttribute("participationPriceMin", minPrice);
+        model.addAttribute("participationPriceMax", maxPrice);
         model.addAttribute("keyword",keyword);
+        model.addAttribute("allowedGuns",allowedGuns);
+        model.addAttribute("nrOfPlayers",nrOfPlayers);
         model.addAttribute("filtersEnabled", true);
         return "competitions";
     }

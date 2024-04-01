@@ -29,10 +29,10 @@
     <form th:action="@{/guns/filter}" method="get">
         <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container">
             <h5 class="card-header text-warning">Filters</h5>
-            <div class="btn-group w-25 col-md-2 row col">
+            <div class="btn-group w-25 col-md-4 row col">
                 <label for="gunType"></label>
                 <select id="gunType" name="gunType" class="btn-warning btn" th:value="${gunType}">
-                    <option value="" selected disabled>Select Gun Type</option>
+                    <option value="" selected disabled>Guntype</option>
                     <option value="Handgun">Handguns</option>
                     <option value="Shotgun">Shotguns</option>
                     <option value="Rifle">Rifles</option>
@@ -41,10 +41,10 @@
                     <option value="Submachine Gun">Submachine Guns</option>
                 </select>
             </div>
-            <div class="btn-group w-25 col-md-2 row col">
+            <div class="btn-group w-25 col-md-4 row col">
             <label for="caliber"></label>
                 <select id="caliber" name="caliber" class="btn-warning btn" th:value="${caliber}">
-                    <option value="" selected disabled>Select Caliber</option>
+                    <option value="" selected disabled>Caliber</option>
                     <option value="9x19 mm">9x19 mm</option>
                     <option value=".44 Magnum">.44 Magnum</option>
                     <option value=".22 LR">.22 LR</option>

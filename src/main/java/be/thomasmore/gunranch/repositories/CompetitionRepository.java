@@ -1,10 +1,13 @@
 package be.thomasmore.gunranch.repositories;
 
 import be.thomasmore.gunranch.model.Competitions;
+import be.thomasmore.gunranch.model.Guns;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.core.parameters.P;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -64,36 +67,38 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("select comp from Competitions comp where :startDate IS NULL AND :endDate IS NULL")
     List<Competitions> findAllByDate(@Param("endDate") Date endDate, @Param("startDate") Date startDate);
 
+
+
     @Query("SELECT comp, COUNT(Participants) FROM Competitions comp JOIN comp.participants p GROUP BY comp")
     List<Competitions> countParticipantsPerCompetition();
 
-//    @Query("select c from Competitions c WHERE " +
-//            ":keyword IS NULL OR " +
-//            "(UPPER(c.bio) LIKE UPPER(CONCAT('%', :keyword, '%'))) OR " +
-//            "(UPPER(c.participationPrice) LIKE UPPER(CONCAT('%', :keyword, '%'))) OR " +
-//            "(UPPER(c.title) LIKE UPPER(CONCAT('%', :keyword, '%')))")
-//           List<Competitions> findByKeyword(@Param("keyword")String keyword);
-
-//    @Query("SELECT comp from Competitions comp WHERE " +
-//            "(:minMagaz IS NULL OR :minMagazine <= g.magazine) AND " +
-//            "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine) AND " +
-//            "(:minPrice IS NULL OR :minPrice <= g.price) AND " +
-//            "(:maxPrice IS NULL OR g.price <= :maxPrice) AND " +
-//            "(:caliber IS NULL OR g.caliber = :caliber) AND " +
-//            "(:gunType IS NULL OR g.gunType = :gunType) AND " +
-//            "(:firearmsType IS NULL OR g.firearmsType = :firearmsType)")
-
-//    Iterable<Guns> findByFilter(
-//            @Param("minMagazine") Integer minMagazine,
-//            @Param("maxMagazine") Integer maxMagazine,
-//            @Param("minPrice") Integer minPrice,
-//            @Param("maxPrice") Integer maxPrice,
-//            @Param("caliber")String caliber,
-//            @Param("gunType") String gunType,
-//            @Param("firearmsType") String firearmsType);
 
 
 
-
+    @Query("SELECT comp FROM Competitions comp " +
+            "WHERE (:minPrice IS NULL OR comp.participationPrice >= :minPrice) AND " +
+            "(:maxPrice IS NULL OR comp.participationPrice <= :maxPrice)AND " +
+            "(:startHour IS NULL OR comp.startingHour >= :startHour)AND " +
+            "(:endHour IS NULL OR comp.endingHour <= :endHour)AND " +
+            "(:startDate IS NULL OR comp.date >= :startDate) AND " +
+            "(:endDate IS NULL OR comp.date <= :endDate) AND " +
+            "(:allowedGuns IS NULL OR EMPTY(:allowedGuns) OR comp.allowedFirearms IN (:allowedGuns))AND " +
+            "(:nrOfPlayers IS NULL OR comp.participants = :nrOfPlayers)AND " +
+            "(:keyword IS NULL OR comp.title LIKE CONCAT('%', :keyword, '%'))")
+    Iterable<Competitions> findByFilter(@Param("minPrice") Double minPrice,
+                                        @Param("maxPrice") Double maxPrice,
+                                        @Param("startDate") Date startDate,
+                                        @Param("endDate") Date endDate,
+                                        @Param("startHour") Date startHour,
+                                        @Param("endHour") Date endHour,
+                                        @Param("allowedGuns") List<String> allowedGuns,
+                                        @Param("nrOfPlayers") int nrOfPlayers,
+                                        @Param("keyword") String keyword);
 }
+
+
+
+
+
+
 

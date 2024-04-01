@@ -43,7 +43,6 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 
             http.formLogin(Customizer.withDefaults());
 
-
             if (h2ConsoleNeeded){
                 http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
                 http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));

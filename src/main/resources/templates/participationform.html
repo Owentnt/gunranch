@@ -37,7 +37,7 @@
         <div class="form-group col-md-12">
           <label for="skillLevel" class="my-3"><strong>Skill Level:</strong></label>
           <input type="range" class="form-control" id="skillLevel"
-                 th:field="*{skillLevel}" required >
+                 th:field="*{skillLevel}" required min="1" max="5" step="1" >
         </div>
         <div class="form-group col-md-12">
           <label class="my-3" for="games">Competing in</label>

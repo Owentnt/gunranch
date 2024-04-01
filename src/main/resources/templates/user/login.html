@@ -20,7 +20,7 @@
 <h1 class="text-center text-warning">Log in</h1>
 
 <div>
-<form class="form-select container my-5 justify-content-center w-50">
+<form th:action="@{|/user/login|}" class="form-select container my-5 justify-content-center w-50" method="post">
     <div class="form-group">
         <label for="firstName" class="my-3"><strong>Username:</strong></label>
         <input type="text" class="form-control" id="firstName" placeholder="First name">
@@ -31,10 +31,10 @@
     </div>
 
     <div>
-        <a class="text-warning text-decoration-none mt-2" th:href="@{/registration}">Register if you are new</a>
+        <a class="text-warning text-decoration-none mt-2" th:href="@{|/registration|}">Register if you are new</a>
     </div>
 
-<button type="submit" class="btn btn-warning my-3">Sign in</button>
+<input type="submit" class="btn btn-warning my-3" value="Log in">
 
 </form>
 </div>

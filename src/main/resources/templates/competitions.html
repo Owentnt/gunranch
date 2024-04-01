@@ -25,7 +25,7 @@
 
 <div th:if="${filtersEnabled}" class="text-center mt-5">
     <a class="btn btn-outline-warning bi bi-arrow-up" th:href="@{/competitions}">Close Filter</a>
-   <form th:action="@{/competitions/filter}" method="get">
+   <form th:action="@{/competitions/filter}" th:object="${competitions}" method="get">
        <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container">
           <h5 class="card-header text-warning">Filters</h5>
             <div class="btn-group w-25 col-md-2 row col">
@@ -33,7 +33,41 @@
                     <a class="btn-outline-warning btn" th:href="@{/admin/newcompetition}">New Competition</a>
                 </div>
             </div>
+           <div class="form-select w-75 col-md-3 mt-5 ms-3 ">
+               <label for="minPlayPrice" class="form-label">Min Play Price</label>
+               <input type="number" name="minPlayPrice" class="form-control" id="minPlayPrice"
+                      placeholder="minPrice"
+                      th:value="${participationPrice}" step="5" min="5" max="30" th:class="w-100">
+               <label for="maxPrice" class="form-label">Max Play Price</label>
+               <input type="number" name="maxPrice" class="form-control" id="maxPrice"
+                      placeholder="maxPrice"
+                      th:value="${participationPrice}" step="5" min="5" max="30" th:class="w-100">
+           </div>
+           <div class="form-select w-75 col-md-3 mt-5 ms-3 ">
+               <label for="startDate" class="form-label">Start Date</label>
+               <input type="date" name="startDate" class="form-control" id="startDate"
+                      th:value="${date}" th:class="w-100">
+               <label for="endStart" class="form-label">Max Play Price</label>
+               <input type="date" name="endStart" class="form-control" id="endStart"
+                      th:value="${date}" th:class="w-100">
+           </div>
+           <div class="form-select w-75 col-md-3 mt-5 ms-3 ">
+               <label for="startTime" class="form-label">Start Time:</label>
+               <input type="time" name="startTime" class="form-control" id="startTime"
+                      th:value="${startingHour}" th:class="w-100">
+               <label for="endTime" class="form-label">End Time</label>
+               <input type="time" name="endTime" class="form-control" id="endTime"
+                      th:value="${endingHour}" th:class="w-100">
+           </div>
+           <div class="form-group col-md-6 w-25">
+               <label class="control-label" for="fireArms">Firearms</label>
+               <select name="fireArms" id="fireArms" class="btn btn-warning form-control" th:field="${allowedGuns}">
+                   <option th:each="gun : ${allowedGuns}" th:value="${allowedGuns}" th:text="${allowedGuns}"></option>
+               </select>
+           </div>
        </div>
+
+
 
     </form>
 </div>

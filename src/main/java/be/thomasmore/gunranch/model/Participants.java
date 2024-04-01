@@ -18,11 +18,6 @@ public class Participants {
     private String skillLevel;
 
     private String medicalConditions;
-    //skill level
-    //chosen firearms
-    //age
-    //medical conditions
-    //competition
 
     @ManyToOne
     private Users users;
