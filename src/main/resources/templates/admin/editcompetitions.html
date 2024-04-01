@@ -21,12 +21,10 @@
 
 <div th:if="${competitions}">
   <form th:action="@{|/admin/editcompetitions/${competitions.id}|}" method="post" th:object="${competitions}">
-    <label for="image" class="form-label">Image</label>
-    <input id="image" type="file" name="image" class="form-control-file" accept="image/*" th:field="*{image}">
     <label for="title" class="form-label">Title</label>
     <input id="title" class="form-control" type="text" th:field="*{title}">
     <label for="date" class="form-label">Date</label>
-    <input id="date" class="form-control" type="date" th:field="*{date}">
+    <input id="date" class="form-control" type="date" th:field="*{date}" th:attr="pattern=${'\\d{4}-\\d{2}-\\d{2}'}">
     <label for="timeStart" class="form-label">Starting Hour</label>
     <input id="timeStart" class="form-control" type="time" th:field="*{startingHour}">
     <label for="timeEnd" class="form-label">Ending Hour</label>

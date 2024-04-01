@@ -17,10 +17,7 @@ public class HomeController {
     public String home(Model model, Principal principal) {
         final String loginName = principal != null ? principal.getName() : null;
         logger.info("homepage - logged in as" + loginName);
-        String name = "Bullseye Shooting Academy";
-        String slogan = "Lock Load, and Hit the Bullseye";
-        model.addAttribute("name", name);
-        model.addAttribute("slogan", slogan);
+        model.addAttribute("loginName", loginName);
         return "home";
     }
 

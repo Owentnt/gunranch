@@ -13,6 +13,7 @@
   <meta charset="UTF-8">
     <title>Logout</title>
 </head>
+<<<<<<< HEAD
 
 <body>
 
@@ -24,5 +25,13 @@
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
+=======
+<body>
+<form th:action="@{/user/logout}" method="post">
+  <input type="submit" value="logout"/>
+  <a href="/">cancel</a>
+</form>
+
+>>>>>>> origin/securitydb
 </body>
 </html>

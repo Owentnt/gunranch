@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="login pagina gecustomized">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/logout.html" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="insert pagina van competitions gemaakt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Members.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositorys/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editcompetitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editcompetitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/newcompetition.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/newcompetition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +92,11 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates\user" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GunRanchApplication">
@@ -113,7 +114,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.schedule.sql" />
         <item itemvalue="Database Script.schedule.sql" />
       </list>
     </recent_temporary>
@@ -173,12 +173,28 @@
       <workItem from="1710773107588" duration="1794000" />
       <workItem from="1711027248209" duration="11090000" />
       <workItem from="1711044401471" duration="10850000" />
-      <workItem from="1711100893989" duration="11751000" />
-      <workItem from="1711191557991" duration="3435000" />
-      <workItem from="1711196328111" duration="2843000" />
-      <workItem from="1711208311903" duration="5619000" />
-      <workItem from="1711280994535" duration="1598000" />
-      <workItem from="1711301329403" duration="1598000" />
+      <workItem from="1711100893989" duration="11132000" />
+    </task>
+    <task id="LOCAL-00061" summary="styling">
+      <created>1710101090368</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1710101090368</updated>
+    </task>
+    <task id="LOCAL-00062" summary="troubleshooting">
+      <created>1710159602474</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1710159602474</updated>
+    </task>
+    <task id="LOCAL-00063" summary="minmagazine field corrigeren">
+      <created>1710160564118</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1710160564119</updated>
     </task>
     <task id="LOCAL-00064" summary="maxmagazine field corrigeren. ze werken nu allebei">
       <created>1710160802539</created>
@@ -502,28 +518,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711114620284</updated>
     </task>
-    <task id="LOCAL-00110" summary="security system geintegreerd in de securityconfig zodat alleen admins kunnen gaan naar de admin paginas">
-      <created>1711117096993</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1711117096993</updated>
-    </task>
-    <task id="LOCAL-00111" summary="admin buttons beveiligd voor users">
-      <created>1711200067035</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1711200067036</updated>
-    </task>
-    <task id="LOCAL-00112" summary="login pagina gecustomized">
-      <created>1711210953106</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1711210953107</updated>
-    </task>
-    <option name="localTasksCounter" value="113" />
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,6 +548,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="troubleshooting met de database Competitions" />
+    <MESSAGE value="Page styling" />
+    <MESSAGE value="wat styling wat data bijgewerkt en card klaar en troubleshooting" />
     <MESSAGE value="competition pagina aan het maken. Wat extra testdata toegevoegd" />
     <MESSAGE value="admin controller en edit pagina gemaakt" />
     <MESSAGE value="formulier gemaakt op editguns maar nog niet volledig klaar" />
@@ -575,10 +573,7 @@
     <MESSAGE value="implementatie van scores pagina en prototype van reservationdetails gemaakt" />
     <MESSAGE value="edit pagina van competitions gemaakt" />
     <MESSAGE value="insert pagina van competitions gemaakt" />
-    <MESSAGE value="security system geintegreerd in de securityconfig zodat alleen admins kunnen gaan naar de admin paginas" />
-    <MESSAGE value="admin buttons beveiligd voor users" />
-    <MESSAGE value="login pagina gecustomized" />
-    <option name="LAST_COMMIT_MESSAGE" value="login pagina gecustomized" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert pagina van competitions gemaakt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

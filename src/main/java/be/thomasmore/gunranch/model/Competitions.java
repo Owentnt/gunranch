@@ -1,13 +1,13 @@
 package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -17,18 +17,18 @@ public class Competitions {
 
     private String title;
 
+    @DateTimeFormat(pattern = "HH:mm")
     @Temporal(TemporalType.TIME)
-    @DateTimeFormat(fallbackPatterns = "HH:MM")
     private Date startingHour;
 
+    @DateTimeFormat(pattern = "HH:mm")
     @Temporal(TemporalType.TIME)
     private Date endingHour;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    @Temporal(TemporalType.DATE)
-    private Date registrationDeadline;
 
     private Integer participationPrice;
 
@@ -42,24 +42,21 @@ public class Competitions {
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "competitions")
     private Collection<Participants> participants;
 
-    private String image;
 
     @Length(max = 1000)
     private String bio;
 
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
-                        Date date,Date registrationDeadline, Integer participationPrice,
-                        String objective, String image,String bio) {
+                        Date date, Integer participationPrice,
+                        String objective, String bio) {
         this.id = id;
         this.title = title;
         this.startingHour = startingHour;
         this.endingHour = endingHour;
         this.date = date;
-        this.registrationDeadline = registrationDeadline;
         this.participationPrice = participationPrice;
         this.objective = objective;
-        this.image = image;
         this.bio = bio;
     }
 
@@ -139,9 +136,6 @@ public class Competitions {
         this.objective = objective;
     }
 
-    public String getImage() {
-        return image;
-    }
 
     public String getBio() {
         return bio;
@@ -151,16 +145,9 @@ public class Competitions {
         this.bio = bio;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public Integer getPlayerCount(int playerCount){
+        return playerCount;
     }
-
-
-    public Date getRegistrationDeadline() {
-        return registrationDeadline;
-    }
-
-    public void setRegistrationDeadline(Date registrationDeadline) {
-        this.registrationDeadline = registrationDeadline;
+    public void setPlayerCount(int playerCount) {
     }
 }

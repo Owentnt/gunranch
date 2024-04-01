@@ -3,39 +3,42 @@ package be.thomasmore.gunranch.model;
 import jakarta.persistence.*;
 
 import java.util.Collection;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Participants {
     @Id
     private int id;
 
-    private String firstName;
+    private String playerName;
 
-    private String lastName;
+    private Date birthDate;
 
-    private String gender;
+    private String skillLevel;
 
-    private String emailAddress;
-
-    private String phoneNumber;
+    private String medicalConditions;
+    //skill level
+    //chosen firearms
+    //age
+    //medical conditions
+    //competition
 
     @ManyToOne
-    private Members users;
+    private Users users;
 
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
 
-    public Participants(int id, String firstName, String lastName, String gender, String emailAddress, String phoneNumber) {
+    public Participants(int id, String playerName, Date birthDate, String skillLevel, String medicalConditions) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.emailAddress = emailAddress;
-        this.phoneNumber = phoneNumber;
+        this.playerName = playerName;
+        this.birthDate = birthDate;
+        this.skillLevel = skillLevel;
+        this.medicalConditions = medicalConditions;
     }
 
     public Participants() {
-
     }
 
     public int getId() {
@@ -46,44 +49,44 @@ public class Participants {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getPlayerName() {
+        return playerName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
-    public String getGender() {
-        return gender;
+    public String getSkillLevel() {
+        return skillLevel;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setSkillLevel(String skillLevel) {
+        this.skillLevel = skillLevel;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getMedicalConditions() {
+        return medicalConditions;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setMedicalConditions(String medicalConditions) {
+        this.medicalConditions = medicalConditions;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 
     public Collection<Competitions> getCompetitions() {
@@ -92,14 +95,5 @@ public class Participants {
 
     public void setCompetitions(Collection<Competitions> competitions) {
         this.competitions = competitions;
-    }
-
-
-    public Members getUsers() {
-        return users;
-    }
-
-    public void setUsers(Members users) {
-        this.users = users;
     }
 }

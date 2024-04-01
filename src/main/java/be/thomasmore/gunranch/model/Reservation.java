@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Reservation {
@@ -12,8 +13,8 @@ public class Reservation {
     @Id
     private int id;
 
-    @ManyToOne
-    private Members users;
+    @ManyToOne()
+    private Users users;
 
     @NotNull(message = "Amount of participants is required")
     @Min( value = 1, message = "Please enter a positive number")
@@ -33,7 +34,7 @@ public class Reservation {
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "reservations")
     @Size(max = 5)
-    private Collection<Guns> gunsPackage;
+    private List<Guns> gunsPackage;
 
 
 
@@ -49,19 +50,19 @@ public class Reservation {
 
     }
 
-    public Members getUsers() {
+    public Users getUsers() {
         return users;
     }
 
-    public void setUsers(Members users) {
+    public void setUsers(Users users) {
         this.users = users;
     }
 
-    public Collection<Guns> getGunsPackage() {
+    public List<Guns> getGunsPackage() {
         return gunsPackage;
     }
 
-    public void setGunsPackage(Collection<Guns> gunsPackage) {
+    public void setGunsPackage(List<Guns> gunsPackage) {
         this.gunsPackage = gunsPackage;
     }
 
