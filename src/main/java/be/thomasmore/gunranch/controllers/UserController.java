@@ -32,14 +32,15 @@ public class UserController {
         return "user/logout";
     }
 
-    @GetMapping("/registration")
-    public String registration(Users users, Model model) {
+    @GetMapping({"/registration/{username}","/registration"})
+    public String registration(Users users,@PathVariable String username, Model model) {
         model.addAttribute("user", users);
+        model.addAttribute("username",username);
         logger.info("registrate");
         return "/registration";
     }
     @ModelAttribute("users")
-    public Users findUser(String username) {
+    public Users findUser( @PathVariable(required = false) String username) {
         logger.info("findUser " + username);
         if (username == null) return new Users();
         Optional<Users> findUser = userRepository.findByUsername(username);

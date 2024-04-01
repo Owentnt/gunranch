@@ -49,7 +49,7 @@
   <h6 th:text="'Bio : ' +${user.aboutMe}"></h6>
   </div>
   <div>
-    <a class="btn btn-outline-warning" th:href="@{/registration}">Edit Profile</a>
+    <a class="btn btn-outline-warning" th:href="@{|/registration/${user.username}|}">Edit Profile</a>
   </div>
 
 
