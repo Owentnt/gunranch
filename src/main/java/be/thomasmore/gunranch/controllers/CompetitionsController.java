@@ -1,9 +1,11 @@
 package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Competitions;
+import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.model.Participants;
-import be.thomasmore.gunranch.repositorys.CompetitionRepository;
-import be.thomasmore.gunranch.repositorys.ParticipantRepository;
+import be.thomasmore.gunranch.repositories.CompetitionRepository;
+import be.thomasmore.gunranch.repositories.GunsRepository;
+import be.thomasmore.gunranch.repositories.ParticipantRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,9 @@ public class CompetitionsController {
 
     @Autowired
     ParticipantRepository participantRepository;
+
+    @Autowired
+    GunsRepository gunsRepository;
 
     @GetMapping("/competitions")
     public String competitions(Model model) {
@@ -84,6 +89,11 @@ public class CompetitionsController {
     @GetMapping("/participationform")
     public String participationForm(Model model) {
         model.addAttribute("participations", new Participants());
+        Iterable <Competitions> chosenGame = competitionRepository.findAll();
+        Iterable<Guns> selectedGuns = gunsRepository.findAll();
+        model.addAttribute("chosenGame",chosenGame);
+        model.addAttribute("selectedGuns",selectedGuns);
+
         return "participationform";
     }
 }

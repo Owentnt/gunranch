@@ -1,9 +1,7 @@
 package be.thomasmore.gunranch.controllers.admin;
 
 import be.thomasmore.gunranch.model.Competitions;
-import be.thomasmore.gunranch.model.Guns;
-import be.thomasmore.gunranch.repositorys.CompetitionRepository;
-import be.thomasmore.gunranch.repositorys.GunsRepository;
+import be.thomasmore.gunranch.repositories.CompetitionRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

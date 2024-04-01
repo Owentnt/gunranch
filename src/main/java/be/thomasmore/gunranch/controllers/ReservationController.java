@@ -2,8 +2,8 @@ package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Guns;
 import be.thomasmore.gunranch.model.Reservation;
-import be.thomasmore.gunranch.repositorys.GunsRepository;
-import be.thomasmore.gunranch.repositorys.ReservationRepository;
+import be.thomasmore.gunranch.repositories.GunsRepository;
+import be.thomasmore.gunranch.repositories.ReservationRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

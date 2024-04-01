@@ -17,8 +17,10 @@
 
 <body>
 
-<h1 th:text="${user.username}+ ' profile '" class="text-warning"></h1>
 <div class="card-body card card border-warning col-md-8 row mt-5 bg-dark container text-warning mb-5">
+  <div class="card-header">
+    <h1 th:text="${user.username}+ ' profile '" class="text-warning text-center"></h1>
+  </div>
 <div th:if="${user != null}" class="">
   <div class="text-center">
     <img th:src="${user.image}" class="img-fluid rounded-circle" style="width: 150px;">

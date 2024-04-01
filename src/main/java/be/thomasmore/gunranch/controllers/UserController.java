@@ -1,7 +1,7 @@
 package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Users;
-import be.thomasmore.gunranch.repositorys.UserRepository;
+import be.thomasmore.gunranch.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class UserController {
     public String registration(Users users,@PathVariable String username, Model model) {
         model.addAttribute("user", users);
         model.addAttribute("username",username);
-        logger.info("registrate");
+        logger.info(String.format(username));
         return "/registration";
     }
     @ModelAttribute("users")
@@ -52,23 +52,7 @@ public class UserController {
 
 
     @PostMapping("/registration")
-    public String submitRegistrationForm(
-                                        Model model, Users users,
-                                        @RequestParam("firstName") String firstName,
-                                        @RequestParam("lastName") String lastName,
-                                        @RequestParam("username") String username,
-                                        @RequestParam("gender") String gender,
-                                        @RequestParam("emailAddress") String emailAddress,
-                                        @RequestParam("phoneNumber") String phoneNumber,
-                                        @RequestParam("password") String password,
-                                        @RequestParam("address") String address,
-                                        @RequestParam("city") String city,
-                                        @RequestParam("ssId") String ssId,
-                                        @RequestParam("postalCode") String postalCode,
-                                        @RequestParam("image") String image,
-                                        @RequestParam("aboutMe") String aboutMe) {
-
-
+    public String submitRegistrationForm(Users users, @PathVariable String username) {
         logger.info("registration" + username + "-- new username=" + users.getUsername()
                 + "-- new firstName=" + users.getFirstName()
                 + "-- new lastName=" + users.getLastName()
@@ -81,20 +65,6 @@ public class UserController {
                 + "-- new ssId=" + users.getSsId()
                 + "-- new image=" + users.getImage()
                 + "-- new aboutMe=" + users.getAboutMe());
-        model.addAttribute("users", users);
-        model.addAttribute("firstName", firstName);
-        model.addAttribute("lastName", lastName);
-        model.addAttribute("username", username);
-        model.addAttribute("gender", gender);
-        model.addAttribute("emailAddress", emailAddress);
-        model.addAttribute("phoneNumber", phoneNumber);
-        model.addAttribute("password", password);
-        model.addAttribute("address", address);
-        model.addAttribute("city", city);
-        model.addAttribute("postalCode", postalCode);
-        model.addAttribute("ssId", ssId);
-        model.addAttribute("image",image);
-        model.addAttribute("aboutMe",aboutMe);
         userRepository.save(users);
         return "redirect:/profile";
     }

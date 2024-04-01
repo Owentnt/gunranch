@@ -30,6 +30,9 @@ public class Participants {
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Guns> chosenGuns;
+
     public Participants(int id, String playerName, Date birthDate, String skillLevel, String medicalConditions) {
         this.id = id;
         this.playerName = playerName;
@@ -55,6 +58,14 @@ public class Participants {
 
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
+    }
+
+    public Collection<Guns> getChosenGuns() {
+        return chosenGuns;
+    }
+
+    public void setChosenGuns(Collection<Guns> chosenGuns) {
+        this.chosenGuns = chosenGuns;
     }
 
     public Date getBirthDate() {

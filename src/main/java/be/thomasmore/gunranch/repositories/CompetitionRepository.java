@@ -1,10 +1,9 @@
-package be.thomasmore.gunranch.repositorys;
+package be.thomasmore.gunranch.repositories;
 
 import be.thomasmore.gunranch.model.Competitions;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.security.core.parameters.P;
 
 import java.util.Date;
 import java.util.List;
