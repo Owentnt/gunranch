@@ -33,9 +33,12 @@ public class UserController {
     }
 
     @GetMapping({"/registration/{username}","/registration"})
-    public String registration(Users users,@PathVariable String username, Model model) {
+    public String registration(@ModelAttribute("users") Users users, @PathVariable(required = false) String username, Model model) {
+        if (users == null) {
+            users = new Users();
+        }
         model.addAttribute("user", users);
-        model.addAttribute("username",username);
+        model.addAttribute("username", username);
         logger.info(String.format(username));
         return "/registration";
     }

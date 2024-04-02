@@ -37,19 +37,19 @@
                <label for="minPlayPrice" class="form-label">Min Play Price</label>
                <input type="number" name="minPlayPrice" class="form-control" id="minPlayPrice"
                       placeholder="minPrice"
-                      th:value="${participationPrice}" step="5" min="5" max="30" th:class="w-100">
+                      th:value="${participationPriceMin}" step="5" min="5" max="30" th:class="w-100">
                <label for="maxPrice" class="form-label">Max Play Price</label>
                <input type="number" name="maxPrice" class="form-control" id="maxPrice"
                       placeholder="maxPrice"
-                      th:value="${participationPrice}" step="5" min="5" max="30" th:class="w-100">
+                      th:value="${participationPriceMax}" step="5" min="5" max="30" th:class="w-100">
            </div>
            <div class="form-select w-75 col-md-3 mt-5 ms-3 ">
                <label for="startDate" class="form-label">Start Date</label>
                <input type="date" name="startDate" class="form-control" id="startDate"
-                      th:value="${date}" th:class="w-100">
+                      th:value="${startDate}" th:class="w-100">
                <label for="endStart" class="form-label">Max Play Price</label>
                <input type="date" name="endStart" class="form-control" id="endStart"
-                      th:value="${date}" th:class="w-100">
+                      th:value="${endDate}" th:class="w-100">
            </div>
            <div class="form-select w-75 col-md-3 mt-5 ms-3 ">
                <label for="startTime" class="form-label">Start Time:</label>

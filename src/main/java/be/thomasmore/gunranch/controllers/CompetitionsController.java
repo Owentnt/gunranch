@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
@@ -51,12 +52,12 @@ public class CompetitionsController {
                                      @RequestParam(required = false) Date startHour,
                                      @RequestParam(required = false) Date endHour,
                                      @RequestParam(required = false) List <String> allowedGuns,
-                                     @RequestParam(required = false) int nrOfPlayers,
+                                     @RequestParam(required = false) Integer nrOfPlayers,
                                      @RequestParam(required = false) String keyword) {
 
         Iterable<Competitions> allGames = competitionRepository.findAll();
 
-        allGames = competitionRepository.findByFilter(minPrice, maxPrice, startDate, endDate, startHour, endHour, allowedGuns, nrOfPlayers, keyword);
+        //allGames = competitionRepository.findByFilter(minPrice, maxPrice, startDate, endDate, startHour, endHour, nrOfPlayers, keyword,allowedGuns);
         logger.info(String.format("competitionsFilter -- keyword=%s", keyword));
         model.addAttribute("competitions", allGames);
         model.addAttribute("startingHour", startHour);
@@ -101,5 +102,11 @@ public class CompetitionsController {
         model.addAttribute("selectedGuns",selectedGuns);
 
         return "participationform";
+    }
+    @PostMapping("/participationform")
+    public String submitParticipationForm(Model model,Participants participants){
+        model.addAttribute("participation",participants);
+        participantRepository.save(participants);
+        return "redirect:/participationdetails";
     }
 }
