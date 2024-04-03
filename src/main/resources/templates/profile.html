@@ -18,10 +18,10 @@
 <body>
 
 <div class="card-body card card border-warning col-md-8 row mt-5 bg-dark container text-warning mb-5">
-    <div class="card-header">
-        <h1 th:text="${user.username}+ ' profile '" class="text-warning text-center"></h1>
-    </div>
     <div th:if="${user != null}" class="">
+        <div class="card-header">
+            <h1 th:text="${user.username}+ ' profile '" class="text-warning text-center"></h1>
+        </div>
         <div class="text-center">
             <img th:src="${user.image}" class="img-fluid rounded-circle" style="width: 150px;">
         </div>
@@ -50,14 +50,13 @@
         <div th:if="${user.aboutMe != null}">
             <h6 th:text="'Bio : ' +${user.aboutMe}"></h6>
         </div>
-        <div>
+        <div th:if="${user != null}">
             <a class="btn btn-outline-warning" th:href="@{|/registration/${user.username}|}">Edit Profile</a>
-            <a class="btn btn-outline-warning" th:href="@{|/registration/${user}|}">New Profile</a>
         </div>
-
-
-
         <div th:insert="~{fragments/footer :: footer}">Footer</div>
+    </div>
+    <div th:if="${user == null}">
+        <a class="btn btn-outline-warning" th:href="@{/registration}">Register</a>
     </div>
 </div>
 </body>

@@ -55,35 +55,40 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-select mt-5 ms-3">
-                        <label for="minPlayPrice" class="form-label">Min Play Price</label>
-                        <input type="number" name="minPlayPrice" class="form-control" id="minPlayPrice"
-                               placeholder="minPrice" th:value="${participationPriceMin}" step="5" min="5" max="30">
-                        <label for="maxPrice" class="form-label">Max Play Price</label>
+                        <label for="priceRange" class="form-label">Price Range</label>
+                        <input type="number" name="minPrice" class="form-control" id="minPrice"
+                               placeholder="Min Price"
+                               th:value="${participationPriceMin}" step="5" min="5" max="30" th:class="w-100">
                         <input type="number" name="maxPrice" class="form-control" id="maxPrice"
-                               placeholder="maxPrice" th:value="${participationPriceMax}" step="5" min="5" max="30">
+                               placeholder="Max Price"
+                               th:value="${participationPriceMax}" step="5" min="5" max="30" th:class="w-100">
+                        <input type="hidden" id="priceRange" name="priceRange">
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="form-select mt-5 ms-3">
-                        <label for="startDate" class="form-label">Start Date</label>
-                        <input type="date" name="startDate" class="form-control" id="startDate" th:value="${startDate}">
-                        <label for="endStart" class="form-label">End Date</label>
-                        <input type="date" name="endStart" class="form-control" id="endStart" th:value="${endDate}">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-select col-md-3 mt-5 ms-3">
-                        <label for="startTime" class="form-label">Start Time</label>
-                        <input type="time" name="startTime" class="form-control" id="startTime"
-                               th:value="${startingHour}">
-                        <label for="endTime" class="form-label">End Time</label>
-                        <input type="time" name="endTime" class="form-control" id="endTime" th:value="${endingHour}">
-                    </div>
-                </div>
-            </div>
 
+                <div class="col-md-4">
+                    <div class="form-select mt-5 ms-3">
+                        <label for="dateRange" class="form-label">Date Range</label>
+                        <input type="date" name="startDate" class="form-control" id="startDate"
+                               th:value="${startDate}" th:class="w-100">
+                        <input type="date" name="endDate" class="form-control" id="endDate"
+                               th:value="${endDate}" th:class="w-100">
+                        <input type="hidden" id="dateRange" name="dateRange">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-select mt-5 ms-3">
+                        <label for="timeRange" class="form-label">Time Range</label>
+                        <input type="time" name="startTime" class="form-control" id="startTime"
+                               th:value="${startingHour}" th:class="w-100">
+                        <input type="time" name="endTime" class="form-control" id="endTime"
+                               th:value="${endingHour}" th:class="w-100">
+                        <input type="hidden" id="timeRange" name="timeRange">
+                    </div>
+                </div>
 
             <div class="btn-group col-md-6">
                 <div sec:authorize="hasAuthority('ADMIN')">
@@ -95,6 +100,7 @@
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     </form>
 
@@ -133,10 +139,49 @@
 
     </div>
 </div>
-</div>
+<!--<script>-->
+<!--    document.addEventListener('DOMContentLoaded', function() {-->
+<!--        document.getElementById('participationPriceMin').addEventListener('change', updatePriceRange);-->
+<!--        document.getElementById('participationPriceMin').addEventListener('change', updatePriceRange);-->
+<!--        document.getElementById('startDate').addEventListener('change', updateDateRange);-->
+<!--        document.getElementById('endDate').addEventListener('change', updatePriceRange);-->
+
+<!--        function updateMagazineRange() {-->
+<!--            const minMagazine = document.getElementById('minMagazine').value;-->
+<!--            const maxMagazine = document.getElementById('maxMagazine').value;-->
+<!--            document.getElementById('magazineRange').value = minMagazine + ' - ' + maxMagazine;-->
+<!--        }-->
+
+<!--        function updatePriceRange() {-->
+<!--            const minPrice = document.getElementById('minPrice').value;-->
+<!--            const maxPrice = document.getElementById('maxPrice').value;-->
+<!--            document.getElementById('priceRange').value = minPrice + ' - ' + maxPrice;-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+<script>
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
+
+    startDateInput.addEventListener('change', function () {
+        if (startDateInput.value && endDateInput.value && startDateInput.value > endDateInput.value) {
+            endDateInput.setCustomValidity('End date must be later than the start date');
+        } else {
+            endDateInput.setCustomValidity('');
+        }
+    });
+
+    endDateInput.addEventListener('change', function () {
+        if (startDateInput.value && endDateInput.value && startDateInput.value > endDateInput.value) {
+            endDateInput.setCustomValidity('End date must be later than the start date');
+        } else {
+            endDateInput.setCustomValidity('');
+        }
+    });
+</script>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
-</div>
+
 </body>
 </html>

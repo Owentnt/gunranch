@@ -173,14 +173,14 @@
         document.getElementById('maxPrice').addEventListener('change', updatePriceRange);
 
         function updateMagazineRange() {
-            var minMagazine = document.getElementById('minMagazine').value;
-            var maxMagazine = document.getElementById('maxMagazine').value;
+            const minMagazine = document.getElementById('minMagazine').value;
+            const maxMagazine = document.getElementById('maxMagazine').value;
             document.getElementById('magazineRange').value = minMagazine + ' - ' + maxMagazine;
         }
 
         function updatePriceRange() {
-            var minPrice = document.getElementById('minPrice').value;
-            var maxPrice = document.getElementById('maxPrice').value;
+            const minPrice = document.getElementById('minPrice').value;
+            const maxPrice = document.getElementById('maxPrice').value;
             document.getElementById('priceRange').value = minPrice + ' - ' + maxPrice;
         }
     });

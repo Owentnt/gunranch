@@ -242,27 +242,27 @@ INSERT INTO GUNS_COMPETITIONS(ALLOWED_FIREARMS_ID,COMPETITIONS_ID) VALUES (16,7)
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
-VALUES (1,'Owen','Talboom','M','owentnt','owentm031111@gmail.com','0494310004',
+VALUES (1001,'Owen','Talboom','M','owentnt','owentm031111@gmail.com','0494310004',
         '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS',
         'Duivebergen 2B','3140','Keerbergen','03.11.11.157', true,'/images/owen.jpg','Ik ben klant');
 
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
-VALUES (2,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0477 83 14 10',
+VALUES (1002,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0477 83 14 10',
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
         'Den Bremt 1','3020','Herent','06.14.03.157', true,null,null);
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
-VALUES (3,'Milan','Keymolen','M','milankeymolen1','milan.keymolen@gmail.com','0478389427',
+VALUES (1003,'Milan','Keymolen','M','milankeymolen1','milan.keymolen@gmail.com','0478389427',
         '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS',
         'Duivebergen 9','3140','Keerbergen','05.17.04.157', true,null,'Ik ben user');
 
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
-VALUES (4,'Beike','Rogiers','F','beeroger','beike.r@hotmail.com','0478 23 65 00',
+VALUES (1004,'Beike','Rogiers','F','beeroger','beike.r@hotmail.com','0478 23 65 00',
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
         'Baalsebaan 203B','3120','Baal','78.08.11.157', true,null,null);
 
