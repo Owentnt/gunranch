@@ -1,4 +1,4 @@
-package be.thomasmore.gunranch.repositorys;
+package be.thomasmore.gunranch.repositories;
 
 import be.thomasmore.gunranch.model.Guns;
 import org.springframework.data.repository.CrudRepository;

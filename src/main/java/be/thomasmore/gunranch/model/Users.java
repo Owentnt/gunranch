@@ -9,6 +9,7 @@ import java.util.Set;
 @Entity
 @Table(name = "Users")
 public class Users {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 
@@ -42,7 +43,7 @@ public class Users {
     @Email(message = "Please enter a valid email")
     private String emailAddress;
 
-    @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
+   // @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
     @NotNull(message = "Phone number is required")
     private String phoneNumber;
 
@@ -64,7 +65,7 @@ public class Users {
                 "one uppercase letter, no whitespace and a special character")*/
     private String password;
 
-    @Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
+    //@Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
     private String ssId;
 
     @Length(max = 500)

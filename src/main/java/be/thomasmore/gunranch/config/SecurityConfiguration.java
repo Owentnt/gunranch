@@ -2,6 +2,7 @@ package be.thomasmore.gunranch.config;
 
 import jakarta.persistence.Access;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,6 +28,9 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 
     @Autowired
     private DataSource dataSource;
+
+    @Value("${security.h2-console-needed}")
+    private boolean h2ConsoleNeeded;
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
             HandlerMappingIntrospector introspector = new HandlerMappingIntrospector();
@@ -39,8 +43,13 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 
             http.formLogin(Customizer.withDefaults());
 
-            http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
-            http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+
+            if (h2ConsoleNeeded){
+                http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
+                http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+
+            }
+
             return http.build();
         }
 

@@ -19,8 +19,49 @@
 
 <body>
 
-<form>
+<h1 class="text-center text-warning">Compete </h1>
 
+  <form th:action="@{/participationform}" th:object="${participations}" method="post" id="participation" class="form-select container my-5 justify-content-center w-50">
+    <div class="form-group">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="playerName" class="my-3"><strong>Player Name:</strong></label>
+          <input type="text" class="form-control" id="playerName" placeholder="Player name"
+                 th:field="*{playerName}" required >
+        </div>
+
+        <div class="form-group col-md-12">
+          <label for="birthDate" class="my-3"><strong>Birthdate:</strong></label>
+          <input type="date" class="form-control" id="birthDate"
+                 th:field="*{birthDate}" required >
+        </div>
+        <div class="form-group col-md-12">
+          <label for="skillLevel" class="my-3"><strong>Skill Level:</strong></label>
+          <input type="range" class="form-control" id="skillLevel"
+                 th:field="*{skillLevel}" required min="1" max="5" step="1" >
+        </div>
+        <div class="form-group col-md-12">
+          <label class="my-3" for="games">Competing in</label>
+          <select name="games" id="games" class="btn btn-warning form-control" th:field="${chosenGame}">
+            <option th:each="game : ${chosenGame}" th:value="${game.id}" th:text="${game.title}"></option>
+          </select>
+        </div>
+        <div class="form-group col-md-12">
+          <label class="my-3" for="guns">Chosen Guns</label>
+          <select name="guns" id="guns" class="btn btn-warning form-control" th:field="${selectedGuns}">
+            <option th:each="gun : ${selectedGuns}" th:value="${gun.id}" th:text="${gun.name}"></option>
+          </select>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="notes" class="my-3"><strong>Notes:</strong></label>
+          <textarea class="form-control" id="notes" th:field="*{medicalConditions}"></textarea>
+        </div>
+
+
+
+    <input type="submit" class="btn btn-warning my-3"><a th:href="@{/participationdetails}" class="text-white text-decoration-none bi bi-send">Submit</a></button>
+    </div>
+    </div>
 </form>
 
 </body>

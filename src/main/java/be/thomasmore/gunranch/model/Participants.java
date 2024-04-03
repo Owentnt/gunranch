@@ -18,17 +18,15 @@ public class Participants {
     private String skillLevel;
 
     private String medicalConditions;
-    //skill level
-    //chosen firearms
-    //age
-    //medical conditions
-    //competition
 
     @ManyToOne
     private Users users;
 
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Guns> chosenGuns;
 
     public Participants(int id, String playerName, Date birthDate, String skillLevel, String medicalConditions) {
         this.id = id;
@@ -55,6 +53,14 @@ public class Participants {
 
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
+    }
+
+    public Collection<Guns> getChosenGuns() {
+        return chosenGuns;
+    }
+
+    public void setChosenGuns(Collection<Guns> chosenGuns) {
+        this.chosenGuns = chosenGuns;
     }
 
     public Date getBirthDate() {

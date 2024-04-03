@@ -30,7 +30,7 @@ public class Competitions {
     private Date date;
 
 
-    private Integer participationPrice;
+    private Double participationPrice;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "competitions")
     private Collection<Guns> allowedFirearms;
@@ -48,7 +48,7 @@ public class Competitions {
 
 
     public Competitions(int id, String title, Date startingHour, Date endingHour,
-                        Date date, Integer participationPrice,
+                        Date date, Double participationPrice,
                         String objective, String bio) {
         this.id = id;
         this.title = title;
@@ -119,11 +119,11 @@ public class Competitions {
         this.date = date;
     }
 
-    public Integer getParticipationPrice() {
+    public Double getParticipationPrice() {
         return participationPrice;
     }
 
-    public void setParticipationPrice(Integer participationPrice) {
+    public void setParticipationPrice(Double participationPrice) {
         this.participationPrice = participationPrice;
     }
 

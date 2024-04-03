@@ -1,10 +1,9 @@
-package be.thomasmore.gunranch.repositorys;
+package be.thomasmore.gunranch.repositories;
 
 import be.thomasmore.gunranch.model.Competitions;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.security.core.parameters.P;
 
 import java.util.Date;
 import java.util.List;
@@ -24,7 +23,7 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("SELECT comp FROM Competitions comp WHERE" +
             "(:minPrice IS NULL OR :minPrice <= comp.participationPrice) AND " + " (:maxPrice IS NULL OR comp.participationPrice <= :maxPrice)")
     List<Competitions> findByPriceBetween(@Param("minPrice") Integer minPrice,
-                                  @Param("maxPrice") Integer maxPrice);
+                                          @Param("maxPrice") Integer maxPrice);
 
     @Query("select comp from Competitions comp Where :minPrice IS NULL OR :minPrice <= comp.participationPrice")
     List<Competitions> findByPriceGreaterThan(@Param("minPrice") Integer minPrice);
@@ -39,7 +38,7 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("SELECT comp FROM Competitions comp WHERE" +
             "(:startHour IS NULL OR :startHour <= comp.startingHour) AND " + " (:endHour IS NULL OR comp.endingHour <= :endHour)")
     List<Competitions> findCompetitionsByStartingHourBetween(@Param("startHour") Date startingHour,
-                                          @Param("endHour") Date endingHour);
+                                                             @Param("endHour") Date endingHour);
 
     @Query("select comp from Competitions comp Where :startHour IS NULL OR :startHour <= comp.startingHour")
     List<Competitions> findCompetitionsByStartingHourGreaterThan(@Param("startHour") Date startingHour);
@@ -54,7 +53,7 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("SELECT comp FROM Competitions comp WHERE" +
             "(:startDate IS NULL OR :startDate <= comp.date) AND " + " (:endDate IS NULL OR comp.date <= :endDate)")
     List<Competitions> findCompetitionsByDateBetween(@Param("startDate") Date startDate,
-                                                             @Param("endDate") Date endDate);
+                                                     @Param("endDate") Date endDate);
 
     @Query("select comp from Competitions comp Where :startDate IS NULL OR :startDate <= comp.date")
     List<Competitions> findCompetitionsByDateAfter(@Param("startDate") Date startDate);
@@ -65,36 +64,33 @@ public interface CompetitionRepository extends CrudRepository<Competitions,Integ
     @Query("select comp from Competitions comp where :startDate IS NULL AND :endDate IS NULL")
     List<Competitions> findAllByDate(@Param("endDate") Date endDate, @Param("startDate") Date startDate);
 
-    @Query("SELECT comp, COUNT(Participants) FROM Competitions comp JOIN comp.participants p GROUP BY comp")
+
+    @Query("SELECT comp, COUNT(p) FROM Competitions comp JOIN comp.participants p GROUP BY comp")
     List<Competitions> countParticipantsPerCompetition();
 
-//    @Query("select c from Competitions c WHERE " +
-//            ":keyword IS NULL OR " +
-//            "(UPPER(c.bio) LIKE UPPER(CONCAT('%', :keyword, '%'))) OR " +
-//            "(UPPER(c.participationPrice) LIKE UPPER(CONCAT('%', :keyword, '%'))) OR " +
-//            "(UPPER(c.title) LIKE UPPER(CONCAT('%', :keyword, '%')))")
-//           List<Competitions> findByKeyword(@Param("keyword")String keyword);
 
-//    @Query("SELECT comp from Competitions comp WHERE " +
-//            "(:minMagaz IS NULL OR :minMagazine <= g.magazine) AND " +
-//            "(:maxMagazine IS NULL OR g.magazine <= :maxMagazine) AND " +
-//            "(:minPrice IS NULL OR :minPrice <= g.price) AND " +
-//            "(:maxPrice IS NULL OR g.price <= :maxPrice) AND " +
-//            "(:caliber IS NULL OR g.caliber = :caliber) AND " +
-//            "(:gunType IS NULL OR g.gunType = :gunType) AND " +
-//            "(:firearmsType IS NULL OR g.firearmsType = :firearmsType)")
-
-//    Iterable<Guns> findByFilter(
-//            @Param("minMagazine") Integer minMagazine,
-//            @Param("maxMagazine") Integer maxMagazine,
-//            @Param("minPrice") Integer minPrice,
-//            @Param("maxPrice") Integer maxPrice,
-//            @Param("caliber")String caliber,
-//            @Param("gunType") String gunType,
-//            @Param("firearmsType") String firearmsType);
-
+//    @Query("SELECT comp FROM Competitions comp " +
+//            "WHERE (:minPrice IS NULL OR comp.participationPrice >= :minPrice) " +
+//            "AND (:maxPrice IS NULL OR comp.participationPrice <= :maxPrice) " +
+//            "AND (:startHour IS NULL OR comp.startingHour >= :startHour) " +
+//            "AND (:endHour IS NULL OR comp.endingHour <= :endHour) " +
+//            "AND (:startDate IS NULL OR comp.date >= :startDate) " +
+//            "AND (:endDate IS NULL OR comp.date <= :endDate) " +
+//            "AND (:nrOfPlayers IS NULL OR SIZE(comp.participants) = :nrOfPlayers) " +
+//            "AND (:keyword IS NULL OR comp.title LIKE CONCAT('%', :keyword, '%')) " +
+//            "AND (COALESCE(:allowedGuns, NULL) IS NULL OR SIZE(comp.allowedFirearms) = 0 OR comp.allowedFirearms IN :allowedGuns)")
+//    Iterable<Competitions> findByFilter(@Param("minPrice") Double minPrice,
+//                                        @Param("maxPrice") Double maxPrice,
+//                                        @Param("startDate") Date startDate,
+//                                        @Param("endDate") Date endDate,
+//                                        @Param("startHour") Date startHour,
+//                                        @Param("endHour") Date endHour,
+//                                        @Param("nrOfPlayers") Integer nrOfPlayers,
+//                                        @Param("keyword") String keyword,
+//                                        @Param("allowedGuns") List<String> allowedGuns);
 
 
 
 }
+
 
