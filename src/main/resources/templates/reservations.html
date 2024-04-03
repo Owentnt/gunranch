@@ -64,7 +64,6 @@
                     <div class="form-group col-md-6 btn-outline-warning">
                     <label class="control-label" for="gunPackageSelect">Selected Guns:</label>
                     <div id="selectedGunsTags" class="breadcrumb gap-2 btn-warning ">
-                        <!-- Selected guns will be displayed here as tags -->
                     </div>
                         <textarea id="gunPackageSelect" name="gunPackageSelect" type="text" th:value="${selectedGun}" readonly="readonly"></textarea>
                 </div>
@@ -81,19 +80,6 @@
     </div>
 </div>
 
-<style>
-    .selected-guns-tags {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .selected-gun-tag {
-        background-color: #007bff;
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-</style>
 
 
 <script>
@@ -101,29 +87,26 @@
         const gunTextarea = document.getElementById("gunPackageSelect");
         const selectedGunsDiv = document.getElementById("selectedGunsTags");
         const gunSelect = document.getElementById("gunPackage");
-        const selectedGuns = new Set(); // Keeps track of selected guns
+        const selectedGuns = new Set();
 
-        // Function to add a gun button
         function addGunButton(gunName) {
             const button = document.createElement("button");
             button.className = "btn btn-warning btn-sm m-1";
             button.textContent = gunName;
             button.onclick = function() {
-                selectedGuns.delete(gunName); // Remove from the set
+                selectedGuns.delete(gunName);
                 selectedGunsDiv.removeChild(button);
                 updateTextarea();
-                updateOptions(); // Enable the option in the dropdown
+                updateOptions();
             };
             selectedGunsDiv.appendChild(button);
         }
 
-        // Function to update the text area
         function updateTextarea() {
             const gunList = Array.from(selectedGuns);
             gunTextarea.value = gunList.join(", ");
         }
 
-        // Function to disable the selected option in the dropdown
         function updateOptions() {
             const options = gunSelect.options;
             for (let i = 0; i < options.length; i++) {
@@ -134,8 +117,6 @@
                 }
             }
         }
-
-        // Event listener for select change
         gunSelect.addEventListener("change", function(event) {
             const selectedGun = event.target.options[event.target.selectedIndex].text;
             if (!selectedGuns.has(selectedGun)) {
@@ -146,11 +127,9 @@
             } else {
                 alert("This gun has already been selected.");
             }
-            // Reset the dropdown to the default option
             event.target.selectedIndex = 0;
         });
 
-        // Initial setup (if any guns are pre-selected)
         const initialGuns = gunTextarea.value.split(",");
         initialGuns.forEach(function(gun) {
             if (gun.trim() !== "") {
@@ -159,7 +138,6 @@
             }
         });
 
-        // Update the options initially
         updateOptions();
     });
 </script>

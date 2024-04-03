@@ -55,6 +55,7 @@ public class CompetitionsController {
                                      @RequestParam(required = false) Integer nrOfPlayers,
                                      @RequestParam(required = false) String keyword) {
 
+
         Iterable<Competitions> allGames = competitionRepository.findAll();
 
         //allGames = competitionRepository.findByFilter(minPrice, maxPrice, startDate, endDate, startHour, endHour, nrOfPlayers, keyword,allowedGuns);
