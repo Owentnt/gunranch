@@ -17,7 +17,7 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
-<h1>Thank you for you reservation<span th:text="' '+${#authentication.name}"></span>
+<h1>Thank you for you reservation<span th:text="' '+${#authentication.name}"></span></h1>
 
 <div th:each="booking : ${reservations}">
 
@@ -42,5 +42,6 @@ Als je meerdere magazijnen wilt gebruiken moet je opnieuw de prijs betalen voor 
 </div>
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
+
 </body>
 </html>

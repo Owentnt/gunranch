@@ -2,6 +2,7 @@ package be.thomasmore.gunranch.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Collection;
 import java.util.Date;
@@ -16,24 +17,25 @@ public class Reservation {
     @ManyToOne()
     private Users users;
 
-    @NotNull(message = "Amount of participants is required")
-    @Min( value = 1, message = "Please enter a positive number")
-    @Max(value = 8, message = "Max 8 participants")
+//    @NotNull(message = "Amount of participants is required")
+//    @Min( value = 1, message = "Please enter a positive number")
+//    @Max(value = 8, message = "Max 8 participants")
     private int amountOfParticipants;
 
-    @NotNull(message = "Date is required")
-    @Future(message = "Please select a date in the future")
-    @Temporal(TemporalType.DATE)
-    private Date date;
+//    @NotNull(message = "Date is required")
+//    @Future(message = "Please select a date in the future")
+//    @Temporal(TemporalType.DATE)
+@DateTimeFormat(pattern = "yyyy-MM-dd")
+private Date date;
 
-    @FutureOrPresent(message = "Please select a time in the present or future")
-    @NotNull(message = "Time is required")
-    @Temporal(TemporalType.TIME)
-    private Date time;
+//    @FutureOrPresent(message = "Please select a time in the present or future")
+//    @NotNull(message = "Time is required")
+//    @Temporal(TemporalType.TIME)
+@DateTimeFormat(pattern = "HH:mm")
+private Date time;
 
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "reservations")
-    @Size(max = 5)
     private List<Guns> gunsPackage;
 
 

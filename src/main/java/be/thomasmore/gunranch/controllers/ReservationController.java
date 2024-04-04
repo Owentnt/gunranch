@@ -5,6 +5,8 @@ import be.thomasmore.gunranch.model.Reservation;
 import be.thomasmore.gunranch.repositories.GunsRepository;
 import be.thomasmore.gunranch.repositories.ReservationRepository;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,25 +25,32 @@ public class ReservationController {
     @Autowired
     GunsRepository gunsRepository;
 
-    @GetMapping("/reservations")
-    public String reservationsForm(Model model) {
-        Iterable<Guns> gunsPackage = gunsRepository.findAll();
-        model.addAttribute("reservation", new Reservation());
-        model.addAttribute("gunsPackage", gunsPackage);
-        return "reservations";
-    }
+    private Logger logger = LoggerFactory.getLogger(ReservationController.class);
 
-    @PostMapping("/reservations")
-    public String submitReservationForm(@Valid Reservation reservation, BindingResult bindingResult, Model model) {
-        if (bindingResult.hasErrors()) {
+        @GetMapping("/reservations")
+        public String reservationsForm(Model model) {
+            logger.info("GET request received for /reservations");
             Iterable<Guns> gunsPackage = gunsRepository.findAll();
+            model.addAttribute("reservation", new Reservation());
             model.addAttribute("gunsPackage", gunsPackage);
             return "reservations";
         }
 
-        reservationRepository.save(reservation);
-        return "redirect:/reservationdetails";
-    }
+        @PostMapping("/reservations")
+        public String submitReservationForm(@Valid Reservation reservation, BindingResult bindingResult, Model model) {
+            logger.info("POST request received for /reservations");
+            if (bindingResult.hasErrors()) {
+                logger.warn("Form submission has errors: {}", bindingResult.getAllErrors());
+                Iterable<Guns> gunsPackage = gunsRepository.findAll();
+                model.addAttribute("gunsPackage", gunsPackage);
+                return "reservations";
+            }
+
+            logger.info("Saving reservation: {}", reservation);
+            reservationRepository.save(reservation);
+            return "redirect:/reservationdetails";
+        }
+    
 
     @GetMapping("/reservationdetails")
     public String reservationDetails(Model model) {
