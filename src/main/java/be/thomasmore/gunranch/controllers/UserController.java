@@ -80,7 +80,6 @@ public class UserController {
             insertFlag = true;
 
         }
-
         userRepository.save(users);
         if (insertFlag){
            authorityRepository.insertRecord(users.getUsername(), "USER");

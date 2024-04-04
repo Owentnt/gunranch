@@ -24,34 +24,34 @@ public class ReservationController {
     GunsRepository gunsRepository;
 
     @GetMapping("/reservations")
-    public String reservationsForm(Model model, String selectedGun){
-        Iterable <Guns> gunsPackage = gunsRepository.findAll();
+    public String reservationsForm(Model model) {
+        Iterable<Guns> gunsPackage = gunsRepository.findAll();
         model.addAttribute("reservation", new Reservation());
-        model.addAttribute("gunsPackage",gunsPackage);
-        model.addAttribute("selectedGun",selectedGun);
-        String selectedGunsText = String.join(", ", selectedGun);
-        model.addAttribute("selectedGuns",selectedGunsText);
-
+        model.addAttribute("gunsPackage", gunsPackage);
         return "reservations";
     }
 
     @PostMapping("/reservations")
-    public String submitReservationForm(@Valid Reservation reservation, BindingResult bindingResult, Model model){
-
-        if (bindingResult.hasErrors()){
+    public String submitReservationForm(@Valid Reservation reservation, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            Iterable<Guns> gunsPackage = gunsRepository.findAll();
+            model.addAttribute("gunsPackage", gunsPackage);
             return "reservations";
         }
-        model.addAttribute("reservation",reservation);
+
         reservationRepository.save(reservation);
         return "redirect:/reservationdetails";
     }
 
     @GetMapping("/reservationdetails")
-    public String reservationDetais(Model model){
+    public String reservationDetails(Model model) {
         Iterable<Reservation> reservations = reservationRepository.findAll();
-        model.addAttribute("reservations",reservations);
+        model.addAttribute("reservations", reservations);
         return "reservationdetails";
     }
+
+
+
     @GetMapping("/userprofiledetails")
     public String profile(Model model,Reservation reservation){
         model.addAttribute("reservation",reservation);

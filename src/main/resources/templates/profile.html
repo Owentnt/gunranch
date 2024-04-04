@@ -20,43 +20,39 @@
 <div class="card-body card card border-warning col-md-8 row mt-5 bg-dark container text-warning mb-5">
     <div th:if="${user != null}" class="">
         <div class="card-header">
-            <h1 th:text="${user.username}+ ' profile '" class="text-warning text-center"></h1>
+            <h1 th:text="${user.username} + ' profile '" class="text-warning text-center"></h1>
         </div>
         <div class="text-center">
-            <img th:src="${user.image}" class="img-fluid rounded-circle" style="width: 150px;">
+            <img th:src="${user.image != null ? user.image : (user.gender == 'M' ? '/images/male%20icon.jpg' : '/images/anonymous-female-icon-12.jpg')}" class="img-fluid rounded-circle" style="width: 150px;">
         </div>
-        <div th:if="${user.image == null} and ${user.gender == 'M'}">
-            <div class="text-center">
-                <img src="/images/male%20icon.jpg" class="img-fluid rounded-circle" style="width: 150px;">
-            </div>
-        </div>
-        <div th:if="${user.image == null} and ${user.gender == 'F'}">
-            <div class="text-center">
-                <img src="/images/anonymous-female-icon-12.jpg" class="img-fluid rounded-circle" style="width: 150px;">
-            </div>
-        </div>
-        <h6 th:text="'Name: ' +${user.firstName} + ' ' +${user.lastName}"></h6>
-        <h6 th:text="'Gender: ' +${user.gender}"></h6>
-        <h6 th:text="'Contact Info : '"></h6>
-        <p th:text="'Email: ' +${user.emailAddress}"></p>
-        <p th:text="'Phone: ' +${user.phoneNumber}"></p>
-        <h6 th:text="'Address : '"></h6>
-        <p th:text="'Street: ' +${user.address}"></p>
-        <p th:text="'Postal Code: ' +${user.postalCode}"></p>
-        <p th:text="'City: ' +${user.city}"></p>
-        <h6 th:text="'SsId  : ' +${user.ssId}"></h6>
-        <h6 th:text="'Reservations : ' +${user.reservations}"></h6>
-        <h6 th:text="'Competitions : ' +${user.participants}"></h6>
+        <h6 th:text="'Name: ' + ${user.firstName} + ' ' + ${user.lastName}"></h6>
+        <h6 th:text="'Gender: ' + ${user.gender}"></h6>
+        <h6>Contact Info:</h6>
+        <p th:text="'Email: ' + ${user.emailAddress}"></p>
+        <p th:text="'Phone: ' + ${user.phoneNumber}"></p>
+        <h6>Address:</h6>
+        <p th:text="'Street: ' + ${user.address}"></p>
+        <p th:text="'Postal Code: ' + ${user.postalCode}"></p>
+        <p th:text="'City: ' + ${user.city}"></p>
+        <h6 th:text="'SsId  : ' + ${user.ssId}"></h6>
+        <h6 th:text="'Reservations : ' + ${user.reservations}"></h6>
+        <h6 th:text="'Competitions : ' + ${user.participants}"></h6>
         <div th:if="${user.aboutMe != null}">
-            <h6 th:text="'Bio : ' +${user.aboutMe}"></h6>
+            <h6 th:text="'Bio : ' + ${user.aboutMe}"></h6>
         </div>
-        <div th:if="${user != null}">
+        <div>
             <a class="btn btn-outline-warning" th:href="@{|/registration/${user.username}|}">Edit Profile</a>
+            <a href="/logout" class="btn btn-outline-warning">Logout</a>
         </div>
         <div th:insert="~{fragments/footer :: footer}">Footer</div>
     </div>
     <div th:if="${user == null}">
-        <a class="btn btn-outline-warning" th:href="@{/registration}">Register</a>
+        <div class="text-center text-warning">
+        <h3>You are not logged in</h3>
+        <h5>Log in to your account or registrate yourself if you dont have one.</h5>
+        </div>
+        <a class="btn btn-outline-warning justify-content-center" th:href="@{/registration}">Register</a>
+        <a th:href="@{/login}" class="btn btn-outline-warning">Login</a>
     </div>
 </div>
 </body>
