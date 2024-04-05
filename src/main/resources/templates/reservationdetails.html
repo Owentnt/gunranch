@@ -21,7 +21,7 @@
 
 <div th:each="booking : ${reservations}">
 
-<p th:text="'Je reservatie zal doorgaan op' +${booking.getDate()}+' stipt om '+${booking.time} + 'Je komt met '+${booking.amountOfParticipants}+' personen.'"></p>
+    <p th:text="'Je reservatie zal doorgaan op ' + ${#dates.format(booking.date, 'dd-MM-yyyy')} + ' stipt om ' + ${#dates.format(booking.time, 'HH:mm')} + '. Je komt met ' + ${booking.amountOfParticipants} + ' personen.'"></p>
 
 <p>Gekozen wapens:</p>
 
@@ -33,9 +33,6 @@ Als je meerdere magazijnen wilt gebruiken moet je opnieuw de prijs betalen voor 
 </div>
 <div>
     <button type="button" class="btn btn-outline-warning"><a th:href="@{/reservations}" class="text-dark text-decoration-none">New reservation></a></button>
-</div>
-<div>
-    <button type="button" class="btn btn-outline-warning">Cancel Reservation</button>
 </div>
 <div>
     <button type="button" class="btn btn-outline-warning"><a th:href="@{/}" class="text-dark text-decoration-none">Return to home page</a></button>
