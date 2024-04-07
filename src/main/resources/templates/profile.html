@@ -21,32 +21,30 @@
         <div class="col-md-8">
             <div class="card border-warning bg-dark text-warning">
                 <div class="card-body">
-                    <div th:if="${user != null}" class="">
+                    <div th:if="${user != null}">
                         <div class="card-header">
-                            <h1 th:text="${user.username} + ' profile '" class="text-warning text-center"></h1>
+                            <h1 th:text="${users.username} + ' profile '" class="text-warning text-center"></h1>
                         </div>
                         <div class="text-center">
-                            <img th:src="${user.image != null ? user.image : (user.gender == 'M' ? '/images/male%20icon.jpg' : '/images/anonymous-female-icon-12.jpg')}"
+                            <img th:src="${users.image != null ? users.image : (users.gender == 'M' ? '/images/male%20icon.jpg' : '/images/anonymous-female-icon-12.jpg')}"
                                  class="img-fluid rounded-circle" style="width: 150px;">
                         </div>
-                        <h6 th:text="'Name: ' + ${user.firstName} + ' ' + ${user.lastName}"></h6>
-                        <h6 th:text="'Gender: ' + ${user.gender}"></h6>
+                        <h6 th:text="'Name: ' + ${users.firstName} + ' ' + ${users.lastName}"></h6>
+                        <h6 th:text="'Gender: ' + ${users.gender}"></h6>
                         <h6>Contact Info:</h6>
-                        <p th:text="'Email: ' + ${user.emailAddress}"></p>
-                        <p th:text="'Phone: ' + ${user.phoneNumber}"></p>
+                        <p th:text="'Email: ' + ${users.emailAddress}"></p>
+                        <p th:text="'Phone: ' + ${users.phoneNumber}"></p>
                         <h6>Address:</h6>
-                        <p th:text="'Street: ' + ${user.address}"></p>
-                        <p th:text="'Postal Code: ' + ${user.postalCode}"></p>
-                        <p th:text="'City: ' + ${user.city}"></p>
-                        <h6 th:text="'SsId  : ' + ${user.ssId}"></h6>
-                        <h6 th:text="'Reservations : ' + ${user.reservations}"></h6>
-                        <h6 th:text="'Competitions : ' + ${user.participants}"></h6>
-                        <div th:if="${user.aboutMe != null}">
-                            <h6 th:text="'Bio : ' + ${user.aboutMe}"></h6>
+                        <p th:text="'Street: ' + ${users.address}"></p>
+                        <p th:text="'Postal Code: ' + ${users.postalCode}"></p>
+                        <p th:text="'City: ' + ${users.city}"></p>
+                        <h6 th:text="'SsId  : ' + ${users.ssId}"></h6>
+                        <div th:if="${users.aboutMe != null}">
+                            <h6 th:text="'Bio : ' + ${users.aboutMe}"></h6>
                         </div>
                         <div>
-                            <a class="btn btn-outline-warning" th:href="@{|/registration/${user.username}|}">Edit
-                                Profile</a>
+                            <a class="btn btn-outline-warning" th:href="@{|/registration/${users.username}|}">Edit Profile</a>
+                            <a class="btn btn-outline-warning" th:href="@{/reservationdetails}">Check Reservations</a>
                             <a href="/logout" class="btn btn-outline-warning">Logout</a>
                         </div>
                         <div th:insert="~{fragments/footer :: footer}">Footer</div>

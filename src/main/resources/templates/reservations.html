@@ -30,10 +30,9 @@
         <h1 class="text-center text-warning">Make a reservation</h1>
         <div class="container text-start">
             <form class="my-5" th:action="@{/reservations}" th:object="${reservation}" method="post">
-                <div class="row">
 
                 <div class="row">
-                    <div class="form-group col-md-4 bi">
+                    <div class="form-group col-md-8 bi">
                             <i class="bi bi-people"></i>
                         <label for="participants" class="my-3"><strong>Participants:</strong></label>
                         <input type="number" class="form-control" id="participants" placeholder="Amount of participants"
@@ -41,13 +40,13 @@
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('AmountOfParticipants')}"
                              th:errors="*{amountOfParticipants}"></div>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-8">
                         <label class="control-label my-3" for="date"><strong>Date:</strong></label>
                         <input type="date" class="form-control" id="date" required
                                th:field="*{date}" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}">
                         <div class="alert-danger alert" th:if="${#fields.hasErrors('*')}" th:errors="*{date}"></div>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-8">
                         <label class="control-label my-3" for="time"><strong>Time:</strong></label>
                         <input type="time" class="form-control" id="time" required
                                th:field="*{time}">
@@ -55,13 +54,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-md-6 w-25">
+                    <div class="form-group col-md-8 w-25">
                         <label class="control-label" for="gunPackage">Guns</label>
                         <select name="gunPackage" id="gunPackage" class="btn btn-warning form-control" th:field="${gunsPackage}">
                             <option th:each="gun : ${gunsPackage}" th:value="${gun.id}" th:text="${gun.name}"></option>
                         </select>
                     </div>
-                    <div class="form-group col-md-6 btn-outline-warning">
+                    <div class="form-group col-md-8 btn-outline-warning">
                     <label class="control-label" for="gunPackageSelect">Selected Guns:</label>
                     <div id="selectedGunsTags" class="breadcrumb gap-2 btn-warning ">
                     </div>
@@ -71,7 +70,6 @@
                 </div>
                     <div>
                         <button type="submit" class=" btn btn-outline-warning my-3">Submit</button>
-                </div>
                 </div>
             </form>
 

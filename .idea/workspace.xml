@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="reservatie formulier probleem opgelost">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="meerdere reservaties maken nu mogelijk">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/CompetitionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/CompetitionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/GunsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/gunranch.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/gunranch.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/competitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservationdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservationdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,17 +26,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Interface" />
-        <option value="HTML File" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="rating" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,11 +93,11 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\owenh\OneDrive\Documenten\gunranch3\src\main\resources\templates\user" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GunRanchApplication">
@@ -183,14 +190,11 @@
       <workItem from="1712230869091" duration="4791000" />
       <workItem from="1712241022436" duration="2249000" />
       <workItem from="1712316976985" duration="2631000" />
-      <workItem from="1712322655447" duration="601000" />
-    </task>
-    <task id="LOCAL-00067" summary="dropdown menu voor guntypes toegevoegd">
-      <created>1710182659544</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1710182659544</updated>
+      <workItem from="1712322655447" duration="3049000" />
+      <workItem from="1712338202548" duration="2754000" />
+      <workItem from="1712483836197" duration="4069000" />
+      <workItem from="1712494056752" duration="8495000" />
+      <workItem from="1712508289804" duration="2954000" />
     </task>
     <task id="LOCAL-00068" summary="troubleshooting">
       <created>1710183465565</created>
@@ -528,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712242240775</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="meerdere reservaties maken nu mogelijk">
+      <created>1712324896383</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1712324896384</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="findGun controller toegevoegd" />
     <MESSAGE value="update pagina toegevoegd met de nodige controllers" />
     <MESSAGE value="update formulier werkt" />
     <MESSAGE value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
@@ -583,7 +593,8 @@
     <MESSAGE value="styling van verschillende paginas" />
     <MESSAGE value="login en logout syteem gefinetuned" />
     <MESSAGE value="reservatie formulier probleem opgelost" />
-    <option name="LAST_COMMIT_MESSAGE" value="reservatie formulier probleem opgelost" />
+    <MESSAGE value="meerdere reservaties maken nu mogelijk" />
+    <option name="LAST_COMMIT_MESSAGE" value="meerdere reservaties maken nu mogelijk" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

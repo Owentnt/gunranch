@@ -272,6 +272,7 @@ VALUES (1004,'Beike','Rogiers','F','beeroger','beike.r@hotmail.com','0478 23 65 
 
 
 
+
 --INSERT INTO USERS (USERNAME, PASSWORD, ENABLED) VALUES ('admin', '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS', true);
 INSERT INTO AUTHORITIES (USERNAME, AUTHORITY)
 VALUES ('owentnt', 'ADMIN');

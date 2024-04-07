@@ -57,7 +57,8 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
     List<Guns> findAll(@Param("maxPrice") Integer maxPrice, @Param("minPrice") Integer minPrice);
 
 
-
+    @Query("SELECT SUM(g.price) FROM Guns g WHERE g IN :selectedGuns")
+    Double calculateTotalPrice(@Param("selectedGuns") List<Guns> selectedGuns);
 
     @Query("SELECT g from Guns g WHERE " +
             "(:minMagazine IS NULL OR :minMagazine <= g.magazine) AND " +
