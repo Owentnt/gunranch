@@ -28,38 +28,16 @@
   .starrating {
     user-select: none;
   }
+  #timer {
+    color: darkred;
+    font-size: 36px;
+    font-weight: bold;
+  }
 </style>
 
 <body>
-<table class="table">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td colspan="2">Larry the Bird</td>
-    <td>@twitter</td>
-  </tr>
-  </tbody>
-</table>
+
+
 
 <div class="starrating col-md-4 bg-dark text-center">
   <h6 class="text-warning text-center">How was your experience?</h6>
@@ -70,6 +48,11 @@
   <button class="star">&#9734;</button>
   <h6 id="ratingCount" class="text-center text-warning">0 of 5</h6>
   <h6 id="message" class="text-warning text-center"></h6>
+</div>
+
+<div class="countdown">
+  <h2 class="text-center text-warning">Countdown Timer</h2>
+  <div id="timer"></div>
 </div>
 
 
@@ -114,6 +97,41 @@
       }
     }
   })
+</script>
+<script>
+  const countDownDate = new Date("April 08, 2024 20:30:00").getTime();
+  const x = setInterval(function (){
+    const now = new Date().getTime()
+    const distance = countDownDate - now
+    const totalDistance = countDownDate - (new Date("April 08, 2024 20:19:00").getTime());
+    const percentageRemaining = (distance / totalDistance) * 100;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000 );
+
+    let color="";
+    if (percentageRemaining > 50){
+      color= "green";
+    }
+    if (percentageRemaining <= 50){
+      color = "yellow"
+    }
+    if (percentageRemaining <= 25){
+      color ="red"
+    }
+
+    document.getElementById("timer").innerHTML = `<span style="color: ${color};">${days}d ${hours}h ${minutes}m ${seconds}s</span>`;
+
+    // If the countdown is finished, display a message
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "<span style='color: darkred'>EXPIRED</span>";
+    }
+  }, 1000);
+
+
 </script>
 
 </body>
