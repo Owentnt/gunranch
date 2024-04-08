@@ -27,7 +27,7 @@
 <div th:if="${filtersEnabled}" class="text-center mt-5">
     <a class="btn btn-outline-warning bi bi-arrow-up"  th:href="@{/guns}">Close Filter</a>
     <form th:action="@{/guns/filter}" method="get">
-        <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container">
+        <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container mx-auto">
             <h5 class="card-header text-warning">Filters</h5>
             <div class="row">
                 <div class="col-md-4">
@@ -67,7 +67,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="form-select mt-5 ms-3">
+                    <div class="form-select mt-5 ms-3 bg-dark text-warning">
                         <label for="magazineRange" class="form-label">Magazine Range</label>
                         <input type="number" name="minMagazine" class="form-control" id="minMagazine"
                                placeholder="Min"
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="form-select mt-5 ms-3">
+                    <div class="form-select mt-5 ms-3 bg-dark text-warning">
                         <label for="priceRange" class="form-label">Price Range</label>
                         <input type="number" name="minPrice" class="form-control" id="minPrice"
                                placeholder="Min Price"
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 align-items-end">
-                    <div class="text-warning form-select text-start">
+                    <div class="text-warning form-select text-start bg-dark">
                         <div>
                             <label for="Semi-Auto" class="form-label d-inline-block">Semi-Auto</label>
                             <input type="radio" class="form-control " name="firearmsType" id="Semi-Auto" value="Semi-Auto"
