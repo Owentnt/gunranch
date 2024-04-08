@@ -10840,12 +10840,7 @@ textarea.form-control-lg {
     .background-nav{
         background-color: deepskyblue;
     }
-    .star-rating {
-        line-height:32px;
-        font-size:1.25em;
-    }
 
-    .star-rating .fa-star{color: yellow;}
 
 }
 
