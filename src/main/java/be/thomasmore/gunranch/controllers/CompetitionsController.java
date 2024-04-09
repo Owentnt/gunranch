@@ -41,7 +41,7 @@ public class CompetitionsController {
         List<Competitions> playerCount = competitionRepository.countParticipantsPerCompetition();
         model.addAttribute("competitions", allComps);
         model.addAttribute("playerCount",playerCount);
-        return "competitions";
+        return "user/competitions";
     }
 
     @GetMapping("/competitions/filter")
@@ -71,7 +71,7 @@ public class CompetitionsController {
         model.addAttribute("allowedGuns",allowedGuns);
         model.addAttribute("nrOfPlayers",nrOfPlayers);
         model.addAttribute("filtersEnabled", true);
-        return "competitions";
+        return "user/competitions";
     }
 
     @GetMapping({"/competitionsdetails/{id}", "/competitionsdetails"})
@@ -109,5 +109,10 @@ public class CompetitionsController {
         model.addAttribute("participation",participants);
         participantRepository.save(participants);
         return "redirect:/participationdetails";
+    }
+    @GetMapping("/scoreboard")
+    public String scores(Model model,Competitions competitions){
+        model.addAttribute("competitions",competitions);
+        return "scoreboard";
     }
 }

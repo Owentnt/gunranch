@@ -1,10 +1,12 @@
 package be.thomasmore.gunranch.controllers;
 
 import be.thomasmore.gunranch.model.Users;
-import be.thomasmore.gunranch.repositorys.UserRepository;
+import be.thomasmore.gunranch.repositories.AuthorityRepository;
+import be.thomasmore.gunranch.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,11 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    AuthorityRepository authorityRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -32,43 +39,27 @@ public class UserController {
         return "user/logout";
     }
 
-    @GetMapping({"/registration/{username}","/registration"})
-    public String registration(Users users,@PathVariable String username, Model model) {
+    @GetMapping({"/registration/{username}"})
+    public String registration(@ModelAttribute("users") Users users, @PathVariable(required = false) String username, Model model) {
+        if (users == null) {
+            users = new Users();
+        }
         model.addAttribute("user", users);
-        model.addAttribute("username",username);
-        logger.info("registrate");
+        model.addAttribute("username", username);
+        logger.info("registration: " + String.format(username));
         return "/registration";
     }
-    @ModelAttribute("users")
-    public Users findUser( @PathVariable(required = false) String username) {
-        logger.info("findUser " + username);
-        if (username == null) return new Users();
-        Optional<Users> findUser = userRepository.findByUsername(username);
 
-        if (findUser.isPresent())
-            return findUser.get();
-        return null;
+    @GetMapping({"/registration"})
+    public String registration2(String username, Model model) {
+        Users users = new Users();
+        model.addAttribute("user", users);
+        model.addAttribute("username", null);
+        //logger.info("registration: " + String.format(username));
+        return "/registration";
     }
-
-
-    @PostMapping("/registration")
-    public String submitRegistrationForm(
-                                        Model model, Users users,
-                                        @RequestParam("firstName") String firstName,
-                                        @RequestParam("lastName") String lastName,
-                                        @RequestParam("username") String username,
-                                        @RequestParam("gender") String gender,
-                                        @RequestParam("emailAddress") String emailAddress,
-                                        @RequestParam("phoneNumber") String phoneNumber,
-                                        @RequestParam("password") String password,
-                                        @RequestParam("address") String address,
-                                        @RequestParam("city") String city,
-                                        @RequestParam("ssId") String ssId,
-                                        @RequestParam("postalCode") String postalCode,
-                                        @RequestParam("image") String image,
-                                        @RequestParam("aboutMe") String aboutMe) {
-
-
+    @PostMapping("/registration/{username}")
+    public String submitRegistrationForm(Users users, @PathVariable String username) {
         logger.info("registration" + username + "-- new username=" + users.getUsername()
                 + "-- new firstName=" + users.getFirstName()
                 + "-- new lastName=" + users.getLastName()
@@ -81,21 +72,20 @@ public class UserController {
                 + "-- new ssId=" + users.getSsId()
                 + "-- new image=" + users.getImage()
                 + "-- new aboutMe=" + users.getAboutMe());
-        model.addAttribute("users", users);
-        model.addAttribute("firstName", firstName);
-        model.addAttribute("lastName", lastName);
-        model.addAttribute("username", username);
-        model.addAttribute("gender", gender);
-        model.addAttribute("emailAddress", emailAddress);
-        model.addAttribute("phoneNumber", phoneNumber);
-        model.addAttribute("password", password);
-        model.addAttribute("address", address);
-        model.addAttribute("city", city);
-        model.addAttribute("postalCode", postalCode);
-        model.addAttribute("ssId", ssId);
-        model.addAttribute("image",image);
-        model.addAttribute("aboutMe",aboutMe);
+        boolean insertFlag = false;
+        if (users.getId() == 0){
+            // new user
+            users.setEnabled(true);
+            users.setPassword(passwordEncoder.encode(users.getPassword()));
+            insertFlag = true;
+
+        }
+
         userRepository.save(users);
+        if (insertFlag){
+           authorityRepository.insertRecord(users.getUsername(), "USER");
+        }
+
         return "redirect:/profile";
     }
 
@@ -108,10 +98,9 @@ public class UserController {
             model.addAttribute("user", user.get());
 
         }else{
-            return "/registration";
+            model.addAttribute("user", null);
         }
 
-   //     model.addAttribute("user", user);
         return "profile";
     }
 
@@ -159,4 +148,15 @@ public class UserController {
 //    }
 //
 
+    @ModelAttribute("users")
+    public Users findUser( @PathVariable(required = false) String username) {
+        logger.info("findUser " + username);
+        if (username == null) return new Users();
+        Optional<Users> findUser = userRepository.findByUsername(username);
+
+        if (findUser.isPresent())
+            return findUser.get();
+        else
+            return new Users();
+    }
 }

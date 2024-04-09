@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="controller voor edit profile">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling van verschillende paginas">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/AuthorityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/competitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,20 +23,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="CSS File" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="loginout" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,11 +90,11 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates\user" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static" />
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
+      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GunRanchApplication">
@@ -104,7 +112,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.schedule.sql" />
         <item itemvalue="Database Script.schedule.sql" />
         <item itemvalue="Database Script.schedule.sql" />
         <item itemvalue="Database Script.schedule.sql" />
@@ -167,20 +174,82 @@
       <workItem from="1711027248209" duration="11090000" />
       <workItem from="1711044401471" duration="10850000" />
       <workItem from="1711100893989" duration="11132000" />
-      <workItem from="1711447709223" duration="13129000" />
-      <workItem from="1711464753094" duration="3165000" />
-      <workItem from="1711472107251" duration="3591000" />
-      <workItem from="1711542451632" duration="11260000" />
-      <workItem from="1711560536787" duration="6185000" />
-      <workItem from="1711579873028" duration="388000" />
-      <workItem from="1711580385130" duration="1164000" />
-      <workItem from="1711582732137" duration="1203000" />
-      <workItem from="1711584359889" duration="830000" />
-      <workItem from="1711620809654" duration="7423000" />
-      <workItem from="1711628742835" duration="4982000" />
-      <workItem from="1711651185306" duration="8160000" />
-      <workItem from="1711709787292" duration="2537000" />
-      <workItem from="1711735528260" duration="4152000" />
+      <workItem from="1711982625298" duration="13978000" />
+      <workItem from="1712046842392" duration="3140000" />
+      <workItem from="1712054535595" duration="8310000" />
+      <workItem from="1712079821060" duration="7734000" />
+      <workItem from="1712136276481" duration="4658000" />
+      <workItem from="1712145357489" duration="5531000" />
+    </task>
+    <task id="LOCAL-00065" summary="min price field toegevoegd">
+      <created>1710162669461</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1710162669461</updated>
+    </task>
+    <task id="LOCAL-00066" summary="max price field toegevoegd">
+      <created>1710178379899</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1710178379899</updated>
+    </task>
+    <task id="LOCAL-00067" summary="dropdown menu voor guntypes toegevoegd">
+      <created>1710182659544</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1710182659544</updated>
+    </task>
+    <task id="LOCAL-00068" summary="troubleshooting">
+      <created>1710183465565</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1710183465565</updated>
+    </task>
+    <task id="LOCAL-00069" summary="caliber button toegevoegd">
+      <created>1710188146853</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1710188146853</updated>
+    </task>
+    <task id="LOCAL-00070" summary="caliber button filter actief">
+      <created>1710189284921</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1710189284921</updated>
+    </task>
+    <task id="LOCAL-00071" summary="type of gun button filter actief">
+      <created>1710190151073</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1710190151073</updated>
+    </task>
+    <task id="LOCAL-00072" summary="radio buttons klaargezet">
+      <created>1710191146342</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1710191146342</updated>
+    </task>
+    <task id="LOCAL-00073" summary="logo terug actief gezet">
+      <created>1710243485149</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1710243485149</updated>
+    </task>
+    <task id="LOCAL-00074" summary="troubleshooting">
+      <created>1710244051189</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1710244051189</updated>
     </task>
     <task id="LOCAL-00075" summary="wat refactoring en wat aanpassingen aan de database">
       <created>1710244801870</created>
@@ -427,105 +496,35 @@
       <option name="project" value="LOCAL" />
       <updated>1711114620284</updated>
     </task>
-    <task id="LOCAL-00110" summary="refactoring securitydb">
-      <created>1711377039113</created>
+    <task id="LOCAL-00110" summary="participationform gemaakt">
+      <created>1711983010868</created>
       <option name="number" value="00110" />
       <option name="presentableId" value="LOCAL-00110" />
       <option name="project" value="LOCAL" />
-      <updated>1711377039113</updated>
+      <updated>1711983010868</updated>
     </task>
-    <task id="LOCAL-00111" summary="refactoring members to users table">
-      <created>1711380032220</created>
+    <task id="LOCAL-00111" summary="filter query voor competitions">
+      <created>1712007227685</created>
       <option name="number" value="00111" />
       <option name="presentableId" value="LOCAL-00111" />
       <option name="project" value="LOCAL" />
-      <updated>1711380032220</updated>
+      <updated>1712007227685</updated>
     </task>
-    <task id="LOCAL-00112" summary="nog meer beveiliging">
-      <created>1711383684914</created>
+    <task id="LOCAL-00112" summary="some styling">
+      <created>1712064225633</created>
       <option name="number" value="00112" />
       <option name="presentableId" value="LOCAL-00112" />
       <option name="project" value="LOCAL" />
-      <updated>1711383684914</updated>
+      <updated>1712064225634</updated>
     </task>
-    <task id="LOCAL-00113" summary="finetunen van login systeem">
-      <created>1711404106861</created>
+    <task id="LOCAL-00113" summary="styling van verschillende paginas">
+      <created>1712138907494</created>
       <option name="number" value="00113" />
       <option name="presentableId" value="LOCAL-00113" />
       <option name="project" value="LOCAL" />
-      <updated>1711404106861</updated>
+      <updated>1712138907495</updated>
     </task>
-    <task id="LOCAL-00114" summary="login logout button in orde en buttons met admin onzichtbaar voor niet admins">
-      <created>1711455563630</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1711455563631</updated>
-    </task>
-    <task id="LOCAL-00115" summary="niet meer mogelijk om een datum te kiezen in het verleden">
-      <created>1711457154667</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1711457154668</updated>
-    </task>
-    <task id="LOCAL-00116" summary="werken aan de querys voor de filters op competitions pagina">
-      <created>1711467918925</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1711467918926</updated>
-    </task>
-    <task id="LOCAL-00117" summary="query maken voor filter competitions prt 2">
-      <created>1711475697911</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1711475697912</updated>
-    </task>
-    <task id="LOCAL-00118" summary="input fields veranderd van participants class">
-      <created>1711548295259</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1711548295259</updated>
-    </task>
-    <task id="LOCAL-00119" summary="troubleshooting">
-      <created>1711554453353</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1711554453353</updated>
-    </task>
-    <task id="LOCAL-00120" summary="troubleshooting">
-      <created>1711630014347</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1711630014347</updated>
-    </task>
-    <task id="LOCAL-00121" summary="test profile pagina">
-      <created>1711630419683</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1711630419683</updated>
-    </task>
-    <task id="LOCAL-00122" summary="profile page in orde">
-      <created>1711632965143</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1711632965143</updated>
-    </task>
-    <task id="LOCAL-00123" summary="profiel foto functie toegevoegd">
-      <created>1711659130103</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1711659130103</updated>
-    </task>
-    <option name="localTasksCounter" value="124" />
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +541,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="securitydb" />
+                        <option value="security" />
                       </list>
                     </value>
                   </entry>
@@ -551,15 +550,19 @@
             </State>
           </value>
         </entry>
-        <entry key="abce5ffb-9ea3-4ec5-9450-8d9659b5ae67">
-          <value>
-            <State />
-          </value>
-        </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="admin controller en edit pagina gemaakt" />
+    <MESSAGE value="formulier gemaakt op editguns maar nog niet volledig klaar" />
+    <MESSAGE value="findGun controller toegevoegd" />
+    <MESSAGE value="update pagina toegevoegd met de nodige controllers" />
+    <MESSAGE value="update formulier werkt" />
+    <MESSAGE value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
+    <MESSAGE value="wat troubleshooting" />
+    <MESSAGE value="Icons bootstrap documentation toegevoegd" />
+    <MESSAGE value="postmapping controller voor new gun toegevoegd" />
     <MESSAGE value="gunfilter voor pump-action gefixed" />
     <MESSAGE value="probleem met insert pagina opgelost" />
     <MESSAGE value="reservation form: gun select field toegevoegd" />
@@ -572,20 +575,11 @@
     <MESSAGE value="implementatie van scores pagina en prototype van reservationdetails gemaakt" />
     <MESSAGE value="edit pagina van competitions gemaakt" />
     <MESSAGE value="insert pagina van competitions gemaakt" />
-    <MESSAGE value="refactoring securitydb" />
-    <MESSAGE value="refactoring members to users table" />
-    <MESSAGE value="nog meer beveiliging" />
-    <MESSAGE value="finetunen van login systeem" />
-    <MESSAGE value="login logout button in orde en buttons met admin onzichtbaar voor niet admins" />
-    <MESSAGE value="niet meer mogelijk om een datum te kiezen in het verleden" />
-    <MESSAGE value="werken aan de querys voor de filters op competitions pagina" />
-    <MESSAGE value="query maken voor filter competitions prt 2" />
-    <MESSAGE value="input fields veranderd van participants class" />
-    <MESSAGE value="troubleshooting" />
-    <MESSAGE value="test profile pagina" />
-    <MESSAGE value="profile page in orde" />
-    <MESSAGE value="profiel foto functie toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="profiel foto functie toegevoegd" />
+    <MESSAGE value="participationform gemaakt" />
+    <MESSAGE value="filter query voor competitions" />
+    <MESSAGE value="some styling" />
+    <MESSAGE value="styling van verschillende paginas" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling van verschillende paginas" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
