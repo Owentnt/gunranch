@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="meerdere reservaties maken nu mogelijk">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="selected guns worden getoond bij een reservatie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/competitions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +190,8 @@
       <workItem from="1712483836197" duration="4069000" />
       <workItem from="1712494056752" duration="8495000" />
       <workItem from="1712508289804" duration="2954000" />
-      <workItem from="1712669930346" duration="2530000" />
-    </task>
-    <task id="LOCAL-00068" summary="troubleshooting">
-      <created>1710183465565</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1710183465565</updated>
+      <workItem from="1712669930346" duration="5672000" />
+      <workItem from="1712687348980" duration="2533000" />
     </task>
     <task id="LOCAL-00069" summary="caliber button toegevoegd">
       <created>1710188146853</created>
@@ -539,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712324896384</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="selected guns worden getoond bij een reservatie">
+      <created>1712673980355</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1712673980356</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +566,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update pagina toegevoegd met de nodige controllers" />
     <MESSAGE value="update formulier werkt" />
     <MESSAGE value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
     <MESSAGE value="wat troubleshooting" />
@@ -594,7 +590,8 @@
     <MESSAGE value="login en logout syteem gefinetuned" />
     <MESSAGE value="reservatie formulier probleem opgelost" />
     <MESSAGE value="meerdere reservaties maken nu mogelijk" />
-    <option name="LAST_COMMIT_MESSAGE" value="meerdere reservaties maken nu mogelijk" />
+    <MESSAGE value="selected guns worden getoond bij een reservatie" />
+    <option name="LAST_COMMIT_MESSAGE" value="selected guns worden getoond bij een reservatie" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -24,25 +24,34 @@
         <div class="col-md-8">
             <div class="card border-warning bg-dark">
                 <div class="card-body">
-                    <div th:each="booking : ${reservations}">
-                        <span class="text-warning text-center" th:text="${booking.id} + ':' +
-                                ${#dates.format(booking.date, 'dd-MM-yyyy')} + '@' +
-                                ${#dates.format(booking.time, 'HH:mm')} + ' with ' +
-                                ${booking.amountOfParticipants} + ' participants.'" >
-                            <div th:each="package : ${booking.gunsPackage}">
-                                <p class="text-warning" th:text="${package.name}"></p>
-                            </div>
-                        </span>
-                        <div class="text-warning">
-                        <ul class="list-unstyled">
-                            <li th:each="package : ${booking.gunsPackage}" th:text="${package.name}"></li>
-                        </ul>
-                        </div>
-                            <a th:href="@{|/reservation/${booking.id}|}">edit</a>)
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-start">
-                            <button type="button" class="btn btn-outline-warning"><a th:href="@{/reservation}" class="text-white text-decoration-none">New reservation</a></button>
+                    <table class="table table-dark">
+                        <thead>
+                        <tr>
+                            <th class="text-warning" colspan="2">Booking Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="booking : ${reservations}">
+                            <td class="text-warning">
+                                <strong>Date:</strong> <span th:text="${#dates.format(booking.date, 'dd-MM-yyyy')}"></span><br>
+                                <strong>Time:</strong> <span th:text="${#dates.format(booking.time, 'HH:mm')}"></span><br>
+                                <strong>Participants:</strong> <span th:text="${booking.amountOfParticipants}"></span><br>
+                                <strong>Your Package:</strong>
+                                <ul class="list-unstyled">
+                                    <li th:each="package : ${booking.gunsPackage}" th:text="${package.name}"></li>
+                                </ul>
+                                <strong>Total Price:</strong>
+                                <span th:text="${@userRepository.calculateTotalPriceByBookingId(booking.id)}"></span> EUR<br>
+                                <a th:href="@{|/reservation/${booking.id}|}" class="btn btn-outline-warning">Edit</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <button type="button" class="btn btn-outline-warning">
+                                <a th:href="@{/reservation}" class="text-white text-decoration-none">New reservation</a>
+                            </button>
                         </div>
                     </div>
                 </div>
