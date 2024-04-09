@@ -79,4 +79,5 @@ public interface GunsRepository extends CrudRepository<Guns, Integer> {
                                 @Param("firearmsType") String firearmsType);
 
 
+
 }

@@ -16,6 +16,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -34,72 +37,85 @@ public class ReservationController {
 
     private Logger logger = LoggerFactory.getLogger(ReservationController.class);
 
-        @GetMapping("/reservations")
-        public String reservationsForm(Model model) {
-            logger.info("GET request received for /reservations");
-            Iterable<Guns> gunsPackage = gunsRepository.findAll();
-            Iterable<Users> users = userRepository.findAll();
-            model.addAttribute("reservation", new Reservation());
-            model.addAttribute("gunsPackage", gunsPackage);
-            model.addAttribute("users",users);
-            return "reservations";
+    @GetMapping("/reservation")
+    public String newReservation(Model model) {
+        model.addAttribute("reservation", new Reservation());
+        model.addAttribute("gunsList", getGunsList());
+        return "editReservation";
+    }
+
+    @GetMapping({"/reservation/{id}"})
+    public String editReservation(@PathVariable Integer id,
+                                  Model model,
+                                  Principal principal) {
+        Optional<Reservation> reservation = reservationRepository.findById(Long.valueOf(id));
+        if (reservation.isEmpty())
+            return "redirect:/reservations";
+
+        // check if user valid
+        Users user = getCurrentUser(principal);
+        if (user == null)
+            return "redirect:/login";
+        if (!user.equals(reservation.get().getUsers()))
+            return "redirect:/reservations";
+
+        model.addAttribute("reservation", reservation.get());
+        model.addAttribute("gunsList", getGunsList());
+        return "editReservation";
+    }
+
+    private List<Guns> getGunsList(){
+        Iterable<Guns> gunsListIterator = gunsRepository.findAll();
+        List<Guns> gunsList = new ArrayList<Guns>();
+        for (Guns gun : gunsListIterator) {
+            gunsList.add(gun);
         }
-    @GetMapping({"/reservations/{id}"})
-    public String editReservation( Reservation reservation, @PathVariable Integer id, Model model) {
-
-        model.addAttribute("id", id);
-        model.addAttribute("reservations", reservation);
-        logger.info(String.format("editReservation" + id));
-        return "reservations";
+        return gunsList;
     }
-    @ModelAttribute("reservation")
-    public Reservation findReservation(@PathVariable(required = false) Long id) {
-        logger.info("findReservation " + id);
-        if (id == null) return new Reservation();
-        Optional<Reservation> bookingFinder = reservationRepository.findById(id);
 
-        if (bookingFinder.isPresent())
-            return bookingFinder.get();
-        return null;
-    }
-    @PostMapping("/reservations/{id}")
-    public String editReservationPost(@PathVariable Integer id, Reservation reservation) {
-        logger.info("editReservation" + id + "-- new amount of participants=" + reservation.getAmountOfParticipants()
-                + "-- new date=" + reservation.getDate()
-                + "-- new time" + reservation.getTime()
-                + "-- new gunPackage" + reservation.getGunsPackage());
+    @PostMapping("/postreservation")
+    public String postReservation(@ModelAttribute Reservation reservation,
+                                  BindingResult bindingResult,
+                                  Model model,
+                                  Principal principal) {
+        logger.info("POST request received for /reservations");
+        if (bindingResult.hasErrors()) {
+            logger.warn("Form submission has errors: {}", bindingResult.getAllErrors());
+
+            return "reservation";
+        }
+
+        if (reservation.getUsers() == null){
+            // set current user
+            reservation.setUsers(getCurrentUser(principal));
+        }
+
+        logger.info("Saving reservation: {}", reservation.toString());
         reservationRepository.save(reservation);
-        return "redirect:/reservationdetails/" + id;
+        return "redirect:/reservations";
     }
 
-        @PostMapping("/reservations")
-        public String submitReservationForm(@Valid Reservation reservation, BindingResult bindingResult, Model model) {
-            logger.info("POST request received for /reservations");
-            if (bindingResult.hasErrors()) {
-                logger.warn("Form submission has errors: {}", bindingResult.getAllErrors());
-                Iterable<Guns> gunsPackage = gunsRepository.findAll();
-                Iterable<Users> users = userRepository.findAll(); // Fetch users again
-                model.addAttribute("gunsPackage", gunsPackage);
-                model.addAttribute("users",users);
-                return "reservations";
-            }
 
-            logger.info("Saving reservation: {}", reservation);
-            reservationRepository.save(reservation);
-            return "redirect:/reservationdetails";
+    @GetMapping("/reservations")
+    public String reservations(Model model, Principal principal) {
+        if (principal != null){
+            Users user = getCurrentUser(principal);
+            Iterable<Reservation> reservations = reservationRepository.findByUsers(user);
+            model.addAttribute("reservations", reservations);
+            return "reservations";
+        }else{
+            return "redirect:/login";
         }
 
-
-    @GetMapping("/reservationdetails")
-    public String reservationDetails(Model model) {
-        Iterable<Reservation> reservations = reservationRepository.findAll();
-        Iterable<Guns> gunsPackage = gunsRepository.findAll();
-        model.addAttribute("reservations", reservations);
-        model.addAttribute("gunPackage",gunsPackage);
-        return "reservationdetails";
     }
 
-
-
+    private Users getCurrentUser(Principal principal){
+        Optional<Users> user = userRepository.findByUsername(principal.getName());
+        if (user.isPresent()){
+            return user.get();
+        }else{
+            return null;
+        }
+    }
 
 }

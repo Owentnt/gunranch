@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="Rating">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="edit reservaties controller (bijna klaar)">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/GunsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/GunsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/repositories/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservationdetails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +27,16 @@
         <option value="CSS File" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="rating" />
+        <entry key="$PROJECT_DIR$" value="randombezigzijn" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -84,11 +92,11 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\owenh\OneDrive\Documenten\gunranch3\src\main\java\be\thomasmore\gunranch\controllers" />
+      <recent name="C:\Users\owenh\OneDrive\Documenten\gunranch3\src\main\resources\templates" />
       <recent name="C:\Users\owenh\OneDrive\Documenten\gunranch3\src\main\resources\templates\user" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GunRanchApplication">
@@ -185,8 +193,10 @@
       <workItem from="1712338202548" duration="2754000" />
       <workItem from="1712483836197" duration="4069000" />
       <workItem from="1712494056752" duration="8495000" />
-      <workItem from="1712508289804" duration="2954000" />
-      <workItem from="1712594334997" duration="6938000" />
+      <workItem from="1712508289804" duration="3304000" />
+      <workItem from="1712519502494" duration="7051000" />
+      <workItem from="1712568049521" duration="5668000" />
+      <workItem from="1712663383262" duration="3159000" />
     </task>
     <task id="LOCAL-00069" summary="caliber button toegevoegd">
       <created>1710188146853</created>
@@ -524,12 +534,12 @@
       <option name="project" value="LOCAL" />
       <updated>1712324896384</updated>
     </task>
-    <task id="LOCAL-00117" summary="Rating">
-      <created>1712597482346</created>
+    <task id="LOCAL-00117" summary="edit reservaties controller (bijna klaar)">
+      <created>1712511592584</created>
       <option name="number" value="00117" />
       <option name="presentableId" value="LOCAL-00117" />
       <option name="project" value="LOCAL" />
-      <updated>1712597482346</updated>
+      <updated>1712511592584</updated>
     </task>
     <option name="localTasksCounter" value="118" />
     <servers />
@@ -585,8 +595,8 @@
     <MESSAGE value="login en logout syteem gefinetuned" />
     <MESSAGE value="reservatie formulier probleem opgelost" />
     <MESSAGE value="meerdere reservaties maken nu mogelijk" />
-    <MESSAGE value="Rating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rating" />
+    <MESSAGE value="edit reservaties controller (bijna klaar)" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit reservaties controller (bijna klaar)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

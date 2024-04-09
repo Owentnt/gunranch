@@ -31,7 +31,7 @@ public class Guns {
 
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<Competitions> competitions;
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "gunsPackage")
     private Collection<Reservation> reservations;
 
 

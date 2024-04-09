@@ -37,7 +37,8 @@ private Date date;
 private Date time;
 
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "reservations")
+    @ManyToMany()
+    @JoinTable(name = "reservation_guns")
     private List<Guns> gunsPackage;
 
 
