@@ -29,8 +29,16 @@
                                 ${#dates.format(booking.date, 'dd-MM-yyyy')} + '@' +
                                 ${#dates.format(booking.time, 'HH:mm')} + ' with ' +
                                 ${booking.amountOfParticipants} + ' participants.'" >
-                           <!-- <p class="text-warning text-center" th:text="'Chosen Weapons'+${booking.gunsPackage}"></p>-->
-                        </span>&nbsp(<a th:href="@{|/reservation/${booking.id}|}">edit</a>)
+                            <div th:each="package : ${booking.gunsPackage}">
+                                <p class="text-warning" th:text="${package.name}"></p>
+                            </div>
+                        </span>
+                        <div class="text-warning">
+                        <ul class="list-unstyled">
+                            <li th:each="package : ${booking.gunsPackage}" th:text="${package.name}"></li>
+                        </ul>
+                        </div>
+                            <a th:href="@{|/reservation/${booking.id}|}">edit</a>)
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-start">
@@ -42,6 +50,7 @@
         </div>
     </div>
 </div>
+
 
 
 <div th:insert="~{fragments/footer :: footer}">Footer</div>

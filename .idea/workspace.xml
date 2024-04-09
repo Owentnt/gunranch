@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="login pagina gecustomized">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/logout.html" afterDir="false" />
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="meerdere reservaties maken nu mogelijk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/competitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/competitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,19 +25,22 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="rating" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,7 +92,7 @@
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates\user" />
+      <recent name="C:\Users\owenh\OneDrive\Documenten\gunranch3\src\main\resources\templates\user" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\images" />
@@ -113,6 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.schedule.sql" />
+        <item itemvalue="Database Script.schedule.sql" />
+        <item itemvalue="Database Script.schedule.sql" />
         <item itemvalue="Database Script.schedule.sql" />
         <item itemvalue="Database Script.schedule.sql" />
       </list>
@@ -173,40 +177,24 @@
       <workItem from="1710773107588" duration="1794000" />
       <workItem from="1711027248209" duration="11090000" />
       <workItem from="1711044401471" duration="10850000" />
-      <workItem from="1711100893989" duration="11751000" />
-      <workItem from="1711191557991" duration="3435000" />
-      <workItem from="1711196328111" duration="2843000" />
-      <workItem from="1711208311903" duration="5619000" />
-      <workItem from="1711280994535" duration="1598000" />
-      <workItem from="1711301329403" duration="1598000" />
-    </task>
-    <task id="LOCAL-00064" summary="maxmagazine field corrigeren. ze werken nu allebei">
-      <created>1710160802539</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1710160802539</updated>
-    </task>
-    <task id="LOCAL-00065" summary="min price field toegevoegd">
-      <created>1710162669461</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1710162669461</updated>
-    </task>
-    <task id="LOCAL-00066" summary="max price field toegevoegd">
-      <created>1710178379899</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1710178379899</updated>
-    </task>
-    <task id="LOCAL-00067" summary="dropdown menu voor guntypes toegevoegd">
-      <created>1710182659544</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1710182659544</updated>
+      <workItem from="1711100893989" duration="11132000" />
+      <workItem from="1711982625298" duration="13978000" />
+      <workItem from="1712046842392" duration="3140000" />
+      <workItem from="1712054535595" duration="8310000" />
+      <workItem from="1712079821060" duration="7734000" />
+      <workItem from="1712136276481" duration="4658000" />
+      <workItem from="1712145357489" duration="5531000" />
+      <workItem from="1712173732233" duration="1429000" />
+      <workItem from="1712225696568" duration="3191000" />
+      <workItem from="1712230869091" duration="4791000" />
+      <workItem from="1712241022436" duration="2249000" />
+      <workItem from="1712316976985" duration="2631000" />
+      <workItem from="1712322655447" duration="3049000" />
+      <workItem from="1712338202548" duration="2754000" />
+      <workItem from="1712483836197" duration="4069000" />
+      <workItem from="1712494056752" duration="8495000" />
+      <workItem from="1712508289804" duration="2954000" />
+      <workItem from="1712669930346" duration="2530000" />
     </task>
     <task id="LOCAL-00068" summary="troubleshooting">
       <created>1710183465565</created>
@@ -502,28 +490,56 @@
       <option name="project" value="LOCAL" />
       <updated>1711114620284</updated>
     </task>
-    <task id="LOCAL-00110" summary="security system geintegreerd in de securityconfig zodat alleen admins kunnen gaan naar de admin paginas">
-      <created>1711117096993</created>
+    <task id="LOCAL-00110" summary="participationform gemaakt">
+      <created>1711983010868</created>
       <option name="number" value="00110" />
       <option name="presentableId" value="LOCAL-00110" />
       <option name="project" value="LOCAL" />
-      <updated>1711117096993</updated>
+      <updated>1711983010868</updated>
     </task>
-    <task id="LOCAL-00111" summary="admin buttons beveiligd voor users">
-      <created>1711200067035</created>
+    <task id="LOCAL-00111" summary="filter query voor competitions">
+      <created>1712007227685</created>
       <option name="number" value="00111" />
       <option name="presentableId" value="LOCAL-00111" />
       <option name="project" value="LOCAL" />
-      <updated>1711200067036</updated>
+      <updated>1712007227685</updated>
     </task>
-    <task id="LOCAL-00112" summary="login pagina gecustomized">
-      <created>1711210953106</created>
+    <task id="LOCAL-00112" summary="some styling">
+      <created>1712064225633</created>
       <option name="number" value="00112" />
       <option name="presentableId" value="LOCAL-00112" />
       <option name="project" value="LOCAL" />
-      <updated>1711210953107</updated>
+      <updated>1712064225634</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="styling van verschillende paginas">
+      <created>1712138907494</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1712138907495</updated>
+    </task>
+    <task id="LOCAL-00114" summary="login en logout syteem gefinetuned">
+      <created>1712228058675</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1712228058676</updated>
+    </task>
+    <task id="LOCAL-00115" summary="reservatie formulier probleem opgelost">
+      <created>1712242240775</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1712242240775</updated>
+    </task>
+    <task id="LOCAL-00116" summary="meerdere reservaties maken nu mogelijk">
+      <created>1712324896383</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1712324896384</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +556,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="security" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -553,10 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="competition pagina aan het maken. Wat extra testdata toegevoegd" />
-    <MESSAGE value="admin controller en edit pagina gemaakt" />
-    <MESSAGE value="formulier gemaakt op editguns maar nog niet volledig klaar" />
-    <MESSAGE value="findGun controller toegevoegd" />
     <MESSAGE value="update pagina toegevoegd met de nodige controllers" />
     <MESSAGE value="update formulier werkt" />
     <MESSAGE value="Registratie pagina gemaakt en link in login voor moest user geen account hebben" />
@@ -575,10 +587,14 @@
     <MESSAGE value="implementatie van scores pagina en prototype van reservationdetails gemaakt" />
     <MESSAGE value="edit pagina van competitions gemaakt" />
     <MESSAGE value="insert pagina van competitions gemaakt" />
-    <MESSAGE value="security system geintegreerd in de securityconfig zodat alleen admins kunnen gaan naar de admin paginas" />
-    <MESSAGE value="admin buttons beveiligd voor users" />
-    <MESSAGE value="login pagina gecustomized" />
-    <option name="LAST_COMMIT_MESSAGE" value="login pagina gecustomized" />
+    <MESSAGE value="participationform gemaakt" />
+    <MESSAGE value="filter query voor competitions" />
+    <MESSAGE value="some styling" />
+    <MESSAGE value="styling van verschillende paginas" />
+    <MESSAGE value="login en logout syteem gefinetuned" />
+    <MESSAGE value="reservatie formulier probleem opgelost" />
+    <MESSAGE value="meerdere reservaties maken nu mogelijk" />
+    <option name="LAST_COMMIT_MESSAGE" value="meerdere reservaties maken nu mogelijk" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
