@@ -16,8 +16,6 @@ public class Users {
     @OneToMany(mappedBy="users")
     private Set<Reservation> reservations;
 
-    @OneToMany(mappedBy = "users")
-    private Set<Participants> participants;
 
     public boolean isEnabled() {
         return enabled;
@@ -110,13 +108,6 @@ public class Users {
         this.reservations = reservations;
     }
 
-    public Set<Participants> getParticipants() {
-        return participants;
-    }
-
-    public void setParticipants(Set<Participants> participants) {
-        this.participants = participants;
-    }
 
     public String getAddress() {
         return address;

@@ -15,63 +15,7 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
-
-<!--<div th:if="${guns}">-->
-<!--  <form th:action="@{|/admin/newgun|}" method="post" th:object="${guns}">-->
-<!--    <div class="row">-->
-<!--      <div class="form-group col-md-6">-->
-<!--        <label for="image" class="form-label">Image</label>-->
-<!--        <input id="image" type="file" name="image" class="form-control-file" accept="image/*" th:field="*{image}">-->
-<!--      </div>-->
-<!--      <div class="form-group col-md-6">-->
-<!--        <label for="gunName" class="form-label">Gun Name</label>-->
-<!--        <input id="gunName" class="form-control" type="text" th:field="*{name}">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--      <label for="gunType" class="form-label">Gun Type</label>-->
-<!--      <select id="gunType" name="gunType" class="btn-warning btn" th:field="*{gunType}">-->
-<!--        <option value="" selected disabled>Select Gun Type</option>-->
-<!--        <option value="Handgun">Handguns</option>-->
-<!--        <option value="Shotgun">Shotguns</option>-->
-<!--        <option value="Rifle">Rifles</option>-->
-<!--        <option value="Assault Rifle">Assault Rifles</option>-->
-<!--        <option value="Sniper Rifle">Sniper Rifles</option>-->
-<!--        <option value="Submachine Gun">Submachine Guns</option>-->
-<!--      </select>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--      <label for="magazine" class="form-label">Magazine</label>-->
-<!--      <input id="magazine" class="form-control" type="number" th:field="*{magazine}">-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--      <label for="caliber" class="form-label">Caliber</label>-->
-<!--      <select id="caliber" name="caliber" class="btn-warning btn" th:field="*{caliber}">-->
-<!--        <option value="" selected disabled>Select Caliber</option>-->
-<!--        <option value="9x19 mm">9x19 mm</option>-->
-<!--        &lt;!&ndash; Add more options here &ndash;&gt;-->
-<!--      </select>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--      <label for="price" class="form-label">Price</label>-->
-<!--      <input id="price" class="form-control" type="number" th:field="*{price}">-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--      <label for="firearmsType" class="form-label">Firearms Type</label>-->
-<!--      <select id="firearmsType" name="firearmsType" class="btn-warning btn" th:field="*{firearmsType}">-->
-<!--        <option value="" selected disabled>Select Firearms Type</option>-->
-<!--        <option value="Semi-Auto">Semi-Auto</option>-->
-<!--        &lt;!&ndash; Add more options here &ndash;&gt;-->
-<!--      </select>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--      <label for="bio" class="form-label">Bio</label>-->
-<!--      <textarea id="bio" type="text" class="form-control" th:field="*{bio}"></textarea>-->
-<!--    </div>-->
-
-<!--  </form>-->
-<!--</div>-->
-
+<h1 class="mt-1 text-warning text-center">Adding a new gun</h1>
 <form th:action="@{|/admin/newgun|}" method="post" id="newgun"
       class="form-select container my-5 justify-content-center w-50">
     <div class="form-group">
@@ -79,7 +23,7 @@
             <div class="form-group col-md-6">
                 <label for="image" class="my-3"><strong>Image:</strong></label>
                 <input type="file" class="form-control-file" accept="image/*" id="image" placeholder="image"
-                       th:field="*{guns.image}" required>
+                       th:field="*{guns.image}">
             </div>
 
             <div class="form-group col-md-6">
@@ -89,7 +33,7 @@
 
             </div>
             <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="gunType" class="my-3"><strong>Guntype:</strong></label>
                     <select id="gunType" name="gunType" class="form-control" th:field="*{guns.gunType}">
                         <option value="" selected disabled>Guntype</option>
@@ -101,9 +45,8 @@
                         <option value="Submachine Gun">Submachine Guns</option>
                     </select>
                 </div>
-            </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
                 <label for="caliber" class="my-3"><strong>Caliber:</strong></label>
                 <select id="caliber" name="caliber" class="form-control" th:field="*{guns.caliber}">
                     <option value="" selected disabled>Caliber</option>
@@ -125,11 +68,11 @@
             <div class="row">
             <div class="form-group col-md-6">
                 <label for="magazine" class="form-label">Magazine</label>
-                <input id="magazine" class="form-control" type="number" th:field="*{guns.magazine}">
+                <input id="magazine" class="form-control" min="0" type="number" th:field="*{guns.magazine}">
             </div>
                 <div class="form-group col-md-6">
                     <label for="price" class="form-label">Price</label>
-                    <input id="price" class="form-control" type="number" th:field="*{guns.price}">
+                    <input id="price" class="form-control" min="0" type="number" th:field="*{guns.price}">
                 </div>
             </div>
         <div class="col-md-6">
@@ -154,12 +97,13 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <a class="btn btn-warning" th:href="@{/guns}">Cancel</a>
-        </div>
-        <div class="col-md-6">
-            <input class="btn-warning btn" type="submit" value="Save">
+        <div class="row">
+            <div class="col-md-2">
+                <a class="btn btn-warning mt-1" th:href="@{/guns}">Cancel</a>
+            </div>
+            <div class="col-md-2">
+                <input class="btn btn-warning btn mt-1" type="submit" value="Save">
+            </div>
         </div>
     </div>
     <!--    EEN FORM HEEFT ALTIJD EEN SUBMIT BUTTON!!!!!!!!!-->

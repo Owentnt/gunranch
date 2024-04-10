@@ -40,11 +40,14 @@ public class UserController {
     }
 
     @GetMapping({"/registration/{username}"})
-    public String registration(@ModelAttribute("users") Users users, @PathVariable(required = false) String username, Model model) {
-        if (users == null) {
-            users = new Users();
+    public String registration(@ModelAttribute("users") @PathVariable(required = false) String username,
+                               Model model,Principal principal) {
+        Users user = getCurrentUser(principal);
+        if (user == null) {
+            user = new Users();
+
         }
-        model.addAttribute("user", users);
+        model.addAttribute("user", user);
         model.addAttribute("username", username);
         logger.info("registration: " + String.format(username));
         return "/registration";
@@ -104,59 +107,14 @@ public class UserController {
         return "profile";
     }
 
-//    @PostMapping("/registration")
-//    public String registrationPost(Principal principal, HttpServletRequest request,
-//                                   @RequestParam String firstName,
-//                                   @RequestParam String lastName,
-//                                   @RequestParam String username,
-//                                   @RequestParam String gender,
-//                                   @RequestParam String emailAddress,
-//                                   @RequestParam String phoneNumber,
-//                                   @RequestParam String password,
-//                                   @RequestParam String address,
-//                                   @RequestParam String city,
-//                                   @RequestParam String ssId,
-//                                   @RequestParam String postalCode) throws Exception {
-//        if (principal != null) return "redirect:/";
-//        if (username == null || username.isBlank()) return "redirect:/";
-//        if (jdbcUserDetailsManager.userExists(username)) return "redirect:/";
-//
-//        UserDetails user = org.springframework.security.core.userdetails.User
-//                .withUsername(username)
-//                .password(passwordEncoder.encode(password))
-//                .roles("USER")
-//                .build();
-//        jdbcUserDetailsManager.createUser(user);
-//
-//        Users newUser = new Users();
-//        newUser.setFirstName(firstName);
-//        newUser.setLastName(lastName);
-//        newUser.setGender(gender);
-//        newUser.setUsername(username);
-//        newUser.setEmailAddress(emailAddress);
-//        newUser.setPassword(password);
-//        newUser.setPhoneNumber(phoneNumber);
-//        newUser.setAddress(address);
-//        newUser.setPostalCode(postalCode);
-//        newUser.setCity(city);
-//        newUser.setSsId(ssId);
-//
-//        //autologin:
-//        request.login(username, password);
-//        userRepository.save()
-//        return "redirect:/";
-//    }
-//
 
-    @ModelAttribute("users")
-    public Users findUser( @PathVariable(required = false) String username) {
-        logger.info("findUser " + username);
-        if (username == null) return new Users();
-        Optional<Users> findUser = userRepository.findByUsername(username);
 
-        if (findUser.isPresent())
-            return findUser.get();
-        else
-            return new Users();
+    private Users getCurrentUser(Principal principal){
+        Optional<Users> user = userRepository.findByUsername(principal.getName());
+        if (user.isPresent()){
+            return user.get();
+        }else{
+            return null;
+        }
     }
 }

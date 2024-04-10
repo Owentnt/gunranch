@@ -23,19 +23,18 @@ public class Guns {
     @Length(max = 1000)
     private String bio;
 
-    private double price;
+    private Double price;
 
     private String image;
 
     private String firearmsType;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    private Collection<Competitions> competitions;
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "gunsPackage")
     private Collection<Reservation> reservations;
 
 
-    public Guns(int id, String name, String type, int magazine, String caliber, String bio, double price, String firearmsType, String image) {
+    public Guns(int id, String name, String type, int magazine, String caliber,
+                String bio, Double price, String firearmsType, String image) {
         this.id = id;
         this.name = name;
         this.gunType = type;
@@ -61,13 +60,6 @@ public class Guns {
         this.reservations = reservations;
     }
 
-    public Collection<Competitions> getCompetitions() {
-        return competitions;
-    }
-
-    public void setCompetitions(Collection<Competitions> competitions) {
-        this.competitions = competitions;
-    }
 
     public int getId() {
         return id;
@@ -117,11 +109,11 @@ public class Guns {
         this.bio = bio;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double prijs) {
+    public void setPrice(Double prijs) {
         this.price = prijs;
     }
 
