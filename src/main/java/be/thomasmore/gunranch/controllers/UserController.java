@@ -1,5 +1,6 @@
 package be.thomasmore.gunranch.controllers;
 
+import be.thomasmore.gunranch.model.Reservation;
 import be.thomasmore.gunranch.model.Users;
 import be.thomasmore.gunranch.repositories.AuthorityRepository;
 import be.thomasmore.gunranch.repositories.UserRepository;
@@ -40,12 +41,16 @@ public class UserController {
     }
 
     @GetMapping({"/registration/{username}"})
-    public String registration(@ModelAttribute("users") @PathVariable(required = false) String username,
+    public String registrationEdit(@ModelAttribute("users") @PathVariable(required = false) String username,
                                Model model,Principal principal) {
+        Optional<Users> registration = userRepository.findByUsername(username);
         Users user = getCurrentUser(principal);
         if (user == null) {
             user = new Users();
-
+            return "redirect:/login";
+        }
+        if (!user.equals(registration.get().getUsername())){
+            return "redirect:/registration";
         }
         model.addAttribute("user", user);
         model.addAttribute("username", username);
@@ -54,11 +59,10 @@ public class UserController {
     }
 
     @GetMapping({"/registration"})
-    public String registration2(String username, Model model) {
+    public String registrationNew(String username, Model model) {
         Users users = new Users();
         model.addAttribute("user", users);
         model.addAttribute("username", null);
-        //logger.info("registration: " + String.format(username));
         return "/registration";
     }
     @PostMapping("/registration/{username}")
