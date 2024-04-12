@@ -17,10 +17,19 @@
 
 <body>
 
-<h1 class="text-center text-warning mt-2"> Registrate Your Account</h1>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+    Form submitted successfully!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+    <h1 class="text-center text-warning mt-2"> Registrate Your Account</h1>
 
 
-<form th:action="@{|/postRegistration|}" method="post" id="registration"
+
+    <form th:action="@{|/postRegistration|}" method="post" id="registration"
       class="form-select container my-5 justify-content-center w-50">
     <input type="hidden" id="id" placeholder="id" required th:field="*{user.id}" >
     <div class="form-group">
@@ -108,7 +117,15 @@
     <button type="submit" class="btn btn-warning my-3">Submit</button>
 <!--    EEN FORM HEEFT ALTIJD EEN SUBMIT BUTTON!!!!!!!!!-->
 </form>
-
+<script>
+    $(document).ready(function(){
+        $('registration').submit(function(e){
+            e.preventDefault(); // Prevent form submission
+            // Show Bootstrap alert
+            $('.alert').alert();
+        });
+    });
+</script>
 
 
 

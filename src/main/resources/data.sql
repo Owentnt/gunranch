@@ -2,13 +2,13 @@
 --GUNS DATA
 
 INSERT INTO GUNS(id, NAME, GUN_TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ( 101,'Glock-19', 'Handgun', 15, '9x19 mm', 8, '/images/glock19.png','Semi-Auto','The Glock 19 is a popular 9mm semi-automatic pistol known for its reliability,
+VALUES ( 1001,'Glock-19', 'Handgun', 15, '9x19 mm', 8, '/images/glock19.png','Semi-Auto','The Glock 19 is a popular 9mm semi-automatic pistol known for its reliability,
                                                                   compact size, and versatility. It is widely used by military, law enforcement, and civilians.
                                                                   Introduced in 1988, the Glock 19 has a standard magazine capacity of 15 rounds, a polymer frame,
                                                                   and is a popular choice for concealed carry due to its balance of size and firepower.');
 
 INSERT INTO GUNS( id,NAME, GUN_TYPE, MAGAZINE, CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ( 102,'Desert Eagle', 'Handgun', 8, '.44 Magnum', 8, '/images/desert_eagle.png','Semi-Auto','The Desert Eagle is a powerful semi-automatic pistol
+VALUES ( 1002,'Desert Eagle', 'Handgun', 8, '.44 Magnum', 8, '/images/desert_eagle.png','Semi-Auto','The Desert Eagle is a powerful semi-automatic pistol
                                                                         known for its distinctive appearance and high-caliber ammunition.
                                                                         It was designed by Magnum Research in the United States
                                                                         and is often used in movies and video games due to its iconic look and reputation for firepower.');

@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling 3">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="user formulier fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Guns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,14 +199,9 @@
       <workItem from="1712781403210" duration="1924000" />
       <workItem from="1712830907895" duration="7276000" />
       <workItem from="1712843817200" duration="19000" />
-      <workItem from="1712910919491" duration="4396000" />
-    </task>
-    <task id="LOCAL-00072" summary="radio buttons klaargezet">
-      <created>1710191146342</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1710191146342</updated>
+      <workItem from="1712910919491" duration="5283000" />
+      <workItem from="1712937047089" duration="1363000" />
+      <workItem from="1712943486328" duration="2352000" />
     </task>
     <task id="LOCAL-00073" summary="logo terug actief gezet">
       <created>1710243485149</created>
@@ -546,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712832028416</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="user formulier fix">
+      <created>1712915523302</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1712915523304</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Icons bootstrap documentation toegevoegd" />
     <MESSAGE value="postmapping controller voor new gun toegevoegd" />
     <MESSAGE value="gunfilter voor pump-action gefixed" />
     <MESSAGE value="probleem met insert pagina opgelost" />
@@ -601,7 +600,8 @@
     <MESSAGE value="styling" />
     <MESSAGE value="styling 2" />
     <MESSAGE value="styling 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling 3" />
+    <MESSAGE value="user formulier fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="user formulier fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,8 +616,22 @@
           <line>69</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java</url>
+          <line>62</line>
+          <properties class="be.thomasmore.gunranch.controllers.admin.GunAdminController" method="newGunPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="be.thomasmore.gunranch.model.Guns" memberName="id" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gunranch$GunRanchApplication.ic" NAME="GunRanchApplication Coverage Results" MODIFIED="1709487204355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

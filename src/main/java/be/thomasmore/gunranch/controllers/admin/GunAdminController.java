@@ -61,7 +61,15 @@ public class GunAdminController {
     }
     @PostMapping("/newgun")
     public String newGunPost(Guns guns) {
-        gunsRepository.save(guns);
-        return "redirect:/guns";
+        logger.info("newGunPost -- new name=" + guns.getName() +
+                ", type=" + guns.getGunType() +
+                ", magazine=" + guns.getMagazine() +
+                ", caliber=" + guns.getCaliber() +
+                ", price=" + guns.getPrice() +
+                ", fireArmsType=" + guns.getFirearmsType() +
+                ", bio=" +guns.getBio() +
+                ", image=" + guns.getImage());
+        Guns newGun = gunsRepository.save(guns);
+        return "redirect:/gunsdetails/" + newGun.getId();
     }
 }

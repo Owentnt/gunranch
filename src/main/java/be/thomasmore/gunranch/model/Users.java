@@ -37,25 +37,16 @@ public class Users {
     @Column(unique=true)
     private String username;
 
-    @NotNull(message = "Email address is required")
-    @Email(message = "Please enter a valid email")
     private String emailAddress;
-
-   // @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
-    @NotNull(message = "Phone number is required")
+    @Pattern(regexp = "\\d{10}", message = "Phone number not valid")
     private String phoneNumber;
 
-    @NotNull(message = "Address is required")
     private String address;
 
-    @NotNull(message = "Postal code is required")
     @Pattern(regexp = "\\d{4}", message = "Postal code not valid")
     private String postalCode;
-    @NotNull(message = "City is required")
     private String city;
 
-    @NotNull(message = "Password is required")
-//@Size(min = 10, max = 20)
     @Column(length = 100)
 /*@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[&@#§è!+=?^])(?=\\S+$)",
         message = "passWord does not meet requirements, " +
@@ -63,7 +54,7 @@ public class Users {
                 "one uppercase letter, no whitespace and a special character")*/
     private String password;
 
-    //@Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
+    @Pattern(regexp ="\\d{6}-\\d{3}.\\d{2}", message = "ssId is not valid")
     private String ssId;
 
     @Length(max = 500)
