@@ -20,8 +20,9 @@
 <h1 class="text-center text-warning mt-2"> Registrate Your Account</h1>
 
 
-<form th:action="@{|/registration/${username}|}" method="post" id="registration"
+<form th:action="@{|/postRegistration|}" method="post" id="registration"
       class="form-select container my-5 justify-content-center w-50">
+    <input type="hidden" id="id" placeholder="id" required th:field="*{user.id}" >
     <div class="form-group">
         <div class="row">
             <div class="form-group col-md-6">
@@ -47,7 +48,7 @@
             </div>
         </div>
 
-        <div class="row" th:if="${username == null}" >
+        <div class="row" th:if="${user.id == 0}" >
             <div class="form-group col-md-6">
                 <label for="username" class="my-3"><strong>Username: </strong></label>
                 <input type="text" class="form-control" id="username" placeholder="Username"

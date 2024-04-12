@@ -1,6 +1,5 @@
 package be.thomasmore.gunranch.controllers;
 
-import be.thomasmore.gunranch.model.Reservation;
 import be.thomasmore.gunranch.model.Users;
 import be.thomasmore.gunranch.repositories.AuthorityRepository;
 import be.thomasmore.gunranch.repositories.UserRepository;
@@ -41,33 +40,34 @@ public class UserController {
     }
 
     @GetMapping({"/registration/{username}"})
-    public String registrationEdit(@ModelAttribute("users") @PathVariable(required = false) String username,
-                               Model model,Principal principal) {
+    public String editRegistration(@PathVariable(required = false) String username,
+                                   Model model, Principal principal) {
         Optional<Users> registration = userRepository.findByUsername(username);
         Users user = getCurrentUser(principal);
         if (user == null) {
-            user = new Users();
             return "redirect:/login";
         }
-        if (!user.equals(registration.get().getUsername())){
+        if (!user.equals(registration.get())){
             return "redirect:/registration";
         }
         model.addAttribute("user", user);
-        model.addAttribute("username", username);
         logger.info("registration: " + String.format(username));
         return "/registration";
     }
 
     @GetMapping({"/registration"})
-    public String registrationNew(String username, Model model) {
+    public String newRegistration(Model model) {
         Users users = new Users();
         model.addAttribute("user", users);
-        model.addAttribute("username", null);
+        //logger.info("registration: " + String.format(username));
         return "/registration";
     }
-    @PostMapping("/registration/{username}")
-    public String submitRegistrationForm(Users users, @PathVariable String username) {
-        logger.info("registration" + username + "-- new username=" + users.getUsername()
+
+    @PostMapping("/postRegistration")
+    public String postRegistration(@ModelAttribute() Users users,
+                                   Model model,
+                                   Principal principal) {
+        logger.info("registration"  + "-- new username=" + users.getUsername()
                 + "-- new firstName=" + users.getFirstName()
                 + "-- new lastName=" + users.getLastName()
                 + "-- new gender=" + users.getGender()
@@ -80,17 +80,25 @@ public class UserController {
                 + "-- new image=" + users.getImage()
                 + "-- new aboutMe=" + users.getAboutMe());
         boolean insertFlag = false;
-        if (users.getId() == 0){
+        if (users.getId() == 0) {
             // new user
             users.setEnabled(true);
             users.setPassword(passwordEncoder.encode(users.getPassword()));
             insertFlag = true;
 
         }
+        else{
+            //edit user
+            Users userPrincipal = getCurrentUser(principal);
+            // restore username/paswoord
+            users.setPassword(userPrincipal.getPassword());
+            users.setUsername(userPrincipal.getUsername());
+            users.setEnabled(userPrincipal.isEnabled());
+        }
 
         userRepository.save(users);
-        if (insertFlag){
-           authorityRepository.insertRecord(users.getUsername(), "USER");
+        if (insertFlag) {
+            authorityRepository.insertRecord(users.getUsername(), "USER");
         }
 
         return "redirect:/profile";
@@ -98,27 +106,32 @@ public class UserController {
 
     @GetMapping("profile")
     public String profile(Model model, Principal principal) {
-        if (principal != null){
-            final String loginName = principal.getName();
+        Users user = getCurrentUser(principal);
+        if (user != null) {
+            //final String loginName = principal.getName();
             System.out.println(principal.getName());
-            Optional<Users> user = userRepository.findByUsername(loginName);
-            model.addAttribute("user", user.get());
-
-        }else{
-            model.addAttribute("user", null);
+           // Optional<Users> user = userRepository.findByUsername(loginName);
+            model.addAttribute("user", user);
+        } else {
+            model.addAttribute("user",null);
         }
-
         return "profile";
+
+
     }
 
 
-
-    private Users getCurrentUser(Principal principal){
-        Optional<Users> user = userRepository.findByUsername(principal.getName());
-        if (user.isPresent()){
-            return user.get();
-        }else{
+    private Users getCurrentUser(Principal principal) {
+        if (principal != null){
+            Optional<Users> user = userRepository.findByUsername(principal.getName());
+            if (user.isPresent()) {
+                return user.get();
+            } else {
+                return null;
+            }
+        } else {
             return null;
         }
+
     }
 }

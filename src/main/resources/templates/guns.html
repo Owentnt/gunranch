@@ -27,7 +27,7 @@
 <div th:if="${filtersEnabled}" class="text-center mt-5">
     <a class="btn btn-outline-warning bi bi-arrow-up"  th:href="@{/guns}">Close Filter</a>
     <form th:action="@{/guns/filter}" method="get">
-        <div class="card-body card card border-warning col-md-6 row mt-5 bg-dark container">
+        <div class="card-body card border-warning col-md-6 row mt-5 bg-dark container mx-auto text-center">
             <h5 class="card-header text-warning">Filters</h5>
             <div class="row">
                 <div class="col-md-4">
@@ -64,10 +64,45 @@
                         </select>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="text-warning bg-dark form-select text-start mt-5 ms-5">
+                        <div>
+                            <input type="radio" class="form-control " name="firearmsType" id="Semi-Auto" value="Semi-Auto"
+                                   th:class="text-center" th:checked="${firearmsType == 'Semi-Auto'}">
+                            <label for="Semi-Auto" class="form-label d-inline-block">Semi-Auto</label>
+                        </div>
+                        <div class="FirearmsFilterFull">
+                            <input type="radio" class="form-control d-inline-block " name="firearmsType" id="Full-Auto"
+                                   value="Full-Auto" th:class="text-center" th:checked="${firearmsType == 'Full-Auto'}">
+                            <label for="Full-Auto" class="form-label">Full-Auto </label>
+                        </div>
+
+                        <div class="FirearmsFilterRevolver">
+                            <input type="radio" name="firearmsType" id="Revolver" value="Revolver" th:checked="${firearmsType == 'Revolver'}">
+                            <label for="Revolver" class="form-label">Revolver</label>
+                        </div>
+
+
+                        <div class="FirearmsFilterCarbine">
+                            <input type="radio" name="firearmsType" id="Carbine" value="Carbine" th:checked="${firearmsType == 'Carbine'}">
+                            <label for="Carbine" class="form-label">Carbine</label>
+                        </div>
+
+                        <div class="FirearmsFilterBoltAction">
+                            <input type="radio" name="firearmsType" id="Bolt-Action" value="Bolt-Action" th:checked="${firearmsType == 'Bolt-Action'}">
+                            <label for="Bolt-Action" class="form-label">Bolt-Action</label>
+                        </div>
+
+                        <div class="FirearmsFilterPumpAction">
+                            <input type="radio" name="firearmsType" id="Pump-Action" value="Pump-Action" th:checked="${firearmsType == 'Pump-Action'}">
+                            <label for="Pump-Action" class="form-label">Pump-Action</label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="form-select mt-5 ms-3">
+                    <div class="form-select bg-dark text-warning mt-5 ms-3">
                         <label for="magazineRange" class="form-label">Magazine Range</label>
                         <input type="number" name="minMagazine" class="form-control" id="minMagazine"
                                placeholder="Min"
@@ -79,7 +114,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="form-select mt-5 ms-3">
+                    <div class="form-select bg-dark text-warning mt-5 ms-3">
                         <label for="priceRange" class="form-label">Price Range</label>
                         <input type="number" name="minPrice" class="form-control" id="minPrice"
                                placeholder="Min Price"
@@ -90,44 +125,7 @@
                         <input type="hidden" id="priceRange" name="priceRange">
                     </div>
                 </div>
-                <div class="col-md-4 align-items-end">
-                    <div class="text-warning form-select text-start">
-                        <div>
-                            <label for="Semi-Auto" class="form-label d-inline-block">Semi-Auto</label>
-                            <input type="radio" class="form-control " name="firearmsType" id="Semi-Auto" value="Semi-Auto"
-                                   th:class="text-center" th:checked="${firearmsType == 'Semi-Auto'}">
-                        </div>
-                        <div class="FirearmsFilterFull">
-                            <label for="Full-Auto" class="form-label">Full-Auto </label>
-                            <input type="radio" class="form-control d-inline-block " name="firearmsType" id="Full-Auto"
-                                   value="Full-Auto" th:class="text-center" th:checked="${firearmsType == 'Full-Auto'}">
-                        </div>
-                        <div class="FirearmsFilterRevolver">
-                            <label for="Revolver" class="form-label">Revolver</label>
-                            <input type="radio" class="form-control" name="firearmsType" id="Revolver"
-                                   value="Revolver" th:class="w-25"
-                                   th:checked="${firearmsType == 'Revolver'}">
-                        </div>
-                        <div class="FirearmsFilterCarbine">
-                            <label for="Carbine" class="form-label">Carbine</label>
-                            <input type="radio" class="form-control" name="firearmsType" id="Carbine"
-                                   value="Carbine" th:class="w-25"
-                                   th:checked="${firearmsType == 'Carbine'}">
-                        </div>
-                        <div class="FirearmsFilterBoltAction">
-                            <label for="Bolt-Action" class="form-label">Bolt-Action</label>
-                            <input type="radio" class="form-control" name="firearmsType" id="Bolt-Action"
-                                   value="Bolt-Action" th:class="w-25"
-                                   th:checked="${firearmsType == 'Bolt-Action'}">
-                        </div>
-                        <div class="FirearmsFilterPumpAction">
-                            <label for="Pump-Action" class="form-label">Pump-Action</label>
-                            <input type="radio" class="form-control" name="firearmsType" id="Pump-Action"
-                                   value="Pump-Action" th:class="w-25"
-                                   th:checked="${firearmsType == 'Pump-Action'}">
-                        </div>
-                    </div>
-                </div>
+
             </div>
                 <div class="row">
                     <div class="col-md-6 mx-auto">
@@ -165,26 +163,7 @@
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('minMagazine').addEventListener('change', updateMagazineRange);
-        document.getElementById('maxMagazine').addEventListener('change', updateMagazineRange);
-        document.getElementById('minPrice').addEventListener('change', updatePriceRange);
-        document.getElementById('maxPrice').addEventListener('change', updatePriceRange);
 
-        function updateMagazineRange() {
-            const minMagazine = document.getElementById('minMagazine').value;
-            const maxMagazine = document.getElementById('maxMagazine').value;
-            document.getElementById('magazineRange').value = minMagazine + ' - ' + maxMagazine;
-        }
-
-        function updatePriceRange() {
-            const minPrice = document.getElementById('minPrice').value;
-            const maxPrice = document.getElementById('maxPrice').value;
-            document.getElementById('priceRange').value = minPrice + ' - ' + maxPrice;
-        }
-    });
-</script>
 </body>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 

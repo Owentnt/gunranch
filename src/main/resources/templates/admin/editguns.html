@@ -19,7 +19,7 @@
 <h1 class="text-center text-warning mt-1" th:text="'Editing gun: ' +${guns.name}"></h1>
 <div th:if="${guns}">
 
-    <form th:action="@{|/admin/editguns|}" method="post" id="editgun"
+    <form th:action="@{|/admin/editguns/${id}|}" method="post" id="editgun"
           class="form-select container my-5 justify-content-center w-50">
         <div class="form-group">
             <div class="row">
@@ -113,11 +113,8 @@
         <!--    EEN FORM HEEFT ALTIJD EEN SUBMIT BUTTON!!!!!!!!!-->
     </form>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
-</div>
+
 </body>
 </html>

@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling 2">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/gunranch.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/gunranch.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,14 +199,9 @@
       <workItem from="1712769030999" duration="2333000" />
       <workItem from="1712771519961" duration="5787000" />
       <workItem from="1712781403210" duration="1924000" />
-      <workItem from="1712830907895" duration="770000" />
-    </task>
-    <task id="LOCAL-00071" summary="type of gun button filter actief">
-      <created>1710190151073</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1710190151073</updated>
+      <workItem from="1712830907895" duration="7276000" />
+      <workItem from="1712843817200" duration="19000" />
+      <workItem from="1712910919491" duration="4396000" />
     </task>
     <task id="LOCAL-00072" summary="radio buttons klaargezet">
       <created>1710191146342</created>
@@ -540,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712778871362</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="styling 3">
+      <created>1712832028415</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1712832028416</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wat troubleshooting" />
     <MESSAGE value="Icons bootstrap documentation toegevoegd" />
     <MESSAGE value="postmapping controller voor new gun toegevoegd" />
     <MESSAGE value="gunfilter voor pump-action gefixed" />
@@ -595,7 +600,8 @@
     <MESSAGE value="selected guns worden getoond bij een reservatie" />
     <MESSAGE value="styling" />
     <MESSAGE value="styling 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling 2" />
+    <MESSAGE value="styling 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,6 +610,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/admin/GunAdminController.java</url>
           <line>43</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/UserController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
