@@ -20,10 +20,6 @@
 
 
 <body>
-
-
-
-
 <div class="position-relative">
     <img src="/images/reservationsbg.jpg" class="bg h-100 w-100 d-flex">
     <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
@@ -33,7 +29,7 @@
                 <input type="hidden" id="id" placeholder="id"
                        required th:field="*{id}" >
                 <div class="row">
-                    <div class="form-group col-md-8 bi">
+                    <div class="form-group col-md-12">
                             <i class="bi bi-people"></i>
                         <label for="participants" class="my-3"><strong>Participants:</strong></label>
                         <input type="number" class="form-control" id="participants" placeholder="Amount of participants"
@@ -41,13 +37,15 @@
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('AmountOfParticipants')}"
                              th:errors="*{amountOfParticipants}"></div>
                     </div>
-                    <div class="form-group col-md-8">
+                    <div class="form-group col-md-12">
+                        <i class="bi bi-calendar-date"></i>
                         <label class="control-label my-3" for="date"><strong>Date:</strong></label>
                         <input type="date" class="form-control" id="date" required
                                th:field="*{date}" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}">
                         <div class="alert-danger alert" th:if="${#fields.hasErrors('*')}" th:errors="*{date}"></div>
                     </div>
-                    <div class="form-group col-md-8">
+                    <div class="form-group col-md-12">
+                        <i class="bi bi-clock"></i>
                         <label class="control-label my-3" for="time"><strong>Time:</strong></label>
                         <input type="time" class="form-control" id="time" required
                                th:field="*{time}">
@@ -55,8 +53,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div >
-                        <label class="control-label" for="gunsPackage">Guns</label>
+                    <div>
+                        <i class="bi bi-box"></i>
+                        <label class="control-label" for="gunsPackage"><strong>Guns:</strong></label>
                         <select name="gunsPackage" id="gunsPackage" class="btn btn-warning form-control" th:field="*{gunsPackage}" multiple required>
                             <option th:each="gun : ${gunsList}" th:value="${gun.id}" th:text="${gun.name}"></option>
                         </select>
@@ -75,65 +74,7 @@
 
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const gunTextarea = document.getElementById("gunPackageSelect");
-        const selectedGunsDiv = document.getElementById("selectedGunsTags");
-        const gunSelect = document.getElementById("gunPackage");
-        const selectedGuns = new Set();
 
-        function addGunButton(gunName) {
-            const button = document.createElement("button");
-            button.className = "btn btn-warning btn-sm m-1";
-            button.textContent = gunName;
-            button.onclick = function() {
-                selectedGuns.delete(gunName);
-                selectedGunsDiv.removeChild(button);
-                updateTextarea();
-                updateOptions();
-            };
-            selectedGunsDiv.appendChild(button);
-        }
-
-        function updateTextarea() {
-            const gunList = Array.from(selectedGuns);
-            gunTextarea.value = gunList.join(", ");
-        }
-
-        function updateOptions() {
-            const options = gunSelect.options;
-            for (let i = 0; i < options.length; i++) {
-                if (selectedGuns.has(options[i].textContent)) {
-                    options[i].disabled = true;
-                } else {
-                    options[i].disabled = false;
-                }
-            }
-        }
-        gunSelect.addEventListener("change", function(event) {
-            const selectedGun = event.target.options[event.target.selectedIndex].text;
-            if (!selectedGuns.has(selectedGun)) {
-                selectedGuns.add(selectedGun);
-                addGunButton(selectedGun);
-                updateTextarea();
-                updateOptions();
-            } else {
-                alert("This gun has already been selected.");
-            }
-            event.target.selectedIndex = 0;
-        });
-
-        const initialGuns = gunTextarea.value.split(",");
-        initialGuns.forEach(function(gun) {
-            if (gun.trim() !== "") {
-                selectedGuns.add(gun.trim());
-                addGunButton(gun.trim());
-            }
-        });
-
-        updateOptions();
-    });
-</script>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
 </body>

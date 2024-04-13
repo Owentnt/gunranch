@@ -41,7 +41,7 @@
                                     <li th:each="package : ${booking.gunsPackage}" th:text="${package.name}"></li>
                                 </ul>
                                 <strong>Total Price:</strong>
-                                <span th:text="${@userRepository.calculateTotalPriceByBookingId(booking.id)} + ' per person'"></span> EUR<br>
+                                <span th:text="${@userRepository.calculateTotalPriceByBookingId(booking.id)} + ' EUR'"></span> per person<br>
                                 <a th:href="@{|/reservation/${booking.id}|}" class="btn btn-outline-warning">Edit</a>
                             </td>
                         </tr>

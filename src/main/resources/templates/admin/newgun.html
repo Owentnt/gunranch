@@ -15,99 +15,108 @@
 <div th:insert="~{fragments/header :: header}">Header</div>
 
 <body>
-<h1 class="mt-1 text-warning text-center">Adding a new gun</h1>
-<form th:action="@{|/admin/newgun|}" method="post" id="newgun"
-      class="form-select container my-5 justify-content-center w-50">
-    <div class="form-group">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="image" class="my-3"><strong>Image:</strong></label>
-                <input type="file" class="form-control-file" accept="image/*" id="image" placeholder="image"
-                       th:field="*{guns.image}">
-            </div>
+<div class="position-relative">
+    <img src="/images/reservationsbg.jpg" class="bg h-100 w-100 d-flex">
+    <div class="position-absolute top-0 start-50 translate-middle-x text-white text-center mt-5">
+        <div class="container text-start">
+            <h1 class="mt-1 text-warning text-center">Adding a new gun</h1>
+            <form th:action="@{|/admin/newgun|}" method="post" id="newgun"
+                  class="form-select container my-5 justify-content-center">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="image" class="my-3"><strong>Image:</strong></label>
+                            <input type="file" class="form-control-file" accept="image/*" id="image" placeholder="image"
+                                   th:field="*{guns.image}">
+                        </div>
 
-            <div class="form-group col-md-6">
-                <label for="gunName" class="my-3"><strong>Gun Name:</strong></label>
-                <input type="text" class="form-control" id="gunName" placeholder="Gun name"
-                       th:field="*{guns.name}" required>
+                        <div class="form-group col-md-6">
+                            <label for="gunName" class="my-3"><strong>Gun Name:</strong></label>
+                            <input type="text" class="form-control" id="gunName" placeholder="Gun name"
+                                   th:field="*{guns.name}" required>
 
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="gunType" class="my-3"><strong>Guntype:</strong></label>
-                    <select id="gunType" name="gunType" class="form-control" th:field="*{guns.gunType}">
-                        <option value="" selected disabled>Guntype</option>
-                        <option value="Handgun">Handguns</option>
-                        <option value="Shotgun">Shotguns</option>
-                        <option value="Rifle">Rifles</option>
-                        <option value="Assault Rifle">Assault Rifles</option>
-                        <option value="Sniper Rifle">Sniper Rifles</option>
-                        <option value="Submachine Gun">Submachine Guns</option>
-                    </select>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="gunType" class="my-3"><strong>Guntype:</strong></label>
+                                <select id="gunType" name="gunType" class="form-control" th:field="*{guns.gunType}">
+                                    <option value="" selected disabled>Guntype</option>
+                                    <option value="Handgun">Handguns</option>
+                                    <option value="Shotgun">Shotguns</option>
+                                    <option value="Rifle">Rifles</option>
+                                    <option value="Assault Rifle">Assault Rifles</option>
+                                    <option value="Sniper Rifle">Sniper Rifles</option>
+                                    <option value="Submachine Gun">Submachine Guns</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="caliber" class="my-3"><strong>Caliber:</strong></label>
+                                <select id="caliber" name="caliber" class="form-control" th:field="*{guns.caliber}">
+                                    <option value="" selected disabled>Caliber</option>
+                                    <option value="9x19 mm">9x19 mm</option>
+                                    <option value=".44 Magnum">.44 Magnum</option>
+                                    <option value=".22 LR">.22 LR</option>
+                                    <option value=".38 Special Magnum">.38 Special Magnum</option>
+                                    <option value="7.62x25 mm">7.62x25 mm</option>
+                                    <option value="5.56x45 mm">5.56x45 mm</option>
+                                    <option value="7.62x54 mm">7.62x54 mm</option>
+                                    <option value="12 GA">12 GA</option>
+                                    <option value="7.62x51 mm">7.62x51 mm</option>
+                                    <option value=".45 ACP">.45 ACP</option>
+                                    <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>
+                                    <option value="7,92x57mm">7,92x57mm</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="magazine" class="form-label">Magazine</label>
+                                <input id="magazine" class="form-control" min="0" type="number"
+                                       th:field="*{guns.magazine}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="price" class="form-label">Price</label>
+                                <input id="price" class="form-control" min="0" type="number" th:field="*{guns.price}">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="firearmsType" class="form-label">Firearms Type</label>
+                            <select id="firearmsType" name="firearmsType" class="btn-warning btn"
+                                    th:field="*{guns.firearmsType}">
+                                <option value="" selected disabled>Select Firearms Type</option>
+                                <option value="Semi-Auto">Semi-Auto</option>
+                                <option value="Full-Auto">Full-Auto</option>
+                                <option value="Revolver">Revolver</option>
+                                <option value="Carbine">Carbine</option>
+                                <option value="Pump-Action">Pump-Action</option>
+                                <option value="Bolt-Action">Bolt-Action</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="bio" class="my-3"><strong>Bio:</strong></label>
+                            <textarea id="bio" name="bio" rows="5" cols="50" th:field="*{guns.bio}"
+                                      placeholder="Tell something about yourself"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="btn btn-warning mt-1" th:href="@{/guns}">Cancel</a>
+                        </div>
+                        <div class="col-md-2">
+                            <input class="btn btn-warning btn mt-1" type="submit" value="Save">
+                        </div>
+                    </div>
                 </div>
-
-            <div class="form-group col-md-6">
-                <label for="caliber" class="my-3"><strong>Caliber:</strong></label>
-                <select id="caliber" name="caliber" class="form-control" th:field="*{guns.caliber}">
-                    <option value="" selected disabled>Caliber</option>
-                    <option value="9x19 mm">9x19 mm</option>
-                    <option value=".44 Magnum">.44 Magnum</option>
-                    <option value=".22 LR">.22 LR</option>
-                    <option value=".38 Special Magnum">.38 Special Magnum</option>
-                    <option value="7.62x25 mm">7.62x25 mm</option>
-                    <option value="5.56x45 mm">5.56x45 mm</option>
-                    <option value="7.62x54 mm">7.62x54 mm</option>
-                    <option value="12 GA">12 GA</option>
-                    <option value="7.62x51 mm">7.62x51 mm</option>
-                    <option value=".45 ACP">.45 ACP</option>
-                    <option value=".30-06 Springfield Ridge">.30-06 Springfield Ridge</option>
-                    <option value="7,92x57mm">7,92x57mm</option>
-                </select>
-            </div>
-        </div>
-            <div class="row">
-            <div class="form-group col-md-6">
-                <label for="magazine" class="form-label">Magazine</label>
-                <input id="magazine" class="form-control" min="0" type="number" th:field="*{guns.magazine}">
-            </div>
-                <div class="form-group col-md-6">
-                    <label for="price" class="form-label">Price</label>
-                    <input id="price" class="form-control" min="0" type="number" th:field="*{guns.price}">
-                </div>
-            </div>
-        <div class="col-md-6">
-            <label for="firearmsType" class="form-label">Firearms Type</label>
-            <select id="firearmsType" name="firearmsType" class="btn-warning btn" th:field="*{guns.firearmsType}">
-            <option value="" selected disabled>Select Firearms Type</option>
-            <option value="Semi-Auto">Semi-Auto</option>
-            <option value="Full-Auto">Full-Auto</option>
-            <option value="Revolver">Revolver</option>
-            <option value="Carbine">Carbine</option>
-            <option value="Pump-Action">Pump-Action</option>
-            <option value="Bolt-Action">Bolt-Action</option>
-        </select>
-        </div>
-        </div>
-
-    <div class="row">
-        <div class="form-group col-md-8">
-            <label for="bio" class="my-3"><strong>Bio:</strong></label>
-            <textarea id="bio" name="bio" rows="5" cols="50" th:field="*{guns.bio}"
-                      placeholder="Tell something about yourself"></textarea>
+                <!--    EEN FORM HEEFT ALTIJD EEN SUBMIT BUTTON!!!!!!!!!-->
+            </form>
         </div>
     </div>
-
-        <div class="row">
-            <div class="col-md-2">
-                <a class="btn btn-warning mt-1" th:href="@{/guns}">Cancel</a>
-            </div>
-            <div class="col-md-2">
-                <input class="btn btn-warning btn mt-1" type="submit" value="Save">
-            </div>
-        </div>
-    </div>
-    <!--    EEN FORM HEEFT ALTIJD EEN SUBMIT BUTTON!!!!!!!!!-->
-</form>
+</div>
 <div th:insert="~{fragments/footer :: footer}">Footer</div>
 
 </body>

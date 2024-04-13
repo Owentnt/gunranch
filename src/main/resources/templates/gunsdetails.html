@@ -16,7 +16,7 @@
 </head>
 <div th:insert="~{fragments/header :: header}">Header</div>
 
-<body class="bg-secondary">
+<body>
 
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -28,7 +28,7 @@
                             <a class="btn btn-outline-warning bi bi-caret-left-fill" th:href="@{|/gunsdetails/${previousGun}|}">Prev</a>
                         </div>
                         <div class="col-md-4 text-center">
-                            <h1 class="text-warning" th:text="${guns.name}"></h1>
+                            <h4 class="text-warning" th:text="${guns.name}"></h4>
                         </div>
                         <div class="col-md-4 text-end">
                             <a class="btn btn-outline-warning bi bi-caret-right-fill" th:href="@{|/gunsdetails/${nextGun}|}">Next</a>
@@ -40,7 +40,6 @@
                         <img th:src="${guns.image}" th:alt="${guns.name}" class="" width="192" height="124.7">
                     </div>
 
-                    <!-- Gun details in a table -->
                     <table class="table table-dark">
                         <tbody>
                         <tr>
@@ -69,8 +68,8 @@
                         </tr>
                         </tbody>
                     </table>
-                <div class="row justify-content-center my-3 ">
-                    <div class="col-md-6" sec:authorize="hasAnyAuthority('ADMIN')">
+                <div class="row justify-content-center my-3 mx-5">
+                    <div class="col-md-3" sec:authorize="hasAnyAuthority('ADMIN')">
                         <a class="btn btn-outline-warning bi bi-hammer" th:href="@{|/admin/editguns/${guns.id}|}">Edit Gun</a>
                     </div>
                 </div>
