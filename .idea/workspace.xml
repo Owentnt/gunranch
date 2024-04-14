@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling 4">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling 5">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/sara.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/thomasmore/gunranch/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/newgun.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/newgun.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
@@ -22,16 +28,16 @@
         <option value="CSS File" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="rating" />
+        <entry key="$PROJECT_DIR$" value="firebase" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,35 +60,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/owenh/IdeaProjects/gunranch/src/main/resources/templates&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;85fb476ba61be0aa61df268a5a12e0e3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/owenh/OneDrive/Documenten/gunranch3/src/main/resources/static/images",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "85fb476ba61be0aa61df268a5a12e0e3"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;module&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "module"
     ],
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
+    "DatabaseDriversLRU": [
+      "h2"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;52149911-bfbc-4dee-9505-c4b7b3d0541e&quot;
+    "RunConfigurationTargetLRU": [
+      "52149911-bfbc-4dee-9505-c4b7b3d0541e"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\owenh\OneDrive\Documenten\gunranch3\src\main\resources\static\images" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\templates" />
       <recent name="C:\Users\owenh\IdeaProjects\gunranch\src\main\resources\static\css" />
     </key>
@@ -201,14 +208,8 @@
       <workItem from="1712937047089" duration="1363000" />
       <workItem from="1712943486328" duration="2352000" />
       <workItem from="1713009091451" duration="9515000" />
-      <workItem from="1713096598449" duration="1728000" />
-    </task>
-    <task id="LOCAL-00074" summary="troubleshooting">
-      <created>1710244051189</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1710244051189</updated>
+      <workItem from="1713096598449" duration="5654000" />
+      <workItem from="1713113288680" duration="6962000" />
     </task>
     <task id="LOCAL-00075" summary="wat refactoring en wat aanpassingen aan de database">
       <created>1710244801870</created>
@@ -546,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713017107976</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="styling 5">
+      <created>1713098481463</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1713098481463</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gunfilter voor pump-action gefixed" />
     <MESSAGE value="probleem met insert pagina opgelost" />
     <MESSAGE value="reservation form: gun select field toegevoegd" />
     <MESSAGE value="detailpagina klaargemaakt voor competitions" />
@@ -601,7 +608,8 @@
     <MESSAGE value="styling 3" />
     <MESSAGE value="user formulier fix" />
     <MESSAGE value="styling 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling 4" />
+    <MESSAGE value="styling 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

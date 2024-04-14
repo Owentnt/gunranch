@@ -48,8 +48,9 @@
                         <i class="bi bi-clock"></i>
                         <label class="control-label my-3" for="time"><strong>Time:</strong></label>
                         <input type="time" class="form-control" id="time" required
-                               th:field="*{time}">
+                               th:field="*{time}" step="3600" min="09:00" max="21:00">
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}" th:errors="*{time}"></div>
+                        <label class="my-2">Opening hours: 9 u - 21 u</label>
                     </div>
                 </div>
                 <div class="row">
@@ -71,6 +72,7 @@
         </div>
     </div>
 </div>
+
 
 
 

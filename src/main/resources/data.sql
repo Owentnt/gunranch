@@ -2,13 +2,13 @@
 --GUNS DATA
 
 INSERT INTO GUNS(id, NAME, GUN_TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ( 1001,'Glock-19', 'Handgun', 15, '9x19 mm', 8, '/images/glock19.png','Semi-Auto','The Glock 19 is a popular 9mm semi-automatic pistol known for its reliability,
+VALUES ( 101,'Glock-19', 'Handgun', 15, '9x19 mm', 8, '/images/glock19.png','Semi-Auto','The Glock 19 is a popular 9mm semi-automatic pistol known for its reliability,
                                                                   compact size, and versatility. It is widely used by military, law enforcement, and civilians.
                                                                   Introduced in 1988, the Glock 19 has a standard magazine capacity of 15 rounds, a polymer frame,
                                                                   and is a popular choice for concealed carry due to its balance of size and firepower.');
 
 INSERT INTO GUNS( id,NAME, GUN_TYPE, MAGAZINE, CALIBER, PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES ( 1002,'Desert Eagle', 'Handgun', 8, '.44 Magnum', 8, '/images/desert_eagle.png','Semi-Auto','The Desert Eagle is a powerful semi-automatic pistol
+VALUES ( 102,'Desert Eagle', 'Handgun', 8, '.44 Magnum', 8, '/images/desert_eagle.png','Semi-Auto','The Desert Eagle is a powerful semi-automatic pistol
                                                                         known for its distinctive appearance and high-caliber ammunition.
                                                                         It was designed by Magnum Research in the United States
                                                                         and is often used in movies and video games due to its iconic look and reputation for firepower.');
@@ -80,7 +80,8 @@ VALUES (113,'Saiga 12','Shotgun',5,'12 GA',15,'/images/Saiga12.png','Semi-Auto',
                                                             The Saiga-12 is popular for its versatility and adaptability, often used in shooting sports and by military and law enforcement agencies.');
 
 INSERT INTO GUNS(id,NAME,GUN_TYPE,MAGAZINE,CALIBER,PRICE,IMAGE,FIREARMS_TYPE,BIO)
-VALUES (114,'M14','Assault Rifle',20,'7.62x51 mm',12,'/images/M14.png','Carbine','The M14 is a selective fire, magazine-fed battle rifle adopted by the United States military in the late 1950s.
+VALUES (114,'M14','Assault Rifle',20,'7.62x51 mm',12,'https://firebasestorage.googleapis.com/v0/b/bullseye-shooting-academ-d0602.appspot.com/o/M14.webp?alt=media&token=6fc6e367-1679-4ab7-ab40-f1012bda6bd0','Carbine',
+        'The M14 is a selective fire, magazine-fed battle rifle adopted by the United States military in the late 1950s.
                                                            It served as the standard-issue rifle for the U.S. military until it was replaced by the M16 in the 1960s.
                                                            The M14 is known for its 7.62x51mm NATO caliber and distinctive design, featuring a wooden stock.
                                                            It has seen continued use in various roles and is appreciated for its accuracy and stopping power.');
@@ -124,7 +125,7 @@ INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_N
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
 VALUES (102,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0477 83 14 10',
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
-        'Den Bremt 1','3020','Herent','06.14.03.157.70', true,null,null);
+        'Den Bremt 1','3020','Herent','06.14.03.157.70', true,'/images/sara.png',null);
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
