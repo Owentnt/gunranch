@@ -116,15 +116,15 @@ VALUES (118,'Mauser Kar98K','Sniper Rifle',5,'7,92x57mm',15,'/images/mauser.png'
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
 VALUES (101,'Owen','Talboom','M','owentnt','owentm031111@gmail.com','0494310004',
-        '$2a$10$9MIX8kYPkuB7uE/H5nHF8.KG6.YdjBA/voOnjSZnZDxLXL/2BIerS',
-        'Duivebergen 2B','3140','Keerbergen','03.11.11.157', true,'/images/owen.jpg','Ik ben klant');
+        '$2a$10$XiScDl5EsM4avp/1vXcDD.OK5k6BTAsWZxqIF4lTqXfemF1uuzLsy',
+        'Duivebergen 2B','3140','Keerbergen','03.11.11.157.70', true,'/images/owen.jpg','Ik ben klant');
 
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)
 VALUES (102,'Sara','Pasteels','F','saraps','sara.pasteels@gmail.com','0477 83 14 10',
         '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm',
-        'Den Bremt 1','3020','Herent','06.14.03.157', true,null,null);
+        'Den Bremt 1','3020','Herent','06.14.03.157.70', true,null,null);
 
 INSERT INTO USERS(ID,FIRST_NAME,LAST_NAME, GENDER,USERNAME,EMAIL_ADDRESS,PHONE_NUMBER,PASSWORD,
                   ADDRESS,POSTAL_CODE,CITY,SS_ID, enabled,IMAGE,ABOUT_ME)

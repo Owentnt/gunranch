@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="user formulier fix">
+    <list default="true" id="4501b8b9-0713-49ea-92c8-0a9778833296" name="Changes" comment="styling 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editguns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/newgun.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/newgun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editReservation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guns.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gunsdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +200,8 @@
       <workItem from="1712910919491" duration="5283000" />
       <workItem from="1712937047089" duration="1363000" />
       <workItem from="1712943486328" duration="2352000" />
-      <workItem from="1713009091451" duration="7241000" />
-    </task>
-    <task id="LOCAL-00073" summary="logo terug actief gezet">
-      <created>1710243485149</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1710243485149</updated>
+      <workItem from="1713009091451" duration="9515000" />
+      <workItem from="1713096598449" duration="1728000" />
     </task>
     <task id="LOCAL-00074" summary="troubleshooting">
       <created>1710244051189</created>
@@ -548,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712915523304</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="styling 4">
+      <created>1713017107976</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1713017107976</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="postmapping controller voor new gun toegevoegd" />
     <MESSAGE value="gunfilter voor pump-action gefixed" />
     <MESSAGE value="probleem met insert pagina opgelost" />
     <MESSAGE value="reservation form: gun select field toegevoegd" />
@@ -603,7 +600,8 @@
     <MESSAGE value="styling 2" />
     <MESSAGE value="styling 3" />
     <MESSAGE value="user formulier fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="user formulier fix" />
+    <MESSAGE value="styling 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
